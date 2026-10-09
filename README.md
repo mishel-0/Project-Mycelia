@@ -347,3 +347,7 @@ Unsupervised receptor growth + teach-only memory reaches **94.5%** held-out 4-cl
 ## Mycelial Symbiosis Engine (new)
 
 A self-modifying trace memory with structural plasticity, local reward/punishment, a metabolic budget, fast/slow memory with sleep, and self-healing. 93.7% diagnosis and 97.4% tumor presence with 6x less memory than the fixed network; recovers to full accuracy after losing 50% of its memories. See [SYMBIOSIS-ENGINE.md](SYMBIOSIS-ENGINE.md).
+
+## Collective Dissent (new)
+
+Independent specialists plus a coordinator that abstains when evidence is unreliable: at 90% coverage, accuracy on answered scans rises from 93.7% to 98.1% (68 of 93 errors caught before output). See [COLLECTIVE-DISSENT.md](COLLECTIVE-DISSENT.md).
