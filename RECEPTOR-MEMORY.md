@@ -123,3 +123,21 @@ Runs in about 30 minutes on 4 CPU cores with 16 GB RAM, and writes
 
 Code: `mycelia/receptor_memory.py` (method), `tools/receptor_memory_mri.py`
 (experiment), `tests/test_receptor_memory.py`.
+
+## Image reconstruction
+
+`ReceptorField.sense(img)` records every 6×6 window's receptor responses plus
+its brightness and contrast; `ReceptorField.reconstruct(sensed, keep=None)`
+rebuilds the image.
+
+- **All receptors (default): lossless.** The 800 receptors span every 6×6
+  patch shape, so the rebuild is exact. Full-resolution Testing MRIs
+  (225–512 px) come back with **0 gray-level error**.
+- `keep=k`: only the k strongest receptors per window (lossy compression):
+  10 receptors gave 38–48 dB at full resolution; k ≥ 36 is exact.
+
+Audit of the first attempt (`research/.../recon.py`): it was lossy because it
+kept only 1–10 receptors per 36-pixel window and compared against a 64×64
+downscale, not the original. The classifier's pooled memory cannot rebuild
+images: regional averaging discards position inside each region.
+Script: `research/receptor-memory-exploration/recon_fullres.py`.

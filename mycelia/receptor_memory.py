@@ -82,6 +82,39 @@ class ReceptorField:
             out += [f[np.ix_(a, b)].mean((0, 1)) for a in cut for b in cut]
         return np.concatenate(out).astype(np.float32)
 
+    def sense(self, img):
+        """Unpooled receptor responses plus each window's brightness and contrast."""
+        c = self.config; p = self._patches(img); g = p.shape
+        flat = p.reshape(-1, c.patch * c.patch)
+        mean = flat.mean(1, keepdims=True); sd = np.sqrt(flat.var(1, keepdims=True) + .01)
+        responses = (((flat - mean) / sd - self.mu) @ self.whiten) @ self.receptors.T
+        return {'responses': responses, 'mean': mean, 'sd': sd, 'grid': g[:2], 'shape': np.shape(img)}
+
+    def reconstruct(self, sensed, keep=None):
+        """Rebuild the image from sensed responses.
+
+        keep=None uses every receptor; the receptors span all patch shapes, so
+        this is exact (lossless after uint8 rounding). keep=k uses only the k
+        strongest receptors per window (lossy, k >= patch*patch is exact).
+        """
+        c = self.config; r = sensed['responses']; d = self.receptors
+        if keep is None:
+            z = r @ np.linalg.pinv(d.T)
+        else:
+            idx = np.argsort(-np.abs(r), 1)[:, :keep]
+            z = np.empty((len(r), d.shape[1]))
+            for i, sel in enumerate(idx):
+                coef, *_ = np.linalg.lstsq(d[sel] @ d[sel].T, r[i, sel], rcond=None)
+                z[i] = coef @ d[sel]
+        patches = ((z @ np.linalg.inv(self.whiten)) + self.mu) * sensed['sd'] + sensed['mean']
+        out = np.zeros(sensed['shape']); count = np.zeros(sensed['shape'])
+        gy, gx = sensed['grid']; patches = patches.reshape(gy, gx, c.patch, c.patch)
+        for dy in range(c.patch):
+            for dx in range(c.patch):
+                ys = slice(dy, dy + (gy - 1) * c.stride + 1, c.stride); xs = slice(dx, dx + (gx - 1) * c.stride + 1, c.stride)
+                out[ys, xs] += patches[:, :, dy, dx]; count[ys, xs] += 1
+        return np.clip(out / np.maximum(count, 1), 0, 1)
+
     def encode_many(self, images):
         return np.stack([self.encode(i) for i in images])
 

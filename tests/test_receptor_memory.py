@@ -24,3 +24,12 @@ def test_unsupervised_field_and_teach_only_memory_generalize():
 def test_field_is_deterministic():
     x, _ = images(0, 10); c = ReceptorConfig(receptors=8, patch=4, patches_per_image=5, iterations=3)
     assert np.array_equal(ReceptorField(c).fit(x).receptors, ReceptorField(c).fit(x).receptors)
+
+
+def test_reconstruction_is_lossless_with_all_receptors_and_lossy_with_few():
+    x, _ = images(0, 10)
+    field = ReceptorField(ReceptorConfig(receptors=40, patch=4, patches_per_image=10, iterations=3)).fit(x)
+    img = (np.round(np.random.default_rng(3).random((23, 31)) * 255) / 255)  # any size
+    full = field.reconstruct(field.sense(img))
+    assert np.array_equal(np.round(full * 255), np.round(img * 255))
+    assert np.abs(field.reconstruct(field.sense(img), keep=2) - img).max() > 1 / 255
