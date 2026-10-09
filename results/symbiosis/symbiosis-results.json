@@ -1,0 +1,407 @@
+{
+  "method": "Mycelial Symbiosis Engine on brain-tumor MRI: accuracy, budget, damage.\n\nInput: sensed compartment responses cached by tools/mycelial_network_mri.py\n(results/mycelial-network/cache). Each compartment compresses its own region\nresponse (per-compartment PCA on unlabelled Training data).\n\nReports (Testing scored only after settings are chosen on validation):\n  headline   - validation-selected engine vs the fixed kernel network\n  ablations  - no plasticity / no local credit / no sleep\n  budget     - Experiment C: accuracy vs maximum trace budget and recall energy\n  damage     - Experiment A: kill 10/30/50% of compartments or traces;\n               fixed network vs engine without and with self-healing\n",
+  "config": {
+    "budget": 4000,
+    "gamma": 30.0,
+    "contributors": 8,
+    "reward": 0.1,
+    "punishment": 0.2,
+    "grow_margin": 0.5,
+    "merge_similarity": 0.9,
+    "sleep_every": 1000,
+    "min_strength": 0.05,
+    "max_strength": 4.0,
+    "plasticity": true,
+    "local_credit": true,
+    "sleep": true,
+    "seed": 0
+  },
+  "epochs": 2,
+  "compressed_dims_per_compartment": 16,
+  "validation_grid": [
+    {
+      "gamma": 10.0,
+      "grow_margin": 0.2,
+      "epochs": 1,
+      "validation_accuracy": 0.9333950046253469,
+      "traces": 2411
+    },
+    {
+      "gamma": 10.0,
+      "grow_margin": 0.2,
+      "epochs": 2,
+      "validation_accuracy": 0.9361702127659575,
+      "traces": 2992
+    },
+    {
+      "gamma": 10.0,
+      "grow_margin": 0.5,
+      "epochs": 1,
+      "validation_accuracy": 0.9047178538390379,
+      "traces": 3950
+    },
+    {
+      "gamma": 10.0,
+      "grow_margin": 0.5,
+      "epochs": 2,
+      "validation_accuracy": 0.8982423681776133,
+      "traces": 3929
+    },
+    {
+      "gamma": 20.0,
+      "grow_margin": 0.2,
+      "epochs": 1,
+      "validation_accuracy": 0.9537465309898242,
+      "traces": 1295
+    },
+    {
+      "gamma": 20.0,
+      "grow_margin": 0.2,
+      "epochs": 2,
+      "validation_accuracy": 0.9574468085106383,
+      "traces": 1418
+    },
+    {
+      "gamma": 20.0,
+      "grow_margin": 0.5,
+      "epochs": 1,
+      "validation_accuracy": 0.9565217391304348,
+      "traces": 1972
+    },
+    {
+      "gamma": 20.0,
+      "grow_margin": 0.5,
+      "epochs": 2,
+      "validation_accuracy": 0.9611470860314524,
+      "traces": 2156
+    },
+    {
+      "gamma": 30.0,
+      "grow_margin": 0.2,
+      "epochs": 1,
+      "validation_accuracy": 0.9518963922294172,
+      "traces": 1117
+    },
+    {
+      "gamma": 30.0,
+      "grow_margin": 0.2,
+      "epochs": 2,
+      "validation_accuracy": 0.9555966697502313,
+      "traces": 1214
+    },
+    {
+      "gamma": 30.0,
+      "grow_margin": 0.5,
+      "epochs": 1,
+      "validation_accuracy": 0.9518963922294172,
+      "traces": 1502
+    },
+    {
+      "gamma": 30.0,
+      "grow_margin": 0.5,
+      "epochs": 2,
+      "validation_accuracy": 0.9620721554116559,
+      "traces": 1619
+    }
+  ],
+  "selected": {
+    "gamma": 30.0,
+    "grow_margin": 0.5,
+    "epochs": 2,
+    "validation_accuracy": 0.9620721554116559,
+    "traces": 1619
+  },
+  "headline": {
+    "engine": {
+      "accuracy": 0.9366053169734151,
+      "diagnosis": {
+        "accuracy": 0.9366053169734151,
+        "correct": 1374,
+        "n": 1467,
+        "wilson_95": [
+          0.9229600347962719,
+          0.9479699980211962
+        ],
+        "balanced_accuracy": 0.9345305555063661,
+        "labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            309,
+            24,
+            36,
+            10
+          ],
+          [
+            10,
+            275,
+            2,
+            11
+          ],
+          [
+            0,
+            0,
+            390,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            400
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.8153034300791556,
+            "precision": 0.9686520376175548,
+            "f1": 0.8853868194842407
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.9228187919463087,
+            "precision": 0.919732441471572,
+            "f1": 0.9212730318257957
+          },
+          "notumor": {
+            "count": 390,
+            "recall": 1.0,
+            "precision": 0.9112149532710281,
+            "f1": 0.9535452322738387
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 1.0,
+            "precision": 0.9501187648456056,
+            "f1": 0.9744214372716199
+          }
+        }
+      },
+      "tumor_presence": {
+        "accuracy": 0.9740967961826857,
+        "wilson_95": [
+          0.964646801746383,
+          0.9810703533270739
+        ],
+        "tp": 1039,
+        "fn": 38,
+        "fp": 0,
+        "tn": 390,
+        "sensitivity": 0.9647168059424327,
+        "specificity": 1.0,
+        "ppv": 1.0,
+        "npv": 0.9112149532710281
+      },
+      "memory": {
+        "traces": 1805,
+        "slow": 1700,
+        "fast": 105,
+        "alive_compartments": 36,
+        "steps": 21640,
+        "grown": 2280,
+        "pruned": 475,
+        "merged": 472,
+        "promoted": 1700,
+        "rewards": 116804,
+        "punishments": 56264,
+        "sleeps": 21,
+        "energy": 30751704.0
+      },
+      "recall_cost_per_image": 1805
+    },
+    "fixed_network": {
+      "accuracy": 0.9461486025903204,
+      "diagnosis": {
+        "accuracy": 0.9461486025903204,
+        "correct": 1388,
+        "n": 1467,
+        "wilson_95": [
+          0.9333889934858938,
+          0.9565777613603718
+        ],
+        "balanced_accuracy": 0.9457722658532698,
+        "labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            313,
+            24,
+            39,
+            3
+          ],
+          [
+            6,
+            286,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            390,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            399
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.8258575197889182,
+            "precision": 0.9811912225705329,
+            "f1": 0.8968481375358165
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.959731543624161,
+            "precision": 0.9196141479099679,
+            "f1": 0.9392446633825944
+          },
+          "notumor": {
+            "count": 390,
+            "recall": 1.0,
+            "precision": 0.9027777777777778,
+            "f1": 0.9489051094890512
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.9975,
+            "precision": 0.9851851851851852,
+            "f1": 0.991304347826087
+          }
+        }
+      },
+      "tumor_presence": {
+        "accuracy": 0.9713701431492843,
+        "wilson_95": [
+          0.9615280850848875,
+          0.9787500065517702
+        ],
+        "tp": 1035,
+        "fn": 42,
+        "fp": 0,
+        "tn": 390,
+        "sensitivity": 0.9610027855153204,
+        "specificity": 1.0,
+        "ppv": 1.0,
+        "npv": 0.9027777777777778
+      },
+      "recall_cost_per_image": 10820
+    }
+  },
+  "ablations": {
+    "no_plasticity": {
+      "accuracy": 0.923653715064758,
+      "traces": 4000
+    },
+    "no_local_credit": {
+      "accuracy": 0.9359236537150648,
+      "traces": 2404
+    },
+    "no_sleep": {
+      "accuracy": 0.934560327198364,
+      "traces": 2210
+    }
+  },
+  "budget_experiment": [
+    {
+      "budget": 100,
+      "traces": 100,
+      "accuracy": 0.743694614860259,
+      "training_energy": 2155474.0,
+      "recall_cost_per_image": 100
+    },
+    {
+      "budget": 250,
+      "traces": 250,
+      "accuracy": 0.8050443081117927,
+      "training_energy": 5341628.0,
+      "recall_cost_per_image": 250
+    },
+    {
+      "budget": 500,
+      "traces": 500,
+      "accuracy": 0.8275391956373551,
+      "training_energy": 10491013.0,
+      "recall_cost_per_image": 500
+    },
+    {
+      "budget": 1000,
+      "traces": 1000,
+      "accuracy": 0.8773006134969326,
+      "training_energy": 19992972.0,
+      "recall_cost_per_image": 1000
+    },
+    {
+      "budget": 2000,
+      "traces": 1805,
+      "accuracy": 0.9366053169734151,
+      "training_energy": 30751704.0,
+      "recall_cost_per_image": 1805
+    }
+  ],
+  "damage_experiment": [
+    {
+      "damage": "compartments",
+      "fraction": 0.1,
+      "fixed_network": 0.9452397182458533,
+      "engine_damaged": 0.9322881163371961,
+      "engine_self_healed": 0.9368325380595319,
+      "repeats": 3
+    },
+    {
+      "damage": "compartments",
+      "fraction": 0.3,
+      "fixed_network": 0.938877527834583,
+      "engine_damaged": 0.923653715064758,
+      "engine_self_healed": 0.9343331061122472,
+      "repeats": 3
+    },
+    {
+      "damage": "compartments",
+      "fraction": 0.5,
+      "fixed_network": 0.9157009770506702,
+      "engine_damaged": 0.8897977732333561,
+      "engine_self_healed": 0.9270620313565098,
+      "repeats": 3
+    },
+    {
+      "damage": "traces",
+      "fraction": 0.1,
+      "fixed_network": 0.4528516246307657,
+      "engine_damaged": 0.9227448307202909,
+      "engine_self_healed": 0.9354692115428311,
+      "repeats": 3
+    },
+    {
+      "damage": "traces",
+      "fraction": 0.3,
+      "fixed_network": 0.3512837991365599,
+      "engine_damaged": 0.8916155419222903,
+      "engine_self_healed": 0.9354692115428311,
+      "repeats": 3
+    },
+    {
+      "damage": "traces",
+      "fraction": 0.5,
+      "fixed_network": 0.3028857077936833,
+      "engine_damaged": 0.8498068620768007,
+      "engine_self_healed": 0.9354692115428312,
+      "repeats": 3
+    }
+  ],
+  "seconds": 450.405828208
+}

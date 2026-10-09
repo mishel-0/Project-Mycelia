@@ -343,3 +343,7 @@ The assay trains a growing network in a Gaussian resource field, then transfers 
 ## Receptor-field memory (new)
 
 Unsupervised receptor growth + teach-only memory reaches **94.5%** held-out 4-class accuracy and **97.3%** tumor-presence accuracy on the brain-tumor MRI dataset (previous colony memory: 73.3%). See [RECEPTOR-MEMORY.md](RECEPTOR-MEMORY.md).
+
+## Mycelial Symbiosis Engine (new)
+
+A self-modifying trace memory with structural plasticity, local reward/punishment, a metabolic budget, fast/slow memory with sleep, and self-healing. 93.7% diagnosis and 97.4% tumor presence with 6x less memory than the fixed network; recovers to full accuracy after losing 50% of its memories. See [SYMBIOSIS-ENGINE.md](SYMBIOSIS-ENGINE.md).
