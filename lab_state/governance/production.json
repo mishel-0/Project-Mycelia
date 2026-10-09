@@ -1,0 +1,13 @@
+{
+  "id": "baseline",
+  "config": {
+    "engine": {
+      "gamma": 30.0,
+      "grow_margin": 0.5
+    },
+    "epochs": 2,
+    "mirror": true
+  },
+  "approved_by": "root (demo operator)",
+  "parent": null
+}

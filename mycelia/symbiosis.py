@@ -42,6 +42,7 @@ class SymbiosisConfig:
     local_credit: bool = True
     sleep: bool = True
     seed: int = 0
+    label_margins: tuple = ()  # ((label, margin), ...) overrides grow_margin per label
 
 
 class SymbiosisEngine:
@@ -116,7 +117,8 @@ class SymbiosisEngine:
             np.clip(self.strength[:self.n], c.min_strength, c.max_strength, out=self.strength[:self.n])
             self.stats['rewards'] += int(good.sum()); self.stats['punishments'] += int((~good).sum())
         outcome = 'correct' if guess == y else 'error'
-        if c.plasticity and (guess != y or margin < c.grow_margin):
+        need = dict(c.label_margins).get(int(y), c.grow_margin)
+        if c.plasticity and (guess != y or margin < need):
             self._grow(x, y); outcome += '+grow'
         elif not c.plasticity and self.n < c.budget:
             self._grow(x, y)

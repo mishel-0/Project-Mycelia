@@ -1,0 +1,47 @@
+{
+  "started": 1791549997.1564364,
+  "steps": [
+    {
+      "step": "evaluate_production",
+      "id": "baseline",
+      "summary": {
+        "accuracy": 0.9608387295713845,
+        "balanced_accuracy": 0.9612806156514612,
+        "selective_accuracy": 0.9890373415553272,
+        "tumor_presence_accuracy": 0.9830403946962689,
+        "memories": 1602.3333333333333,
+        "fit_seconds": 2.5246473540000047,
+        "robust_accuracy": 0.9599136601911811,
+        "accuracy_sd": 0.0011537642265723174,
+        "recall": {
+          "glioma": 0.9345238095238096,
+          "meningioma": 0.9470517448856799,
+          "notumor": 0.9696969696969697,
+          "pituitary": 0.993849938499385
+        },
+        "recall_ci": {
+          "glioma": [
+            0.9006819688438781,
+            0.9589528463581449
+          ],
+          "meningioma": [
+            0.9125876332876078,
+            0.966912142269745
+          ],
+          "notumor": [
+            0.9388562467021371,
+            0.983891977389886
+          ],
+          "pituitary": [
+            0.9734953769255511,
+            0.9979737789494733
+          ]
+        }
+      }
+    },
+    {
+      "step": "no_action",
+      "reason": "no class recall separated from the others"
+    }
+  ]
+}

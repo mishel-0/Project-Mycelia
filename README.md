@@ -351,3 +351,7 @@ A self-modifying trace memory with structural plasticity, local reward/punishmen
 ## Collective Dissent (new)
 
 Independent specialists plus a coordinator that abstains when evidence is unreliable: at 90% coverage, accuracy on answered scans rises from 93.7% to 98.1% (68 of 93 errors caught before output). See [COLLECTIVE-DISSENT.md](COLLECTIVE-DISSENT.md).
+
+## Symbiosis Lab v0.1 (new)
+
+A bounded self-improvement loop: detects a weakness, gathers evidence, tests candidates against frozen production, rejects regressions, verifies, and asks a separate gate for a one-time holdout score. Only a human can approve a release. See [SYMBIOSIS-LAB.md](SYMBIOSIS-LAB.md).
