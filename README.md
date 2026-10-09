@@ -339,3 +339,7 @@ The opt-in candidate mechanism consolidates a locally sensed nutrient-gradient d
 The assay trains a growing network in a Gaussian resource field, then transfers only the root compartment into fresh uniform substrate, discards all old geometry/tips, regenerates tips with randomized polarity and disables further acquisition. Six paired arms compare intact memory, erased trace, directional coupling disabled, inheritance disabled, rotated trace and uniform-history sham. All physical initial pools are matched across arms.
 
 **First result: the primary behavioral check did not pass.** In 30 paired trials, the memory-minus-erased alignment difference was +0.157, with a 95% bootstrap interval of −0.142 to +0.437. The direction initially follows the bait but is overwritten by subsequent local gradients. None of the networks reached the bait's central radius-3 region. This is a gradient-history regrowth assay, not a replication of the published wood-bait experiment. See `DIRECTIONAL-MEMORY.md` for the protocol, limitations and next model requirements.
+
+## Receptor-field memory (new)
+
+Unsupervised receptor growth + teach-only memory reaches **94.5%** held-out 4-class accuracy and **97.3%** tumor-presence accuracy on the brain-tumor MRI dataset (previous colony memory: 73.3%). See [RECEPTOR-MEMORY.md](RECEPTOR-MEMORY.md).
