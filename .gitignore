@@ -11,5 +11,4 @@ runs/
 # Local medical datasets and archives are intentionally kept out of source control.
 # The README documents the expected dataset paths for reproducible local runs.
 Brain-Tumor-MRI-Dataset/
-Brain-Tumor-MRI-Dataset.zip
 Brain-Tumor-Omnia-Dataset/
