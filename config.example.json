@@ -1,0 +1,12 @@
+{
+  "dt": 0.5,
+  "max_nodes": 800,
+  "max_tips": 48,
+  "branch_interval": 8.0,
+  "branch_rate": 0.28,
+  "diffusion": 0.04,
+  "hydraulic_scale": 0.12,
+  "solute_diffusion": 0.055,
+  "streaming_rate": 0.012
+}
+

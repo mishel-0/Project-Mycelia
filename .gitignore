@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+runs/
+.DS_Store
+
+# Local medical datasets and archives are intentionally kept out of source control.
+# The README documents the expected dataset paths for reproducible local runs.
+Brain-Tumor-MRI-Dataset/
+Brain-Tumor-MRI-Dataset.zip
+Brain-Tumor-Omnia-Dataset/

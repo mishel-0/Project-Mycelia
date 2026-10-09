@@ -1,0 +1,446 @@
+{
+  "revision": 1,
+  "mechanisms": [
+    {
+      "scale": "Molecular",
+      "mechanism": "Named ions",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Ion flux, concentration and charge balance",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Organic osmolytes",
+      "legacy_prototype": "Lumped organic pool",
+      "new_core": "Conserved single solute pool; no synthesis regulation",
+      "evidence_class": "Reduction",
+      "empirical_target": "Osmolyte accumulation after shock",
+      "literature": "R2",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Metabolites",
+      "legacy_prototype": "Lumped nutrient/energy",
+      "new_core": "Single carbon substrate + ATP equivalents",
+      "evidence_class": "Reduction",
+      "empirical_target": "Substrate, respiration and metabolite time courses",
+      "literature": "Needs stoichiometric model",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Ion channels",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Current/voltage dependence and knockouts",
+      "literature": "R2 motivates next gate",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Membrane potential",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Voltage and input conductance after perturbation",
+      "literature": "R2 motivates next gate",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Calcium gradients",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Spatial Ca signal and tip extension after buffering",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Molecular",
+      "mechanism": "Molecular signalling",
+      "legacy_prototype": "Directional trace hypothesis",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Signal production, propagation and pathway perturbation",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Hyphal compartments",
+      "legacy_prototype": "Explicit graph",
+      "new_core": "Explicit serial cells with split rule",
+      "evidence_class": "Implementation / geometry reduction",
+      "empirical_target": "Spatial compartment lengths and septation times",
+      "literature": "Needs septation literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Cell wall",
+      "legacy_prototype": "Elastic volume + growth proxy",
+      "new_core": "Separate elastic state and funded irreversible expansion in fixed tip growth zone",
+      "evidence_class": "Constitutive candidate",
+      "empirical_target": "Pressure-step creep and extension response",
+      "literature": "R1",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Plasma membrane",
+      "legacy_prototype": "Water/uptake flux proxies",
+      "new_core": "Finite local uptake and osmotic water flux; no dynamic voltage or membrane chemistry",
+      "evidence_class": "Reduction",
+      "empirical_target": "Selective permeability, uptake and osmotic response",
+      "literature": "R2",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Septa",
+      "legacy_prototype": "Pores and heuristic damage gate",
+      "new_core": "Effective pore hydraulics/diffusion; prescribed gate; splitting not costed",
+      "evidence_class": "Reduction",
+      "empirical_target": "Pore conductance, closure/reopening and injury responses",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Cytoplasm",
+      "legacy_prototype": "Lumped water/resources",
+      "new_core": "Finite water and soluble material per cell",
+      "evidence_class": "Reduction",
+      "empirical_target": "Cytoplasmic tracer dilution and volume",
+      "literature": "R2 / R4",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Vacuole",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Vacuolar volume and tonoplast flux during shock",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Turgor",
+      "legacy_prototype": "Nondimensional elastic pressure",
+      "new_core": "Nonnegative pressure from water/rest-volume wall law",
+      "evidence_class": "Constitutive candidate",
+      "empirical_target": "Pressure-probe traces under multiple stresses",
+      "literature": "R1 / R2",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Water uptake",
+      "legacy_prototype": "Finite osmotic proxy",
+      "new_core": "Dimensional osmotic membrane exchange with finite baths",
+      "evidence_class": "Physical constraint + constitutive candidate",
+      "empirical_target": "Water uptake, shrinkage and refill time courses",
+      "literature": "R2",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Nutrient uptake",
+      "legacy_prototype": "Finite credited uptake",
+      "new_core": "Local Michaelis-Menten capacity, shared finite bath budgets",
+      "evidence_class": "Constitutive candidate",
+      "empirical_target": "Species/substrate uptake saturation curves",
+      "literature": "Needs transporter measurements",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Metabolism",
+      "legacy_prototype": "Fuel/reserve and ATP-like energy",
+      "new_core": "Conservative reserve mobilization, respiration and ATP-equivalent accounting",
+      "evidence_class": "Reduction",
+      "empirical_target": "Oxygen/carbon flux and ATP/ADP balance",
+      "literature": "Needs metabolic stoichiometry",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Compartment",
+      "mechanism": "Storage",
+      "legacy_prototype": "Finite reserve pool",
+      "new_core": "Finite non-osmotic polymer-equivalent reserve with release",
+      "evidence_class": "Reduction",
+      "empirical_target": "Storage pool size and mobilization kinetics",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Tip growth",
+      "legacy_prototype": "Heuristic pressure/energy/vesicle factor",
+      "new_core": "Local wall yield limited by cargo and energy; one prescribed apex",
+      "evidence_class": "Constitutive candidate",
+      "empirical_target": "Tip extension versus pressure, wall and transport perturbations",
+      "literature": "R1 / R3",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Polarity",
+      "legacy_prototype": "Tip direction / optional history bias",
+      "new_core": "Fixed straight axis and tip flag; dynamic polarity absent",
+      "evidence_class": "Prescribed / not emergent",
+      "empirical_target": "Polarity localization, relocation and response times",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Spitzenk\u00f6rper",
+      "legacy_prototype": "Energy-dependent supply proxy",
+      "new_core": "Finite apical wall-cargo reservoir; molecular organization absent",
+      "evidence_class": "Lumped analogue",
+      "empirical_target": "Vesicle localization and tip-shape response",
+      "literature": "R3",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Vesicle transport",
+      "legacy_prototype": "Supply proxy",
+      "new_core": "Finite cytoplasmic-to-apical cargo delivery with ATP expense",
+      "evidence_class": "Constitutive candidate",
+      "empirical_target": "Cargo velocity, motor inhibition and localization",
+      "literature": "R3; rates uncalibrated",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Cytoskeleton",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent; motor rate is a coarse substitute",
+      "evidence_class": "Not specified",
+      "empirical_target": "Track organization and motor/track perturbations",
+      "literature": "Needs primary literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Branching",
+      "legacy_prototype": "Seeded local hazard",
+      "new_core": "Absent; serial splitting is not branching",
+      "evidence_class": "Not specified",
+      "empirical_target": "Branch site/latency distribution with local precursor dynamics",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Avoidance",
+      "legacy_prototype": "Local direction/resistance rule",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Obstacle/stimulus-specific turn and extension response",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Damage",
+      "legacy_prototype": "Stress proxy / simplified healing",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Injury localization, leakage and survival",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Hypha",
+      "mechanism": "Repair",
+      "legacy_prototype": "Heuristic relaxation/recycling",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Material-funded wall/pore repair and recovery",
+      "literature": "Needs species-specific literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Anastomosis / fusion",
+      "legacy_prototype": "Contact heuristic graph edge",
+      "new_core": "Absent; recognition/contact/membrane continuity not modeled",
+      "evidence_class": "Not specified",
+      "empirical_target": "Compatible recognition, contact latency and cytoplasmic exchange",
+      "literature": "Needs primary literature",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Diffusion",
+      "legacy_prototype": "Conservative substrate and graph diffusion",
+      "new_core": "Fick transport across septal pores with donor limits",
+      "evidence_class": "Physical law + geometric reduction",
+      "empirical_target": "Tracer spread and measured diffusivity",
+      "literature": "Species coefficients needed",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Cytoplasmic streaming",
+      "legacy_prototype": "Hydraulics plus tip-directed cargo proxy",
+      "new_core": "Pressure-driven axial bulk flow; no resolved intracellular velocity field or active streaming",
+      "evidence_class": "Reduction",
+      "empirical_target": "Tracer speeds and radial flow profiles",
+      "literature": "R4; transport modes need review",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Growth-induced flow",
+      "legacy_prototype": "Coupled water/growth but extension proxy",
+      "new_core": "Wall expansion lowers pressure, generating flow in an isolated equilibrium-pair test",
+      "evidence_class": "Computationally verified causal coupling",
+      "empirical_target": "Simultaneous growth volume and tracer flux time series",
+      "literature": "R4",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Resource redistribution",
+      "legacy_prototype": "Conservative graph flows",
+      "new_core": "Soluble advection/diffusion across a serial septal graph",
+      "evidence_class": "Reduction",
+      "empirical_target": "Basal-to-tip labelled substrate transport",
+      "literature": "R4; substance-specific data needed",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Topology",
+      "legacy_prototype": "Growth/branch/fusion graph",
+      "new_core": "Serial graph extends by prescribed conservative segment splits",
+      "evidence_class": "Geometry reduction",
+      "empirical_target": "Spatial morphology and topology through time",
+      "literature": "Branch/fusion dynamics deferred",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Cords / rhizomorphs",
+      "legacy_prototype": "Effective conduit reinforcement",
+      "new_core": "Absent; hypha is not a cord",
+      "evidence_class": "Not specified",
+      "empirical_target": "Differentiation anatomy, conductive area and cord biomass",
+      "literature": "R4 motivates later network gate",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Reinforcement",
+      "legacy_prototype": "Flow-linked material-funded radius rule",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Flow history versus subsequent material investment",
+      "literature": "R4",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Network",
+      "mechanism": "Pruning",
+      "legacy_prototype": "Dead-terminal retraction heuristic",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Carbon recycling and network retraction time courses",
+      "literature": "Needs primary remodeling data",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Structural memory",
+      "legacy_prototype": "Persistent graph; no validated memory assay",
+      "new_core": "Persistent grown rest volumes; no functional memory assay",
+      "evidence_class": "Persistence only",
+      "empirical_target": "Transfer/regrowth with geometry and resource controls",
+      "literature": "R5",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Chemical memory",
+      "legacy_prototype": "Engineered image receptor traces; directional hypothesis",
+      "new_core": "No memory law; persistent pools are ordinary material state",
+      "evidence_class": "Not demonstrated",
+      "empirical_target": "Exposure-specific persistence and causal erase intervention",
+      "literature": "R5 does not identify molecular mechanism",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Electrical activity",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Not specified",
+      "empirical_target": "Voltage/current recordings with artifact controls",
+      "literature": "R2; long-distance function requires separate evidence",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Electrical memory",
+      "legacy_prototype": "Absent",
+      "new_core": "Absent",
+      "evidence_class": "Unknown mechanism / not specified",
+      "empirical_target": "Persistent state with electrical causal controls",
+      "literature": "No established model selected",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Environmental memory",
+      "legacy_prototype": "Directional hypothesis failed primary test",
+      "new_core": "Absent; shock response has no regulatory recovery",
+      "evidence_class": "Not demonstrated",
+      "empirical_target": "Bait colonization and relocation versus matched controls",
+      "literature": "R5",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Sensing / adaptation",
+      "legacy_prototype": "Gradient and stress proxies",
+      "new_core": "Concentration drives uptake/osmotic exchange; active adaptation absent",
+      "evidence_class": "Physical response only",
+      "empirical_target": "Held-out stress dose/time and recovery response",
+      "literature": "R2",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Foraging",
+      "legacy_prototype": "Resource-gradient growth heuristic",
+      "new_core": "Absent in straight-axis core",
+      "evidence_class": "Not specified",
+      "empirical_target": "Actual bait contact/colonization and transport cost",
+      "literature": "R5",
+      "empirical_validation": "Not performed"
+    },
+    {
+      "scale": "Organism",
+      "mechanism": "Resource allocation",
+      "legacy_prototype": "Local growth/transport heuristics",
+      "new_core": "Local resource spending and pressure transport; no full colony allocation",
+      "evidence_class": "Partial local coupling",
+      "empirical_target": "Growth and carbon distribution after spatial interventions",
+      "literature": "R4",
+      "empirical_validation": "Not performed"
+    }
+  ],
+  "overall_fidelity_percentage": null
+}

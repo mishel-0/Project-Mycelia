@@ -1,0 +1,7 @@
+{
+  "foraging_memory_rate": 0.08,
+  "foraging_memory_gain": 1.2,
+  "foraging_memory_decay": 0.001,
+  "foraging_memory_cost": 0.01,
+  "foraging_memory_inheritance": 0.85
+}

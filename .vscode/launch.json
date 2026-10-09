@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MYCELIA biology: mechanism validation",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mycelia.biology",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [
+        "--validate",
+        "--output",
+        "runs/biology-validation"
+      ]
+    },
+    {
+      "name": "MYCELIA legacy: nutrient patches",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mycelia",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [
+        "--scenario",
+        "patches",
+        "--steps",
+        "300",
+        "--output",
+        "runs/demo"
+      ]
+    },
+    {
+      "name": "MYCELIA: tests",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "args": [
+        "-q"
+      ]
+    }
+  ]
+}
