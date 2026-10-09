@@ -12,3 +12,4 @@ runs/
 # The README documents the expected dataset paths for reproducible local runs.
 Brain-Tumor-MRI-Dataset/
 Brain-Tumor-Omnia-Dataset/
+results/reward-punishment/*-memory.json

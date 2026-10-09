@@ -1,0 +1,23 @@
+[
+  {
+    "epoch": 1,
+    "outcomes": {
+      "imprint": 5410
+    },
+    "online_accuracy": null
+  },
+  {
+    "epoch": 2,
+    "outcomes": {
+      "imprint": 5410
+    },
+    "online_accuracy": null
+  },
+  {
+    "epoch": 3,
+    "outcomes": {
+      "imprint": 5410
+    },
+    "online_accuracy": null
+  }
+]
