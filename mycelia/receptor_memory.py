@@ -133,8 +133,14 @@ class TraceMemory:
         """features: training responses; extra: (features, labels) mirror imprints."""
         self.mean = features.mean(0, dtype=np.float64).astype(np.float32)
         self.scale = (features.std(0, dtype=np.float64) + 1e-6).astype(np.float32)
-        parts = [self._n(features)] + [self._n(f) for f, _ in extra]
-        self.traces = np.concatenate(parts)
+        sources = [features] + [f for f, _ in extra]
+        self.traces = np.empty((sum(len(f) for f in sources), features.shape[1]), dtype=np.float32)
+        start = 0
+        for f in sources:
+            for i in range(0, len(f), 512):  # chunked: no full-size temporaries
+                block = self._n(np.asarray(f[i:i + 512], dtype=np.float32))
+                self.traces[start + i:start + i + len(block)] = block
+            start += len(f)
         y = np.concatenate([labels] + [l for _, l in extra])
         k = self.traces @ self.traces.T; k -= 1; k *= self.gamma; np.exp(k, out=k)
         k[np.diag_indices_from(k)] += self.lam

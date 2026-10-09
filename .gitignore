@@ -13,3 +13,4 @@ runs/
 Brain-Tumor-MRI-Dataset/
 Brain-Tumor-Omnia-Dataset/
 results/reward-punishment/*-memory.json
+results/*/cache/

@@ -141,3 +141,28 @@ kept only 1–10 receptors per 36-pixel window and compared against a 64×64
 downscale, not the original. The classifier's pooled memory cannot rebuild
 images: regional averaging discards position inside each region.
 Script: `research/receptor-memory-exploration/recon_fullres.py`.
+
+## Real mycelial network topology (`mycelia/mycelial_network.py`)
+
+The receptor field now runs inside an actual `Mycelium` lattice (6×6
+compartments, 60 septal cords, built like `MemoryColony`). Each compartment
+senses one image region. Cords are thickened by unsupervised Hebbian learning
+(compartments whose responses co-vary across unlabelled Training images),
+paid from compartment nutrient and ATP-like energy; budgets validate exactly
+(carbon and energy error 0). Compartment states then spread along cords
+weighted by real conductance (∝ radius⁴) before teach-only memory.
+
+Held-out Testing (`tools/mycelial_network_mri.py`, 1,467 images):
+
+| Variant | Diagnosis | Tumor presence | Sensitivity | Specificity |
+|---|---|---|---|---|
+| Isolated compartments (validation-selected) | **94.8%** (1391) | 97.2% | 96.3% | 99.7% |
+| Spread on untrained cords | 94.8% (1390) | 97.6% | 96.7% | 100% |
+| Spread on learned cords (radius 0.315→0.41) | 94.5% (1387) | 97.4% | 96.6% | 99.7% |
+
+Finding: the compartment lattice gives a small gain over the pooled version
+(94.5%), but signal spread along cords, learned or not, does not improve
+diagnosis; differences are within noise. Spreading blurs tumor location,
+which is what separates the classes. Validation tied isolated and learned
+cords (97.6%); ties go to the first variant. Glioma recall remains the weak
+point (82.8%).

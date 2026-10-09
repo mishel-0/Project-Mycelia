@@ -1,0 +1,454 @@
+{
+  "method": "Brain-tumor MRI on the real mycelial network topology, with ablations.\n\nVariants (all teach-only TraceMemory with mirror imprints, same receptors):\n  isolated   - compartments sense their region, no signal spread\n  uniform    - spread along untrained cords (all equal)\n  learned    - spread along cords thickened by unsupervised Hebbian learning\nSelection (variant, gamma) uses a 20% validation split of Training only.\nEvery variant is then scored on Testing and reported as an ablation; the\nvalidation-selected one is the headline result.\n",
+  "receptor_config": {
+    "receptors": 800,
+    "patch": 6,
+    "stride": 1,
+    "grid": 4,
+    "patches_per_image": 20,
+    "iterations": 15,
+    "whitening": 0.1,
+    "threshold": 0.25,
+    "seed": 0
+  },
+  "network_config": {
+    "size": 6,
+    "spread": 0.3,
+    "steps": 2,
+    "cord_rate": 0.2,
+    "cord_energy_cost": 0.2,
+    "learn_topology": true
+  },
+  "clean_counts": {
+    "Training": 5410,
+    "Testing": 1467
+  },
+  "validation_grid": [
+    {
+      "variant": "isolated",
+      "gamma": 2.0,
+      "validation_accuracy": 0.9759481961147086
+    },
+    {
+      "variant": "isolated",
+      "gamma": 5.0,
+      "validation_accuracy": 0.973172987974098
+    },
+    {
+      "variant": "uniform",
+      "gamma": 2.0,
+      "validation_accuracy": 0.9750231267345051
+    },
+    {
+      "variant": "uniform",
+      "gamma": 5.0,
+      "validation_accuracy": 0.971322849213691
+    },
+    {
+      "variant": "learned",
+      "gamma": 2.0,
+      "validation_accuracy": 0.9759481961147086
+    },
+    {
+      "variant": "learned",
+      "gamma": 5.0,
+      "validation_accuracy": 0.9722479185938946
+    }
+  ],
+  "selected_by_validation": {
+    "variant": "isolated",
+    "gamma": 2.0,
+    "validation_accuracy": 0.9759481961147086
+  },
+  "headline": {
+    "gamma": 2.0,
+    "network": {
+      "compartments": 36,
+      "cords": 60,
+      "cord_radius_min": 0.315,
+      "cord_radius_max": 0.315,
+      "carbon_error": 0.0,
+      "energy_error": 0.0,
+      "cords_reinforced": 0,
+      "carbon_invested": 0.0,
+      "energy_spent": 0.0
+    },
+    "heldout_diagnosis": {
+      "accuracy": 0.9481935923653715,
+      "correct": 1391,
+      "n": 1467,
+      "wilson_95": [
+        0.9356359482309006,
+        0.9584101041929641
+      ],
+      "balanced_accuracy": 0.9480937231680977,
+      "labels": [
+        "glioma",
+        "meningioma",
+        "notumor",
+        "pituitary"
+      ],
+      "confusion_matrix": [
+        [
+          314,
+          27,
+          36,
+          2
+        ],
+        [
+          5,
+          288,
+          4,
+          1
+        ],
+        [
+          0,
+          1,
+          389,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          400
+        ]
+      ],
+      "classes": {
+        "glioma": {
+          "count": 379,
+          "recall": 0.8284960422163589,
+          "precision": 0.9843260188087775,
+          "f1": 0.8997134670487107
+        },
+        "meningioma": {
+          "count": 298,
+          "recall": 0.9664429530201343,
+          "precision": 0.9113924050632911,
+          "f1": 0.9381107491856678
+        },
+        "notumor": {
+          "count": 390,
+          "recall": 0.9974358974358974,
+          "precision": 0.9067599067599068,
+          "f1": 0.94993894993895
+        },
+        "pituitary": {
+          "count": 400,
+          "recall": 1.0,
+          "precision": 0.9925558312655087,
+          "f1": 0.9962640099626401
+        }
+      }
+    },
+    "heldout_tumor_presence": {
+      "accuracy": 0.9720518064076347,
+      "wilson_95": [
+        0.9623057959392762,
+        0.9793320615565815
+      ],
+      "tp": 1037,
+      "fn": 40,
+      "fp": 1,
+      "tn": 389,
+      "sensitivity": 0.9628597957288765,
+      "specificity": 0.9974358974358974,
+      "ppv": 0.9990366088631984,
+      "npv": 0.9067599067599068
+    }
+  },
+  "ablations": {
+    "isolated": {
+      "gamma": 2.0,
+      "network": {
+        "compartments": 36,
+        "cords": 60,
+        "cord_radius_min": 0.315,
+        "cord_radius_max": 0.315,
+        "carbon_error": 0.0,
+        "energy_error": 0.0,
+        "cords_reinforced": 0,
+        "carbon_invested": 0.0,
+        "energy_spent": 0.0
+      },
+      "heldout_diagnosis": {
+        "accuracy": 0.9481935923653715,
+        "correct": 1391,
+        "n": 1467,
+        "wilson_95": [
+          0.9356359482309006,
+          0.9584101041929641
+        ],
+        "balanced_accuracy": 0.9480937231680977,
+        "labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            314,
+            27,
+            36,
+            2
+          ],
+          [
+            5,
+            288,
+            4,
+            1
+          ],
+          [
+            0,
+            1,
+            389,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            400
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.8284960422163589,
+            "precision": 0.9843260188087775,
+            "f1": 0.8997134670487107
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.9664429530201343,
+            "precision": 0.9113924050632911,
+            "f1": 0.9381107491856678
+          },
+          "notumor": {
+            "count": 390,
+            "recall": 0.9974358974358974,
+            "precision": 0.9067599067599068,
+            "f1": 0.94993894993895
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 1.0,
+            "precision": 0.9925558312655087,
+            "f1": 0.9962640099626401
+          }
+        }
+      },
+      "heldout_tumor_presence": {
+        "accuracy": 0.9720518064076347,
+        "wilson_95": [
+          0.9623057959392762,
+          0.9793320615565815
+        ],
+        "tp": 1037,
+        "fn": 40,
+        "fp": 1,
+        "tn": 389,
+        "sensitivity": 0.9628597957288765,
+        "specificity": 0.9974358974358974,
+        "ppv": 0.9990366088631984,
+        "npv": 0.9067599067599068
+      }
+    },
+    "uniform": {
+      "gamma": 2.0,
+      "network": {
+        "compartments": 36,
+        "cords": 60,
+        "cord_radius_min": 0.315,
+        "cord_radius_max": 0.315,
+        "carbon_error": 0.0,
+        "energy_error": 0.0,
+        "cords_reinforced": 0,
+        "carbon_invested": 0.0,
+        "energy_spent": 0.0
+      },
+      "heldout_diagnosis": {
+        "accuracy": 0.9475119291070211,
+        "correct": 1390,
+        "n": 1467,
+        "wilson_95": [
+          0.9348864408587573,
+          0.9577998457059077
+        ],
+        "balanced_accuracy": 0.9476294137698996,
+        "labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            32,
+            33,
+            2
+          ],
+          [
+            3,
+            289,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            390,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            399
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.8232189973614775,
+            "precision": 0.9904761904761905,
+            "f1": 0.8991354466858789
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.9697986577181208,
+            "precision": 0.8975155279503105,
+            "f1": 0.932258064516129
+          },
+          "notumor": {
+            "count": 390,
+            "recall": 1.0,
+            "precision": 0.9154929577464789,
+            "f1": 0.9558823529411764
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.9975,
+            "precision": 0.9876237623762376,
+            "f1": 0.9925373134328358
+          }
+        }
+      },
+      "heldout_tumor_presence": {
+        "accuracy": 0.9754601226993865,
+        "wilson_95": [
+          0.9662145289872601,
+          0.9822221578045964
+        ],
+        "tp": 1041,
+        "fn": 36,
+        "fp": 0,
+        "tn": 390,
+        "sensitivity": 0.9665738161559888,
+        "specificity": 1.0,
+        "ppv": 1.0,
+        "npv": 0.9154929577464789
+      }
+    },
+    "learned": {
+      "gamma": 2.0,
+      "network": {
+        "compartments": 36,
+        "cords": 60,
+        "cord_radius_min": 0.315,
+        "cord_radius_max": 0.4101571173484373,
+        "carbon_error": 0.0,
+        "energy_error": 0.0,
+        "cords_reinforced": 50,
+        "carbon_invested": 5.791610479619283,
+        "energy_spent": 1.1583220959238574
+      },
+      "heldout_diagnosis": {
+        "accuracy": 0.94546693933197,
+        "correct": 1387,
+        "n": 1467,
+        "wilson_95": [
+          0.9326410349815087,
+          0.9559659540055568
+        ],
+        "balanced_accuracy": 0.9453105357798807,
+        "labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            32,
+            33,
+            2
+          ],
+          [
+            4,
+            287,
+            4,
+            3
+          ],
+          [
+            0,
+            1,
+            389,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            399
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.8232189973614775,
+            "precision": 0.9873417721518988,
+            "f1": 0.8978417266187051
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.9630872483221476,
+            "precision": 0.8940809968847352,
+            "f1": 0.9273021001615508
+          },
+          "notumor": {
+            "count": 390,
+            "recall": 0.9974358974358974,
+            "precision": 0.9131455399061033,
+            "f1": 0.9534313725490196
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.9975,
+            "precision": 0.9876237623762376,
+            "f1": 0.9925373134328358
+          }
+        }
+      },
+      "heldout_tumor_presence": {
+        "accuracy": 0.9740967961826857,
+        "wilson_95": [
+          0.964646801746383,
+          0.9810703533270739
+        ],
+        "tp": 1040,
+        "fn": 37,
+        "fp": 1,
+        "tn": 389,
+        "sensitivity": 0.9656453110492108,
+        "specificity": 0.9974358974358974,
+        "ppv": 0.9990393852065321,
+        "npv": 0.9131455399061033
+      }
+    }
+  },
+  "seconds": 954.2362768030002
+}
