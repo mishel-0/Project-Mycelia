@@ -161,6 +161,64 @@ class MemoryColony:
         o._validate()
         return {'changed_nodes':changed,'synthesis_carbon':carbon,'synthesis_energy':energy}
 
+    def punish(self,cue,*,penalty=.5,feed=.02):
+        """Paid anti-imprint: move traces away from a cue that caused an error.
+
+        Punishment is an externally supplied aversive cue (a hypothesis, like
+        reward). Trace repulsion is funded turnover; weakened cord material is
+        recycled to compartment reserve, so carbon and energy budgets balance.
+        """
+        original=self.organism;env=original.environment;before=deepcopy(original.__dict__)
+        try:return self._punish(cue,penalty=penalty,feed=feed)
+        except Exception:
+            saved_env=before.pop('environment')
+            env.__dict__.clear();env.__dict__.update(saved_env.__dict__)
+            original.__dict__.clear();original.__dict__.update(before);original.environment=env
+            raise
+
+    def _punish(self,cue,*,penalty=.5,feed=.02):
+        o=self.organism;c=self.config;x=self._cue(cue)
+        if o.memory_frozen:raise RuntimeError('memory is frozen')
+        if not math.isfinite(penalty) or not 0<=penalty<=1 or not math.isfinite(feed) or feed<0:raise ValueError('invalid penalty or feed')
+        result={'changed_nodes':0,'synthesis_carbon':0.,'synthesis_energy':0.,'recycled_carbon':0.}
+        living=[n for n in o.nodes.values() if n.alive]
+        if penalty==0 or not living:return result
+        for n in living:o.environment.nutrient[o.environment.cell(n.x,n.y)]+=feed
+        o.carbon_added+=feed*len(living)
+        rate=c.learning_rate*penalty
+        for i,n in o.nodes.items():
+            if not n.alive:continue
+            intake=o.environment.consume(n.x,n.y,feed);n.nutrient+=intake;o.uptake+=intake
+            for trace,material in (('receptor_trace','memory_material'),('receptor_fast_trace','fast_memory_material')):
+                values=getattr(n,trace)
+                if not values:continue
+                old=np.asarray(values);delta=x[i]-old
+                request=c.material_cost*rate*(.05+float(np.abs(delta).mean()))
+                paid=min(request,n.nutrient,n.energy/c.energy_cost)
+                if paid<=0:continue
+                # Repulsion is strongest where the trace already matches the error cue.
+                push=rate*(paid/request)*math.exp(-4*float(np.abs(delta).mean()))
+                new=np.clip(old-push*np.sign(delta+1e-12)*(1-np.abs(delta)),0,1)
+                n.nutrient-=paid;setattr(n,material,getattr(n,material)+paid)
+                spent=paid*c.energy_cost;n.energy-=spent;o.memory_spent+=spent
+                setattr(n,trace,new.tolist())
+                result['changed_nodes']+=int(np.any(new!=old));result['synthesis_carbon']+=paid;result['synthesis_energy']+=spent
+        for e in o.segments.values():
+            if not e.alive:continue
+            contrast=float(np.abs(x[e.a]-x[e.b]).mean())
+            similarity=math.exp(-4*abs(contrast-e.route_trace))
+            # Cords that carried the wrong pattern are pruned: material -> reserve.
+            recycled=e.material*rate*similarity;e.material-=recycled
+            o.nodes[e.a].reserve+=recycled/2;o.nodes[e.b].reserve+=recycled/2
+            e.radius=max(o.config.radius*.7,e.radius-recycled*.5)
+            e.route_trace=min(1.,max(0.,e.route_trace-rate*similarity*(contrast-e.route_trace)))
+            if c.adaptive:e.route_fast_trace=min(1.,max(0.,e.route_fast_trace-rate*similarity*(contrast-e.route_fast_trace)))
+            result['recycled_carbon']+=recycled
+        self.exposures+=1
+        if self.exposures%c.physiology_interval==0:o.step()
+        o._validate()
+        return result
+
     def _adaptive_node(self,n,cue,reward):
         """Fast response plus slower acquisition gated by local cue stability.
 
@@ -304,6 +362,27 @@ class AssociativeMycelium:
             return result
         colony=min(population,key=lambda z:z.distance(cue))
         return colony.expose(cue)
+    def reinforce(self,cue,label,*,reward=1.,penalty=.5):
+        """Trial-and-error teaching: predict first, then reward or punish.
+
+        Correct: the winning colony of the true label is fed (rewarded imprint).
+        Wrong: the nearest colony of the wrongly chosen label is punished
+        (anti-imprint), and the true label is taught. Abstain: teach only.
+        """
+        if self.frozen:raise RuntimeError('memory is frozen')
+        if label not in self.colonies:raise ValueError('unknown teaching label')
+        if not math.isfinite(reward) or not 0<reward<=1 or not math.isfinite(penalty) or not 0<=penalty<=1:raise ValueError('invalid reward or penalty')
+        guess=self.predict(cue)
+        if guess==label and len(self.colonies[label])>=self.config.colonies_per_label:
+            colony=min(self.colonies[label],key=lambda z:z.distance(cue))
+            return {'prediction':guess,'outcome':'reward',**colony.expose(cue,reward=reward)}
+        if guess==label:return {'prediction':guess,'outcome':'reward',**self.learn(cue,label)}
+        outcome='abstain'
+        if guess is not None and penalty>0:
+            outcome='punish'
+            wrong=min(self.colonies[guess],key=lambda z:z.distance(cue))
+            wrong.punish(cue,penalty=penalty)
+        return {'prediction':guess,'outcome':outcome,**self.learn(cue,label)}
     def scores(self,cue):
         self._validate_cues(np.asarray(cue,dtype=float)[None,...])
         # Canonical label order also defines ties in batch recall. JSON mapping
