@@ -45,6 +45,7 @@ class Scenario:
     length: int = 24
     limit: int = 60
     family: str = ''
+    extra_roll: int = 0   # hidden environment shift (e.g. worn tyres): extra cells rolled after a stop
 
     @classmethod
     def from_dict(cls, d):
@@ -85,8 +86,11 @@ def reflex(obs):
     return 'stop' if obs['distance'] == 'near' else 'keep'
 
 
-def simulate(sc, policy, trace=False):
-    """Run one episode. policy(obs) -> (action, rule_id or None)."""
+def simulate(sc, policy, trace=False, brake=0):
+    """Run one episode. policy(obs) -> (action, rule_id or None).
+    `brake` is the car's hidden capability: extra cells rolled after a stop
+    while moving (0 strong, 1 normal, 2 weak). Wet roads and `sc.extra_roll`
+    add to it. Neither is visible in observations."""
     hazards = [Hazard(**vars(h)) for h in sc.hazards]
     lane, pos, moving, t, stops, unnecessary, idle, fired = sc.start_lane, 0, True, 0, 0, 0, 0, []
     steps = []
@@ -108,7 +112,7 @@ def simulate(sc, policy, trace=False):
         advance = 0
         if action == 'stop':
             stops += 1; unnecessary += obs['distance'] in ('none', 'far')
-            advance = 1 if (sc.surface == 'wet' and moving) else 0; moving = False
+            advance = (brake + (sc.surface == 'wet') + sc.extra_roll) if moving else 0; moving = False
         elif action == 'slow':
             advance = t % 2; moving = True
         else:

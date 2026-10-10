@@ -18,7 +18,19 @@ def _veh(rng, lane):
     return Hazard('vehicle', lane, rng.randint(4, 9))
 
 
-def make(family, seed):
+def make(family, seed, shifted=False):
+    """`shifted`: the hidden environment change of v0.2 (worn tyres roll one more
+    cell after stopping; pedestrians linger longer). Observations are unchanged."""
+    sc = _make(family, seed)
+    if shifted:
+        sc.extra_roll = 1
+        for h in sc.hazards:
+            if h.kind == 'pedestrian':
+                h.duration += 3
+    return sc
+
+
+def _make(family, seed):
     rng = random.Random(f'{family}:{seed}')
     if family == 'city_blocks':        # clear, dry, 2-3 lanes, one blocked lane
         lanes = rng.choice([2, 3]); hz, lane = _block(rng, lanes)
@@ -43,6 +55,11 @@ def make(family, seed):
     if family == 'rain_traffic':       # wet + slow vehicles
         lanes = rng.choice([2, 3]); start = rng.randrange(lanes)
         return Scenario(f'{family}-{seed}', lanes, 'clear', 'wet', [_veh(rng, start)], start_lane=start, family=family)
+    if family == 'urban_mixed':        # v0.2: dry city streets with pedestrians and blocks
+        lanes = rng.choice([1, 2]); start = rng.randrange(lanes); hz = [_ped(rng)]
+        if rng.random() < .5:
+            hz.append(Hazard('block', start, rng.randint(12, 18)))
+        return Scenario(f'{family}-{seed}', lanes, 'clear', 'dry', hz, start_lane=start, family=family)
     if family == 'mixed':              # random combination of conditions and hazards
         lanes = rng.choice([1, 2, 3]); vis = rng.choice(['clear', 'fog']); surf = rng.choice(['dry', 'wet'])
         start = rng.randrange(lanes); hz = []
@@ -58,3 +75,7 @@ def make(family, seed):
 
 TRAIN_FAMILIES = {'car1': 'city_blocks', 'car2': 'rain_pedestrians', 'car3': 'fog_traffic', 'car4': 'highway_traffic'}
 HELD_OUT = ['narrow_blocked', 'fog_blocks', 'rain_traffic', 'mixed']
+# v0.2: car -> (family, hidden brake profile). car4 practises pedestrians with strong brakes;
+# car2 meets pedestrians in the rain with weak brakes.
+TRAIN_V2 = {'car1': ('city_blocks', 0), 'car2': ('rain_pedestrians', 2), 'car3': ('fog_traffic', 1), 'car4': ('urban_mixed', 0)}
+SHIFTED_FAMILIES = {'city_blocks', 'rain_pedestrians', 'urban_mixed'}

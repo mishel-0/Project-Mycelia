@@ -39,13 +39,17 @@ class Budget:
 class Car:
     _ids = itertools.count()
 
-    def __init__(self, name, family, budget=300, batch=6, scope_check=False, seed=0):
+    def __init__(self, name, family, budget=300, batch=6, scope_check=False, seed=0, brake=0, shifted=False):
         self.name, self.family, self.batch, self.scope_check, self.seed = name, family, batch, scope_check, seed
+        self.brake, self.shifted = brake, shifted  # hidden capability; whether the car's world has shifted
         self.budget = Budget(budget); self.rules, self.failures, self.contexts = [], [], set()
         self._seed = 0
 
     def next_seed(self):
         self._seed += 1; return 7919 * self.seed + self._seed
+
+    def scenario(self):
+        return make(self.family, self.next_seed(), shifted=self.shifted)
 
     def policy(self, extra=(), scope_check=None):
         check = self.scope_check if scope_check is None else scope_check
@@ -62,9 +66,9 @@ class Car:
         """Evaluate a candidate rule on n fresh variations from the car's own family."""
         if not self.budget.take(n * (2 if base is None else 1)):
             return None
-        scs = [make(self.family, self.next_seed()) for _ in range(n)]
-        with_rule = [simulate(sc, self.policy([rule], False), trace=True) for sc in scs]
-        baseline = [simulate(sc, self.policy([], False)) for sc in scs] if base is None else base
+        scs = [self.scenario() for _ in range(n)]
+        with_rule = [simulate(sc, self.policy([rule], False), trace=True, brake=self.brake) for sc in scs]
+        baseline = [simulate(sc, self.policy([], False), brake=self.brake) for sc in scs] if base is None else base
         seen = {}
         for res in with_rule:
             for obs, _, rid in res['trace']:
@@ -80,7 +84,7 @@ class Car:
 
     def practice(self):
         while self.budget.take(1):
-            sc = make(self.family, self.next_seed()); res = simulate(sc, self.policy(scope_check=False), trace=True)
+            sc = self.scenario(); res = simulate(sc, self.policy(scope_check=False), trace=True, brake=self.brake)
             for obs, _, _ in res['trace']:
                 self.contexts.add(tuple(obs[f] for f in ('visibility', 'surface', 'left_free', 'right_free')))
             if res['outcome'] == 'collision':
