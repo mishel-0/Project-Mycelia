@@ -72,6 +72,15 @@ class BioCar(Car):
             return reflex(obs), None
         return act
 
+    def judge(self, res):
+        """Remove an own rule only if it crashes in more than half of >= 3 uses (exploratory
+        change after the pre-registered run, which removed a rule after a single crash)."""
+        for rid in set(res['fired']):
+            for r in self.rules:
+                if r['id'] == rid:
+                    r['uses'] = r.get('uses', 0) + 1; r['crashes'] = r.get('crashes', 0) + (res['outcome'] == 'collision')
+        self.rules = [r for r in self.rules if not (r.get('uses', 0) >= 3 and r['crashes'] / r['uses'] > .5)]
+
     # -- practice: like Car.practice, plus back-chaining (rat) and abstraction (crow)
     def practice(self):
         generalise = (('ahead',) if 'crow' in self.mech else ()) + GENERALISE
@@ -81,9 +90,7 @@ class BioCar(Car):
                 self.contexts.add(tuple(obs[f] for f in ('visibility', 'surface', 'left_free', 'right_free')))
             if 'rat' in self.mech:
                 self.record(res['trace'], res['outcome'])
-            if res['outcome'] == 'collision':
-                for rid in set(res['fired']):
-                    self.rules = [r for r in self.rules if r['id'] != rid]
+            self.judge(res)
             if res['outcome'] == 'success' and res['idle'] <= 4:
                 continue
             first = next((i for i, (o, a, _) in enumerate(res['trace']) if a == 'stop' and o['distance'] == 'near'), len(res['trace']) - 1)
@@ -94,7 +101,7 @@ class BioCar(Car):
                     continue
                 cond = {f: trigger[f] for f in FEATURES}
                 if any(all(r['cond'].get(f) == cond[f] for f in r['cond']) for r in self.rules + self.failures):
-                    break
+                    continue  # this moment was already tried: move on to an earlier one (fix after the pre-registered run)
                 learned = self._experiment(cond, trigger, generalise)
                 if learned is None:
                     return
@@ -110,8 +117,14 @@ class BioCar(Car):
             ev = self.test(rule, self.batch)
             if ev is None:
                 return None
-            better = ev['success'] > ev['baseline_success'] or (ev['success'] == ev['baseline_success'] and ev['ticks'] <= ev['baseline_ticks'] - 1)
-            if ev['collisions'] == 0 and better and (best is None or (ev['success'], -ev['ticks']) > (best[1]['success'], -best[1]['ticks'])):
+            # Accept a rule that causes no extra crashes and improves something. (The v0.1/v0.2 learner demanded
+            # zero crashes across all variations, which rejects every rule where the reflex already crashes in
+            # situations the rule does not cover; fixed here after the pre-registered v0.3 run.)
+            if not ev['fired'] or ev['collisions'] > ev['baseline_collisions']:
+                continue
+            better = (ev['collisions'] < ev['baseline_collisions'] or ev['success'] > ev['baseline_success']
+                      or (ev['success'] == ev['baseline_success'] and ev['ticks'] <= ev['baseline_ticks'] - 1))
+            if better and (best is None or (-ev['collisions'], ev['success'], -ev['ticks']) > (-best[1]['collisions'], best[1]['success'], -best[1]['ticks'])):
                 best = (rule, ev)
         if best is None:
             self.failures.append({'cond': cond, 'status': 'no_better_action'}); return False
@@ -123,7 +136,8 @@ class BioCar(Car):
             g = self.test(general, self.batch)
             if g is None:
                 break
-            if g['collisions'] == 0 and g['success'] >= ev['success'] and g['ticks'] <= ev['ticks'] + 1 and g['fired']:
+            if g['collisions'] <= g['baseline_collisions'] and g['collisions'] - g['baseline_collisions'] <= ev['collisions'] - ev['baseline_collisions'] \
+                    and g['success'] - g['baseline_success'] >= ev['success'] - ev['baseline_success'] and g['fired']:
                 scope = dict(rule['scope']); scope[f] = sorted(g['seen'].get(f, {rule['cond'][f]}) | {rule['cond'][f]})
                 rule, ev = dict(general, scope=scope), g
         rule.update(status='verified_in_scope', evidence={'tests': ev['n'], 'success': ev['success'], 'collisions': ev['collisions']})
@@ -170,16 +184,18 @@ def run(mech=ALL, seed=0, budget=400, rounds=4, ops=20, k=4, batch=6):
                 collisions += res['outcome'] == 'collision'
                 if 'rat' in mech:
                     c.record(res['trace'], res['outcome'])
+                c.judge(res)
                 for rid in set(res['fired']):
                     sender = origin(rid); r = held[c.name].get(rid) or next((x for x in c.rules if x['id'] == rid), None)
                     if r is None:
                         continue
-                    if 'physarum' in mech:
-                        r['g'] = min(5., r.get('g', 1.) + .5) if res['outcome'] == 'success' else r.get('g', 1.) * (.2 if res['outcome'] == 'collision' else .9)
+                    r['uses'] = r.get('uses', 0) + 1; r['crashes'] = r.get('crashes', 0) + (res['outcome'] == 'collision')
+                    if 'physarum' in mech:  # gradual: strength tracks the net record, not a single outcome
+                        r['g'] = min(5., r.get('g', 1.) + .5) if res['outcome'] == 'success' else max(0., r.get('g', 1.) - (.6 if res['outcome'] == 'collision' else .1))
                         if sender != c.name:
                             link[(sender, c.name)] = link[(sender, c.name)] + .2 if res['outcome'] == 'success' else link[(sender, c.name)] * .5
                     if 'bee' in mech and sender != c.name:
-                        if res['outcome'] == 'collision':
+                        if r['uses'] >= 2 and r['crashes'] / r['uses'] > .5:  # rate-based withdrawal (exploratory)
                             withdraw(rid)
                         elif res['outcome'] == 'success':
                             confirmations.setdefault(rid, set()).add(c.name)
