@@ -94,7 +94,7 @@ class BioCar(Car):
             if res['outcome'] == 'success' and res['idle'] <= 4:
                 continue
             first = next((i for i, (o, a, _) in enumerate(res['trace']) if a == 'stop' and o['distance'] == 'near'), len(res['trace']) - 1)
-            moments = [first] + ([first - k for k in (1, 2, 3) if first - k >= 0] if 'rat' in self.mech else [])
+            moments = [first] + ([first - k for k in (1, 2, 3, 4, 5) if first - k >= 0] if 'rat' in self.mech else [])
             for m in moments:
                 trigger = res['trace'][m][0]
                 if trigger['ahead'] == 'none':
@@ -105,16 +105,23 @@ class BioCar(Car):
                 learned = self._experiment(cond, trigger, generalise)
                 if learned is None:
                     return
-                if learned:
-                    break
+                if learned and res['outcome'] != 'collision':
+                    break  # after a crash keep testing earlier moments: braking sooner may be what helps
 
     def _experiment(self, cond, trigger, generalise):
         best = None
+        # Paired experiment: every candidate action is tried on the same variations against one shared baseline,
+        # so actions are compared fairly (fix after the pre-registered run; before, each action saw fresh variations).
+        if not self.budget.take(self.batch):
+            return None
+        state = self._seed
+        base = [simulate(self.scenario(), self.policy([], False), brake=self.brake) for _ in range(self.batch)]
         for action in ACTIONS:
             if action == reflex(trigger):
                 continue
             rule = {'id': f'{self.name}-r{next(Car._ids)}', 'cond': dict(cond), 'action': action, 'scope': {}, 'origin': self.name, 'g': 1.}
-            ev = self.test(rule, self.batch)
+            after = self._seed; self._seed = state
+            ev = self.test(rule, self.batch, base=base); self._seed = after
             if ev is None:
                 return None
             # Accept a rule that causes no extra crashes and improves something. (The v0.1/v0.2 learner demanded
