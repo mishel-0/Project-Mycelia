@@ -1,0 +1,2256 @@
+{
+ "conditions": {
+  "A": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1289,
+     "idle_ticks": 51550,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 1741,
+     "stuck": 810,
+     "success_rate": 0.33567708333333335,
+     "success_ci": [
+      0.3209119132332095,
+      0.3507706955528495
+     ],
+     "collision_rate": 0.45338541666666665,
+     "collision_ci": [
+      0.4376942886364735,
+      0.4691697160746272
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 342,
+     "idle_ticks": 4275,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 90,
+     "stuck": 48,
+     "success_rate": 0.7125,
+     "success_ci": [
+      0.6704494668496899,
+      0.751176246038217
+     ],
+     "collision_rate": 0.1875,
+     "collision_ci": [
+      0.15511436306373955,
+      0.22484782386580915
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 589,
+     "idle_ticks": 9821,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 267,
+     "stuck": 104,
+     "success_rate": 0.6135416666666667,
+     "success_ci": [
+      0.5823447604254884,
+      0.6438335161001275
+     ],
+     "collision_rate": 0.278125,
+     "collision_ci": [
+      0.25070786681080176,
+      0.30731073043730656
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 448,
+     "idle_ticks": 7421,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 854,
+     "stuck": 138,
+     "success_rate": 0.3111111111111111,
+     "success_ci": [
+      0.28772912750237745,
+      0.3354982035341407
+     ],
+     "collision_rate": 0.5930555555555556,
+     "collision_ci": [
+      0.5674669404820375,
+      0.6181490067279131
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 884,
+     "idle_ticks": 8744,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 466,
+     "stuck": 90,
+     "success_rate": 0.3236111111111111,
+     "success_ci": [
+      0.29994356960587537,
+      0.34821724687675554
+     ],
+     "collision_rate": 0.6138888888888889,
+     "collision_ci": [
+      0.5884715834636908,
+      0.6387001728231144
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 767,
+     "idle_ticks": 38531,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 481,
+     "stuck": 672,
+     "success_rate": 0.25052083333333336,
+     "success_ci": [
+      0.23164991136972732,
+      0.27038805771154534
+     ],
+     "collision_rate": 0.39947916666666666,
+     "collision_ci": [
+      0.3777925513884047,
+      0.42156721485937315
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 885,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 75,
+     "stuck": 0,
+     "success_rate": 0.078125,
+     "success_ci": [
+      0.06278072910982811,
+      0.09683209664361735
+     ],
+     "collision_rate": 0.921875,
+     "collision_ci": [
+      0.9031679033563826,
+      0.9372192708901719
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 487,
+     "idle_ticks": 15772,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 198,
+     "stuck": 275,
+     "success_rate": 0.20625,
+     "success_ci": [
+      0.18185022596347292,
+      0.23299129715374092
+     ],
+     "collision_rate": 0.5072916666666667,
+     "collision_ci": [
+      0.4757002581176986,
+      0.5388249523013777
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "stuck": 431,
+     "idle_ticks": 25957,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 102,
+     "success": 427,
+     "success_rate": 0.44479166666666664,
+     "success_ci": [
+      0.41363825333319737,
+      0.4763851534937966
+     ],
+     "collision_rate": 0.10625,
+     "collision_ci": [
+      0.08830172803509424,
+      0.1273369093347882
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      10,
+      9,
+      12,
+      14
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 0
+    },
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      12,
+      14,
+      14
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 0
+    },
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      11,
+      14,
+      15
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 0
+    }
+   ],
+   "totals": {
+    "messages": 0,
+    "bytes": 0,
+    "adopted": 0,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 0,
+    "false_rule_acceptance": 0
+   },
+   "operational_collisions_by_round": [
+    36,
+    32,
+    40,
+    43
+   ]
+  },
+  "B": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1376,
+     "idle_ticks": 9574,
+     "unsafe_transfer": 2203,
+     "liar_rule_fired": 2546,
+     "collision": 2464,
+     "stuck": 0,
+     "success_rate": 0.35833333333333334,
+     "success_ci": [
+      0.34331549017599955,
+      0.3736343341974015
+     ],
+     "collision_rate": 0.6416666666666667,
+     "collision_ci": [
+      0.6263656658025986,
+      0.6566845098240005
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 272,
+     "idle_ticks": 1786,
+     "unsafe_transfer": 208,
+     "liar_rule_fired": 225,
+     "collision": 208,
+     "stuck": 0,
+     "success_rate": 0.5666666666666667,
+     "success_ci": [
+      0.5219800539963834,
+      0.6102946794586462
+     ],
+     "collision_rate": 0.43333333333333335,
+     "collision_ci": [
+      0.3897053205413537,
+      0.4780199460036167
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 486,
+     "idle_ticks": 3963,
+     "unsafe_transfer": 336,
+     "liar_rule_fired": 485,
+     "collision": 474,
+     "stuck": 0,
+     "success_rate": 0.50625,
+     "success_ci": [
+      0.4746618560304018,
+      0.5377883243288063
+     ],
+     "collision_rate": 0.49375,
+     "collision_ci": [
+      0.46221167567119364,
+      0.5253381439695982
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 561,
+     "idle_ticks": 0,
+     "unsafe_transfer": 877,
+     "liar_rule_fired": 946,
+     "collision": 879,
+     "stuck": 0,
+     "success_rate": 0.38958333333333334,
+     "success_ci": [
+      0.36472169999582693,
+      0.41503251189684354
+     ],
+     "collision_rate": 0.6104166666666667,
+     "collision_ci": [
+      0.5849674881031565,
+      0.635278300004173
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 791,
+     "idle_ticks": 3812,
+     "unsafe_transfer": 669,
+     "liar_rule_fired": 721,
+     "success": 649,
+     "stuck": 0,
+     "success_rate": 0.45069444444444445,
+     "success_ci": [
+      0.4251605763126706,
+      0.4764906755387734
+     ],
+     "collision_rate": 0.5493055555555556,
+     "collision_ci": [
+      0.5235093244612267,
+      0.5748394236873294
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 1465,
+     "idle_ticks": 3976,
+     "unsafe_transfer": 1326,
+     "liar_rule_fired": 1600,
+     "success": 455,
+     "stuck": 0,
+     "success_rate": 0.23697916666666666,
+     "success_ci": [
+      0.21849565121305986,
+      0.2565130635803486
+     ],
+     "collision_rate": 0.7630208333333334,
+     "collision_ci": [
+      0.7434869364196514,
+      0.7815043487869401
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 788,
+     "idle_ticks": 0,
+     "unsafe_transfer": 666,
+     "liar_rule_fired": 686,
+     "success": 172,
+     "stuck": 0,
+     "success_rate": 0.17916666666666667,
+     "success_ci": [
+      0.15620125815653824,
+      0.2046894834041067
+     ],
+     "collision_rate": 0.8208333333333333,
+     "collision_ci": [
+      0.7953105165958932,
+      0.8437987418434617
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 661,
+     "idle_ticks": 1851,
+     "unsafe_transfer": 660,
+     "liar_rule_fired": 687,
+     "success": 299,
+     "stuck": 0,
+     "success_rate": 0.31145833333333334,
+     "success_ci": [
+      0.2829646336739975,
+      0.341454925489888
+     ],
+     "collision_rate": 0.6885416666666667,
+     "collision_ci": [
+      0.658545074510112,
+      0.7170353663260025
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "collision": 541,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 541,
+     "liar_rule_fired": 688,
+     "success": 419,
+     "stuck": 0,
+     "success_rate": 0.43645833333333334,
+     "success_ci": [
+      0.40540080173444903,
+      0.4680223646136008
+     ],
+     "collision_rate": 0.5635416666666667,
+     "collision_ci": [
+      0.5319776353863993,
+      0.5945991982655511
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8883,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      36,
+      36,
+      31,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8979,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      37,
+      28,
+      35,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 3,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 28,
+     "bytes": 10116,
+     "adopted": 28,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      31,
+      25,
+      35,
+      35
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 28,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 28
+    }
+   ],
+   "totals": {
+    "messages": 78,
+    "bytes": 27978,
+    "adopted": 78,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 48,
+    "false_rule_acceptance": 11
+   },
+   "operational_collisions_by_round": [
+    104,
+    89,
+    101,
+    109
+   ]
+  },
+  "B_scope": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1302,
+     "idle_ticks": 9371,
+     "unsafe_transfer": 2415,
+     "liar_rule_fired": 2757,
+     "collision": 2538,
+     "stuck": 0,
+     "success_rate": 0.3390625,
+     "success_ci": [
+      0.32425717323256403,
+      0.35418950225045404
+     ],
+     "collision_rate": 0.6609375,
+     "collision_ci": [
+      0.645810497749546,
+      0.6757428267674359
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 272,
+     "idle_ticks": 1786,
+     "unsafe_transfer": 208,
+     "liar_rule_fired": 225,
+     "collision": 208,
+     "stuck": 0,
+     "success_rate": 0.5666666666666667,
+     "success_ci": [
+      0.5219800539963834,
+      0.6102946794586462
+     ],
+     "collision_rate": 0.43333333333333335,
+     "collision_ci": [
+      0.3897053205413537,
+      0.4780199460036167
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 430,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 530,
+     "liar_rule_fired": 678,
+     "collision": 530,
+     "stuck": 0,
+     "success_rate": 0.4479166666666667,
+     "success_ci": [
+      0.41672959367061596,
+      0.4795189033359823
+     ],
+     "collision_rate": 0.5520833333333334,
+     "collision_ci": [
+      0.5204810966640178,
+      0.5832704063293842
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 561,
+     "idle_ticks": 0,
+     "unsafe_transfer": 879,
+     "liar_rule_fired": 948,
+     "collision": 879,
+     "stuck": 0,
+     "success_rate": 0.38958333333333334,
+     "success_ci": [
+      0.36472169999582693,
+      0.41503251189684354
+     ],
+     "collision_rate": 0.6104166666666667,
+     "collision_ci": [
+      0.5849674881031565,
+      0.635278300004173
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 791,
+     "idle_ticks": 3812,
+     "unsafe_transfer": 671,
+     "liar_rule_fired": 723,
+     "success": 649,
+     "stuck": 0,
+     "success_rate": 0.45069444444444445,
+     "success_ci": [
+      0.4251605763126706,
+      0.4764906755387734
+     ],
+     "collision_rate": 0.5493055555555556,
+     "collision_ci": [
+      0.5235093244612267,
+      0.5748394236873294
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 1539,
+     "idle_ticks": 3773,
+     "unsafe_transfer": 1536,
+     "liar_rule_fired": 1809,
+     "success": 381,
+     "stuck": 0,
+     "success_rate": 0.1984375,
+     "success_ci": [
+      0.1812079892437051,
+      0.2168713094996286
+     ],
+     "collision_rate": 0.8015625,
+     "collision_ci": [
+      0.7831286905003713,
+      0.8187920107562948
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 794,
+     "idle_ticks": 0,
+     "unsafe_transfer": 672,
+     "liar_rule_fired": 692,
+     "success": 166,
+     "stuck": 0,
+     "success_rate": 0.17291666666666666,
+     "success_ci": [
+      0.15030999339635093,
+      0.19813056780508576
+     ],
+     "collision_rate": 0.8270833333333333,
+     "collision_ci": [
+      0.8018694321949142,
+      0.849690006603649
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 667,
+     "idle_ticks": 1851,
+     "unsafe_transfer": 666,
+     "liar_rule_fired": 693,
+     "success": 293,
+     "stuck": 0,
+     "success_rate": 0.30520833333333336,
+     "success_ci": [
+      0.27690260123843186,
+      0.3350667775662454
+     ],
+     "collision_rate": 0.6947916666666667,
+     "collision_ci": [
+      0.6649332224337546,
+      0.7230973987615682
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "collision": 547,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 547,
+     "liar_rule_fired": 694,
+     "success": 413,
+     "stuck": 0,
+     "success_rate": 0.43020833333333336,
+     "success_ci": [
+      0.3992285825990342,
+      0.46174440338980743
+     ],
+     "collision_rate": 0.5697916666666667,
+     "collision_ci": [
+      0.5382555966101926,
+      0.6007714174009658
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8883,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      36,
+      36,
+      31,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8979,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      37,
+      28,
+      35,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 3,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 28,
+     "bytes": 10116,
+     "adopted": 28,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      31,
+      25,
+      35,
+      35
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 28,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 28
+    }
+   ],
+   "totals": {
+    "messages": 78,
+    "bytes": 27978,
+    "adopted": 78,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 48,
+    "false_rule_acceptance": 11
+   },
+   "operational_collisions_by_round": [
+    104,
+    89,
+    101,
+    109
+   ]
+  },
+  "M1": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1287,
+     "idle_ticks": 52988,
+     "unsafe_transfer": 195,
+     "liar_rule_fired": 431,
+     "collision": 1701,
+     "stuck": 852,
+     "success_rate": 0.33515625,
+     "success_ci": [
+      0.32039733394451214,
+      0.3502446491958608
+     ],
+     "collision_rate": 0.44296875,
+     "collision_ci": [
+      0.427322315173555,
+      0.4587291766238253
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 356,
+     "idle_ticks": 3679,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 90,
+     "stuck": 34,
+     "success_rate": 0.7416666666666667,
+     "success_ci": [
+      0.700698403458075,
+      0.7787975053164073
+     ],
+     "collision_rate": 0.1875,
+     "collision_ci": [
+      0.15511436306373955,
+      0.22484782386580915
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 500,
+     "idle_ticks": 15593,
+     "unsafe_transfer": 191,
+     "liar_rule_fired": 366,
+     "collision": 224,
+     "stuck": 236,
+     "success_rate": 0.5208333333333334,
+     "success_ci": [
+      0.4892119134865894,
+      0.5522886877107714
+     ],
+     "collision_rate": 0.23333333333333334,
+     "collision_ci": [
+      0.20767342794132881,
+      0.261118876732454
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 461,
+     "idle_ticks": 3978,
+     "unsafe_transfer": 141,
+     "liar_rule_fired": 145,
+     "collision": 905,
+     "stuck": 74,
+     "success_rate": 0.32013888888888886,
+     "success_ci": [
+      0.29654867572510246,
+      0.34468617257805256
+     ],
+     "collision_rate": 0.6284722222222222,
+     "collision_ci": [
+      0.6032035349131881,
+      0.6530572877274152
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 942,
+     "idle_ticks": 5381,
+     "unsafe_transfer": 148,
+     "liar_rule_fired": 145,
+     "success": 458,
+     "stuck": 40,
+     "success_rate": 0.31805555555555554,
+     "success_ci": [
+      0.29451247111299395,
+      0.34256679628247566
+     ],
+     "collision_rate": 0.6541666666666667,
+     "collision_ci": [
+      0.6292192002541167,
+      0.6782937869146074
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 778,
+     "idle_ticks": 43928,
+     "unsafe_transfer": 47,
+     "liar_rule_fired": 286,
+     "success": 473,
+     "collision": 669,
+     "success_rate": 0.24635416666666668,
+     "success_ci": [
+      0.22759970764329052,
+      0.266121567810947
+     ],
+     "collision_rate": 0.3484375,
+     "collision_ci": [
+      0.3274465978152892,
+      0.3700336715013086
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 885,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 75,
+     "stuck": 0,
+     "success_rate": 0.078125,
+     "success_ci": [
+      0.06278072910982811,
+      0.09683209664361735
+     ],
+     "collision_rate": 0.921875,
+     "collision_ci": [
+      0.9031679033563826,
+      0.9372192708901719
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 486,
+     "idle_ticks": 15772,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 199,
+     "stuck": 275,
+     "success_rate": 0.20729166666666668,
+     "success_ci": [
+      0.18284036588794805,
+      0.23407618728913387
+     ],
+     "collision_rate": 0.50625,
+     "collision_ci": [
+      0.4746618560304018,
+      0.5377883243288063
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 513,
+     "idle_ticks": 21623,
+     "unsafe_transfer": 4,
+     "liar_rule_fired": 65,
+     "stuck": 341,
+     "collision": 106,
+     "success_rate": 0.534375,
+     "success_ci": [
+      0.5027466944425316,
+      0.5657292975331136
+     ],
+     "collision_rate": 0.11041666666666666,
+     "collision_ci": [
+      0.09212264203547733,
+      0.1318161155738772
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 32,
+     "bytes": 11376,
+     "adopted": 5,
+     "rejected_by_verification": 4,
+     "rejected_by_trust": 0,
+     "verifications": 25,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      10,
+      12,
+      15,
+      14
+     ],
+     "liar_rules_held_end": 3,
+     "irrelevant_here": 16,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 5,
+     "trust": {
+      "car1": {
+       "car5": 0.667
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {},
+      "car4": {
+       "car1": 0.75,
+       "car5": 0.25
+      }
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 40,
+     "bytes": 14278,
+     "adopted": 7,
+     "rejected_by_verification": 4,
+     "rejected_by_trust": 0,
+     "verifications": 28,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      12,
+      16,
+      13
+     ],
+     "liar_rules_held_end": 4,
+     "irrelevant_here": 17,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 7,
+     "trust": {
+      "car1": {
+       "car4": 0.667,
+       "car5": 0.667
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.4,
+       "car1": 0.75
+      }
+     },
+     "coordination_records": 28
+    },
+    {
+     "messages": 48,
+     "bytes": 17161,
+     "adopted": 8,
+     "rejected_by_verification": 6,
+     "rejected_by_trust": 0,
+     "verifications": 34,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      15,
+      8,
+      15,
+      15
+     ],
+     "liar_rules_held_end": 3,
+     "irrelevant_here": 20,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 8,
+     "trust": {
+      "car1": {
+       "car3": 0.667,
+       "car5": 0.6,
+       "car4": 0.75
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {
+       "car1": 0.667,
+       "car5": 0.25
+      },
+      "car4": {
+       "car5": 0.4,
+       "car1": 0.667
+      }
+     },
+     "coordination_records": 34
+    }
+   ],
+   "totals": {
+    "messages": 120,
+    "bytes": 42815,
+    "adopted": 20,
+    "verifications": 87,
+    "rejected_by_verification": 14,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 53,
+    "liar_rules_held_end": 10,
+    "false_rule_acceptance": 1
+   },
+   "operational_collisions_by_round": [
+    38,
+    32,
+    46,
+    42
+   ]
+  },
+  "M2": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1302,
+     "idle_ticks": 9371,
+     "unsafe_transfer": 2415,
+     "liar_rule_fired": 2757,
+     "collision": 2538,
+     "stuck": 0,
+     "success_rate": 0.3390625,
+     "success_ci": [
+      0.32425717323256403,
+      0.35418950225045404
+     ],
+     "collision_rate": 0.6609375,
+     "collision_ci": [
+      0.645810497749546,
+      0.6757428267674359
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 272,
+     "idle_ticks": 1786,
+     "unsafe_transfer": 208,
+     "liar_rule_fired": 225,
+     "collision": 208,
+     "stuck": 0,
+     "success_rate": 0.5666666666666667,
+     "success_ci": [
+      0.5219800539963834,
+      0.6102946794586462
+     ],
+     "collision_rate": 0.43333333333333335,
+     "collision_ci": [
+      0.3897053205413537,
+      0.4780199460036167
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 430,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 530,
+     "liar_rule_fired": 678,
+     "collision": 530,
+     "stuck": 0,
+     "success_rate": 0.4479166666666667,
+     "success_ci": [
+      0.41672959367061596,
+      0.4795189033359823
+     ],
+     "collision_rate": 0.5520833333333334,
+     "collision_ci": [
+      0.5204810966640178,
+      0.5832704063293842
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 561,
+     "idle_ticks": 0,
+     "unsafe_transfer": 879,
+     "liar_rule_fired": 948,
+     "collision": 879,
+     "stuck": 0,
+     "success_rate": 0.38958333333333334,
+     "success_ci": [
+      0.36472169999582693,
+      0.41503251189684354
+     ],
+     "collision_rate": 0.6104166666666667,
+     "collision_ci": [
+      0.5849674881031565,
+      0.635278300004173
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 791,
+     "idle_ticks": 3812,
+     "unsafe_transfer": 671,
+     "liar_rule_fired": 723,
+     "success": 649,
+     "stuck": 0,
+     "success_rate": 0.45069444444444445,
+     "success_ci": [
+      0.4251605763126706,
+      0.4764906755387734
+     ],
+     "collision_rate": 0.5493055555555556,
+     "collision_ci": [
+      0.5235093244612267,
+      0.5748394236873294
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 1539,
+     "idle_ticks": 3773,
+     "unsafe_transfer": 1536,
+     "liar_rule_fired": 1809,
+     "success": 381,
+     "stuck": 0,
+     "success_rate": 0.1984375,
+     "success_ci": [
+      0.1812079892437051,
+      0.2168713094996286
+     ],
+     "collision_rate": 0.8015625,
+     "collision_ci": [
+      0.7831286905003713,
+      0.8187920107562948
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 794,
+     "idle_ticks": 0,
+     "unsafe_transfer": 672,
+     "liar_rule_fired": 692,
+     "success": 166,
+     "stuck": 0,
+     "success_rate": 0.17291666666666666,
+     "success_ci": [
+      0.15030999339635093,
+      0.19813056780508576
+     ],
+     "collision_rate": 0.8270833333333333,
+     "collision_ci": [
+      0.8018694321949142,
+      0.849690006603649
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 667,
+     "idle_ticks": 1851,
+     "unsafe_transfer": 666,
+     "liar_rule_fired": 693,
+     "success": 293,
+     "stuck": 0,
+     "success_rate": 0.30520833333333336,
+     "success_ci": [
+      0.27690260123843186,
+      0.3350667775662454
+     ],
+     "collision_rate": 0.6947916666666667,
+     "collision_ci": [
+      0.6649332224337546,
+      0.7230973987615682
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "collision": 547,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 547,
+     "liar_rule_fired": 694,
+     "success": 413,
+     "stuck": 0,
+     "success_rate": 0.43020833333333336,
+     "success_ci": [
+      0.3992285825990342,
+      0.46174440338980743
+     ],
+     "collision_rate": 0.5697916666666667,
+     "collision_ci": [
+      0.5382555966101926,
+      0.6007714174009658
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8883,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      36,
+      36,
+      31,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {
+       "car5": 0.038
+      },
+      "car2": {
+       "car5": 0.182
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.117,
+       "car1": 0.8
+      }
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8979,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      37,
+      28,
+      35,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 3,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {
+       "car5": 0.1
+      },
+      "car2": {
+       "car5": 0.11
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.069,
+       "car1": 0.8
+      }
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 28,
+     "bytes": 10116,
+     "adopted": 28,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      31,
+      25,
+      35,
+      35
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 28,
+     "trust": {
+      "car1": {
+       "car5": 0.1,
+       "car4": 0.909
+      },
+      "car2": {
+       "car5": 0.121
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.123,
+       "car1": 0.75
+      }
+     },
+     "coordination_records": 28
+    }
+   ],
+   "totals": {
+    "messages": 78,
+    "bytes": 27978,
+    "adopted": 78,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 48,
+    "false_rule_acceptance": 11
+   },
+   "operational_collisions_by_round": [
+    104,
+    89,
+    101,
+    109
+   ]
+  },
+  "M3": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1797,
+     "idle_ticks": 47975,
+     "unsafe_transfer": 307,
+     "liar_rule_fired": 775,
+     "collision": 1315,
+     "stuck": 728,
+     "success_rate": 0.46796875,
+     "success_ci": [
+      0.4522267100740074,
+      0.48377481271630207
+     ],
+     "collision_rate": 0.3424479166666667,
+     "collision_ci": [
+      0.32760328607407097,
+      0.3576074561059064
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 363,
+     "idle_ticks": 3369,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 90,
+     "stuck": 27,
+     "success_rate": 0.75625,
+     "success_ci": [
+      0.7159052673361654,
+      0.7925257393816045
+     ],
+     "collision_rate": 0.1875,
+     "collision_ci": [
+      0.15511436306373955,
+      0.22484782386580915
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 586,
+     "idle_ticks": 17724,
+     "unsafe_transfer": 11,
+     "liar_rule_fired": 197,
+     "collision": 113,
+     "stuck": 261,
+     "success_rate": 0.6104166666666667,
+     "success_ci": [
+      0.5791870652088241,
+      0.6407661211371879
+     ],
+     "collision_rate": 0.11770833333333333,
+     "collision_ci": [
+      0.09883013681792378,
+      0.13963383121050704
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 802,
+     "idle_ticks": 3166,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 584,
+     "stuck": 54,
+     "success_rate": 0.5569444444444445,
+     "success_ci": [
+      0.5311698810288152,
+      0.5824159971145875
+     ],
+     "collision_rate": 0.40555555555555556,
+     "collision_ci": [
+      0.38047943764608466,
+      0.4311342278721743
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 614,
+     "idle_ticks": 5395,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 799,
+     "stuck": 27,
+     "success_rate": 0.5548611111111111,
+     "success_ci": [
+      0.5290800324807821,
+      0.5803502647549352
+     ],
+     "collision_rate": 0.4263888888888889,
+     "collision_ci": [
+      0.4010745966374166,
+      0.452094877957697
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 674,
+     "idle_ticks": 39211,
+     "unsafe_transfer": 307,
+     "liar_rule_fired": 775,
+     "success": 635,
+     "collision": 611,
+     "success_rate": 0.3307291666666667,
+     "success_ci": [
+      0.31004115544340693,
+      0.35209316595829154
+     ],
+     "collision_rate": 0.3182291666666667,
+     "collision_ci": [
+      0.2977750948464119,
+      0.3394091456741813
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 242,
+     "idle_ticks": 0,
+     "unsafe_transfer": 152,
+     "liar_rule_fired": 189,
+     "collision": 718,
+     "stuck": 0,
+     "success_rate": 0.2520833333333333,
+     "success_ci": [
+      0.22564141611181882,
+      0.28050142963958863
+     ],
+     "collision_rate": 0.7479166666666667,
+     "collision_ci": [
+      0.7194985703604113,
+      0.7743585838881812
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 383,
+     "idle_ticks": 12527,
+     "unsafe_transfer": 133,
+     "liar_rule_fired": 192,
+     "collision": 371,
+     "stuck": 206,
+     "success_rate": 0.39895833333333336,
+     "success_ci": [
+      0.3684439816672135,
+      0.43027810252558707
+     ],
+     "collision_rate": 0.38645833333333335,
+     "collision_ci": [
+      0.35616648389987254,
+      0.4176552395745116
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 586,
+     "idle_ticks": 17724,
+     "unsafe_transfer": 11,
+     "liar_rule_fired": 197,
+     "collision": 113,
+     "stuck": 261,
+     "success_rate": 0.6104166666666667,
+     "success_ci": [
+      0.5791870652088241,
+      0.6407661211371879
+     ],
+     "collision_rate": 0.11770833333333333,
+     "collision_ci": [
+      0.09883013681792378,
+      0.13963383121050704
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8883,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 2,
+     "operational_collisions_by_round": [
+      10,
+      9,
+      12,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 17,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8979,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 2,
+     "operational_collisions_by_round": [
+      14,
+      12,
+      14,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 17,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8976,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 3,
+     "operational_collisions_by_round": [
+      15,
+      11,
+      14,
+      15
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 14,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    }
+   ],
+   "totals": {
+    "messages": 75,
+    "bytes": 26838,
+    "adopted": 75,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 7,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 24,
+    "false_rule_acceptance": 2
+   },
+   "operational_collisions_by_round": [
+    39,
+    32,
+    40,
+    43
+   ]
+  },
+  "M4": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1302,
+     "idle_ticks": 9371,
+     "unsafe_transfer": 2415,
+     "liar_rule_fired": 2757,
+     "collision": 2538,
+     "stuck": 0,
+     "success_rate": 0.3390625,
+     "success_ci": [
+      0.32425717323256403,
+      0.35418950225045404
+     ],
+     "collision_rate": 0.6609375,
+     "collision_ci": [
+      0.645810497749546,
+      0.6757428267674359
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 272,
+     "idle_ticks": 1786,
+     "unsafe_transfer": 208,
+     "liar_rule_fired": 225,
+     "collision": 208,
+     "stuck": 0,
+     "success_rate": 0.5666666666666667,
+     "success_ci": [
+      0.5219800539963834,
+      0.6102946794586462
+     ],
+     "collision_rate": 0.43333333333333335,
+     "collision_ci": [
+      0.3897053205413537,
+      0.4780199460036167
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 430,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 530,
+     "liar_rule_fired": 678,
+     "collision": 530,
+     "stuck": 0,
+     "success_rate": 0.4479166666666667,
+     "success_ci": [
+      0.41672959367061596,
+      0.4795189033359823
+     ],
+     "collision_rate": 0.5520833333333334,
+     "collision_ci": [
+      0.5204810966640178,
+      0.5832704063293842
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 561,
+     "idle_ticks": 0,
+     "unsafe_transfer": 879,
+     "liar_rule_fired": 948,
+     "collision": 879,
+     "stuck": 0,
+     "success_rate": 0.38958333333333334,
+     "success_ci": [
+      0.36472169999582693,
+      0.41503251189684354
+     ],
+     "collision_rate": 0.6104166666666667,
+     "collision_ci": [
+      0.5849674881031565,
+      0.635278300004173
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 791,
+     "idle_ticks": 3812,
+     "unsafe_transfer": 671,
+     "liar_rule_fired": 723,
+     "success": 649,
+     "stuck": 0,
+     "success_rate": 0.45069444444444445,
+     "success_ci": [
+      0.4251605763126706,
+      0.4764906755387734
+     ],
+     "collision_rate": 0.5493055555555556,
+     "collision_ci": [
+      0.5235093244612267,
+      0.5748394236873294
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 1539,
+     "idle_ticks": 3773,
+     "unsafe_transfer": 1536,
+     "liar_rule_fired": 1809,
+     "success": 381,
+     "stuck": 0,
+     "success_rate": 0.1984375,
+     "success_ci": [
+      0.1812079892437051,
+      0.2168713094996286
+     ],
+     "collision_rate": 0.8015625,
+     "collision_ci": [
+      0.7831286905003713,
+      0.8187920107562948
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 794,
+     "idle_ticks": 0,
+     "unsafe_transfer": 672,
+     "liar_rule_fired": 692,
+     "success": 166,
+     "stuck": 0,
+     "success_rate": 0.17291666666666666,
+     "success_ci": [
+      0.15030999339635093,
+      0.19813056780508576
+     ],
+     "collision_rate": 0.8270833333333333,
+     "collision_ci": [
+      0.8018694321949142,
+      0.849690006603649
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 667,
+     "idle_ticks": 1851,
+     "unsafe_transfer": 666,
+     "liar_rule_fired": 693,
+     "success": 293,
+     "stuck": 0,
+     "success_rate": 0.30520833333333336,
+     "success_ci": [
+      0.27690260123843186,
+      0.3350667775662454
+     ],
+     "collision_rate": 0.6947916666666667,
+     "collision_ci": [
+      0.6649332224337546,
+      0.7230973987615682
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "collision": 547,
+     "idle_ticks": 3760,
+     "unsafe_transfer": 547,
+     "liar_rule_fired": 694,
+     "success": 413,
+     "stuck": 0,
+     "success_rate": 0.43020833333333336,
+     "success_ci": [
+      0.3992285825990342,
+      0.46174440338980743
+     ],
+     "collision_rate": 0.5697916666666667,
+     "collision_ci": [
+      0.5382555966101926,
+      0.6007714174009658
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8886,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      36,
+      36,
+      31,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 25,
+     "bytes": 8988,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      37,
+      28,
+      35,
+      37
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 3,
+     "foreign_rules_held_end": 25,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 28,
+     "bytes": 10128,
+     "adopted": 28,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      31,
+      25,
+      35,
+      35
+     ],
+     "liar_rules_held_end": 16,
+     "false_rule_acceptance": 4,
+     "foreign_rules_held_end": 28,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     },
+     "coordination_records": 28
+    }
+   ],
+   "totals": {
+    "messages": 78,
+    "bytes": 28002,
+    "adopted": 78,
+    "verifications": 0,
+    "rejected_by_verification": 0,
+    "rejected_by_trust": 0,
+    "retractions": 0,
+    "irrelevant_here": 0,
+    "liar_rules_held_end": 48,
+    "false_rule_acceptance": 11
+   },
+   "operational_collisions_by_round": [
+    104,
+    89,
+    101,
+    109
+   ]
+  },
+  "D_full": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1283,
+     "idle_ticks": 52625,
+     "unsafe_transfer": 341,
+     "liar_rule_fired": 651,
+     "collision": 1721,
+     "stuck": 836,
+     "success_rate": 0.3341145833333333,
+     "success_ci": [
+      0.3193682364652473,
+      0.3491924953837536
+     ],
+     "collision_rate": 0.44817708333333334,
+     "collision_ci": [
+      0.4325074312019425,
+      0.463950317052298
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 354,
+     "idle_ticks": 3664,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 92,
+     "stuck": 34,
+     "success_rate": 0.7375,
+     "success_ci": [
+      0.6963639803595082,
+      0.774864757574035
+     ],
+     "collision_rate": 0.19166666666666668,
+     "collision_ci": [
+      0.15895698032223937,
+      0.2292723774482487
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 480,
+     "idle_ticks": 15537,
+     "unsafe_transfer": 255,
+     "liar_rule_fired": 454,
+     "collision": 255,
+     "stuck": 225,
+     "success_rate": 0.5,
+     "success_ci": [
+      0.4684343095143526,
+      0.5315656904856474
+     ],
+     "collision_rate": 0.265625,
+     "collision_ci": [
+      0.2386605264644497,
+      0.29445771006524224
+     ]
+    },
+    "post_shift": {
+     "episodes": 1440,
+     "success": 454,
+     "idle_ticks": 3486,
+     "unsafe_transfer": 272,
+     "liar_rule_fired": 297,
+     "collision": 920,
+     "stuck": 66,
+     "success_rate": 0.31527777777777777,
+     "success_ci": [
+      0.2917983912167001,
+      0.3397401016351889
+     ],
+     "collision_rate": 0.6388888888888888,
+     "collision_ci": [
+      0.6137411649146135,
+      0.6632975622644172
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 948,
+     "idle_ticks": 5420,
+     "unsafe_transfer": 272,
+     "liar_rule_fired": 297,
+     "success": 460,
+     "stuck": 32,
+     "success_rate": 0.3194444444444444,
+     "success_ci": [
+      0.2958698796688296,
+      0.34397977499843035
+     ],
+     "collision_rate": 0.6583333333333333,
+     "collision_ci": [
+      0.6334452871805349,
+      0.68237886180356
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 770,
+     "idle_ticks": 43541,
+     "unsafe_transfer": 69,
+     "liar_rule_fired": 354,
+     "success": 469,
+     "collision": 681,
+     "success_rate": 0.24427083333333333,
+     "success_ci": [
+      0.22557550961446104,
+      0.2639874190262589
+     ],
+     "collision_rate": 0.3546875,
+     "collision_ci": [
+      0.33359747134317885,
+      0.3763578384139715
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 885,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 75,
+     "stuck": 0,
+     "success_rate": 0.078125,
+     "success_ci": [
+      0.06278072910982811,
+      0.09683209664361735
+     ],
+     "collision_rate": 0.921875,
+     "collision_ci": [
+      0.9031679033563826,
+      0.9372192708901719
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 472,
+     "idle_ticks": 15489,
+     "unsafe_transfer": 81,
+     "liar_rule_fired": 89,
+     "success": 219,
+     "stuck": 269,
+     "success_rate": 0.228125,
+     "success_ci": [
+      0.202695006933848,
+      0.2557221474405946
+     ],
+     "collision_rate": 0.49166666666666664,
+     "collision_ci": [
+      0.46013855622739447,
+      0.5232612032936612
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 509,
+     "idle_ticks": 21599,
+     "unsafe_transfer": 5,
+     "liar_rule_fired": 108,
+     "stuck": 342,
+     "collision": 109,
+     "success_rate": 0.5302083333333333,
+     "success_ci": [
+      0.4985796781469324,
+      0.5615961935892405
+     ],
+     "collision_rate": 0.11354166666666667,
+     "collision_ci": [
+      0.09499411746872904,
+      0.1351697303202296
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8886,
+     "adopted": 5,
+     "rejected_by_verification": 4,
+     "rejected_by_trust": 0,
+     "verifications": 25,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      10,
+      12,
+      15,
+      14
+     ],
+     "liar_rules_held_end": 3,
+     "irrelevant_here": 16,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 5,
+     "trust": {
+      "car1": {
+       "car5": 0.667
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.25,
+       "car1": 0.933
+      }
+     },
+     "coordination_records": 25
+    },
+    {
+     "messages": 31,
+     "bytes": 11160,
+     "adopted": 10,
+     "rejected_by_verification": 4,
+     "rejected_by_trust": 0,
+     "verifications": 30,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      12,
+      16,
+      13
+     ],
+     "liar_rules_held_end": 5,
+     "irrelevant_here": 17,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 10,
+     "trust": {
+      "car1": {
+       "car5": 0.667,
+       "car4": 0.75
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {},
+      "car4": {
+       "car5": 0.5,
+       "car1": 0.929
+      }
+     },
+     "coordination_records": 31
+    },
+    {
+     "messages": 34,
+     "bytes": 12153,
+     "adopted": 12,
+     "rejected_by_verification": 9,
+     "rejected_by_trust": 0,
+     "verifications": 34,
+     "retractions": 4,
+     "operational_collisions_by_round": [
+      14,
+      9,
+      16,
+      15
+     ],
+     "liar_rules_held_end": 5,
+     "irrelevant_here": 13,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 8,
+     "trust": {
+      "car1": {
+       "car5": 0.667,
+       "car3": 0.75,
+       "car4": 0.667
+      },
+      "car2": {
+       "car5": 0.333
+      },
+      "car3": {
+       "car5": 0.333,
+       "car4": 0.333,
+       "car1": 0.6
+      },
+      "car4": {
+       "car5": 0.4,
+       "car3": 0.667,
+       "car1": 0.938
+      }
+     },
+     "coordination_records": 34
+    }
+   ],
+   "totals": {
+    "messages": 90,
+    "bytes": 32199,
+    "adopted": 27,
+    "verifications": 89,
+    "rejected_by_verification": 17,
+    "rejected_by_trust": 0,
+    "retractions": 4,
+    "irrelevant_here": 46,
+    "liar_rules_held_end": 13,
+    "false_rule_acceptance": 1
+   },
+   "operational_collisions_by_round": [
+    37,
+    33,
+    47,
+    42
+   ]
+  }
+ },
+ "primary_criterion": {
+  "D_full_better_collisions": true,
+  "D_full_better_success": false,
+  "D_full_worse_collisions": false,
+  "D_full_worse_success": false,
+  "adaptive_helps": true
+ },
+ "seconds": 13.20979046299999
+}

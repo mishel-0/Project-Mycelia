@@ -379,3 +379,7 @@ Multi-source, multi-domain learning with claim lifecycles, copy/lineage tracking
 ## Mycelia Autonomous Sandbox v0.1 (new)
 
 Symbolic driving cars learn and share rules with verified scope. Shared repository: 71% success but 368 crashes; applying rules only inside their verified scope: 67% success, 12 crashes. An ablation shows this safety comes from scope checking, not from adaptive symbiosis. See [AUTONOMY.md](AUTONOMY.md).
+
+## Mycelia Autonomous Sandbox v0.2 (new)
+
+Hidden brake differences, a lying car, a hidden environment shift and message limits. Pre-registered criterion met (adaptive beats scope-only on collisions), but the real finding is narrower: runtime monitoring with retraction alone is best (46.8% success, 1,315 collisions vs 33.9% / 2,538 for scope-only); the full adaptive stack only matches isolated cars. See [AUTONOMY-V2.md](AUTONOMY-V2.md).
