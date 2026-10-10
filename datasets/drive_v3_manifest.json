@@ -1,0 +1,14 @@
+{
+ "drive_v3_eval_1.json": {
+  "sha256": "63dc73dbe5ebc9c98f398eb93639337375e1b97cd856d6c65d7f09df0ce1f587",
+  "scenarios": 320
+ },
+ "drive_v3_eval_2.json": {
+  "sha256": "66d8f31ee838d408d2a1d3ea1ec218642921507a628b373216a3d87f343a8bed",
+  "scenarios": 320
+ },
+ "drive_v3_eval_3.json": {
+  "sha256": "dfa053ec612a50dd48b7a66b223ab08c48aace08a9b52d74cc5d6bc4401a3665",
+  "scenarios": 320
+ }
+}
