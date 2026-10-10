@@ -17,3 +17,4 @@ results/*/cache/
 lab_state/benchmark/
 governance/state/
 governance/STOP
+lab_state/talk/*.pkl

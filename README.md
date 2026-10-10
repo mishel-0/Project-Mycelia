@@ -359,3 +359,7 @@ A bounded self-improvement loop: detects a weakness, gathers evidence, tests can
 ## MLCP — internal communication protocol (new)
 
 Specialists exchange one 4-bit learned token each in a checksummed frame: same diagnosis accuracy as raw vectors with 2.9x fewer bytes (16x fewer than JSON), far more robust to bit corruption, and every English explanation parses back to its exact message. See [MLCP.md](MLCP.md).
+
+## Talk to Mycelia (new)
+
+`python -m mycelia.talk` for a command chat over real Mycelia data, or `--claude` for plain English through Claude, which can only answer by calling Mycelia's commands. See [TALK.md](TALK.md).
