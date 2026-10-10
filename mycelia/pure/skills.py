@@ -102,9 +102,11 @@ class Experimenter:
 
 
 def learn_skills(pages, bus=None, verify=True):
-    """pages: [(html, url)] -> skills, with the bus log as shared record."""
-    from .extract import extract
-    bus = bus or Bus(); entries = [e for h, u in pages for e in extract(h, u)]
+    """pages: [(text, url[, "rst"])] -> skills, with the bus log as shared record."""
+    from .extract import extract, extract_rst
+    bus = bus or Bus()
+    entries = [e for page in pages for e in (extract_rst(page[0], page[1]) if len(page) > 2 and page[2] == 'rst'
+                                             else extract(page[0], page[1]))]
     skills = Discoverer().run(entries, bus)
     if verify:
         consts = doc_constants(entries); skills = [Experimenter(consts).run(s, bus) for s in skills]

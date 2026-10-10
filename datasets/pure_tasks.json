@@ -1478,72 +1478,75 @@
   "goal": "remove duplicate words",
   "examples": [
    [
-    "hypha,alice",
+    "spore,alice,alice,spore",
     [
-     "hypha",
+     "spore",
      "alice"
     ]
    ],
    [
-    "spore,alice,apple,mycelia",
+    "alice,alice,bob,alice,bob",
     [
-     "spore",
-     "alice",
-     "apple",
-     "mycelia"
-    ]
-   ],
-   [
-    "stone,spore",
-    [
-     "stone",
-     "spore"
-    ]
-   ]
-  ],
-  "hidden": [
-   [
-    "bob,stone,green",
-    [
-     "bob",
-     "stone",
-     "green"
-    ]
-   ],
-   [
-    "river,night",
-    [
-     "river",
-     "night"
-    ]
-   ],
-   [
-    "night,spore",
-    [
-     "night",
-     "spore"
-    ]
-   ],
-   [
-    "bob,mycelia",
-    [
-     "bob",
-     "mycelia"
-    ]
-   ],
-   [
-    "green,alice,bob",
-    [
-     "green",
      "alice",
      "bob"
     ]
    ],
    [
-    "night,green",
+    "bob,bob,spore,alice",
     [
-     "night",
-     "green"
+     "bob",
+     "spore",
+     "alice"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "alice,spore,bob,alice",
+    [
+     "alice",
+     "spore",
+     "bob"
+    ]
+   ],
+   [
+    "alice,alice,mycelia,spore,bob,spore",
+    [
+     "alice",
+     "mycelia",
+     "spore",
+     "bob"
+    ]
+   ],
+   [
+    "mycelia,alice,mycelia,alice,mycelia",
+    [
+     "mycelia",
+     "alice"
+    ]
+   ],
+   [
+    "alice,spore,alice,bob,spore,spore",
+    [
+     "alice",
+     "spore",
+     "bob"
+    ]
+   ],
+   [
+    "spore,mycelia,alice,mycelia,alice,spore",
+    [
+     "spore",
+     "mycelia",
+     "alice"
+    ]
+   ],
+   [
+    "mycelia,spore,spore,spore,mycelia,bob",
+    [
+     "mycelia",
+     "spore",
+     "bob"
     ]
    ]
   ],

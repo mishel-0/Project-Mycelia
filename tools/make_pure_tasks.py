@@ -64,7 +64,7 @@ TASKS = [
     ('reverse the order of the characters', sentence, lambda s: s[::-1]),
     ('sort the comma separated words alphabetically', csv, lambda s: sorted(s.split(','))),
     ('keep only the first letter of each word', sentence, lambda s: ''.join(w[0] for w in s.split())),
-    ('remove duplicate words', csv, lambda s: list(dict.fromkeys(s.split(',')))),
+    ('remove duplicate words', lambda: ','.join(rng.choices(WORDS[:4], k=rng.randint(4, 6))), lambda s: list(dict.fromkeys(s.split(',')))),
 ]
 
 tasks = []

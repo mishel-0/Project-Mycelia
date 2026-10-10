@@ -14,7 +14,7 @@ from mycelia.pure.bus import Bus
 from mycelia.pure.sandbox import run
 from mycelia.pure.skills import learn_skills
 from mycelia.pure.solver import Solver
-from mycelia.symbiosis_lab.gateway import Gateway, GatewayError
+from mycelia.reach.channels import Reach, ChannelError
 from receptor_memory_mri import wilson
 
 URL = 'https://docs.python.org/3/library/stdtypes.html'
@@ -46,24 +46,30 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--output', type=Path, default=Path('results/pure-web')); ap.add_argument('--budget', type=int, default=20000)
     a = ap.parse_args(); a.output.mkdir(parents=True, exist_ok=True); start = time.monotonic()
-    gw = Gateway(a.output / 'gateway', allowlist=('docs.python.org',), min_interval=1.)
-    try:
-        page = gw.fetch_html(URL)
-    except GatewayError as e:
-        (a.output / 'preflight.json').write_text(json.dumps({'url': URL, 'ok': False, 'error': str(e)}, indent=2))
-        sys.exit(f'docs.python.org is not reachable from this environment ({e}). '
-                 'Allow the domain in the environment network settings and rerun. Nothing was simulated.')
-    (a.output / 'stdtypes.html.meta.json').write_text(json.dumps({'url': URL, 'bytes': len(page['html']), 'retrieved': page['retrieved']}))
+    sources = [('github://python/cpython/Doc/builtins/stdtypes.rst', 'rst'), (URL, 'html')]
+    reach = Reach(a.output / 'reach', web_allowlist=('docs.python.org',)); page, attempts = None, []
+    for src, fmt in sources:  # Mycelia Reach channels (Agent-Reach style), first that works
+        try:
+            page = reach.read(src); page['format'] = fmt; break
+        except ChannelError as e:
+            attempts.append({'source': src, 'error': str(e)[:300]})
+    if page is None:
+        (a.output / 'preflight.json').write_text(json.dumps({'ok': False, 'attempts': attempts}, indent=2))
+        sys.exit('No documentation source reachable; see preflight.json. Nothing was simulated.')
+    doc_url = page.get('url', page['source'])
+    (a.output / 'source.json').write_text(json.dumps({k: page[k] for k in ('source', 'channel', 'backend', 'sha256', 'retrieved')} |
+                                                     {'url': doc_url, 'commit': page.get('commit'), 'failed_attempts': attempts}, indent=2))
+    print('documentation from', doc_url, flush=True)
     tasks = json.loads(Path('datasets/pure_tasks.json').read_text())
     train, test = [t for t in tasks if t['split'] == 'train'], [t for t in tasks if t['split'] == 'test']
 
     # Discover + experiment + share. Only skills announced as verified on the bus reach the solver.
     bus = Bus(); untrusted = Path('tests/fixtures/untrusted_altered_docs.html').read_text()
-    skills, consts, bus = learn_skills([(page['html'], URL), (untrusted, 'untrusted-injected')], bus)
+    skills, consts, bus = learn_skills([(page['text'], doc_url, page['format']), (untrusted, 'untrusted-injected')], bus)
     shared = {m.content['skill'] for m in bus.log if m.kind == 'verified'}
-    verified = [s for s in skills if s['status'] == 'verified' and s['source'] == URL and s['method'] in shared]
-    observed, _, _ = learn_skills([(page['html'], URL), (untrusted, 'untrusted-injected')], Bus(), verify=False)
-    R = {'source': URL, 'skills_extracted': len([s for s in skills if s['source'] == URL]),
+    verified = [s for s in skills if s['status'] == 'verified' and s['source'] == doc_url and s['method'] in shared]
+    observed, _, _ = learn_skills([(page['text'], doc_url, page['format']), (untrusted, 'untrusted-injected')], Bus(), verify=False)
+    R = {'source': doc_url, 'channel': page['channel'], 'skills_extracted': len([s for s in skills if s['source'] == doc_url]),
          'skills_verified': sorted(s['method'] for s in verified),
          'skills_contested': [{'method': s['method'], 'source': s['source'], 'evidence': s['evidence']['examples_contradicted']}
                               for s in skills if s['status'] == 'contested'],

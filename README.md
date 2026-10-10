@@ -370,4 +370,4 @@ Rule-based agents learn invented-word meanings and compositional rules from demo
 
 ## Pure Mycelia v0.2: skills from online docs (new)
 
-Reads docs.python.org through the allowlisted gateway, verifies each documented skill by experiment in a restricted sandbox, shares verified skills on the bus and composes them to solve held-out tasks, abstaining when it can't. Live run pending network access. See [PURE-WEB.md](PURE-WEB.md).
+Reads docs.python.org through the allowlisted gateway, verifies each documented skill by experiment in a restricted sandbox, shares verified skills on the bus and composes them to solve held-out tasks, abstaining when it can't. Live run (docs from CPython's GitHub via Mycelia Reach, Agent-Reach style): 11/13 held-out tasks solved with documentation + learned priors vs 7/13 blind, 0 wrong answers. See [PURE-WEB.md](PURE-WEB.md).

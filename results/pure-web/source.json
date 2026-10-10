@@ -1,0 +1,10 @@
+{
+  "source": "github://python/cpython/Doc/builtins/stdtypes.rst",
+  "channel": "github",
+  "backend": "git",
+  "sha256": "2c6eba3fa2ffe53ce6979aea201444a4c68a13b5b756a1a4f35733b7501e8bed",
+  "retrieved": 1791611835.2644196,
+  "url": "https://github.com/python/cpython/blob/0ec3aee262b03276a18aeb23cb9957e1b57c9d08/Doc/builtins/stdtypes.rst",
+  "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+  "failed_attempts": []
+}

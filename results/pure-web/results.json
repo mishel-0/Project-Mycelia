@@ -1,0 +1,754 @@
+{
+  "source": "https://github.com/python/cpython/blob/0ec3aee262b03276a18aeb23cb9957e1b57c9d08/Doc/builtins/stdtypes.rst",
+  "channel": "github",
+  "skills_extracted": 46,
+  "skills_verified": [
+    "capitalize",
+    "casefold",
+    "center",
+    "count",
+    "endswith",
+    "find",
+    "isalnum",
+    "isalpha",
+    "isdigit",
+    "islower",
+    "isspace",
+    "istitle",
+    "isupper",
+    "join",
+    "ljust",
+    "lower",
+    "lstrip",
+    "partition",
+    "removeprefix",
+    "removesuffix",
+    "replace",
+    "rfind",
+    "rjust",
+    "rpartition",
+    "rsplit",
+    "rstrip",
+    "split",
+    "splitlines",
+    "startswith",
+    "strip",
+    "swapcase",
+    "title",
+    "upper",
+    "zfill"
+  ],
+  "skills_contested": [
+    {
+      "method": "title",
+      "source": "untrusted-injected",
+      "evidence": [
+        {
+          "source": "'  hello  '.title()",
+          "documented": "'Hello'",
+          "observed": "('ok', '  Hello  ')"
+        }
+      ]
+    }
+  ],
+  "not_allowed": [
+    "encode",
+    "expandtabs",
+    "format",
+    "format_map",
+    "index",
+    "isascii",
+    "isdecimal",
+    "isidentifier",
+    "isnumeric",
+    "isprintable",
+    "rindex",
+    "translate",
+    "unscramble"
+  ],
+  "learned_constants": [
+    "sp",
+    ".",
+    " ",
+    ",",
+    "-",
+    "is",
+    "\n",
+    ""
+  ],
+  "bus": {
+    "messages": 83,
+    "verified": 34
+  },
+  "blind_enumeration": {
+    "solved_correctly": 7,
+    "solvable_tasks": 13,
+    "solved_wilson_95": [
+      0.29143795714506004,
+      0.7679393219046169
+    ],
+    "wrong": 0,
+    "correct_abstentions_on_unsolvable": 2,
+    "unsolvable_tasks": 2,
+    "mean_attempts_when_solved": 359.14285714285717,
+    "rows": [
+      {
+        "id": 1,
+        "goal": "make every letter lowercase",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 10
+      },
+      {
+        "id": 3,
+        "goal": "make each word start with a capital letter and trim the ends",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 5,
+        "goal": "swap the case of every letter",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.swapcase()",
+        "attempts": 441
+      },
+      {
+        "id": 7,
+        "goal": "replace the dashes with underscores",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('-', '_')",
+        "attempts": 338
+      },
+      {
+        "id": 9,
+        "goal": "pad the number with zeros to a width of eight",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.zfill(8)",
+        "attempts": 446
+      },
+      {
+        "id": 11,
+        "goal": "count how many commas the text contains",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.count(',')",
+        "attempts": 221
+      },
+      {
+        "id": 13,
+        "goal": "capitalize the first letter and lowercase the rest after trimming",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 15,
+        "goal": "remove whitespace at the right end only",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.rstrip(' ')",
+        "attempts": 397
+      },
+      {
+        "id": 17,
+        "goal": "join the comma separated words with dashes",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', '-')",
+        "attempts": 316
+      },
+      {
+        "id": 19,
+        "goal": "check whether the path ends with a txt extension",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 21,
+        "goal": "case insensitive form of the text without surrounding spaces",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 23,
+        "goal": "turn the comma list into uppercase words separated by spaces",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 25,
+        "goal": "replace slashes with dots in the path",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('/', '.')",
+        "attempts": 355
+      },
+      {
+        "id": 27,
+        "goal": "sort the comma separated words alphabetically",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 29,
+        "goal": "remove duplicate words",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      }
+    ]
+  },
+  "docs_relevance": {
+    "solved_correctly": 9,
+    "solvable_tasks": 13,
+    "solved_wilson_95": [
+      0.42369343180549035,
+      0.8731929634428948
+    ],
+    "wrong": 0,
+    "correct_abstentions_on_unsolvable": 2,
+    "unsolvable_tasks": 2,
+    "mean_attempts_when_solved": 2022.5555555555557,
+    "rows": [
+      {
+        "id": 1,
+        "goal": "make every letter lowercase",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.lower()",
+        "attempts": 201
+      },
+      {
+        "id": 3,
+        "goal": "make each word start with a capital letter and trim the ends",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 5,
+        "goal": "swap the case of every letter",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.swapcase()",
+        "attempts": 202
+      },
+      {
+        "id": 7,
+        "goal": "replace the dashes with underscores",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('-', '_')",
+        "attempts": 233
+      },
+      {
+        "id": 9,
+        "goal": "pad the number with zeros to a width of eight",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.zfill(8)",
+        "attempts": 270
+      },
+      {
+        "id": 11,
+        "goal": "count how many commas the text contains",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.count(',')",
+        "attempts": 203
+      },
+      {
+        "id": 13,
+        "goal": "capitalize the first letter and lowercase the rest after trimming",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 15,
+        "goal": "remove whitespace at the right end only",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.rstrip(' ')",
+        "attempts": 261
+      },
+      {
+        "id": 17,
+        "goal": "join the comma separated words with dashes",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', '-')",
+        "attempts": 360
+      },
+      {
+        "id": 19,
+        "goal": "check whether the path ends with a txt extension",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 21,
+        "goal": "case insensitive form of the text without surrounding spaces",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 23,
+        "goal": "turn the comma list into uppercase words separated by spaces",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.upper().replace(',', ' ')",
+        "attempts": 16223
+      },
+      {
+        "id": 25,
+        "goal": "replace slashes with dots in the path",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('/', '.')",
+        "attempts": 250
+      },
+      {
+        "id": 27,
+        "goal": "sort the comma separated words alphabetically",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 29,
+        "goal": "remove duplicate words",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      }
+    ]
+  },
+  "train_tasks": {
+    "solved_correctly": 12,
+    "solvable_tasks": 13,
+    "solved_wilson_95": [
+      0.6668604907890041,
+      0.9862895787574435
+    ],
+    "wrong": 0,
+    "correct_abstentions_on_unsolvable": 2,
+    "unsolvable_tasks": 2,
+    "mean_attempts_when_solved": 1906.4166666666667,
+    "rows": [
+      {
+        "id": 0,
+        "goal": "make every letter uppercase",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.upper()",
+        "attempts": 201
+      },
+      {
+        "id": 2,
+        "goal": "remove the whitespace at both ends",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.strip(' ')",
+        "attempts": 251
+      },
+      {
+        "id": 4,
+        "goal": "split the comma separated text into a list",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.split(',')",
+        "attempts": 203
+      },
+      {
+        "id": 6,
+        "goal": "replace the commas with spaces",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', ' ')",
+        "attempts": 225
+      },
+      {
+        "id": 8,
+        "goal": "collapse repeated spaces into single spaces and trim",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "' '.join(x.split())",
+        "attempts": 20000
+      },
+      {
+        "id": 10,
+        "goal": "check whether the text is made only of digits",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.isdigit()",
+        "attempts": 291
+      },
+      {
+        "id": 12,
+        "goal": "turn the slug into lowercase words separated by spaces",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('-', ' ')",
+        "attempts": 233
+      },
+      {
+        "id": 14,
+        "goal": "split the path into its folder parts at the slash",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.split('/')",
+        "attempts": 206
+      },
+      {
+        "id": 16,
+        "goal": "remove whitespace at the left end only",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.lstrip(' ')",
+        "attempts": 316
+      },
+      {
+        "id": 18,
+        "goal": "find the position of the first slash",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.find('/')",
+        "attempts": 296
+      },
+      {
+        "id": 20,
+        "goal": "make the words uppercase and separate them by commas",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 22,
+        "goal": "split the trimmed sentence into words",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.split()",
+        "attempts": 209
+      },
+      {
+        "id": 24,
+        "goal": "right align the number in a field of six with zeros",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.zfill(6)",
+        "attempts": 446
+      },
+      {
+        "id": 26,
+        "goal": "reverse the order of the characters",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 28,
+        "goal": "keep only the first letter of each word",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      }
+    ]
+  },
+  "docs_relevance_plus_priors": {
+    "solved_correctly": 11,
+    "solvable_tasks": 13,
+    "solved_wilson_95": [
+      0.5776536898051745,
+      0.9567418216419186
+    ],
+    "wrong": 0,
+    "correct_abstentions_on_unsolvable": 2,
+    "unsolvable_tasks": 2,
+    "mean_attempts_when_solved": 3714.6363636363635,
+    "rows": [
+      {
+        "id": 1,
+        "goal": "make every letter lowercase",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.lower()",
+        "attempts": 202
+      },
+      {
+        "id": 3,
+        "goal": "make each word start with a capital letter and trim the ends",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 5,
+        "goal": "swap the case of every letter",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.swapcase()",
+        "attempts": 275
+      },
+      {
+        "id": 7,
+        "goal": "replace the dashes with underscores",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('-', '_')",
+        "attempts": 233
+      },
+      {
+        "id": 9,
+        "goal": "pad the number with zeros to a width of eight",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.zfill(8)",
+        "attempts": 209
+      },
+      {
+        "id": 11,
+        "goal": "count how many commas the text contains",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.count(',')",
+        "attempts": 285
+      },
+      {
+        "id": 13,
+        "goal": "capitalize the first letter and lowercase the rest after trimming",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.strip(' ').capitalize()",
+        "attempts": 15782
+      },
+      {
+        "id": 15,
+        "goal": "remove whitespace at the right end only",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.rstrip(' ')",
+        "attempts": 336
+      },
+      {
+        "id": 17,
+        "goal": "join the comma separated words with dashes",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', '-')",
+        "attempts": 228
+      },
+      {
+        "id": 19,
+        "goal": "check whether the path ends with a txt extension",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 21,
+        "goal": "case insensitive form of the text without surrounding spaces",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.casefold().strip(' ')",
+        "attempts": 17930
+      },
+      {
+        "id": 23,
+        "goal": "turn the comma list into uppercase words separated by spaces",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', ' ').upper()",
+        "attempts": 5131
+      },
+      {
+        "id": 25,
+        "goal": "replace slashes with dots in the path",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('/', '.')",
+        "attempts": 250
+      },
+      {
+        "id": 27,
+        "goal": "sort the comma separated words alphabetically",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 29,
+        "goal": "remove duplicate words",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      }
+    ]
+  },
+  "unverified_docs_trusted": {
+    "solved_correctly": 8,
+    "solvable_tasks": 13,
+    "solved_wilson_95": [
+      0.355228915126657,
+      0.8229029220223743
+    ],
+    "wrong": 0,
+    "correct_abstentions_on_unsolvable": 2,
+    "unsolvable_tasks": 2,
+    "mean_attempts_when_solved": 269.5,
+    "rows": [
+      {
+        "id": 1,
+        "goal": "make every letter lowercase",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.lower()",
+        "attempts": 201
+      },
+      {
+        "id": 3,
+        "goal": "make each word start with a capital letter and trim the ends",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 5,
+        "goal": "swap the case of every letter",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.swapcase()",
+        "attempts": 202
+      },
+      {
+        "id": 7,
+        "goal": "replace the dashes with underscores",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('-', '_')",
+        "attempts": 233
+      },
+      {
+        "id": 9,
+        "goal": "pad the number with zeros to a width of eight",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.zfill(8)",
+        "attempts": 344
+      },
+      {
+        "id": 11,
+        "goal": "count how many commas the text contains",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.count(',')",
+        "attempts": 203
+      },
+      {
+        "id": 13,
+        "goal": "capitalize the first letter and lowercase the rest after trimming",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 15,
+        "goal": "remove whitespace at the right end only",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.rstrip(' ')",
+        "attempts": 261
+      },
+      {
+        "id": 17,
+        "goal": "join the comma separated words with dashes",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace(',', '-')",
+        "attempts": 462
+      },
+      {
+        "id": 19,
+        "goal": "check whether the path ends with a txt extension",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 21,
+        "goal": "case insensitive form of the text without surrounding spaces",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 23,
+        "goal": "turn the comma list into uppercase words separated by spaces",
+        "solvable": true,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 25,
+        "goal": "replace slashes with dots in the path",
+        "solvable": true,
+        "outcome": "correct",
+        "program": "x.replace('/', '.')",
+        "attempts": 250
+      },
+      {
+        "id": 27,
+        "goal": "sort the comma separated words alphabetically",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      },
+      {
+        "id": 29,
+        "goal": "remove duplicate words",
+        "solvable": false,
+        "outcome": "abstained",
+        "program": null,
+        "attempts": 20000
+      }
+    ]
+  },
+  "seconds": 10.08868454800006
+}

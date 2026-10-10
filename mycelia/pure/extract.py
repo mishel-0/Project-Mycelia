@@ -50,3 +50,44 @@ def extract(page_html, url):
                         'description': ' '.join(p for p in paragraphs if p), 'examples': examples(body),
                         'source': url, 'position': m.start()})
     return entries
+
+
+ROLE = re.compile(r':\w+:`([^`<]+?)(?:\s*<[^>]+>)?`')
+INLINE_EXAMPLE = re.compile(r'``([^`]+?)``\s+returns\s+``([^`]+?)``')
+
+
+def _plain(line):
+    line = ROLE.sub(r'\1', line)
+    return re.sub(r'\*([^*]+)\*', r'\1', line.replace('``', ''))
+
+
+def extract_rst(text, url):
+    """Same output as `extract`, from the reStructuredText documentation source
+    (e.g. CPython's Doc/builtins/stdtypes.rst). Includes doctest blocks and
+    inline "``expr`` returns ``value``" examples from the prose."""
+    lines, entries, i = text.splitlines(), [], 0
+    while i < len(lines):
+        m = re.match(r'\.\. method:: str\.(\w+)(\(.*\))?\s*$', lines[i])
+        if not m:
+            i += 1; continue
+        name, sig, j, body = m.group(1), m.group(2) or '()', i + 1, []
+        while j < len(lines) and (not lines[j].strip() or lines[j].startswith('   ')):
+            body.append(lines[j][3:] if lines[j].startswith('   ') else ''); j += 1
+        exs, prose, k = [], [], 0
+        while k < len(body):
+            s = body[k].strip()
+            if s.startswith('>>> '):
+                src, k, out = s[4:], k + 1, []
+                while k < len(body) and body[k].strip() and not body[k].strip().startswith(('>>> ', '... ')):
+                    out.append(body[k].strip()); k += 1
+                exs.append({'source': src, 'expected': '\n'.join(out)}); continue
+            if s and not s.startswith('..') and not s.startswith(':'):
+                prose.append(s)
+            k += 1
+        joined = ' '.join(prose)
+        exs += [{'source': a, 'expected': b} for a, b in INLINE_EXAMPLE.findall(joined)]
+        signature = f'str.{name}{sig}'
+        entries.append({'method': name, 'signature': signature, 'params': params(signature),
+                        'description': _plain(joined), 'examples': exs, 'source': url, 'position': i})
+        i = j
+    return entries
