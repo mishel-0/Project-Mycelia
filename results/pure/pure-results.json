@@ -1,0 +1,847 @@
+{
+  "symbiosis": [
+    {
+      "budget": 30,
+      "network": {
+        "accuracy": 0.011,
+        "wilson_95": [
+          0.007275425411318251,
+          0.016599446829747115
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 30.0
+      },
+      "network_no_sharing": {
+        "accuracy": 0.011,
+        "wilson_95": [
+          0.007275425411318251,
+          0.016599446829747115
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 30.0
+      },
+      "single_generalist": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 30.0
+      },
+      "vote_of_3": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 30.0
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 100,
+      "network": {
+        "accuracy": 0.9455,
+        "wilson_95": [
+          0.9346702670259668,
+          0.9546216438464368
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 145,
+        "episodes": 200,
+        "mean_evaluations": 82.335
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 100.0
+      },
+      "vote_of_3": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 99.0
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 300,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 300.0
+      },
+      "vote_of_3": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 300.0
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 1000,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 1000.0
+      },
+      "vote_of_3": {
+        "accuracy": 0.005,
+        "wilson_95": [
+          0.0027181808584985597,
+          0.009179695949941846
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 1,
+        "episodes": 200,
+        "mean_evaluations": 998.87
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 3000,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.01,
+        "wilson_95": [
+          0.006482767876552687,
+          0.015395938459075187
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 2,
+        "episodes": 200,
+        "mean_evaluations": 2996.56
+      },
+      "vote_of_3": {
+        "accuracy": 0.01,
+        "wilson_95": [
+          0.006482767876552687,
+          0.015395938459075187
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 2,
+        "episodes": 200,
+        "mean_evaluations": 2994.415
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 10000,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.055,
+        "wilson_95": [
+          0.04583478836864504,
+          0.06587138371167006
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 11,
+        "episodes": 200,
+        "mean_evaluations": 9834.81
+      },
+      "vote_of_3": {
+        "accuracy": 0.095,
+        "wilson_95": [
+          0.08291479680735943,
+          0.10863801149045545
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 19,
+        "episodes": 200,
+        "mean_evaluations": 9864.745
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 30000,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.34,
+        "wilson_95": [
+          0.31956354816279,
+          0.36104990696721095
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 68,
+        "episodes": 200,
+        "mean_evaluations": 25862.805
+      },
+      "vote_of_3": {
+        "accuracy": 0.26,
+        "wilson_95": [
+          0.24124937608332822,
+          0.2796708066116732
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 52,
+        "episodes": 200,
+        "mean_evaluations": 28522.115
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    },
+    {
+      "budget": 100000,
+      "network": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "network_no_sharing": {
+        "accuracy": 0.744,
+        "wilson_95": [
+          0.7244181803933457,
+          0.7626463005334029
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 14,
+        "episodes": 200,
+        "mean_evaluations": 44.715
+      },
+      "single_generalist": {
+        "accuracy": 0.905,
+        "wilson_95": [
+          0.8913619885095446,
+          0.9170852031926405
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 181,
+        "episodes": 200,
+        "mean_evaluations": 52595.76
+      },
+      "vote_of_3": {
+        "accuracy": 0.585,
+        "wilson_95": [
+          0.5632630456485423,
+          0.6064110563136447
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 117,
+        "episodes": 200,
+        "mean_evaluations": 85658.09
+      },
+      "memorizer": {
+        "accuracy": 0.0,
+        "wilson_95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 0.0
+      }
+    }
+  ],
+  "procedural_memory": {
+    "learned_priors": {
+      "('repeat', 2)": 121.0,
+      "('repeat', 3)": 112.0,
+      "('interleave',)": 45.0,
+      "('around',)": 89.0,
+      "('reverse',)": 36.0,
+      "('concat_xy',)": 152.0,
+      "('concat_yx',)": 114.0,
+      "('mirror',)": 81.0,
+      "('repeat', 4)": 50.0
+    },
+    "rows": [
+      {
+        "budget": 20,
+        "without_priors": {
+          "accuracy": 0.0,
+          "wilson_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 0,
+          "episodes": 200,
+          "mean_evaluations": 20.0
+        },
+        "with_priors": {
+          "accuracy": 0.0,
+          "wilson_95": [
+            1.0842021724855044e-19,
+            0.001917047281252934
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 0,
+          "episodes": 200,
+          "mean_evaluations": 20.0
+        }
+      },
+      {
+        "budget": 40,
+        "without_priors": {
+          "accuracy": 0.371,
+          "wilson_95": [
+            0.35009496132421736,
+            0.39239963687434576
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 6,
+          "episodes": 200,
+          "mean_evaluations": 40.0
+        },
+        "with_priors": {
+          "accuracy": 0.645,
+          "wilson_95": [
+            0.6237689097706326,
+            0.665675146517804
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 16,
+          "episodes": 200,
+          "mean_evaluations": 39.995
+        }
+      },
+      {
+        "budget": 60,
+        "without_priors": {
+          "accuracy": 0.7885,
+          "wilson_95": [
+            0.7700581771205187,
+            0.8058356865981983
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 45,
+          "episodes": 200,
+          "mean_evaluations": 58.94
+        },
+        "with_priors": {
+          "accuracy": 0.818,
+          "wilson_95": [
+            0.8004855285111957,
+            0.8342952294179272
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 61,
+          "episodes": 200,
+          "mean_evaluations": 57.885
+        }
+      },
+      {
+        "budget": 100,
+        "without_priors": {
+          "accuracy": 0.9455,
+          "wilson_95": [
+            0.9346702670259668,
+            0.9546216438464368
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 145,
+          "episodes": 200,
+          "mean_evaluations": 82.335
+        },
+        "with_priors": {
+          "accuracy": 0.957,
+          "wilson_95": [
+            0.9471988913295474,
+            0.9650489274553872
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 153,
+          "episodes": 200,
+          "mean_evaluations": 78.2
+        }
+      },
+      {
+        "budget": 1000000,
+        "without_priors": {
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9980829527187469,
+            0.9999999999999998
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 200,
+          "episodes": 200,
+          "mean_evaluations": 90.25
+        },
+        "with_priors": {
+          "accuracy": 1.0,
+          "wilson_95": [
+            0.9980829527187469,
+            0.9999999999999998
+          ],
+          "phrases": 2000,
+          "episodes_fully_solved": 200,
+          "episodes": 200,
+          "mean_evaluations": 84.565
+        }
+      }
+    ]
+  },
+  "critic": {
+    "critic_on": {
+      "accuracy": 0.8041666666666667,
+      "wilson_95": [
+        0.7807579501350764,
+        0.8256341911649264
+      ],
+      "phrases": 1200,
+      "episodes_fully_solved": 136,
+      "episodes": 200,
+      "mean_evaluations": 130.28,
+      "corrupted_demo_flagged": 125
+    },
+    "critic_off": {
+      "accuracy": 0.5266666666666666,
+      "wilson_95": [
+        0.4983771723206485,
+        0.5547859743138721
+      ],
+      "phrases": 1200,
+      "episodes_fully_solved": 38,
+      "episodes": 200,
+      "mean_evaluations": 128.505,
+      "corrupted_demo_flagged": 0
+    }
+  },
+  "retention": {
+    "accuracy_from_memory_only": 1.0,
+    "evaluations": 0,
+    "semantic_facts": 1700,
+    "failure_records": 0
+  },
+  "sample_efficiency": [
+    {
+      "demos_per_modifier": 1,
+      "network_3000": {
+        "accuracy": 0.22916666666666666,
+        "wilson_95": [
+          0.21279227872695147,
+          0.24640666501796174
+        ],
+        "phrases": 2400,
+        "episodes_fully_solved": 0,
+        "episodes": 200,
+        "mean_evaluations": 31.75
+      },
+      "generalist_3000": {
+        "accuracy": 0.011666666666666667,
+        "wilson_95": [
+          0.008084090167653341,
+          0.01681000532317486
+        ],
+        "phrases": 2400,
+        "episodes_fully_solved": 2,
+        "episodes": 200,
+        "mean_evaluations": 2988.975
+      },
+      "generalist_300000": {
+        "accuracy": 0.99,
+        "wilson_95": [
+          0.9851630865391805,
+          0.9932708244700226
+        ],
+        "phrases": 2400,
+        "episodes_fully_solved": 197,
+        "episodes": 200,
+        "mean_evaluations": 52624.495
+      }
+    },
+    {
+      "demos_per_modifier": 2,
+      "network_3000": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 90.25
+      },
+      "generalist_3000": {
+        "accuracy": 0.01,
+        "wilson_95": [
+          0.006482767876552687,
+          0.015395938459075187
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 2,
+        "episodes": 200,
+        "mean_evaluations": 2996.56
+      },
+      "generalist_300000": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ],
+        "phrases": 2000,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 53591.99
+      }
+    },
+    {
+      "demos_per_modifier": 3,
+      "network_3000": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9968089993972651,
+          1.0
+        ],
+        "phrases": 1200,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 108.32
+      },
+      "generalist_3000": {
+        "accuracy": 0.01,
+        "wilson_95": [
+          0.005729576190218534,
+          0.01739760440046169
+        ],
+        "phrases": 1200,
+        "episodes_fully_solved": 2,
+        "episodes": 200,
+        "mean_evaluations": 2996.56
+      },
+      "generalist_300000": {
+        "accuracy": 1.0,
+        "wilson_95": [
+          0.9968089993972651,
+          1.0
+        ],
+        "phrases": 1200,
+        "episodes_fully_solved": 200,
+        "episodes": 200,
+        "mean_evaluations": 53591.99
+      }
+    }
+  ],
+  "rule_world": {
+    "learned_priors": {
+      "('+', 1, ('*', 'a', 'b'))": 14,
+      "('+', 'a', 'b')": 51,
+      "('min', 'a', 'b')": 9,
+      "('+', 'a', ('+', 'b', 'b'))": 22,
+      "('+', ('+', 'a', 'a'), ('+', 'b', 'b'))": 14,
+      "('*', 'a', 'b')": 37,
+      "('-', 'a', 'b')": 33,
+      "('+', ('+', 'a', 'a'), ('-', 'a', 'b'))": 8,
+      "('max', 'a', 'b')": 12
+    },
+    "rows": [
+      {
+        "budget": 10,
+        "without_priors": {
+          "mean_test_accuracy": 0.292,
+          "rule_exact": 0.26,
+          "mean_evaluations": 8.73
+        },
+        "with_priors": {
+          "mean_test_accuracy": 0.92,
+          "rule_exact": 0.92,
+          "mean_evaluations": 4.855
+        }
+      },
+      {
+        "budget": 50,
+        "without_priors": {
+          "mean_test_accuracy": 0.6435,
+          "rule_exact": 0.61,
+          "mean_evaluations": 30.21
+        },
+        "with_priors": {
+          "mean_test_accuracy": 1.0,
+          "rule_exact": 1.0,
+          "mean_evaluations": 5.065
+        }
+      },
+      {
+        "budget": 200,
+        "without_priors": {
+          "mean_test_accuracy": 0.80975,
+          "rule_exact": 0.775,
+          "mean_evaluations": 59.76
+        },
+        "with_priors": {
+          "mean_test_accuracy": 1.0,
+          "rule_exact": 1.0,
+          "mean_evaluations": 5.065
+        }
+      },
+      {
+        "budget": 1000,
+        "without_priors": {
+          "mean_test_accuracy": 0.96475,
+          "rule_exact": 0.93,
+          "mean_evaluations": 94.12
+        },
+        "with_priors": {
+          "mean_test_accuracy": 1.0,
+          "rule_exact": 1.0,
+          "mean_evaluations": 5.065
+        }
+      },
+      {
+        "budget": 1000000,
+        "without_priors": {
+          "mean_test_accuracy": 0.96475,
+          "rule_exact": 0.93,
+          "mean_evaluations": 94.12
+        },
+        "with_priors": {
+          "mean_test_accuracy": 1.0,
+          "rule_exact": 1.0,
+          "mean_evaluations": 5.065
+        }
+      }
+    ],
+    "noise": {
+      "critic_on": {
+        "mean_test_accuracy": 1.0,
+        "corrupted_flagged": 200
+      },
+      "critic_off": {
+        "mean_test_accuracy": 0.07225,
+        "corrupted_flagged": 0
+      }
+    }
+  },
+  "conventions": {
+    "full_bytes": 253891,
+    "symbol_bytes": 195972,
+    "symbols": 400,
+    "messages": 1398
+  },
+  "seconds": 369.0916371200001
+}

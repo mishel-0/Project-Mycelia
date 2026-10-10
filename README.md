@@ -363,3 +363,7 @@ Specialists exchange one 4-bit learned token each in a checksummed frame: same d
 ## Talk to Mycelia (new)
 
 `python -m mycelia.talk` for a command chat over real Mycelia data, or `--claude` for plain English through Claude, which can only answer by calling Mycelia's commands. See [TALK.md](TALK.md).
+
+## Pure Mycelia (new, non-neural)
+
+Rule-based agents learn invented-word meanings and compositional rules from demonstrations by sharing verified discoveries: 100% on unseen combinations with ~90 evaluations per episode, versus ~20,000-110,000 for a single joint-search learner. No neural networks or LLMs. See [PURE-MYCELIA.md](PURE-MYCELIA.md).
