@@ -89,9 +89,16 @@ def simulate(sc, policy, trace=False):
     """Run one episode. policy(obs) -> (action, rule_id or None)."""
     hazards = [Hazard(**vars(h)) for h in sc.hazards]
     lane, pos, moving, t, stops, unnecessary, idle, fired = sc.start_lane, 0, True, 0, 0, 0, 0, []
+    steps = []
+    def done(outcome, ticks):
+        out = {'outcome': outcome, 'ticks': ticks, 'stops': stops, 'unnecessary_stops': unnecessary, 'idle': idle, 'fired': fired}
+        if trace:
+            out['trace'] = steps
+        return out
     while t < sc.limit:
         obs = observe(sc, hazards, lane, pos, t)
         action, rule = policy(obs)
+        steps.append((obs, action, rule))
         if rule:
             fired.append(rule)
         if action in ('left', 'right'):
@@ -110,12 +117,12 @@ def simulate(sc, policy, trace=False):
         for step in range(advance):
             pos += 1
             if any(h.occupies(lane, pos, t) for h in hazards):
-                return {'outcome': 'collision', 'ticks': t + 1, 'stops': stops, 'unnecessary_stops': unnecessary, 'idle': idle, 'fired': fired}
+                return done('collision', t + 1)
         t += 1
         for h in hazards:
             h.step(t)
         if any(h.occupies(lane, pos, t) for h in hazards):
-            return {'outcome': 'collision', 'ticks': t, 'stops': stops, 'unnecessary_stops': unnecessary, 'idle': idle, 'fired': fired}
+            return done('collision', t)
         if pos >= sc.length:
-            return {'outcome': 'success', 'ticks': t, 'stops': stops, 'unnecessary_stops': unnecessary, 'idle': idle, 'fired': fired}
-    return {'outcome': 'stuck', 'ticks': t, 'stops': stops, 'unnecessary_stops': unnecessary, 'idle': idle, 'fired': fired}
+            return done('success', t)
+    return done('stuck', t)

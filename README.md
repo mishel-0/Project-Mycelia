@@ -375,3 +375,7 @@ Reads docs.python.org through the allowlisted gateway, verifies each documented 
 ## Pure Mycelia v0.3 (new)
 
 Multi-source, multi-domain learning with claim lifecycles, copy/lineage tracking, four memories and network comparisons. Honest headline: a shared repository beats adaptive symbiosis on accuracy (549 vs ~240 of 814); adaptive symbiosis blocks fake knowledge completely. See [MYCELIA-LEARN.md](MYCELIA-LEARN.md).
+
+## Mycelia Autonomous Sandbox v0.1 (new)
+
+Symbolic driving cars learn and share rules with verified scope. Shared repository: 71% success but 368 crashes; applying rules only inside their verified scope: 67% success, 12 crashes. An ablation shows this safety comes from scope checking, not from adaptive symbiosis. See [AUTONOMY.md](AUTONOMY.md).
