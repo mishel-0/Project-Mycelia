@@ -19,3 +19,6 @@ governance/state/
 governance/STOP
 lab_state/talk/*.pkl
 results/pure-web/
+lab_state/repos/
+results/learn/reach/
+results/learn/*.sqlite

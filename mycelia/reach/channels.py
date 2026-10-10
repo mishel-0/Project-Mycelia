@@ -31,9 +31,16 @@ class Channel:
 
 
 class GitHubChannel(Channel):
-    """github://owner/repo/path/to/file — anonymous git read of a public repository (blob-less, depth 1)."""
+    """github://owner/repo/path/to/file — anonymous git read of a public repository.
+
+    A blob-less, depth-1 clone is cached per repository (under cache_dir) so a
+    catalog can be listed and many files read without re-cloning; file contents
+    are fetched lazily, one blob per read."""
     name, tier, backends = 'github', 0, ['git']
     PATTERN = re.compile(r'^github://([\w.-]+)/([\w.-]+)/(.+)$')
+
+    def __init__(self, log, cache_dir=None):
+        super().__init__(log); self.cache_dir = Path(cache_dir) if cache_dir else None; self._tmp = None
 
     def can_handle(self, source):
         return bool(self.PATTERN.match(source))
@@ -42,19 +49,38 @@ class GitHubChannel(Channel):
         self.active_backend = 'git' if shutil.which('git') else None
         return ('ok', 'git available') if self.active_backend else ('off', 'git not installed')
 
+    def _repo(self, owner, repo, timeout=600):
+        if self.cache_dir is None:
+            self._tmp = self._tmp or tempfile.TemporaryDirectory(); self.cache_dir = Path(self._tmp.name)
+        path = self.cache_dir / f'{owner}__{repo}'
+        if not (path / '.git').exists():
+            try:
+                subprocess.run(['git', 'clone', '-q', '--depth', '1', '--filter=blob:none', '--no-checkout',
+                                f'https://github.com/{owner}/{repo}', str(path)], check=True, timeout=timeout, capture_output=True)
+            except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+                raise ChannelError(f'git clone failed: {e}')
+        commit = subprocess.run(['git', '-C', str(path), 'rev-parse', 'HEAD'], check=True, capture_output=True, text=True).stdout.strip()
+        return path, commit
+
+    def list(self, owner, repo, prefix=''):
+        """Catalog of files in a public repository (names only, no content read)."""
+        if self.check()[0] != 'ok':
+            raise ChannelError('git not installed')
+        path, commit = self._repo(owner, repo)
+        names = subprocess.run(['git', '-C', str(path), 'ls-tree', '-r', '--name-only', 'HEAD'], check=True,
+                               capture_output=True, text=True).stdout.splitlines()
+        return commit, [n for n in names if n.startswith(prefix)]
+
     def read(self, source, timeout=600):
         m = self.PATTERN.match(source)
         if not m or self.check()[0] != 'ok':
             raise ChannelError('cannot read ' + source)
         owner, repo, path = m.groups()
-        with tempfile.TemporaryDirectory() as tmp:
-            try:
-                subprocess.run(['git', 'clone', '-q', '--depth', '1', '--filter=blob:none', '--no-checkout',
-                                f'https://github.com/{owner}/{repo}', tmp], check=True, timeout=timeout, capture_output=True)
-                commit = subprocess.run(['git', '-C', tmp, 'rev-parse', 'HEAD'], check=True, capture_output=True, text=True).stdout.strip()
-                blob = subprocess.run(['git', '-C', tmp, 'show', f'HEAD:{path}'], check=True, capture_output=True, timeout=timeout).stdout
-            except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
-                self.record(source, False, e); raise ChannelError(f'git read failed: {e}')
+        try:
+            local, commit = self._repo(owner, repo, timeout)
+            blob = subprocess.run(['git', '-C', str(local), 'show', f'HEAD:{path}'], check=True, capture_output=True, timeout=timeout).stdout
+        except (subprocess.CalledProcessError, subprocess.TimeoutExpired, ChannelError) as e:
+            self.record(source, False, e); raise ChannelError(f'git read failed: {e}')
         if len(blob) > MAX_BYTES:
             self.record(source, False, 'too large'); raise ChannelError('file too large')
         return self.result(source, blob.decode('utf-8', 'replace'), commit=commit, url=f'https://github.com/{owner}/{repo}/blob/{commit}/{path}')
@@ -117,9 +143,10 @@ class RSSChannel(Channel):
 
 class Reach:
     """Route a source to the first channel that can handle it."""
-    def __init__(self, root, web_allowlist=('docs.python.org',)):
+    def __init__(self, root, web_allowlist=('docs.python.org',), cache_dir=None):
         log = AppendLog(Path(root) / 'reach.jsonl'); self.log = log
-        self.channels = [GitHubChannel(log), RSSChannel(log), WebChannel(log, set(web_allowlist))]
+        self.github = GitHubChannel(log, cache_dir)
+        self.channels = [self.github, RSSChannel(log), WebChannel(log, set(web_allowlist))]
 
     def read(self, source):
         for ch in self.channels:
