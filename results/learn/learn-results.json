@@ -1,0 +1,2272 @@
+{
+ "sources": {
+  "stdtypes": {
+   "uri": "github://python/cpython/Doc/builtins/stdtypes.rst",
+   "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+   "sha256": "2c6eba3fa2ffe53ce6979aea201444a4c68a13b5b756a1a4f35733b7501e8bed",
+   "claims": 692,
+   "by_relation": {
+    "signature": 153,
+    "describes": 153,
+    "example": 386
+   }
+  },
+  "functions": {
+   "uri": "github://python/cpython/Doc/builtins/functions.rst",
+   "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+   "sha256": "b977e7d6cc2e0694a63b57387b33c04ff6660ae2ccd4cd4a233af424d48cbd0f",
+   "claims": 206,
+   "by_relation": {
+    "signature": 69,
+    "describes": 69,
+    "example": 68
+   }
+  },
+  "math": {
+   "uri": "github://python/cpython/Doc/library/math.rst",
+   "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+   "sha256": "9b8503d2f493bb236f43b247d0ecebb758db7af5e0e75d8c6a0bea6948b6df8c",
+   "claims": 129,
+   "by_relation": {
+    "signature": 63,
+    "describes": 63,
+    "example": 3
+   }
+  },
+  "statistics-doc": {
+   "uri": "github://python/cpython/Doc/library/statistics.rst",
+   "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+   "sha256": "ab09b0b940bbf40ba4382aa5b92ebfd02fbbe2dc56eee604b9327fdb5808c197",
+   "claims": 135,
+   "by_relation": {
+    "signature": 21,
+    "describes": 21,
+    "example": 93
+   }
+  },
+  "statistics-code": {
+   "uri": "github://python/cpython/Lib/statistics.py",
+   "commit": "0ec3aee262b03276a18aeb23cb9957e1b57c9d08",
+   "sha256": "fe1ea3be7039600a50aaa0d0af94d3f7fe1b0b3cd26c0622e9638a5bf097ebd2",
+   "claims": 130,
+   "by_relation": {
+    "signature": 30,
+    "describes": 30,
+    "example": 70
+   }
+  },
+  "cheatsheet": {
+   "uri": "github://gto76/python-cheatsheet/README.md",
+   "commit": "f2ace2d90ea2f153d7f47edc368586ce8f15d8d7",
+   "sha256": "088a246d729e2ca02f28aafe20b022bf3d13248dd83bbee7ba9afbb8d95e0de4",
+   "claims": 38,
+   "by_relation": {
+    "describes": 32,
+    "example": 6
+   }
+  }
+ },
+ "channels": {
+  "github": "live",
+  "web": "blocked by environment network policy (untested)",
+  "rss": "untested"
+ },
+ "multi_source": {
+  "rst_docs": {
+   "skills_verified_in_scope": 68,
+   "lifecycle": {
+    "unverified": 228,
+    "verified_in_scope": 68
+   },
+   "source_reliability": {
+    "python/cpython": 1.0
+   },
+   "evaluation": {
+    "solved": 577,
+    "solvable": 814,
+    "wilson_95": [
+     0.6767136313686125,
+     0.739014865069158
+    ],
+    "wrong": 34,
+    "abstained_on_unsolvable": 86,
+    "unsolvable": 86,
+    "cross_domain": [
+     182,
+     351
+    ],
+    "novel_combination": [
+     50,
+     106
+    ]
+   }
+  },
+  "rst_plus_code": {
+   "skills_verified_in_scope": 68,
+   "lifecycle": {
+    "unverified": 238,
+    "verified_in_scope": 68
+   },
+   "source_reliability": {
+    "python/cpython": 1.0
+   },
+   "evaluation": {
+    "solved": 577,
+    "solvable": 814,
+    "wilson_95": [
+     0.6767136313686125,
+     0.739014865069158
+    ],
+    "wrong": 34,
+    "abstained_on_unsolvable": 86,
+    "unsolvable": 86,
+    "cross_domain": [
+     182,
+     351
+    ],
+    "novel_combination": [
+     50,
+     106
+    ]
+   }
+  },
+  "rst_code_markdown": {
+   "skills_verified_in_scope": 68,
+   "lifecycle": {
+    "unverified": 243,
+    "supported": 11,
+    "verified_in_scope": 68
+   },
+   "source_reliability": {
+    "python/cpython": 1.0
+   },
+   "evaluation": {
+    "solved": 577,
+    "solvable": 814,
+    "wilson_95": [
+     0.6767136313686125,
+     0.739014865069158
+    ],
+    "wrong": 34,
+    "abstained_on_unsolvable": 86,
+    "unsolvable": 86,
+    "cross_domain": [
+     182,
+     351
+    ],
+    "novel_combination": [
+     50,
+     106
+    ]
+   }
+  }
+ },
+ "evidence_examples": {
+  "statistics.median": {
+   "lineages": [
+    "python/cpython"
+   ],
+   "pairwise": {
+    "same_lineage": 1
+   },
+   "status": "verified_in_scope"
+  },
+  "statistics.mean": {
+   "lineages": [
+    "python/cpython"
+   ],
+   "pairwise": {
+    "same_lineage": 1
+   },
+   "status": "verified_in_scope"
+  },
+  "str.strip": {
+   "lineages": [
+    "python/cpython"
+   ],
+   "pairwise": {},
+   "status": "verified_in_scope"
+  },
+  "sorted": {
+   "lineages": [
+    "gto76/python-cheatsheet",
+    "python/cpython"
+   ],
+   "pairwise": {
+    "independent": 1
+   },
+   "status": "verified_in_scope"
+  }
+ },
+ "cross_domain": {
+  "checked": 182,
+  "neither_alone_holds": 181,
+  "violations": [
+   {
+    "task": "202-173",
+    "solved_by_single_source": [
+     "stdtypes"
+    ]
+   }
+  ]
+ },
+ "network": {
+  "1000": {
+   "A": [
+    {
+     "solved": 96,
+     "solvable": 814,
+     "wilson_95": [
+      0.09755315289192584,
+      0.14190824480132924
+     ],
+     "wrong": 8,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 0,
+       "of": 144
+      },
+      "math": {
+       "solved": 32,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 14,
+       "of": 62
+      },
+      "text": {
+       "solved": 45,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 5,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      0,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 796.1733333333333,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 81,
+     "solvable": 814,
+     "wilson_95": [
+      0.08078810108420129,
+      0.12199137045277991
+     ],
+     "wrong": 7,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 1,
+       "of": 144
+      },
+      "math": {
+       "solved": 28,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 13,
+       "of": 62
+      },
+      "text": {
+       "solved": 32,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 7,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      1,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 779.9644444444444,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 75,
+     "solvable": 814,
+     "wilson_95": [
+      0.07413923821054469,
+      0.11396746286392695
+     ],
+     "wrong": 2,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 1,
+       "of": 144
+      },
+      "math": {
+       "solved": 19,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 11,
+       "of": 62
+      },
+      "text": {
+       "solved": 34,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 10,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      1,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 802.2488888888889,
+     "comm": {},
+     "exchanges_logged": 0
+    }
+   ],
+   "B": [
+    {
+     "solved": 486,
+     "solvable": 814,
+     "wilson_95": [
+      0.5629767915985443,
+      0.6302146861578314
+     ],
+     "wrong": 23,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 17,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 112,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      91,
+      351
+     ],
+     "novel_combination": [
+      31,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 787.8066666666666,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 488,
+     "solvable": 814,
+     "wilson_95": [
+      0.5654558492560329,
+      0.632626551987846
+     ],
+     "wrong": 24,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 17,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 114,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      93,
+      351
+     ],
+     "novel_combination": [
+      32,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 781.6644444444445,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 493,
+     "solvable": 814,
+     "wilson_95": [
+      0.5716573266238454,
+      0.6386523833387916
+     ],
+     "wrong": 23,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 17,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 119,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      98,
+      351
+     ],
+     "novel_combination": [
+      31,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 785.0777777777778,
+     "comm": {},
+     "exchanges_logged": 0
+    }
+   ],
+   "C": [
+    {
+     "solved": 248,
+     "solvable": 814,
+     "wilson_95": [
+      0.27402798533427813,
+      0.3371435974092189
+     ],
+     "wrong": 14,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 3,
+       "of": 144
+      },
+      "math": {
+       "solved": 76,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 36,
+       "of": 62
+      },
+      "text": {
+       "solved": 83,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 50,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      28,
+      351
+     ],
+     "novel_combination": [
+      6,
+      106
+     ],
+     "false_claims_in_libraries": 364,
+     "mean_attempts": 869.9588888888889,
+     "comm": {
+      "C_skills_transferred": 19325
+     },
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 245,
+     "solvable": 814,
+     "wilson_95": [
+      0.27046762919081163,
+      0.3333675683214306
+     ],
+     "wrong": 11,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 6,
+       "of": 144
+      },
+      "math": {
+       "solved": 74,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 38,
+       "of": 62
+      },
+      "text": {
+       "solved": 76,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 51,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      38,
+      351
+     ],
+     "novel_combination": [
+      9,
+      106
+     ],
+     "false_claims_in_libraries": 373,
+     "mean_attempts": 868.7577777777777,
+     "comm": {
+      "C_skills_transferred": 19739
+     },
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 243,
+     "solvable": 814,
+     "wilson_95": [
+      0.26809538863239,
+      0.330848885392349
+     ],
+     "wrong": 10,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 8,
+       "of": 144
+      },
+      "math": {
+       "solved": 77,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 35,
+       "of": 62
+      },
+      "text": {
+       "solved": 74,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 49,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      34,
+      351
+     ],
+     "novel_combination": [
+      11,
+      106
+     ],
+     "false_claims_in_libraries": 352,
+     "mean_attempts": 871.53,
+     "comm": {
+      "C_skills_transferred": 19821
+     },
+     "exchanges_logged": 0
+    }
+   ],
+   "D": [
+    {
+     "solved": 217,
+     "solvable": 814,
+     "wilson_95": [
+      0.23735687575082495,
+      0.2980053929363726
+     ],
+     "wrong": 9,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 10,
+       "of": 144
+      },
+      "math": {
+       "solved": 101,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 19,
+       "of": 62
+      },
+      "text": {
+       "solved": 53,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 34,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      21,
+      351
+     ],
+     "novel_combination": [
+      10,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 880.9111111111112,
+     "comm": {
+      "D_requests": 2170,
+      "D_skills_transferred": 8446,
+      "D_rejected_on_receipt": 8
+     },
+     "exchanges_logged": 595
+    },
+    {
+     "solved": 226,
+     "solvable": 814,
+     "wilson_95": [
+      0.2479754649616653,
+      0.30939595941929665
+     ],
+     "wrong": 7,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 8,
+       "of": 144
+      },
+      "math": {
+       "solved": 97,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 35,
+       "of": 62
+      },
+      "text": {
+       "solved": 51,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 35,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      14,
+      351
+     ],
+     "novel_combination": [
+      8,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 877.1988888888889,
+     "comm": {
+      "D_requests": 2596,
+      "D_skills_transferred": 11031,
+      "D_rejected_on_receipt": 8
+     },
+     "exchanges_logged": 612
+    },
+    {
+     "solved": 239,
+     "solvable": 814,
+     "wilson_95": [
+      0.26335413375189765,
+      0.325808293297835
+     ],
+     "wrong": 11,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 16,
+       "of": 144
+      },
+      "math": {
+       "solved": 98,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 38,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 29,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      24,
+      351
+     ],
+     "novel_combination": [
+      16,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 855.4444444444445,
+     "comm": {
+      "D_requests": 2862,
+      "D_skills_transferred": 12580,
+      "D_rejected_on_receipt": 4
+     },
+     "exchanges_logged": 643
+    }
+   ]
+  },
+  "10000": {
+   "A": [
+    {
+     "solved": 96,
+     "solvable": 814,
+     "wilson_95": [
+      0.09755315289192584,
+      0.14190824480132924
+     ],
+     "wrong": 8,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 0,
+       "of": 144
+      },
+      "math": {
+       "solved": 32,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 14,
+       "of": 62
+      },
+      "text": {
+       "solved": 45,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 5,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      0,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 6691.32,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 81,
+     "solvable": 814,
+     "wilson_95": [
+      0.08078810108420129,
+      0.12199137045277991
+     ],
+     "wrong": 7,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 1,
+       "of": 144
+      },
+      "math": {
+       "solved": 28,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 13,
+       "of": 62
+      },
+      "text": {
+       "solved": 32,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 7,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      1,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 6488.747777777778,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 75,
+     "solvable": 814,
+     "wilson_95": [
+      0.07413923821054469,
+      0.11396746286392695
+     ],
+     "wrong": 2,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 1,
+       "of": 144
+      },
+      "math": {
+       "solved": 19,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 11,
+       "of": 62
+      },
+      "text": {
+       "solved": 34,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 10,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      1,
+      351
+     ],
+     "novel_combination": [
+      0,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 6683.606666666667,
+     "comm": {},
+     "exchanges_logged": 0
+    }
+   ],
+   "B": [
+    {
+     "solved": 551,
+     "solvable": 814,
+     "wilson_95": [
+      0.6440113866998161,
+      0.7081351044004132
+     ],
+     "wrong": 29,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 67,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 127,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      156,
+      351
+     ],
+     "novel_combination": [
+      71,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 4998.196666666667,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 552,
+     "solvable": 814,
+     "wilson_95": [
+      0.6452659322992415,
+      0.7093260205447393
+     ],
+     "wrong": 29,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 68,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 127,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      157,
+      351
+     ],
+     "novel_combination": [
+      72,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 4986.156666666667,
+     "comm": {},
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 549,
+     "solvable": 814,
+     "wilson_95": [
+      0.6415030489087828,
+      0.7057525187039432
+     ],
+     "wrong": 29,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 65,
+       "of": 144
+      },
+      "math": {
+       "solved": 108,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 191,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 127,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      154,
+      351
+     ],
+     "novel_combination": [
+      69,
+      106
+     ],
+     "false_claims_in_libraries": 900,
+     "mean_attempts": 5019.7733333333335,
+     "comm": {},
+     "exchanges_logged": 0
+    }
+   ],
+   "C": [
+    {
+     "solved": 265,
+     "solvable": 814,
+     "wilson_95": [
+      0.2942474812960568,
+      0.35849695109121715
+     ],
+     "wrong": 19,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 9,
+       "of": 144
+      },
+      "math": {
+       "solved": 76,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 36,
+       "of": 62
+      },
+      "text": {
+       "solved": 83,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 61,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      45,
+      351
+     ],
+     "novel_combination": [
+      14,
+      106
+     ],
+     "false_claims_in_libraries": 364,
+     "mean_attempts": 7557.634444444445,
+     "comm": {
+      "C_skills_transferred": 19325
+     },
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 265,
+     "solvable": 814,
+     "wilson_95": [
+      0.2942474812960568,
+      0.35849695109121715
+     ],
+     "wrong": 15,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 12,
+       "of": 144
+      },
+      "math": {
+       "solved": 74,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 38,
+       "of": 62
+      },
+      "text": {
+       "solved": 76,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 65,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      58,
+      351
+     ],
+     "novel_combination": [
+      16,
+      106
+     ],
+     "false_claims_in_libraries": 373,
+     "mean_attempts": 7549.134444444445,
+     "comm": {
+      "C_skills_transferred": 19739
+     },
+     "exchanges_logged": 0
+    },
+    {
+     "solved": 259,
+     "solvable": 814,
+     "wilson_95": [
+      0.28710274686307713,
+      0.35096891506168737
+     ],
+     "wrong": 12,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 17,
+       "of": 144
+      },
+      "math": {
+       "solved": 77,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 35,
+       "of": 62
+      },
+      "text": {
+       "solved": 74,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 56,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      50,
+      351
+     ],
+     "novel_combination": [
+      22,
+      106
+     ],
+     "false_claims_in_libraries": 352,
+     "mean_attempts": 7648.046666666667,
+     "comm": {
+      "C_skills_transferred": 19821
+     },
+     "exchanges_logged": 0
+    }
+   ],
+   "D": [
+    {
+     "solved": 228,
+     "solvable": 814,
+     "wilson_95": [
+      0.2503383287920556,
+      0.3119240190764095
+     ],
+     "wrong": 9,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 11,
+       "of": 144
+      },
+      "math": {
+       "solved": 101,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 19,
+       "of": 62
+      },
+      "text": {
+       "solved": 53,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 44,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      32,
+      351
+     ],
+     "novel_combination": [
+      15,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 7299.916666666667,
+     "comm": {
+      "D_requests": 2146,
+      "D_skills_transferred": 8358,
+      "D_rejected_on_receipt": 8
+     },
+     "exchanges_logged": 595
+    },
+    {
+     "solved": 240,
+     "solvable": 814,
+     "wilson_95": [
+      0.26453904179230064,
+      0.3270688470011836
+     ],
+     "wrong": 11,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 12,
+       "of": 144
+      },
+      "math": {
+       "solved": 97,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 35,
+       "of": 62
+      },
+      "text": {
+       "solved": 51,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 45,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      28,
+      351
+     ],
+     "novel_combination": [
+      11,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 7568.8788888888885,
+     "comm": {
+      "D_requests": 2348,
+      "D_skills_transferred": 9380,
+      "D_rejected_on_receipt": 8
+     },
+     "exchanges_logged": 573
+    },
+    {
+     "solved": 247,
+     "solvable": 814,
+     "wilson_95": [
+      0.27284093513257324,
+      0.3358851858671721
+     ],
+     "wrong": 13,
+     "abstained_on_unsolvable": 86,
+     "unsolvable": 86,
+     "by_family": {
+      "cross": {
+       "solved": 17,
+       "of": 144
+      },
+      "math": {
+       "solved": 98,
+       "of": 130
+      },
+      "statistics": {
+       "solved": 58,
+       "of": 62
+      },
+      "text": {
+       "solved": 38,
+       "of": 233
+      },
+      "text+builtins": {
+       "solved": 36,
+       "of": 245
+      }
+     },
+     "cross_domain": [
+      32,
+      351
+     ],
+     "novel_combination": [
+      18,
+      106
+     ],
+     "false_claims_in_libraries": 0,
+     "mean_attempts": 7388.458888888889,
+     "comm": {
+      "D_requests": 2862,
+      "D_skills_transferred": 12580,
+      "D_rejected_on_receipt": 4
+     },
+     "exchanges_logged": 643
+    }
+   ]
+  }
+ },
+ "node_failure": {
+  "B": {
+   "solved": 37,
+   "solvable": 61,
+   "wilson_95": [
+    0.48117252628978935,
+    0.7193164854696293
+   ],
+   "wrong": 0,
+   "abstained_on_unsolvable": 0,
+   "unsolvable": 0,
+   "by_family": {
+    "cross": {
+     "solved": 11,
+     "of": 34
+    },
+    "statistics": {
+     "solved": 26,
+     "of": 27
+    }
+   },
+   "cross_domain": [
+    11,
+    34
+   ],
+   "novel_combination": [
+    7,
+    12
+   ]
+  },
+  "C": {
+   "solved": 0,
+   "solvable": 61,
+   "wilson_95": [
+    -6.938893903907228e-18,
+    0.05924386789811283
+   ],
+   "wrong": 0,
+   "abstained_on_unsolvable": 0,
+   "unsolvable": 0,
+   "by_family": {
+    "cross": {
+     "solved": 0,
+     "of": 34
+    },
+    "statistics": {
+     "solved": 0,
+     "of": 27
+    }
+   },
+   "cross_domain": [
+    0,
+    34
+   ],
+   "novel_combination": [
+    0,
+    12
+   ]
+  },
+  "D": {
+   "solved": 6,
+   "solvable": 61,
+   "wilson_95": [
+    0.04586457581547049,
+    0.19844607216825946
+   ],
+   "wrong": 0,
+   "abstained_on_unsolvable": 0,
+   "unsolvable": 0,
+   "by_family": {
+    "cross": {
+     "solved": 1,
+     "of": 34
+    },
+    "statistics": {
+     "solved": 5,
+     "of": 27
+    }
+   },
+   "cross_domain": [
+    1,
+    34
+   ],
+   "novel_combination": [
+    1,
+    12
+   ]
+  }
+ },
+ "exploration": {
+  "catalog_files": 336,
+  "start": "Doc/builtins/stdtypes.rst",
+  "goal": [
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/builtins.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/builtins.rst",
+      "Doc/library/string.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/builtins.rst",
+      "Doc/library/string.rst",
+      "Doc/library/decimal.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/builtins.rst",
+      "Doc/library/string.rst",
+      "Doc/library/decimal.rst",
+      "Doc/library/struct.rst"
+     ]
+    }
+   ]
+  ],
+  "curiosity": [
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/re.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/re.rst",
+      "Doc/library/builtins.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/re.rst",
+      "Doc/library/builtins.rst",
+      "Doc/library/unicodedata.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/re.rst",
+      "Doc/library/builtins.rst",
+      "Doc/library/unicodedata.rst",
+      "Doc/library/decimal.rst"
+     ]
+    }
+   ]
+  ],
+  "random": [
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/pathlib.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/pathlib.rst",
+      "Doc/library/py_compile.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/pathlib.rst",
+      "Doc/library/py_compile.rst",
+      "Doc/library/asyncio-eventloop.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/pathlib.rst",
+      "Doc/library/py_compile.rst",
+      "Doc/library/asyncio-eventloop.rst",
+      "Doc/library/gzip.rst"
+     ]
+    }
+   ],
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/concurrent.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/concurrent.rst",
+      "Doc/library/tty.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/concurrent.rst",
+      "Doc/library/tty.rst",
+      "Doc/library/asyncio-sync.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/concurrent.rst",
+      "Doc/library/tty.rst",
+      "Doc/library/asyncio-sync.rst",
+      "Doc/library/grp.rst"
+     ]
+    }
+   ],
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/asyncio-queue.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/asyncio-queue.rst",
+      "Doc/library/bz2.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/asyncio-queue.rst",
+      "Doc/library/bz2.rst",
+      "Doc/library/binascii.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/asyncio-queue.rst",
+      "Doc/library/bz2.rst",
+      "Doc/library/binascii.rst",
+      "Doc/library/netrc.rst"
+     ]
+    }
+   ],
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fractions.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fractions.rst",
+      "Doc/library/urllib.robotparser.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fractions.rst",
+      "Doc/library/urllib.robotparser.rst",
+      "Doc/library/tkinter.font.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fractions.rst",
+      "Doc/library/urllib.robotparser.rst",
+      "Doc/library/tkinter.font.rst",
+      "Doc/library/concurrent.futures.rst"
+     ]
+    }
+   ],
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fnmatch.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fnmatch.rst",
+      "Doc/library/internet.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fnmatch.rst",
+      "Doc/library/internet.rst",
+      "Doc/library/cmath.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/library/fnmatch.rst",
+      "Doc/library/internet.rst",
+      "Doc/library/cmath.rst",
+      "Doc/library/plistlib.rst"
+     ]
+    }
+   ]
+  ],
+  "alphabetical": [
+   [
+    {
+     "reads": 0,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst"
+     ]
+    },
+    {
+     "reads": 1,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/builtins/constants.rst"
+     ]
+    },
+    {
+     "reads": 2,
+     "solved": 192,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/builtins/constants.rst",
+      "Doc/builtins/exceptions.rst"
+     ]
+    },
+    {
+     "reads": 3,
+     "solved": 348,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/builtins/constants.rst",
+      "Doc/builtins/exceptions.rst",
+      "Doc/builtins/functions.rst"
+     ]
+    },
+    {
+     "reads": 4,
+     "solved": 348,
+     "read": [
+      "Doc/builtins/stdtypes.rst",
+      "Doc/builtins/constants.rst",
+      "Doc/builtins/exceptions.rst",
+      "Doc/builtins/functions.rst",
+      "Doc/builtins/index.rst"
+     ]
+    }
+   ]
+  ]
+ },
+ "continual": {
+  "episodes": [
+   {
+    "episode": 1,
+    "source": "stdtypes",
+    "skills": 35,
+    "solved": 59,
+    "regressions": []
+   },
+   {
+    "episode": 2,
+    "source": "functions",
+    "skills": 44,
+    "solved": 121,
+    "regressions": []
+   },
+   {
+    "episode": 3,
+    "source": "math",
+    "skills": 54,
+    "solved": 159,
+    "regressions": []
+   },
+   {
+    "episode": 4,
+    "source": "statistics-doc",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 5,
+    "source": "statistics-code",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 6,
+    "source": "cheatsheet",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 7,
+    "source": "Doc/library/datetime.rst",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 8,
+    "source": "Doc/library/textwrap.rst",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 9,
+    "source": "Doc/library/itertools.rst",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 10,
+    "source": "Doc/library/random.rst",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   },
+   {
+    "episode": 11,
+    "source": "Doc/library/operator.rst",
+    "skills": 68,
+    "solved": 198,
+    "regressions": [
+     {
+      "task": "101-40",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-72",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-163",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-181",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-225",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-240",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-296",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-7",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-91",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-110",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     },
+     {
+      "task": "101-167",
+      "cause": "retrieval failure (skill present, not found in budget)"
+     }
+    ]
+   }
+  ],
+  "recovered_from_memory_without_network": 198,
+  "final_live": 198
+ },
+ "seconds": 1274.426212909
+}

@@ -43,9 +43,46 @@ def summarise(rows):
             'novel_combination': [sum(r['outcome'] == 'correct' for r in solv if r['novel']), sum(r['novel'] for r in solv)]}
 
 
+def exploration(a, reach, docs, dev, run_all):
+    R = {}
+    commit, catalog = reach.github.list('python', 'cpython', 'Doc/')
+    catalog = [f for f in catalog if f.endswith('.rst') and (f.startswith('Doc/library/') or f.startswith('Doc/builtins/'))]
+    start = 'Doc/builtins/stdtypes.rst'; R.update({'catalog_files': len(catalog), 'start': start})
+    for strategy in ('goal', 'curiosity', 'random', 'alphabetical'):
+        runs = []
+        for seed in ((0, 1, 2, 3, 4) if strategy == 'random' else (0,)):
+            ex = Explorer(catalog, strategy, seed); read = {start: docs['stdtypes']['text']}
+            ex.observe(start, read[start]); trace = []
+            for step in range(1, 6):
+                cl = [c for p, txt in read.items() for c in extract(txt, Source(p, CP + p, 'rst', 'python/cpython', p))]
+                sk, dc, _, _, cs = build(cl)
+                res = run_all(sk, cs, budget=2000)['total']; trace.append({'reads': len(read) - 1, 'solved': res['solved'], 'read': list(read)})
+                unsolved = ()
+                if strategy == 'goal':  # only training (dev) tasks guide reading; eval tasks stay invisible
+                    rows = score(Solver(sk, cs, budget=2000), dev); unsolved = [t['goal'] for t, r in zip(dev, rows) if r['outcome'] != 'correct' and t['solvable']]
+                nxt = ex.next(unsolved)
+                if nxt is None:
+                    break
+                try:
+                    txt = reach.read(CP + nxt)['text']
+                except Exception:
+                    txt = ''
+                read[nxt] = txt; ex.observe(nxt, txt, [o for o, d in dc.items() if d['status'] == 'unverified'])
+            runs.append(trace)
+        R[strategy] = runs; print('4', strategy, [[s['solved'] for s in r] for r in runs], runs[0][-1]['read'][1:], flush=True)
+
+    return R
+
+
+def exploration_only(a, reach, docs, dev, evals, run_all):
+    R = exploration(a, reach, docs, dev, run_all)
+    (a.output / 'exploration-rerun.json').write_text(json.dumps(R, indent=1, default=str))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__); ap.add_argument('--output', type=Path, default=Path('results/learn'))
     ap.add_argument('--cache', type=Path, default=Path('lab_state/repos')); ap.add_argument('--budget', type=int, default=10000)
+    ap.add_argument('--only', choices=['exploration'], help='rerun one experiment into its own results file')
     a = ap.parse_args(); a.output.mkdir(parents=True, exist_ok=True); t0 = time.monotonic(); R = {}
     manifest = json.loads(Path('datasets/learn_tasks_manifest.json').read_text())
     for name in ['learn_tasks_dev.json'] + EVAL:
@@ -74,6 +111,8 @@ def main():
                         'novel_combination': [sum(v['novel_combination'][i] for v in out.values() if 'novel_combination' in v) for i in (0, 1)]}
         return out
 
+    if a.only == 'exploration':
+        return exploration_only(a, reach, docs, dev, evals, run_all)
     # 1. Multi-source learning + evidence accounting.
     rst = ['stdtypes', 'functions', 'math', 'statistics-doc']; R['multi_source'] = {}
     for label, ids in (('rst_docs', rst), ('rst_plus_code', rst + ['statistics-code']), ('rst_code_markdown', rst + ['statistics-code', 'cheatsheet'])):
@@ -147,32 +186,7 @@ def main():
                          'outcome': 'correct' if sol['program'] and all(execute(sol['program'], x) == ('ok', y) for x, y in t['hidden']) else 'abstained'})
         R['node_failure'][cond] = summarise(rows); print('3f', cond, R['node_failure'][cond]['solved'], '/', len(rows), flush=True)
 
-    # 4. Exploration: which documents to read, from a catalog of CPython docs.
-    commit, catalog = reach.github.list('python', 'cpython', 'Doc/')
-    catalog = [f for f in catalog if f.endswith('.rst') and (f.startswith('Doc/library/') or f.startswith('Doc/builtins/'))]
-    start = 'Doc/builtins/stdtypes.rst'; R['exploration'] = {'catalog_files': len(catalog), 'start': start}
-    for strategy in ('goal', 'curiosity', 'random', 'alphabetical'):
-        runs = []
-        for seed in ((0, 1, 2, 3, 4) if strategy == 'random' else (0,)):
-            ex = Explorer(catalog, strategy, seed); read = {start: docs['stdtypes']['text']}
-            ex.observe(start, read[start]); trace = []
-            for step in range(1, 6):
-                cl = [c for p, txt in read.items() for c in extract(txt, Source(p, CP + p, 'rst', 'python/cpython', p))]
-                sk, dc, _, _, cs = build(cl)
-                res = run_all(sk, cs, budget=2000)['total']; trace.append({'reads': len(read) - 1, 'solved': res['solved'], 'read': list(read)})
-                unsolved = ()
-                if strategy == 'goal':  # only training (dev) tasks guide reading; eval tasks stay invisible
-                    rows = score(Solver(sk, cs, budget=2000), dev); unsolved = [t['goal'] for t, r in zip(dev, rows) if r['outcome'] != 'correct' and t['solvable']]
-                nxt = ex.next(unsolved)
-                if nxt is None:
-                    break
-                try:
-                    txt = reach.read(CP + nxt)['text']
-                except Exception:
-                    txt = ''
-                read[nxt] = txt; ex.observe(nxt, txt, [o for o, d in dc.items() if d['status'] == 'unverified'])
-            runs.append(trace)
-        R['exploration'][strategy] = runs; print('4', strategy, [[s['solved'] for s in r] for r in runs], runs[0][-1]['read'][1:], flush=True)
+    R['exploration'] = exploration(a, reach, docs, dev, run_all)
 
     # 5. Continual learning: read sources in episodes, re-test everything solved before.
     order = ['stdtypes', 'functions', 'math', 'statistics-doc', 'statistics-code', 'cheatsheet']

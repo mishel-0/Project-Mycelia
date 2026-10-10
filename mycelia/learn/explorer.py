@@ -22,7 +22,11 @@ def module_file(catalog):
     for f in catalog:
         stem = f.rsplit('/', 1)[-1].removesuffix('.rst')
         out[stem] = f
-    out.setdefault('builtins', next((f for f in catalog if f.endswith('functions.rst')), None))
+    # Built-in functions (len, sorted, ...) are documented in Doc/builtins/functions.rst; the file
+    # Doc/library/builtins.rst describes the `builtins` module object instead (bug found in the first run).
+    functions = next((f for f in catalog if f.endswith('builtins/functions.rst')), None)
+    if functions:
+        out['builtins'] = functions
     return out
 
 
