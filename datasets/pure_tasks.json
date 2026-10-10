@@ -1,0 +1,1552 @@
+[
+ {
+  "id": 0,
+  "split": "train",
+  "goal": "make every letter uppercase",
+  "examples": [
+   [
+    "River Apple   ",
+    "RIVER APPLE   "
+   ],
+   [
+    "  Apple STONE green night",
+    "  APPLE STONE GREEN NIGHT"
+   ],
+   [
+    " Bob GREEN Alice ",
+    " BOB GREEN ALICE "
+   ]
+  ],
+  "hidden": [
+   [
+    "River  Night  Stone",
+    "RIVER  NIGHT  STONE"
+   ],
+   [
+    "  apple  Hypha  Night  Spore",
+    "  APPLE  HYPHA  NIGHT  SPORE"
+   ],
+   [
+    " river NIGHT Green Spore ",
+    " RIVER NIGHT GREEN SPORE "
+   ],
+   [
+    "  NIGHT GREEN Stone HYPHA   ",
+    "  NIGHT GREEN STONE HYPHA   "
+   ],
+   [
+    "  Mycelia Alice   ",
+    "  MYCELIA ALICE   "
+   ],
+   [
+    " stone  green  Mycelia  Spore   ",
+    " STONE  GREEN  MYCELIA  SPORE   "
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 1,
+  "split": "test",
+  "goal": "make every letter lowercase",
+  "examples": [
+   [
+    "  HYPHA  Apple  Stone  River ",
+    "  hypha  apple  stone  river "
+   ],
+   [
+    "  spore  hypha  apple   ",
+    "  spore  hypha  apple   "
+   ],
+   [
+    "  River  SPORE  HYPHA ",
+    "  river  spore  hypha "
+   ]
+  ],
+  "hidden": [
+   [
+    "  alice  HYPHA  River  Spore ",
+    "  alice  hypha  river  spore "
+   ],
+   [
+    " stone  Green ",
+    " stone  green "
+   ],
+   [
+    "spore STONE",
+    "spore stone"
+   ],
+   [
+    "Night apple bob   ",
+    "night apple bob   "
+   ],
+   [
+    "  RIVER  Mycelia  Alice   ",
+    "  river  mycelia  alice   "
+   ],
+   [
+    "  Mycelia  apple  Spore  Green",
+    "  mycelia  apple  spore  green"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 2,
+  "split": "train",
+  "goal": "remove the whitespace at both ends",
+  "examples": [
+   [
+    "Mycelia NIGHT HYPHA ",
+    "Mycelia NIGHT HYPHA"
+   ],
+   [
+    " bob  stone",
+    "bob  stone"
+   ],
+   [
+    " APPLE  Green ",
+    "APPLE  Green"
+   ]
+  ],
+  "hidden": [
+   [
+    "Green Night   ",
+    "Green Night"
+   ],
+   [
+    "Spore  stone  River  Night",
+    "Spore  stone  River  Night"
+   ],
+   [
+    "Mycelia  Alice   ",
+    "Mycelia  Alice"
+   ],
+   [
+    "  green Alice   ",
+    "green Alice"
+   ],
+   [
+    " MYCELIA  NIGHT",
+    "MYCELIA  NIGHT"
+   ],
+   [
+    " hypha  MYCELIA  RIVER ",
+    "hypha  MYCELIA  RIVER"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 3,
+  "split": "test",
+  "goal": "make each word start with a capital letter and trim the ends",
+  "examples": [
+   [
+    "  MYCELIA  river  Green",
+    "Mycelia  River  Green"
+   ],
+   [
+    "  spore  ALICE ",
+    "Spore  Alice"
+   ],
+   [
+    "  mycelia ALICE River Stone",
+    "Mycelia Alice River Stone"
+   ]
+  ],
+  "hidden": [
+   [
+    "  HYPHA Apple SPORE Night",
+    "Hypha Apple Spore Night"
+   ],
+   [
+    " bob Stone mycelia   ",
+    "Bob Stone Mycelia"
+   ],
+   [
+    "Bob  apple  RIVER  MYCELIA ",
+    "Bob  Apple  River  Mycelia"
+   ],
+   [
+    "ALICE STONE",
+    "Alice Stone"
+   ],
+   [
+    "  alice  hypha ",
+    "Alice  Hypha"
+   ],
+   [
+    "  NIGHT  Alice  stone ",
+    "Night  Alice  Stone"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 4,
+  "split": "train",
+  "goal": "split the comma separated text into a list",
+  "examples": [
+   [
+    "bob,river,hypha,spore",
+    [
+     "bob",
+     "river",
+     "hypha",
+     "spore"
+    ]
+   ],
+   [
+    "river,alice,stone",
+    [
+     "river",
+     "alice",
+     "stone"
+    ]
+   ],
+   [
+    "hypha,river",
+    [
+     "hypha",
+     "river"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "bob,hypha,stone",
+    [
+     "bob",
+     "hypha",
+     "stone"
+    ]
+   ],
+   [
+    "night,alice,river",
+    [
+     "night",
+     "alice",
+     "river"
+    ]
+   ],
+   [
+    "apple,alice",
+    [
+     "apple",
+     "alice"
+    ]
+   ],
+   [
+    "bob,mycelia,night,alice",
+    [
+     "bob",
+     "mycelia",
+     "night",
+     "alice"
+    ]
+   ],
+   [
+    "mycelia,apple",
+    [
+     "mycelia",
+     "apple"
+    ]
+   ],
+   [
+    "night,hypha,alice",
+    [
+     "night",
+     "hypha",
+     "alice"
+    ]
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 5,
+  "split": "test",
+  "goal": "swap the case of every letter",
+  "examples": [
+   [
+    "NIGHT  MYCELIA  RIVER   ",
+    "night  mycelia  river   "
+   ],
+   [
+    "  Mycelia  night ",
+    "  mYCELIA  NIGHT "
+   ],
+   [
+    "  spore  ALICE ",
+    "  SPORE  alice "
+   ]
+  ],
+  "hidden": [
+   [
+    "  river  Mycelia  bob ",
+    "  RIVER  mYCELIA  BOB "
+   ],
+   [
+    "apple River alice NIGHT   ",
+    "APPLE rIVER ALICE night   "
+   ],
+   [
+    "mycelia  Stone  RIVER  APPLE ",
+    "MYCELIA  sTONE  river  apple "
+   ],
+   [
+    "Green Apple NIGHT   ",
+    "gREEN aPPLE night   "
+   ],
+   [
+    " MYCELIA Green Alice   ",
+    " mycelia gREEN aLICE   "
+   ],
+   [
+    "  BOB  Hypha",
+    "  bob  hYPHA"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 6,
+  "split": "train",
+  "goal": "replace the commas with spaces",
+  "examples": [
+   [
+    "bob,alice,spore,stone",
+    "bob alice spore stone"
+   ],
+   [
+    "night,hypha,alice,spore",
+    "night hypha alice spore"
+   ],
+   [
+    "apple,night,mycelia",
+    "apple night mycelia"
+   ]
+  ],
+  "hidden": [
+   [
+    "bob,night,mycelia,river",
+    "bob night mycelia river"
+   ],
+   [
+    "river,apple,hypha",
+    "river apple hypha"
+   ],
+   [
+    "alice,spore,mycelia",
+    "alice spore mycelia"
+   ],
+   [
+    "hypha,apple,night",
+    "hypha apple night"
+   ],
+   [
+    "mycelia,stone,spore",
+    "mycelia stone spore"
+   ],
+   [
+    "alice,green,stone,mycelia",
+    "alice green stone mycelia"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 7,
+  "split": "test",
+  "goal": "replace the dashes with underscores",
+  "examples": [
+   [
+    "apple-alice",
+    "apple_alice"
+   ],
+   [
+    "river-apple",
+    "river_apple"
+   ],
+   [
+    "mycelia-alice",
+    "mycelia_alice"
+   ]
+  ],
+  "hidden": [
+   [
+    "bob-river-hypha",
+    "bob_river_hypha"
+   ],
+   [
+    "apple-mycelia",
+    "apple_mycelia"
+   ],
+   [
+    "mycelia-bob",
+    "mycelia_bob"
+   ],
+   [
+    "green-bob-apple",
+    "green_bob_apple"
+   ],
+   [
+    "hypha-night-bob",
+    "hypha_night_bob"
+   ],
+   [
+    "green-night-bob",
+    "green_night_bob"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 8,
+  "split": "train",
+  "goal": "collapse repeated spaces into single spaces and trim",
+  "examples": [
+   [
+    "APPLE Spore RIVER green ",
+    "APPLE Spore RIVER green"
+   ],
+   [
+    "  HYPHA  SPORE  Mycelia ",
+    "HYPHA SPORE Mycelia"
+   ],
+   [
+    " green  STONE  river  Bob ",
+    "green STONE river Bob"
+   ]
+  ],
+  "hidden": [
+   [
+    "Stone  Spore  Mycelia  Apple ",
+    "Stone Spore Mycelia Apple"
+   ],
+   [
+    "  BOB  RIVER  hypha",
+    "BOB RIVER hypha"
+   ],
+   [
+    " MYCELIA  APPLE  Bob ",
+    "MYCELIA APPLE Bob"
+   ],
+   [
+    " Apple RIVER   ",
+    "Apple RIVER"
+   ],
+   [
+    " APPLE NIGHT Spore ",
+    "APPLE NIGHT Spore"
+   ],
+   [
+    "  Mycelia  ALICE  hypha  GREEN ",
+    "Mycelia ALICE hypha GREEN"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 9,
+  "split": "test",
+  "goal": "pad the number with zeros to a width of eight",
+  "examples": [
+   [
+    "7913",
+    "00007913"
+   ],
+   [
+    "5551",
+    "00005551"
+   ],
+   [
+    "193",
+    "00000193"
+   ]
+  ],
+  "hidden": [
+   [
+    "615",
+    "00000615"
+   ],
+   [
+    "3603",
+    "00003603"
+   ],
+   [
+    "1980",
+    "00001980"
+   ],
+   [
+    "4402",
+    "00004402"
+   ],
+   [
+    "5352",
+    "00005352"
+   ],
+   [
+    "292",
+    "00000292"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 10,
+  "split": "train",
+  "goal": "check whether the text is made only of digits",
+  "examples": [
+   [
+    "3428",
+    true
+   ],
+   [
+    "9106",
+    true
+   ],
+   [
+    "5407",
+    true
+   ]
+  ],
+  "hidden": [
+   [
+    "5070",
+    true
+   ],
+   [
+    "1771",
+    true
+   ],
+   [
+    "apple,spore,green,river",
+    false
+   ],
+   [
+    "river,green,hypha",
+    false
+   ],
+   [
+    "5359",
+    true
+   ],
+   [
+    "hypha,green,spore",
+    false
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 11,
+  "split": "test",
+  "goal": "count how many commas the text contains",
+  "examples": [
+   [
+    "apple,stone,hypha",
+    2
+   ],
+   [
+    "night,alice",
+    1
+   ],
+   [
+    "bob,apple,hypha",
+    2
+   ]
+  ],
+  "hidden": [
+   [
+    "night,bob,river",
+    2
+   ],
+   [
+    "river,night,apple",
+    2
+   ],
+   [
+    "bob,apple",
+    1
+   ],
+   [
+    "hypha,apple",
+    1
+   ],
+   [
+    "stone,bob,spore,alice",
+    3
+   ],
+   [
+    "spore,night,stone",
+    2
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 12,
+  "split": "train",
+  "goal": "turn the slug into lowercase words separated by spaces",
+  "examples": [
+   [
+    "apple-spore",
+    "apple spore"
+   ],
+   [
+    "green-mycelia-river",
+    "green mycelia river"
+   ],
+   [
+    "stone-apple-spore",
+    "stone apple spore"
+   ]
+  ],
+  "hidden": [
+   [
+    "night-apple",
+    "night apple"
+   ],
+   [
+    "mycelia-night",
+    "mycelia night"
+   ],
+   [
+    "alice-hypha",
+    "alice hypha"
+   ],
+   [
+    "mycelia-night-hypha",
+    "mycelia night hypha"
+   ],
+   [
+    "mycelia-green-night",
+    "mycelia green night"
+   ],
+   [
+    "alice-mycelia",
+    "alice mycelia"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 13,
+  "split": "test",
+  "goal": "capitalize the first letter and lowercase the rest after trimming",
+  "examples": [
+   [
+    " mycelia STONE green Hypha ",
+    "Mycelia stone green hypha"
+   ],
+   [
+    "Stone Mycelia river BOB",
+    "Stone mycelia river bob"
+   ],
+   [
+    "night hypha River ",
+    "Night hypha river"
+   ]
+  ],
+  "hidden": [
+   [
+    " stone Spore MYCELIA bob   ",
+    "Stone spore mycelia bob"
+   ],
+   [
+    "  Stone  green  RIVER   ",
+    "Stone  green  river"
+   ],
+   [
+    "  green bob spore RIVER",
+    "Green bob spore river"
+   ],
+   [
+    "spore STONE   ",
+    "Spore stone"
+   ],
+   [
+    " hypha  NIGHT  River  SPORE ",
+    "Hypha  night  river  spore"
+   ],
+   [
+    " Bob  mycelia ",
+    "Bob  mycelia"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 14,
+  "split": "train",
+  "goal": "split the path into its folder parts at the slash",
+  "examples": [
+   [
+    "apple/river.py",
+    [
+     "apple",
+     "river.py"
+    ]
+   ],
+   [
+    "green/night.py",
+    [
+     "green",
+     "night.py"
+    ]
+   ],
+   [
+    "hypha/night.txt",
+    [
+     "hypha",
+     "night.txt"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "night/alice.txt",
+    [
+     "night",
+     "alice.txt"
+    ]
+   ],
+   [
+    "night/bob/stone.csv",
+    [
+     "night",
+     "bob",
+     "stone.csv"
+    ]
+   ],
+   [
+    "night/green/alice.txt",
+    [
+     "night",
+     "green",
+     "alice.txt"
+    ]
+   ],
+   [
+    "mycelia/alice/bob.py",
+    [
+     "mycelia",
+     "alice",
+     "bob.py"
+    ]
+   ],
+   [
+    "mycelia/apple.py",
+    [
+     "mycelia",
+     "apple.py"
+    ]
+   ],
+   [
+    "alice/bob.csv",
+    [
+     "alice",
+     "bob.csv"
+    ]
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 15,
+  "split": "test",
+  "goal": "remove whitespace at the right end only",
+  "examples": [
+   [
+    " BOB river MYCELIA Green ",
+    " BOB river MYCELIA Green"
+   ],
+   [
+    " APPLE river   ",
+    " APPLE river"
+   ],
+   [
+    " green  Spore ",
+    " green  Spore"
+   ]
+  ],
+  "hidden": [
+   [
+    "Alice  green  Spore  APPLE",
+    "Alice  green  Spore  APPLE"
+   ],
+   [
+    "  River Hypha stone GREEN   ",
+    "  River Hypha stone GREEN"
+   ],
+   [
+    "night River ",
+    "night River"
+   ],
+   [
+    "BOB night stone ",
+    "BOB night stone"
+   ],
+   [
+    " APPLE hypha",
+    " APPLE hypha"
+   ],
+   [
+    "  APPLE Bob ",
+    "  APPLE Bob"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 16,
+  "split": "train",
+  "goal": "remove whitespace at the left end only",
+  "examples": [
+   [
+    "green  Apple  Alice  STONE",
+    "green  Apple  Alice  STONE"
+   ],
+   [
+    " bob hypha ",
+    "bob hypha "
+   ],
+   [
+    "  Bob Apple Mycelia ",
+    "Bob Apple Mycelia "
+   ]
+  ],
+  "hidden": [
+   [
+    " apple  River",
+    "apple  River"
+   ],
+   [
+    "  ALICE NIGHT ",
+    "ALICE NIGHT "
+   ],
+   [
+    " night  Mycelia  apple  Bob ",
+    "night  Mycelia  apple  Bob "
+   ],
+   [
+    "  MYCELIA green Bob alice ",
+    "MYCELIA green Bob alice "
+   ],
+   [
+    " Mycelia river night spore   ",
+    "Mycelia river night spore   "
+   ],
+   [
+    "  stone River Apple   ",
+    "stone River Apple   "
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 17,
+  "split": "test",
+  "goal": "join the comma separated words with dashes",
+  "examples": [
+   [
+    "spore,bob,stone",
+    "spore-bob-stone"
+   ],
+   [
+    "hypha,mycelia",
+    "hypha-mycelia"
+   ],
+   [
+    "apple,alice,night",
+    "apple-alice-night"
+   ]
+  ],
+  "hidden": [
+   [
+    "mycelia,green,bob",
+    "mycelia-green-bob"
+   ],
+   [
+    "green,mycelia",
+    "green-mycelia"
+   ],
+   [
+    "apple,green,bob,alice",
+    "apple-green-bob-alice"
+   ],
+   [
+    "alice,apple",
+    "alice-apple"
+   ],
+   [
+    "mycelia,stone,hypha",
+    "mycelia-stone-hypha"
+   ],
+   [
+    "green,hypha",
+    "green-hypha"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 18,
+  "split": "train",
+  "goal": "find the position of the first slash",
+  "examples": [
+   [
+    "stone/alice.py",
+    5
+   ],
+   [
+    "bob/spore.py",
+    3
+   ],
+   [
+    "bob/stone/hypha.py",
+    3
+   ]
+  ],
+  "hidden": [
+   [
+    "hypha/night/green.csv",
+    5
+   ],
+   [
+    "green/hypha/river.txt",
+    5
+   ],
+   [
+    "night/apple.txt",
+    5
+   ],
+   [
+    "spore/hypha.csv",
+    5
+   ],
+   [
+    "spore/river/mycelia.txt",
+    5
+   ],
+   [
+    "stone/mycelia.csv",
+    5
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 19,
+  "split": "test",
+  "goal": "check whether the path ends with a txt extension",
+  "examples": [
+   [
+    "apple/stone/spore.csv",
+    false
+   ],
+   [
+    "apple/night/stone.csv",
+    false
+   ],
+   [
+    "river/green/spore.txt",
+    true
+   ]
+  ],
+  "hidden": [
+   [
+    "alice/spore/hypha.txt",
+    true
+   ],
+   [
+    "night/mycelia/green.py",
+    false
+   ],
+   [
+    "alice/hypha/night.csv",
+    false
+   ],
+   [
+    "apple/hypha/stone.txt",
+    true
+   ],
+   [
+    "night/apple/river.py",
+    false
+   ],
+   [
+    "apple/spore/alice.py",
+    false
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 20,
+  "split": "train",
+  "goal": "make the words uppercase and separate them by commas",
+  "examples": [
+   [
+    " stone Night River APPLE",
+    "STONE,NIGHT,RIVER,APPLE"
+   ],
+   [
+    " SPORE  Mycelia",
+    "SPORE,MYCELIA"
+   ],
+   [
+    "apple Spore river",
+    "APPLE,SPORE,RIVER"
+   ]
+  ],
+  "hidden": [
+   [
+    "Bob  Green  River",
+    "BOB,GREEN,RIVER"
+   ],
+   [
+    "hypha  ALICE  Bob   ",
+    "HYPHA,ALICE,BOB"
+   ],
+   [
+    "  Bob NIGHT SPORE",
+    "BOB,NIGHT,SPORE"
+   ],
+   [
+    " river SPORE   ",
+    "RIVER,SPORE"
+   ],
+   [
+    "Mycelia  BOB  ALICE ",
+    "MYCELIA,BOB,ALICE"
+   ],
+   [
+    "GREEN Night ",
+    "GREEN,NIGHT"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 21,
+  "split": "test",
+  "goal": "case insensitive form of the text without surrounding spaces",
+  "examples": [
+   [
+    "  STONE Bob ",
+    "stone bob"
+   ],
+   [
+    "  river  mycelia ",
+    "river  mycelia"
+   ],
+   [
+    "bob  SPORE  River ",
+    "bob  spore  river"
+   ]
+  ],
+  "hidden": [
+   [
+    "Night  Hypha  Spore ",
+    "night  hypha  spore"
+   ],
+   [
+    " Apple  HYPHA   ",
+    "apple  hypha"
+   ],
+   [
+    " SPORE  Green  MYCELIA",
+    "spore  green  mycelia"
+   ],
+   [
+    "  Spore ALICE Night HYPHA   ",
+    "spore alice night hypha"
+   ],
+   [
+    "Stone  NIGHT  Green ",
+    "stone  night  green"
+   ],
+   [
+    " green  RIVER  STONE  Mycelia ",
+    "green  river  stone  mycelia"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 22,
+  "split": "train",
+  "goal": "split the trimmed sentence into words",
+  "examples": [
+   [
+    "  RIVER stone   ",
+    [
+     "RIVER",
+     "stone"
+    ]
+   ],
+   [
+    " apple  NIGHT  ALICE ",
+    [
+     "apple",
+     "NIGHT",
+     "ALICE"
+    ]
+   ],
+   [
+    "hypha  alice  spore  bob   ",
+    [
+     "hypha",
+     "alice",
+     "spore",
+     "bob"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "green bob ALICE mycelia",
+    [
+     "green",
+     "bob",
+     "ALICE",
+     "mycelia"
+    ]
+   ],
+   [
+    " night stone ",
+    [
+     "night",
+     "stone"
+    ]
+   ],
+   [
+    " river apple GREEN ",
+    [
+     "river",
+     "apple",
+     "GREEN"
+    ]
+   ],
+   [
+    " apple  mycelia  STONE  River ",
+    [
+     "apple",
+     "mycelia",
+     "STONE",
+     "River"
+    ]
+   ],
+   [
+    " mycelia  alice  HYPHA  stone   ",
+    [
+     "mycelia",
+     "alice",
+     "HYPHA",
+     "stone"
+    ]
+   ],
+   [
+    "Mycelia  SPORE  river  bob ",
+    [
+     "Mycelia",
+     "SPORE",
+     "river",
+     "bob"
+    ]
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 23,
+  "split": "test",
+  "goal": "turn the comma list into uppercase words separated by spaces",
+  "examples": [
+   [
+    "river,stone",
+    "RIVER STONE"
+   ],
+   [
+    "alice,river",
+    "ALICE RIVER"
+   ],
+   [
+    "bob,hypha,spore,night",
+    "BOB HYPHA SPORE NIGHT"
+   ]
+  ],
+  "hidden": [
+   [
+    "hypha,bob,night",
+    "HYPHA BOB NIGHT"
+   ],
+   [
+    "apple,bob,night,river",
+    "APPLE BOB NIGHT RIVER"
+   ],
+   [
+    "green,apple",
+    "GREEN APPLE"
+   ],
+   [
+    "mycelia,night,apple",
+    "MYCELIA NIGHT APPLE"
+   ],
+   [
+    "apple,hypha",
+    "APPLE HYPHA"
+   ],
+   [
+    "bob,stone,hypha,green",
+    "BOB STONE HYPHA GREEN"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 24,
+  "split": "train",
+  "goal": "right align the number in a field of six with zeros",
+  "examples": [
+   [
+    "7716",
+    "007716"
+   ],
+   [
+    "5950",
+    "005950"
+   ],
+   [
+    "3131",
+    "003131"
+   ]
+  ],
+  "hidden": [
+   [
+    "3075",
+    "003075"
+   ],
+   [
+    "2917",
+    "002917"
+   ],
+   [
+    "5893",
+    "005893"
+   ],
+   [
+    "7762",
+    "007762"
+   ],
+   [
+    "1059",
+    "001059"
+   ],
+   [
+    "9753",
+    "009753"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 25,
+  "split": "test",
+  "goal": "replace slashes with dots in the path",
+  "examples": [
+   [
+    "night/hypha.csv",
+    "night.hypha.csv"
+   ],
+   [
+    "apple/river.txt",
+    "apple.river.txt"
+   ],
+   [
+    "green/alice/hypha.txt",
+    "green.alice.hypha.txt"
+   ]
+  ],
+  "hidden": [
+   [
+    "green/stone/bob.txt",
+    "green.stone.bob.txt"
+   ],
+   [
+    "bob/hypha/stone.txt",
+    "bob.hypha.stone.txt"
+   ],
+   [
+    "river/hypha/apple.txt",
+    "river.hypha.apple.txt"
+   ],
+   [
+    "bob/hypha.py",
+    "bob.hypha.py"
+   ],
+   [
+    "spore/night.csv",
+    "spore.night.csv"
+   ],
+   [
+    "alice/river.txt",
+    "alice.river.txt"
+   ]
+  ],
+  "solvable_by_str_methods": true
+ },
+ {
+  "id": 26,
+  "split": "train",
+  "goal": "reverse the order of the characters",
+  "examples": [
+   [
+    "  RIVER  BOB   ",
+    "   BOB  REVIR  "
+   ],
+   [
+    "  APPLE  Spore  Alice   ",
+    "   ecilA  eropS  ELPPA  "
+   ],
+   [
+    " STONE  alice  River ",
+    " reviR  ecila  ENOTS "
+   ]
+  ],
+  "hidden": [
+   [
+    "Bob  alice  Stone  Spore",
+    "eropS  enotS  ecila  boB"
+   ],
+   [
+    "Green STONE bob RIVER ",
+    " REVIR bob ENOTS neerG"
+   ],
+   [
+    "  spore HYPHA",
+    "AHPYH erops  "
+   ],
+   [
+    " APPLE green",
+    "neerg ELPPA "
+   ],
+   [
+    "  NIGHT  HYPHA  MYCELIA  GREEN",
+    "NEERG  AILECYM  AHPYH  THGIN  "
+   ],
+   [
+    "  STONE  night ",
+    " thgin  ENOTS  "
+   ]
+  ],
+  "solvable_by_str_methods": false
+ },
+ {
+  "id": 27,
+  "split": "test",
+  "goal": "sort the comma separated words alphabetically",
+  "examples": [
+   [
+    "spore,river,bob",
+    [
+     "bob",
+     "river",
+     "spore"
+    ]
+   ],
+   [
+    "hypha,mycelia",
+    [
+     "hypha",
+     "mycelia"
+    ]
+   ],
+   [
+    "green,mycelia",
+    [
+     "green",
+     "mycelia"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "spore,hypha",
+    [
+     "hypha",
+     "spore"
+    ]
+   ],
+   [
+    "stone,green,apple,alice",
+    [
+     "alice",
+     "apple",
+     "green",
+     "stone"
+    ]
+   ],
+   [
+    "hypha,bob,alice",
+    [
+     "alice",
+     "bob",
+     "hypha"
+    ]
+   ],
+   [
+    "green,river,bob",
+    [
+     "bob",
+     "green",
+     "river"
+    ]
+   ],
+   [
+    "apple,night,stone",
+    [
+     "apple",
+     "night",
+     "stone"
+    ]
+   ],
+   [
+    "river,stone,bob,alice",
+    [
+     "alice",
+     "bob",
+     "river",
+     "stone"
+    ]
+   ]
+  ],
+  "solvable_by_str_methods": false
+ },
+ {
+  "id": 28,
+  "split": "train",
+  "goal": "keep only the first letter of each word",
+  "examples": [
+   [
+    " hypha bob ALICE Night ",
+    "hbAN"
+   ],
+   [
+    " Hypha ALICE NIGHT BOB   ",
+    "HANB"
+   ],
+   [
+    "HYPHA  night",
+    "Hn"
+   ]
+  ],
+  "hidden": [
+   [
+    "River stone alice night   ",
+    "Rsan"
+   ],
+   [
+    "  MYCELIA alice apple ",
+    "Maa"
+   ],
+   [
+    "SPORE mycelia ",
+    "Sm"
+   ],
+   [
+    " ALICE  Spore  Night   ",
+    "ASN"
+   ],
+   [
+    "bob  stone  APPLE  GREEN",
+    "bsAG"
+   ],
+   [
+    "  alice mycelia",
+    "am"
+   ]
+  ],
+  "solvable_by_str_methods": false
+ },
+ {
+  "id": 29,
+  "split": "test",
+  "goal": "remove duplicate words",
+  "examples": [
+   [
+    "hypha,alice",
+    [
+     "hypha",
+     "alice"
+    ]
+   ],
+   [
+    "spore,alice,apple,mycelia",
+    [
+     "spore",
+     "alice",
+     "apple",
+     "mycelia"
+    ]
+   ],
+   [
+    "stone,spore",
+    [
+     "stone",
+     "spore"
+    ]
+   ]
+  ],
+  "hidden": [
+   [
+    "bob,stone,green",
+    [
+     "bob",
+     "stone",
+     "green"
+    ]
+   ],
+   [
+    "river,night",
+    [
+     "river",
+     "night"
+    ]
+   ],
+   [
+    "night,spore",
+    [
+     "night",
+     "spore"
+    ]
+   ],
+   [
+    "bob,mycelia",
+    [
+     "bob",
+     "mycelia"
+    ]
+   ],
+   [
+    "green,alice,bob",
+    [
+     "green",
+     "alice",
+     "bob"
+    ]
+   ],
+   [
+    "night,green",
+    [
+     "night",
+     "green"
+    ]
+   ]
+  ],
+  "solvable_by_str_methods": false
+ }
+]

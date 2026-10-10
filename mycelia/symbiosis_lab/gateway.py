@@ -25,7 +25,7 @@ class Gateway:
         self.log = AppendLog(Path(root) / 'gateway.jsonl'); self.allowlist = tuple(allowlist)
         self.documents = {Path(p).name: Path(p) for p in documents}; self.datasets = datasets or {}
         self.timeout, self.max_bytes, self.min_interval = timeout, max_bytes, min_interval
-        self.opener = opener or urllib.request.urlopen; self.release_fn = release_fn; self._last = 0.
+        self.opener = opener or urllib.request.urlopen; self.release_fn = release_fn; self._last = 0.; self._raw = False
 
     def _record(self, tool, arg, ok, detail=''):
         self.log.append({'tool': tool, 'arg': str(arg)[:300], 'ok': ok, 'detail': str(detail)[:300]})
@@ -46,11 +46,22 @@ class Gateway:
             self._record('fetch_page', url, False, repr(e)); raise GatewayError(f'fetch failed: {e!r}') from e
         if len(raw) > self.max_bytes:
             self._record('fetch_page', url, False, 'too large'); raise GatewayError('page exceeds size limit')
+        if self._raw:
+            self._record('fetch_page', url, True, f'{len(raw)} raw bytes')
+            return {'url': url, 'html': raw.decode('utf-8', 'replace'), 'untrusted': True, 'retrieved': time.time()}
         text = raw.decode('utf-8', 'replace')
         text = re.sub(r'(?is)<(script|style)[^>]*>.*?</\1>', ' ', text)
         text = html.unescape(re.sub(r'(?s)<[^>]+>', ' ', text)); text = re.sub(r'\s+', ' ', text).strip()
         self._record('fetch_page', url, True, f'{len(text)} chars')
         return {'url': url, 'text': text, 'untrusted': True, 'retrieved': time.time()}
+
+    def fetch_html(self, url):
+        """Same checks as fetch_page, but returns the untrusted HTML for structural parsing."""
+        self._raw = True
+        try:
+            return self.fetch_page(url)
+        finally:
+            self._raw = False
 
     def read_document(self, source_id):
         if source_id not in self.documents:

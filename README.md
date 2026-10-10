@@ -367,3 +367,7 @@ Specialists exchange one 4-bit learned token each in a checksummed frame: same d
 ## Pure Mycelia (new, non-neural)
 
 Rule-based agents learn invented-word meanings and compositional rules from demonstrations by sharing verified discoveries: 100% on unseen combinations with ~90 evaluations per episode, versus ~20,000-110,000 for a single joint-search learner. No neural networks or LLMs. See [PURE-MYCELIA.md](PURE-MYCELIA.md).
+
+## Pure Mycelia v0.2: skills from online docs (new)
+
+Reads docs.python.org through the allowlisted gateway, verifies each documented skill by experiment in a restricted sandbox, shares verified skills on the bus and composes them to solve held-out tasks, abstaining when it can't. Live run pending network access. See [PURE-WEB.md](PURE-WEB.md).
