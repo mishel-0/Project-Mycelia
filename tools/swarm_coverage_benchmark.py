@@ -67,7 +67,7 @@ def run(method, scenario, K, mapseed, cap=8000):
     claimed = {}; paths = [[] for _ in range(K)]
     for t in range(1, cap + 1):
         if scenario == 'half_lost' and t == 100:
-            for i in range(K // 2): alive[i] = False
+            for i in range(K // 2): alive[i] = False; claimed.pop(i, None)
         if not any(alive): return None
         shared *= .995
         for i in range(K):
