@@ -59,7 +59,7 @@ def load_patches(root, max_images, min_purity, rng):
 
 def mobilenet_features(rgb, batch=512):
     import torch, torchvision
-    torch.set_num_threads(int(torch.get_num_threads()))
+    import os; torch.set_num_threads(max(1, os.cpu_count() or 1))
     net = torchvision.models.mobilenet_v3_small(weights=torchvision.models.MobileNet_V3_Small_Weights.DEFAULT).eval()
     mean = torch.tensor([.485, .456, .406]).view(1, 3, 1, 1); std = torch.tensor([.229, .224, .225]).view(1, 3, 1, 1)
     out = []
