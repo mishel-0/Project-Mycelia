@@ -8,6 +8,10 @@ from dataclasses import asdict
 from pathlib import Path
 from mycelia.autonomy.scenarios import make, TRAIN_FAMILIES, HELD_OUT
 
+import sys
+if Path('datasets/drive_manifest.json').exists() and '--regenerate' not in sys.argv:
+    sys.exit('Refusing to overwrite the frozen suite datasets/drive_manifest.json. Pass --regenerate only if you deliberately want a new one.')
+
 suites = {}
 for s in (1, 2, 3):
     sc = [make(f, 100000 * s + i) for f in list(TRAIN_FAMILIES.values()) + HELD_OUT for i in range(50)]

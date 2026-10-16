@@ -8,6 +8,10 @@ methods; the correct response there is to abstain.
 import json, random
 from pathlib import Path
 
+import sys
+if Path('datasets/pure_tasks.json').exists() and '--regenerate' not in sys.argv:
+    sys.exit('Refusing to overwrite the frozen suite datasets/pure_tasks.json. Pass --regenerate only if you deliberately want a new one.')
+
 rng = random.Random(2026)
 WORDS = ['alice', 'bob', 'mycelia', 'spore', 'hypha', 'river', 'stone', 'green', 'apple', 'night']
 

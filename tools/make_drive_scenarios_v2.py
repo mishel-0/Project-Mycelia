@@ -8,6 +8,10 @@ from dataclasses import asdict
 from pathlib import Path
 from mycelia.autonomy.scenarios import make, TRAIN_V2, HELD_OUT, SHIFTED_FAMILIES
 
+import sys
+if Path('datasets/drive_v2_manifest.json').exists() and '--regenerate' not in sys.argv:
+    sys.exit('Refusing to overwrite the frozen suite datasets/drive_v2_manifest.json. Pass --regenerate only if you deliberately want a new one.')
+
 manifest = {}
 for s in (1, 2, 3):
     data = []
