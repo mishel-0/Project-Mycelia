@@ -8,7 +8,7 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 pip install -q numpy scikit-learn pillow gdown
 pip install -q torch torchvision --index-url https://download.pytorch.org/whl/cpu
 DATA=/tmp/aeroscapes_dl; mkdir -p "$DATA"
-gdown --fuzzy "https://drive.google.com/file/d/1WmXcm0IamIA0QPpyxRfWKnicxZByA60v/view" -O "$DATA/aeroscapes_archive" || { echo "DOWNLOAD FAILED (Google Drive blocked or quota)"; exit 2; }
+gdown "1WmXcm0IamIA0QPpyxRfWKnicxZByA60v" -O "$DATA/aeroscapes_archive" || { echo "DOWNLOAD FAILED (see gdown message above)"; exit 2; }
 SIZE=$(stat -c %s "$DATA/aeroscapes_archive"); echo "downloaded bytes: $SIZE"
 [ "$SIZE" -lt 8000000000 ] || { echo "archive larger than 8 GB, aborting"; exit 3; }
 mkdir -p "$DATA/x"; (cd "$DATA/x" && (unzip -q ../aeroscapes_archive || tar xf ../aeroscapes_archive))
