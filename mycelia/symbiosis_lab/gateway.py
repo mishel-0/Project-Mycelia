@@ -81,9 +81,13 @@ class Gateway:
         code_root = str(Path(__file__).resolve().parents[2])
         boot = (f'import sys, runpy; sys.path.insert(0, {code_root!r}); '
                 "runpy.run_module('mycelia.symbiosis_lab.worker', run_name='__main__')")
+        # macOS rejects RLIMIT_AS, so the memory cap only exists on Linux-like
+        # systems. CPU and wall-clock limits always apply; the gap is logged.
+        memory_capped = sys.platform != 'darwin'
         def limits():
             resource.setrlimit(resource.RLIMIT_CPU, (cpu_seconds, cpu_seconds))
-            resource.setrlimit(resource.RLIMIT_AS, (memory_bytes, memory_bytes))
+            if memory_capped:
+                resource.setrlimit(resource.RLIMIT_AS, (memory_bytes, memory_bytes))
         with tempfile.TemporaryDirectory() as work:
             (Path(work) / 'spec.json').write_text(json.dumps(spec))
             try:
@@ -95,7 +99,9 @@ class Gateway:
                 self._record('run_sandboxed_experiment', spec.get('id'), False, p.stderr[-300:])
                 raise GatewayError('experiment failed: ' + p.stderr[-500:])
             out = json.loads((Path(work) / 'out.json').read_text())
-        self._record('run_sandboxed_experiment', spec.get('id'), True); return out
+        self._record('run_sandboxed_experiment', spec.get('id'), True,
+                     '' if memory_capped else 'memory cap not enforced on this OS (CPU and wall limits only)')
+        return out
 
     def submit_candidate(self, candidate_id):
         if self.release_fn is None:

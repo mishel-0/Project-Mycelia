@@ -6,7 +6,6 @@ prompt forbids answering medical or lab questions from its own knowledge.
 """
 from __future__ import annotations
 import json
-import anthropic
 
 MODEL = 'claude-opus-5-5'
 SYSTEM = """You are the voice of Project Mycelia, a research system that classifies brain MRI scans
@@ -43,7 +42,13 @@ TOOLS = [
 class ClaudeChat:
     def __init__(self, mycelia, client=None, model=MODEL, effort='medium'):
         self.mycelia, self.model, self.effort = mycelia, model, effort
-        self.client = client or anthropic.Anthropic()
+        if client is None:
+            try:
+                import anthropic
+            except ImportError as exc:
+                raise RuntimeError('Claude chat needs the optional "anthropic" package: pip install anthropic') from exc
+            client = anthropic.Anthropic()
+        self.client = client
         self.messages = []
 
     def _call_tool(self, name, args):

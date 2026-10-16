@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 from .environment import scenario
+from . import __version__
 from .organism import Mycelium
 from .report import write_report
 from .state import Config
@@ -45,7 +46,7 @@ def main(argv=None):
                 options['max_nodes'] = args.max_nodes
             config = Config(**options)
             organism = Mycelium(scenario(args.scenario,args.size,config.diffusion),config,seed=args.seed)
-        print('MYCELIA 1.0 — compartment physiology → network growth')
+        print(f'MYCELIA {__version__} — compartment physiology → network growth')
         for i in range(args.steps):
             s = organism.step(args.dt)
             if (i+1)%args.print_every==0 or i+1==args.steps:

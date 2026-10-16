@@ -11,7 +11,7 @@ from mycelia.report import write_report
 
 def main():
     p=argparse.ArgumentParser()
-    p.add_argument('--dataset',type=Path,default=Path('/Users/misheladnan/Desktop/Project-Mycelia/Brain-Tumor-MRI-Dataset'))
+    p.add_argument('--dataset',type=Path,default=Path(__file__).resolve().parents[1]/'Brain-Tumor-MRI-Dataset')
     p.add_argument('--output',type=Path,default=Path(__file__).resolve().parent)
     p.add_argument('--steps',type=int,default=60)
     a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)

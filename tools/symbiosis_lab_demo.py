@@ -8,6 +8,8 @@ requires `python -m governance.approve approve <id>` in a human terminal.
 from __future__ import annotations
 import argparse, getpass, json
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np
 from governance.gate import Gate
 from governance.approve import DEFAULT_BASELINE
