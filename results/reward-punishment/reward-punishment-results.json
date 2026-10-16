@@ -1,0 +1,230 @@
+{
+  "version": "1.2.1",
+  "seed": 42,
+  "epochs": 3,
+  "reward": 1.0,
+  "penalty": 0.5,
+  "config": {
+    "size": 16,
+    "colonies_per_label": 16,
+    "learning_rate": 0.12,
+    "material_cost": 0.002,
+    "energy_cost": 0.2,
+    "decay_rate": 0.003,
+    "cord_rate": 0.002,
+    "physiology_interval": 20,
+    "consolidation": true,
+    "adaptive": false,
+    "fast_rate": 0.45,
+    "slow_rate": 0.015,
+    "stability_scale": 0.02,
+    "fast_decay_rate": 0.03,
+    "route_memory_cost": 0.002
+  },
+  "train_images": 5410,
+  "test_images": 1467,
+  "audit": {
+    "removed": {
+      "Training_within_split_duplicate": 190,
+      "Testing_source_overlap": 114,
+      "Testing_within_split_duplicate": 18,
+      "Testing_additional_encoded_overlap": 1
+    },
+    "source_label_conflicts": 0,
+    "encoded_label_conflicts": 0
+  },
+  "limits": "Reward and punishment are external teaching cues (computational hypothesis). Image-level split, research only.",
+  "imprint": {
+    "history": [
+      {
+        "epoch": 1,
+        "outcomes": {
+          "imprint": 5410
+        },
+        "online_accuracy": null
+      },
+      {
+        "epoch": 2,
+        "outcomes": {
+          "imprint": 5410
+        },
+        "online_accuracy": null
+      },
+      {
+        "epoch": 3,
+        "outcomes": {
+          "imprint": 5410
+        },
+        "online_accuracy": null
+      }
+    ],
+    "heldout": {
+      "n": 1467,
+      "correct": 1075,
+      "accuracy": 0.732788002726653,
+      "accuracy_wilson_95_interval": [
+        0.7095575927869531,
+        0.7548024481297766
+      ],
+      "balanced_accuracy": 0.72309776001433,
+      "abstentions": 0,
+      "labels": [
+        "glioma",
+        "meningioma",
+        "notumor",
+        "pituitary"
+      ],
+      "confusion_matrix": [
+        [
+          231,
+          96,
+          34,
+          18
+        ],
+        [
+          63,
+          178,
+          22,
+          35
+        ],
+        [
+          23,
+          33,
+          321,
+          13
+        ],
+        [
+          20,
+          30,
+          5,
+          345
+        ]
+      ],
+      "classes": {
+        "glioma": {
+          "count": 379,
+          "recall": 0.6094986807387863,
+          "precision": 0.685459940652819,
+          "f1": 0.6452513966480447
+        },
+        "meningioma": {
+          "count": 298,
+          "recall": 0.5973154362416108,
+          "precision": 0.5281899109792285,
+          "f1": 0.5606299212598427
+        },
+        "notumor": {
+          "count": 390,
+          "recall": 0.823076923076923,
+          "precision": 0.8403141361256544,
+          "f1": 0.8316062176165804
+        },
+        "pituitary": {
+          "count": 400,
+          "recall": 0.8625,
+          "precision": 0.8394160583941606,
+          "f1": 0.8508014796547473
+        }
+      }
+    }
+  },
+  "reinforce": {
+    "history": [
+      {
+        "epoch": 1,
+        "outcomes": {
+          "abstain": 1,
+          "punish": 2339,
+          "reward": 3070
+        },
+        "online_accuracy": 0.5674676524953789
+      },
+      {
+        "epoch": 2,
+        "outcomes": {
+          "reward": 3359,
+          "punish": 2051
+        },
+        "online_accuracy": 0.6208872458410352
+      },
+      {
+        "epoch": 3,
+        "outcomes": {
+          "reward": 3440,
+          "punish": 1970
+        },
+        "online_accuracy": 0.6358595194085028
+      }
+    ],
+    "heldout": {
+      "n": 1467,
+      "correct": 937,
+      "accuracy": 0.6387184730743013,
+      "accuracy_wilson_95_interval": [
+        0.6138039959157231,
+        0.6629083564314351
+      ],
+      "balanced_accuracy": 0.6188190969020178,
+      "abstentions": 0,
+      "labels": [
+        "glioma",
+        "meningioma",
+        "notumor",
+        "pituitary"
+      ],
+      "confusion_matrix": [
+        [
+          193,
+          59,
+          83,
+          44
+        ],
+        [
+          75,
+          101,
+          84,
+          38
+        ],
+        [
+          47,
+          19,
+          306,
+          18
+        ],
+        [
+          12,
+          23,
+          28,
+          337
+        ]
+      ],
+      "classes": {
+        "glioma": {
+          "count": 379,
+          "recall": 0.5092348284960422,
+          "precision": 0.5902140672782875,
+          "f1": 0.5467422096317281
+        },
+        "meningioma": {
+          "count": 298,
+          "recall": 0.3389261744966443,
+          "precision": 0.5,
+          "f1": 0.404
+        },
+        "notumor": {
+          "count": 390,
+          "recall": 0.7846153846153846,
+          "precision": 0.6107784431137725,
+          "f1": 0.6868686868686869
+        },
+        "pituitary": {
+          "count": 400,
+          "recall": 0.8425,
+          "precision": 0.7711670480549199,
+          "f1": 0.8052568697729987
+        }
+      }
+    }
+  },
+  "seconds": 2518.602938902
+}

@@ -1,0 +1,30 @@
+{
+ "learn_tasks_dev.json": {
+  "sha256": "75b2dc0e4e2cc1762e1125925c0bef7768b9a988e19ac204f3cec701495c3d94",
+  "tasks": 58,
+  "cross_domain": 16,
+  "unsolvable": 8,
+  "novel_combination": 0
+ },
+ "learn_tasks_eval_101.json": {
+  "sha256": "688dbbb7fa5396633038cf9ab2336142f21e1f1c44478b33cc17e167f57989a2",
+  "tasks": 300,
+  "cross_domain": 120,
+  "unsolvable": 28,
+  "novel_combination": 35
+ },
+ "learn_tasks_eval_202.json": {
+  "sha256": "aea8416897a4babaf3ae7663ae039e8f938093a9682a2297692bc7e3999a520a",
+  "tasks": 300,
+  "cross_domain": 124,
+  "unsolvable": 25,
+  "novel_combination": 34
+ },
+ "learn_tasks_eval_303.json": {
+  "sha256": "618a32de5f8b06813b73bf0934401dfd22b78ec6b3d7fe8f4ec810808593bc64",
+  "tasks": 300,
+  "cross_domain": 107,
+  "unsolvable": 33,
+  "novel_combination": 37
+ }
+}

@@ -1,0 +1,29 @@
+# Mycelia safety and release policy. Owned by humans; the lab can read it only
+# through governance.gate, which checks its hash against policy.sha256.
+
+[limits]
+max_candidates_per_cycle = 6
+max_cycles_per_run = 5
+sandbox_cpu_seconds = 600
+sandbox_memory_bytes = 6442450944
+sandbox_wall_seconds = 900
+
+[network]
+allowlist = ["arxiv.org", "export.arxiv.org", "pubmed.ncbi.nlm.nih.gov", "eutils.ncbi.nlm.nih.gov",
+             "www.ncbi.nlm.nih.gov", "docs.python.org", "numpy.org"]
+
+[acceptance]
+# Predeclared: a candidate must raise the weak-class recall by at least
+# min_gain (mean over seeds) without regressing any guarded metric by more
+# than its tolerance. Security failures can never be traded for accuracy.
+min_gain = 0.01
+replication_min_gain = 0.005
+tolerance_accuracy = 0.005
+tolerance_selective_accuracy = 0.005
+tolerance_robust_accuracy = 0.01
+tolerance_tumor_presence = 0.005
+max_memory_ratio = 1.5
+
+[release]
+require_human_approval = true
+holdout_scoring_per_candidate = 1

@@ -1,0 +1,27 @@
+[
+  {
+    "epoch": 1,
+    "outcomes": {
+      "abstain": 1,
+      "punish": 2339,
+      "reward": 3070
+    },
+    "online_accuracy": 0.5674676524953789
+  },
+  {
+    "epoch": 2,
+    "outcomes": {
+      "reward": 3359,
+      "punish": 2051
+    },
+    "online_accuracy": 0.6208872458410352
+  },
+  {
+    "epoch": 3,
+    "outcomes": {
+      "reward": 3440,
+      "punish": 1970
+    },
+    "online_accuracy": 0.6358595194085028
+  }
+]

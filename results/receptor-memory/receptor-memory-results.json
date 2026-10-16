@@ -1,0 +1,194 @@
+{
+  "method": "Brain-tumor MRI experiment: unsupervised receptor field + teach-only memory.\n\n1. Unsupervised receptor learning on clean Training images only (no labels).\n2. Settings (mirror imprints, gamma, lambda) chosen on a stratified 20%\n   validation split of Training. Testing labels are never used for selection.\n3. Refit memory on all clean Training (+ mirror imprints if selected) and score\n   the held-out Testing split once: 4-class diagnosis and tumor presence.\nResearch prototype only; not clinically validated.\n",
+  "receptor_config": {
+    "receptors": 800,
+    "patch": 6,
+    "stride": 1,
+    "grid": 4,
+    "patches_per_image": 20,
+    "iterations": 15,
+    "whitening": 0.1,
+    "threshold": 0.25,
+    "seed": 0
+  },
+  "image_size": 64,
+  "clean_counts": {
+    "Training": 5410,
+    "Testing": 1467
+  },
+  "audit": {
+    "removed": {
+      "Training_within_split_duplicate": 190,
+      "Testing_source_overlap": 114,
+      "Testing_within_split_duplicate": 18,
+      "Testing_additional_encoded_overlap": 1
+    },
+    "source_label_conflicts": 0,
+    "encoded_label_conflicts": 0
+  },
+  "validation_grid": [
+    {
+      "mirror": false,
+      "gamma": 2.0,
+      "lam": 0.003,
+      "validation_accuracy": 0.9583718778908418
+    },
+    {
+      "mirror": false,
+      "gamma": 2.0,
+      "lam": 0.01,
+      "validation_accuracy": 0.9574468085106383
+    },
+    {
+      "mirror": false,
+      "gamma": 2.0,
+      "lam": 0.03,
+      "validation_accuracy": 0.9565217391304348
+    },
+    {
+      "mirror": false,
+      "gamma": 5.0,
+      "lam": 0.003,
+      "validation_accuracy": 0.9537465309898242
+    },
+    {
+      "mirror": false,
+      "gamma": 5.0,
+      "lam": 0.01,
+      "validation_accuracy": 0.9537465309898242
+    },
+    {
+      "mirror": false,
+      "gamma": 5.0,
+      "lam": 0.03,
+      "validation_accuracy": 0.9528214616096207
+    },
+    {
+      "mirror": true,
+      "gamma": 2.0,
+      "lam": 0.003,
+      "validation_accuracy": 0.973172987974098
+    },
+    {
+      "mirror": true,
+      "gamma": 2.0,
+      "lam": 0.01,
+      "validation_accuracy": 0.971322849213691
+    },
+    {
+      "mirror": true,
+      "gamma": 2.0,
+      "lam": 0.03,
+      "validation_accuracy": 0.971322849213691
+    },
+    {
+      "mirror": true,
+      "gamma": 5.0,
+      "lam": 0.003,
+      "validation_accuracy": 0.96577243293247
+    },
+    {
+      "mirror": true,
+      "gamma": 5.0,
+      "lam": 0.01,
+      "validation_accuracy": 0.9648473635522664
+    },
+    {
+      "mirror": true,
+      "gamma": 5.0,
+      "lam": 0.03,
+      "validation_accuracy": 0.96577243293247
+    }
+  ],
+  "selected": {
+    "mirror": true,
+    "gamma": 2.0,
+    "lam": 0.003,
+    "validation_accuracy": 0.973172987974098
+  },
+  "heldout_diagnosis": {
+    "accuracy": 0.9447852760736196,
+    "correct": 1386,
+    "n": 1467,
+    "wilson_95": [
+      0.9318935747342872,
+      0.9553536483935786
+    ],
+    "balanced_accuracy": 0.9442390784650528,
+    "labels": [
+      "glioma",
+      "meningioma",
+      "notumor",
+      "pituitary"
+    ],
+    "confusion_matrix": [
+      [
+        311,
+        27,
+        37,
+        4
+      ],
+      [
+        5,
+        285,
+        2,
+        6
+      ],
+      [
+        0,
+        0,
+        390,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        400
+      ]
+    ],
+    "classes": {
+      "glioma": {
+        "count": 379,
+        "recall": 0.820580474934037,
+        "precision": 0.9841772151898734,
+        "f1": 0.8949640287769784
+      },
+      "meningioma": {
+        "count": 298,
+        "recall": 0.9563758389261745,
+        "precision": 0.9134615384615384,
+        "f1": 0.9344262295081966
+      },
+      "notumor": {
+        "count": 390,
+        "recall": 1.0,
+        "precision": 0.9090909090909091,
+        "f1": 0.9523809523809523
+      },
+      "pituitary": {
+        "count": 400,
+        "recall": 1.0,
+        "precision": 0.975609756097561,
+        "f1": 0.9876543209876543
+      }
+    }
+  },
+  "heldout_tumor_presence": {
+    "accuracy": 0.9734151329243353,
+    "wilson_95": [
+      0.9638651070147125,
+      0.9804922821995447
+    ],
+    "tp": 1038,
+    "fn": 39,
+    "fp": 0,
+    "tn": 390,
+    "sensitivity": 0.9637883008356546,
+    "specificity": 1.0,
+    "ppv": 1.0,
+    "npv": 0.9090909090909091
+  },
+  "seconds": 1076.4395616849997,
+  "limits": "Image-level split from one public dataset; patient identity unknown and near-duplicate images exist across splits. Research only; not a medical device."
+}

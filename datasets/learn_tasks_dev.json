@@ -1,0 +1,4488 @@
+[
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "Mycelia stone ALICE Bob",
+    "MYCELIA STONE ALICE BOB"
+   ],
+   [
+    "stone  root",
+    "STONE  ROOT"
+   ],
+   [
+    "Spore  Fungus",
+    "SPORE  FUNGUS"
+   ]
+  ],
+  "family": "text",
+  "goal": "make every letter uppercase",
+  "hidden": [
+   [
+    "  ALICE APPLE mycelia  ",
+    "  ALICE APPLE MYCELIA  "
+   ],
+   [
+    " Apple Fungus Mycelia bob  ",
+    " APPLE FUNGUS MYCELIA BOB  "
+   ],
+   [
+    " Night  alice ",
+    " NIGHT  ALICE "
+   ],
+   [
+    " night  Green  river  hypha  Spore ",
+    " NIGHT  GREEN  RIVER  HYPHA  SPORE "
+   ],
+   [
+    "hypha NIGHT bob FUNGUS STONE  ",
+    "HYPHA NIGHT BOB FUNGUS STONE  "
+   ],
+   [
+    " River  ROOT  night  green  ",
+    " RIVER  ROOT  NIGHT  GREEN  "
+   ]
+  ],
+  "id": "7-0",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.upper",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.upper"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "  Root  Hypha ",
+    "  root  hypha "
+   ],
+   [
+    "fungus  River  alice  GREEN  root",
+    "fungus  river  alice  green  root"
+   ],
+   [
+    " stone  root  GREEN",
+    " stone  root  green"
+   ]
+  ],
+  "family": "text",
+  "goal": "make every letter lowercase",
+  "hidden": [
+   [
+    "apple hypha stone river night",
+    "apple hypha stone river night"
+   ],
+   [
+    "  night  MYCELIA  Hypha  ROOT  Alice",
+    "  night  mycelia  hypha  root  alice"
+   ],
+   [
+    " Green  FUNGUS ",
+    " green  fungus "
+   ],
+   [
+    "GREEN fungus",
+    "green fungus"
+   ],
+   [
+    " mycelia Bob river Alice fungus",
+    " mycelia bob river alice fungus"
+   ],
+   [
+    "  Night  STONE  MYCELIA ",
+    "  night  stone  mycelia "
+   ]
+  ],
+  "id": "7-1",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.lower",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.lower"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    " GREEN ROOT",
+    "GREEN ROOT"
+   ],
+   [
+    " Root RIVER  ",
+    "Root RIVER"
+   ],
+   [
+    "  SPORE apple  ",
+    "SPORE apple"
+   ]
+  ],
+  "family": "text",
+  "goal": "trim the surrounding spaces",
+  "hidden": [
+   [
+    "  FUNGUS  bob  HYPHA  apple  ",
+    "FUNGUS  bob  HYPHA  apple"
+   ],
+   [
+    "NIGHT  Spore  fungus ",
+    "NIGHT  Spore  fungus"
+   ],
+   [
+    "ALICE  HYPHA ",
+    "ALICE  HYPHA"
+   ],
+   [
+    "river  BOB  spore  FUNGUS  ",
+    "river  BOB  spore  FUNGUS"
+   ],
+   [
+    "GREEN Fungus ",
+    "GREEN Fungus"
+   ],
+   [
+    "  Green  MYCELIA  stone ",
+    "Green  MYCELIA  stone"
+   ]
+  ],
+  "id": "7-2",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.strip",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.strip"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "root mycelia  ",
+    "ROOT MYCELIA  "
+   ],
+   [
+    "fungus Mycelia Night green river  ",
+    "FUNGUS mYCELIA nIGHT GREEN RIVER  "
+   ],
+   [
+    " stone SPORE fungus  ",
+    " STONE spore FUNGUS  "
+   ]
+  ],
+  "family": "text",
+  "goal": "swap the case of every letter",
+  "hidden": [
+   [
+    "  hypha  Apple  STONE  MYCELIA  ",
+    "  HYPHA  aPPLE  stone  mycelia  "
+   ],
+   [
+    "Apple mycelia ROOT",
+    "aPPLE MYCELIA root"
+   ],
+   [
+    "Mycelia  green  Night  ",
+    "mYCELIA  GREEN  nIGHT  "
+   ],
+   [
+    "  BOB apple alice Spore FUNGUS",
+    "  bob APPLE ALICE sPORE fungus"
+   ],
+   [
+    " River NIGHT APPLE Fungus Spore  ",
+    " rIVER night apple fUNGUS sPORE  "
+   ],
+   [
+    " APPLE spore GREEN MYCELIA  ",
+    " apple SPORE green mycelia  "
+   ]
+  ],
+  "id": "7-3",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.swapcase",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.swapcase"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    " Bob Spore Hypha ROOT mycelia ",
+    "Bob Spore Hypha Root Mycelia"
+   ],
+   [
+    "ROOT bob Stone  ",
+    "Root Bob Stone"
+   ],
+   [
+    "APPLE  STONE  river  Fungus  SPORE  ",
+    "Apple  Stone  River  Fungus  Spore"
+   ]
+  ],
+  "family": "text",
+  "goal": "make each word start with a capital letter after trimming the ends",
+  "hidden": [
+   [
+    "Green  alice  stone  river  hypha ",
+    "Green  Alice  Stone  River  Hypha"
+   ],
+   [
+    "  mycelia  HYPHA ",
+    "Mycelia  Hypha"
+   ],
+   [
+    "APPLE  Root  NIGHT",
+    "Apple  Root  Night"
+   ],
+   [
+    " stone Bob hypha  ",
+    "Stone Bob Hypha"
+   ],
+   [
+    "  BOB  hypha  ROOT ",
+    "Bob  Hypha  Root"
+   ],
+   [
+    "alice apple SPORE",
+    "Alice Apple Spore"
+   ]
+  ],
+  "id": "7-4",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.strip",
+    []
+   ],
+   [
+    "method",
+    "str.title",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.strip",
+   "str.title"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "68,98,27,38,58",
+    "68;98;27;38;58"
+   ],
+   [
+    "87,23,35,45,3,33,5",
+    "87;23;35;45;3;33;5"
+   ],
+   [
+    "3,94,65",
+    "3;94;65"
+   ]
+  ],
+  "family": "text",
+  "goal": "replace the commas with semicolons",
+  "hidden": [
+   [
+    "25,66,61,32,58,14,85",
+    "25;66;61;32;58;14;85"
+   ],
+   [
+    "85,64,70,51,65,40",
+    "85;64;70;51;65;40"
+   ],
+   [
+    "30,44,26,91",
+    "30;44;26;91"
+   ],
+   [
+    "52,45,7,17",
+    "52;45;7;17"
+   ],
+   [
+    "10,81,95",
+    "10;81;95"
+   ],
+   [
+    "56,21,8,11,86",
+    "56;21;8;11;86"
+   ]
+  ],
+  "id": "7-5",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.replace",
+    [
+     ",",
+     ";"
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.replace"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "86,37,77,32,89,38,6",
+    [
+     "86",
+     "37",
+     "77",
+     "32",
+     "89",
+     "38",
+     "6"
+    ]
+   ],
+   [
+    "24,21,35,58,1,34",
+    [
+     "24",
+     "21",
+     "35",
+     "58",
+     "1",
+     "34"
+    ]
+   ],
+   [
+    "43,71,42,32,5",
+    [
+     "43",
+     "71",
+     "42",
+     "32",
+     "5"
+    ]
+   ]
+  ],
+  "family": "text",
+  "goal": "split the comma separated numbers into a list of strings",
+  "hidden": [
+   [
+    "28,46,24,1,43",
+    [
+     "28",
+     "46",
+     "24",
+     "1",
+     "43"
+    ]
+   ],
+   [
+    "11,61,36,65,84,26",
+    [
+     "11",
+     "61",
+     "36",
+     "65",
+     "84",
+     "26"
+    ]
+   ],
+   [
+    "65,1,12,34",
+    [
+     "65",
+     "1",
+     "12",
+     "34"
+    ]
+   ],
+   [
+    "19,52,76",
+    [
+     "19",
+     "52",
+     "76"
+    ]
+   ],
+   [
+    "51,3,39",
+    [
+     "51",
+     "3",
+     "39"
+    ]
+   ],
+   [
+    "81,30,11,75,68",
+    [
+     "81",
+     "30",
+     "11",
+     "75",
+     "68"
+    ]
+   ]
+  ],
+  "id": "7-6",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "50,98,42,93,64,20,37",
+    6
+   ],
+   [
+    "83,19,6,92,66,81,55",
+    6
+   ],
+   [
+    "18,68,97,65,73,3,88",
+    6
+   ]
+  ],
+  "family": "text",
+  "goal": "count how many commas there are",
+  "hidden": [
+   [
+    "92,88,89,83,30,11,4",
+    6
+   ],
+   [
+    "18,82,47",
+    2
+   ],
+   [
+    "49,58,72",
+    2
+   ],
+   [
+    "81,3,81",
+    2
+   ],
+   [
+    "88,32,63,34,1,59,9",
+    6
+   ],
+   [
+    "69,12,85,68,9,96,95",
+    6
+   ]
+  ],
+  "id": "7-7",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.count",
+    [
+     ","
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.count"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "bob hypha spore night apple",
+    27
+   ],
+   [
+    "green stone bob root hypha fungus",
+    33
+   ],
+   [
+    "night fungus spore",
+    18
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "length of the text",
+  "hidden": [
+   [
+    "night mycelia river",
+    19
+   ],
+   [
+    "fungus hypha night mycelia alice",
+    32
+   ],
+   [
+    "alice green hypha bob spore river",
+    33
+   ],
+   [
+    "hypha apple root green fungus spore",
+    35
+   ],
+   [
+    "apple spore hypha",
+    17
+   ],
+   [
+    "green alice hypha",
+    17
+   ]
+  ],
+  "id": "7-8",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "len",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst"
+  ],
+  "required_ops": [
+   "len"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "apple green hypha",
+    3
+   ],
+   [
+    "spore root bob night mycelia river",
+    6
+   ],
+   [
+    "river mycelia night apple hypha",
+    5
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "how many words are there",
+  "hidden": [
+   [
+    "root river spore",
+    3
+   ],
+   [
+    "green stone alice mycelia night spore",
+    6
+   ],
+   [
+    "stone hypha mycelia root river spore",
+    6
+   ],
+   [
+    "bob river alice fungus apple",
+    5
+   ],
+   [
+    "bob spore alice hypha apple mycelia",
+    6
+   ],
+   [
+    "stone root night",
+    3
+   ]
+  ],
+  "id": "7-9",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "len",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "stone hypha alice fungus bob",
+    [
+     "alice",
+     "bob",
+     "fungus",
+     "hypha",
+     "stone"
+    ]
+   ],
+   [
+    "fungus hypha mycelia",
+    [
+     "fungus",
+     "hypha",
+     "mycelia"
+    ]
+   ],
+   [
+    "hypha stone apple river",
+    [
+     "apple",
+     "hypha",
+     "river",
+     "stone"
+    ]
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "sort the words alphabetically",
+  "hidden": [
+   [
+    "river stone alice fungus",
+    [
+     "alice",
+     "fungus",
+     "river",
+     "stone"
+    ]
+   ],
+   [
+    "root bob alice stone",
+    [
+     "alice",
+     "bob",
+     "root",
+     "stone"
+    ]
+   ],
+   [
+    "night mycelia hypha green alice root",
+    [
+     "alice",
+     "green",
+     "hypha",
+     "mycelia",
+     "night",
+     "root"
+    ]
+   ],
+   [
+    "mycelia green stone river",
+    [
+     "green",
+     "mycelia",
+     "river",
+     "stone"
+    ]
+   ],
+   [
+    "hypha root fungus stone spore",
+    [
+     "fungus",
+     "hypha",
+     "root",
+     "spore",
+     "stone"
+    ]
+   ],
+   [
+    "green apple stone bob mycelia",
+    [
+     "apple",
+     "bob",
+     "green",
+     "mycelia",
+     "stone"
+    ]
+   ]
+  ],
+  "id": "7-10",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "sorted",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "sorted"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "spore apple green",
+    5
+   ],
+   [
+    "green river root stone",
+    5
+   ],
+   [
+    "apple spore fungus bob",
+    6
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "length of the longest word",
+  "hidden": [
+   [
+    "river apple bob root",
+    5
+   ],
+   [
+    "river hypha night spore",
+    5
+   ],
+   [
+    "root stone fungus",
+    6
+   ],
+   [
+    "root apple spore stone hypha mycelia",
+    7
+   ],
+   [
+    "green hypha night",
+    5
+   ],
+   [
+    "mycelia fungus apple night spore",
+    7
+   ]
+  ],
+  "id": "7-11",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "map",
+    [
+     "call",
+     "len",
+     []
+    ]
+   ],
+   [
+    "call",
+    "max",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len",
+   "max"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "spore stone fungus green night",
+    "fungus,green,night,spore,stone"
+   ],
+   [
+    "alice mycelia root stone green",
+    "alice,green,mycelia,root,stone"
+   ],
+   [
+    "alice bob stone apple green spore",
+    "alice,apple,bob,green,spore,stone"
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "sort the words and join them with commas",
+  "hidden": [
+   [
+    "bob spore mycelia night",
+    "bob,mycelia,night,spore"
+   ],
+   [
+    "root fungus green",
+    "fungus,green,root"
+   ],
+   [
+    "apple alice fungus",
+    "alice,apple,fungus"
+   ],
+   [
+    "spore night alice hypha",
+    "alice,hypha,night,spore"
+   ],
+   [
+    "fungus hypha apple stone",
+    "apple,fungus,hypha,stone"
+   ],
+   [
+    "bob root hypha",
+    "bob,hypha,root"
+   ]
+  ],
+  "id": "7-12",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "sorted",
+    []
+   ],
+   [
+    "join",
+    ","
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "sorted",
+   "str.join"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "34,29,77,1,2,69",
+    77
+   ],
+   [
+    "59,36,41,83,32",
+    83
+   ],
+   [
+    "68,31,71,32,4,53",
+    71
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "the largest number in the comma separated text",
+  "hidden": [
+   [
+    "8,3,25,64,87",
+    87
+   ],
+   [
+    "11,33,30,86,55,48",
+    86
+   ],
+   [
+    "64,5,90,44",
+    90
+   ],
+   [
+    "47,88,51,26,1,38",
+    88
+   ],
+   [
+    "9,27,64,26,40,99,25",
+    99
+   ],
+   [
+    "60,29,34,98",
+    98
+   ]
+  ],
+  "id": "7-13",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "max",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "max"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "80,64,79",
+    223
+   ],
+   [
+    "29,63,54,86",
+    232
+   ],
+   [
+    "77,19,51",
+    147
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "total of the comma separated numbers",
+  "hidden": [
+   [
+    "28,4,77",
+    109
+   ],
+   [
+    "54,7,91,8",
+    160
+   ],
+   [
+    "51,58,92,41",
+    242
+   ],
+   [
+    "11,22,43",
+    76
+   ],
+   [
+    "24,84,68,96",
+    272
+   ],
+   [
+    "5,40,86,93,49,48",
+    321
+   ]
+  ],
+  "id": "7-14",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "sum",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "sum"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    227,
+    15.066519173319364
+   ],
+   [
+    112.64,
+    10.613199329137279
+   ],
+   [
+    216,
+    14.696938456699069
+   ]
+  ],
+  "family": "math",
+  "goal": "square root of the number",
+  "hidden": [
+   [
+    288,
+    16.97056274847714
+   ],
+   [
+    143.3,
+    11.970797801316335
+   ],
+   [
+    36.02,
+    6.001666435249463
+   ],
+   [
+    149.71,
+    12.235603785674003
+   ],
+   [
+    130.0,
+    11.40175425099138
+   ],
+   [
+    16,
+    4.0
+   ]
+  ],
+  "id": "7-15",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.sqrt",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.sqrt"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    150.85,
+    150
+   ],
+   [
+    33,
+    33
+   ],
+   [
+    132,
+    132
+   ]
+  ],
+  "family": "math",
+  "goal": "floor of the number",
+  "hidden": [
+   [
+    136.29,
+    136
+   ],
+   [
+    172,
+    172
+   ],
+   [
+    298.83,
+    298
+   ],
+   [
+    142,
+    142
+   ],
+   [
+    13,
+    13
+   ],
+   [
+    286.51,
+    286
+   ]
+  ],
+  "id": "7-16",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.floor",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.floor"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    365.5,
+    366
+   ],
+   [
+    68,
+    68
+   ],
+   [
+    321.22,
+    322
+   ]
+  ],
+  "family": "math",
+  "goal": "round the number up to an integer",
+  "hidden": [
+   [
+    355,
+    355
+   ],
+   [
+    344.64,
+    345
+   ],
+   [
+    186,
+    186
+   ],
+   [
+    263,
+    263
+   ],
+   [
+    127,
+    127
+   ],
+   [
+    221.49,
+    222
+   ]
+  ],
+  "id": "7-17",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.ceil",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.ceil"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    7,
+    5040
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    5,
+    120
+   ]
+  ],
+  "family": "math",
+  "goal": "factorial of the number",
+  "hidden": [
+   [
+    10,
+    3628800
+   ],
+   [
+    4,
+    24
+   ],
+   [
+    8,
+    40320
+   ],
+   [
+    3,
+    6
+   ],
+   [
+    9,
+    362880
+   ],
+   [
+    6,
+    720
+   ]
+  ],
+  "id": "7-18",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.factorial",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.factorial"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     13,
+     29,
+     16,
+     12,
+     16
+    ],
+    1158144
+   ],
+   [
+    [
+     10,
+     19,
+     38,
+     13
+    ],
+    93860
+   ],
+   [
+    [
+     5,
+     26,
+     17,
+     16,
+     33
+    ],
+    1166880
+   ]
+  ],
+  "family": "math",
+  "goal": "multiply the numbers together",
+  "hidden": [
+   [
+    [
+     15,
+     42,
+     7,
+     42,
+     30,
+     3,
+     7
+    ],
+    116688600
+   ],
+   [
+    [
+     31,
+     15,
+     29
+    ],
+    13485
+   ],
+   [
+    [
+     3,
+     19,
+     15,
+     8,
+     4
+    ],
+    27360
+   ],
+   [
+    [
+     39,
+     38,
+     13,
+     5
+    ],
+    96330
+   ],
+   [
+    [
+     33,
+     12,
+     29,
+     39,
+     17
+    ],
+    7613892
+   ],
+   [
+    [
+     7,
+     41,
+     39
+    ],
+    11193
+   ]
+  ],
+  "id": "7-19",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.prod",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.prod"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     3,
+     24,
+     22,
+     10
+    ],
+    14.75
+   ],
+   [
+    [
+     14,
+     17,
+     3
+    ],
+    11.333333333333334
+   ],
+   [
+    [
+     47,
+     42,
+     14,
+     1,
+     21,
+     27,
+     44
+    ],
+    28
+   ]
+  ],
+  "family": "statistics",
+  "goal": "average of the list",
+  "hidden": [
+   [
+    [
+     12,
+     40,
+     20,
+     5,
+     14
+    ],
+    18.2
+   ],
+   [
+    [
+     32,
+     36,
+     31
+    ],
+    33
+   ],
+   [
+    [
+     27,
+     7,
+     26
+    ],
+    20
+   ],
+   [
+    [
+     10,
+     41,
+     35,
+     6,
+     42,
+     11,
+     26
+    ],
+    24.428571428571427
+   ],
+   [
+    [
+     27,
+     19,
+     43,
+     20,
+     27
+    ],
+    27.2
+   ],
+   [
+    [
+     20,
+     48,
+     37
+    ],
+    35
+   ]
+  ],
+  "id": "7-20",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.mean",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.mean"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     27,
+     2,
+     50,
+     24,
+     42,
+     13
+    ],
+    25.5
+   ],
+   [
+    [
+     47,
+     26,
+     14,
+     1,
+     28,
+     11
+    ],
+    20.0
+   ],
+   [
+    [
+     8,
+     6,
+     26,
+     37,
+     24,
+     30
+    ],
+    25.0
+   ]
+  ],
+  "family": "statistics",
+  "goal": "median of the numbers",
+  "hidden": [
+   [
+    [
+     9,
+     1,
+     4,
+     36
+    ],
+    6.5
+   ],
+   [
+    [
+     42,
+     26,
+     6,
+     37
+    ],
+    31.5
+   ],
+   [
+    [
+     24,
+     48,
+     33,
+     11,
+     10,
+     23,
+     19
+    ],
+    23
+   ],
+   [
+    [
+     34,
+     11,
+     5,
+     7
+    ],
+    9.0
+   ],
+   [
+    [
+     32,
+     49,
+     13,
+     20,
+     9,
+     3
+    ],
+    16.5
+   ],
+   [
+    [
+     21,
+     4,
+     39,
+     41,
+     25,
+     6
+    ],
+    23.0
+   ]
+  ],
+  "id": "7-21",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.median",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.median"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     40,
+     26,
+     40,
+     13
+    ],
+    11.233320969330485
+   ],
+   [
+    [
+     12,
+     37,
+     14,
+     3,
+     26,
+     34
+    ],
+    12.274635093014647
+   ],
+   [
+    [
+     25,
+     23,
+     8,
+     10
+    ],
+    7.566372975210778
+   ]
+  ],
+  "family": "statistics",
+  "goal": "population standard deviation of the numbers",
+  "hidden": [
+   [
+    [
+     47,
+     13,
+     3,
+     36
+    ],
+    17.55526986406076
+   ],
+   [
+    [
+     43,
+     21,
+     8
+    ],
+    14.445299120013633
+   ],
+   [
+    [
+     39,
+     30,
+     36,
+     41,
+     50,
+     20
+    ],
+    9.327379053088816
+   ],
+   [
+    [
+     20,
+     38,
+     16,
+     28,
+     25,
+     43
+    ],
+    9.498537899183338
+   ],
+   [
+    [
+     29,
+     33,
+     29,
+     12,
+     2
+    ],
+    11.949895397031725
+   ],
+   [
+    [
+     40,
+     32,
+     30
+    ],
+    4.320493798938574
+   ]
+  ],
+  "id": "7-22",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.pstdev",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.pstdev"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "night green mycelia fungus stone alice",
+    5.0
+   ],
+   [
+    "mycelia river stone",
+    5
+   ],
+   [
+    "bob green apple night alice",
+    5
+   ]
+  ],
+  "family": "cross",
+  "goal": "median word length",
+  "hidden": [
+   [
+    "fungus mycelia bob",
+    6
+   ],
+   [
+    "root apple bob alice stone",
+    5
+   ],
+   [
+    "alice bob night fungus",
+    5.0
+   ],
+   [
+    "mycelia green hypha root",
+    5.0
+   ],
+   [
+    "bob river night hypha",
+    5.0
+   ],
+   [
+    "river night hypha green",
+    5.0
+   ]
+  ],
+  "id": "7-23",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "map",
+    [
+     "call",
+     "len",
+     []
+    ]
+   ],
+   [
+    "call",
+    "statistics.median",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst",
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len",
+   "statistics.median"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "65,62,27,76,34",
+    52.8
+   ],
+   [
+    "65,31,41,48,5,26,24",
+    34.285714285714285
+   ],
+   [
+    "21,82,36,87,42,49",
+    52.833333333333336
+   ]
+  ],
+  "family": "cross",
+  "goal": "mean of the numbers in the text",
+  "hidden": [
+   [
+    "34,15,99,68",
+    54
+   ],
+   [
+    "82,47,58",
+    62.333333333333336
+   ],
+   [
+    "67,75,89,14,33,69,81",
+    61.142857142857146
+   ],
+   [
+    "95,48,34,49,48,74",
+    58
+   ],
+   [
+    "47,43,98,11",
+    49.75
+   ],
+   [
+    "30,23,79,96,7,38",
+    45.5
+   ]
+  ],
+  "id": "7-24",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "statistics.mean",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst",
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "statistics.mean"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    " Fungus  night  river  alice ",
+    " ecila  revir  thgin  sugnuF "
+   ],
+   [
+    "Alice Mycelia green spore  ",
+    "  erops neerg ailecyM ecilA"
+   ],
+   [
+    " Hypha bob APPLE River",
+    "reviR ELPPA bob ahpyH "
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "reverse the order of the characters",
+  "hidden": [
+   [
+    " night green Mycelia root",
+    "toor ailecyM neerg thgin "
+   ],
+   [
+    "  FUNGUS  hypha  stone  ",
+    "  enots  ahpyh  SUGNUF  "
+   ],
+   [
+    " night apple green Spore mycelia",
+    "ailecym eropS neerg elppa thgin "
+   ],
+   [
+    "Alice Bob Root ",
+    " tooR boB ecilA"
+   ],
+   [
+    "  Apple Night ROOT  ",
+    "  TOOR thgiN elppA  "
+   ],
+   [
+    " Bob  Hypha  alice  GREEN",
+    "NEERG  ecila  ahpyH  boB "
+   ]
+  ],
+  "id": "7-25",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "spore bob hypha root",
+    "sbhr"
+   ],
+   [
+    "bob river hypha",
+    "brh"
+   ],
+   [
+    "hypha fungus apple",
+    "hfa"
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "keep only the first letter of each word",
+  "hidden": [
+   [
+    "fungus apple hypha night spore alice",
+    "fahnsa"
+   ],
+   [
+    "mycelia hypha spore",
+    "mhs"
+   ],
+   [
+    "mycelia river spore stone",
+    "mrss"
+   ],
+   [
+    "night spore stone apple green",
+    "nssag"
+   ],
+   [
+    "apple alice fungus stone spore hypha",
+    "aafssh"
+   ],
+   [
+    "spore stone night bob mycelia",
+    "ssnbm"
+   ]
+  ],
+  "id": "7-26",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "alice bob fungus",
+    [
+     "bob",
+     "alice",
+     "fungus"
+    ]
+   ],
+   [
+    "river mycelia alice night",
+    [
+     "alice",
+     "night",
+     "river",
+     "mycelia"
+    ]
+   ],
+   [
+    "mycelia fungus alice",
+    [
+     "alice",
+     "fungus",
+     "mycelia"
+    ]
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "sort the words by their length",
+  "hidden": [
+   [
+    "root alice bob",
+    [
+     "bob",
+     "root",
+     "alice"
+    ]
+   ],
+   [
+    "spore apple bob stone night",
+    [
+     "bob",
+     "apple",
+     "night",
+     "spore",
+     "stone"
+    ]
+   ],
+   [
+    "spore root bob alice",
+    [
+     "bob",
+     "root",
+     "alice",
+     "spore"
+    ]
+   ],
+   [
+    "fungus bob hypha",
+    [
+     "bob",
+     "hypha",
+     "fungus"
+    ]
+   ],
+   [
+    "bob mycelia root spore hypha fungus",
+    [
+     "bob",
+     "root",
+     "hypha",
+     "spore",
+     "fungus",
+     "mycelia"
+    ]
+   ],
+   [
+    "stone hypha alice river fungus",
+    [
+     "alice",
+     "hypha",
+     "river",
+     "stone",
+     "fungus"
+    ]
+   ]
+  ],
+  "id": "7-27",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "root river fungus",
+    6
+   ],
+   [
+    "hypha night alice stone fungus spore",
+    11
+   ],
+   [
+    "river green alice",
+    7
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "count the vowels",
+  "hidden": [
+   [
+    "root bob night hypha",
+    5
+   ],
+   [
+    "stone alice apple spore",
+    9
+   ],
+   [
+    "alice root river green bob",
+    10
+   ],
+   [
+    "root mycelia green river hypha night",
+    11
+   ],
+   [
+    "hypha spore fungus green",
+    7
+   ],
+   [
+    "bob fungus root green",
+    7
+   ]
+  ],
+  "id": "7-28",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "River  bob  STONE  Night",
+    "RIVER  BOB  STONE  NIGHT"
+   ],
+   [
+    " hypha STONE Apple night  ",
+    " HYPHA STONE APPLE NIGHT  "
+   ],
+   [
+    "RIVER  Night  ",
+    "RIVER  NIGHT  "
+   ]
+  ],
+  "family": "text",
+  "goal": "make every letter uppercase",
+  "hidden": [
+   [
+    " Mycelia green fungus HYPHA  ",
+    " MYCELIA GREEN FUNGUS HYPHA  "
+   ],
+   [
+    "hypha  Root  night  ",
+    "HYPHA  ROOT  NIGHT  "
+   ],
+   [
+    "  MYCELIA Spore river fungus",
+    "  MYCELIA SPORE RIVER FUNGUS"
+   ],
+   [
+    " MYCELIA root hypha Night stone ",
+    " MYCELIA ROOT HYPHA NIGHT STONE "
+   ],
+   [
+    "Alice  Root  STONE  NIGHT  spore  ",
+    "ALICE  ROOT  STONE  NIGHT  SPORE  "
+   ],
+   [
+    "  Alice Spore Stone Night Fungus  ",
+    "  ALICE SPORE STONE NIGHT FUNGUS  "
+   ]
+  ],
+  "id": "7-29",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.upper",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.upper"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "  GREEN STONE ",
+    "  green stone "
+   ],
+   [
+    " STONE FUNGUS MYCELIA  ",
+    " stone fungus mycelia  "
+   ],
+   [
+    "  APPLE FUNGUS mycelia river ALICE",
+    "  apple fungus mycelia river alice"
+   ]
+  ],
+  "family": "text",
+  "goal": "convert the text to small letters",
+  "hidden": [
+   [
+    "Apple  RIVER  Bob  ",
+    "apple  river  bob  "
+   ],
+   [
+    " Fungus  RIVER",
+    " fungus  river"
+   ],
+   [
+    "  Stone Apple BOB ",
+    "  stone apple bob "
+   ],
+   [
+    "  stone  ROOT  ALICE  Night  ",
+    "  stone  root  alice  night  "
+   ],
+   [
+    "Bob spore HYPHA STONE",
+    "bob spore hypha stone"
+   ],
+   [
+    "  FUNGUS Spore",
+    "  fungus spore"
+   ]
+  ],
+  "id": "7-30",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.lower",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.lower"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "  GREEN  hypha  APPLE  Mycelia  ROOT ",
+    "GREEN  hypha  APPLE  Mycelia  ROOT"
+   ],
+   [
+    " GREEN  alice  Hypha ",
+    "GREEN  alice  Hypha"
+   ],
+   [
+    " STONE NIGHT bob river Mycelia  ",
+    "STONE NIGHT bob river Mycelia"
+   ]
+  ],
+  "family": "text",
+  "goal": "trim the surrounding spaces",
+  "hidden": [
+   [
+    " fungus night Alice ROOT  ",
+    "fungus night Alice ROOT"
+   ],
+   [
+    " SPORE mycelia green  ",
+    "SPORE mycelia green"
+   ],
+   [
+    "Fungus  APPLE  ",
+    "Fungus  APPLE"
+   ],
+   [
+    "Apple  bob  Green ",
+    "Apple  bob  Green"
+   ],
+   [
+    " Mycelia green FUNGUS  ",
+    "Mycelia green FUNGUS"
+   ],
+   [
+    " spore  GREEN  MYCELIA  Apple  Alice ",
+    "spore  GREEN  MYCELIA  Apple  Alice"
+   ]
+  ],
+  "id": "7-31",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.strip",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.strip"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "Stone  Fungus  bob  mycelia  River",
+    "sTONE  fUNGUS  BOB  MYCELIA  rIVER"
+   ],
+   [
+    " Green  mycelia  ALICE  spore  Stone ",
+    " gREEN  MYCELIA  alice  SPORE  sTONE "
+   ],
+   [
+    "HYPHA  STONE  River ",
+    "hypha  stone  rIVER "
+   ]
+  ],
+  "family": "text",
+  "goal": "swap the case of every letter",
+  "hidden": [
+   [
+    "  GREEN  Stone  RIVER  apple",
+    "  green  sTONE  river  APPLE"
+   ],
+   [
+    " Spore  River  hypha  mycelia  ",
+    " sPORE  rIVER  HYPHA  MYCELIA  "
+   ],
+   [
+    "stone hypha ",
+    "STONE HYPHA "
+   ],
+   [
+    "  Apple ROOT  ",
+    "  aPPLE root  "
+   ],
+   [
+    " Spore Alice",
+    " sPORE aLICE"
+   ],
+   [
+    "Alice  stone  BOB  ",
+    "aLICE  STONE  bob  "
+   ]
+  ],
+  "id": "7-32",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.swapcase",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.swapcase"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "  mycelia STONE Alice River ",
+    "Mycelia Stone Alice River"
+   ],
+   [
+    " Bob  Stone",
+    "Bob  Stone"
+   ],
+   [
+    "  Fungus Stone ",
+    "Fungus Stone"
+   ]
+  ],
+  "family": "text",
+  "goal": "make each word start with a capital letter after trimming the ends",
+  "hidden": [
+   [
+    "apple Bob fungus GREEN spore",
+    "Apple Bob Fungus Green Spore"
+   ],
+   [
+    "  bob MYCELIA Green ",
+    "Bob Mycelia Green"
+   ],
+   [
+    "  Alice  river  MYCELIA ",
+    "Alice  River  Mycelia"
+   ],
+   [
+    "alice  Root  Fungus  Night ",
+    "Alice  Root  Fungus  Night"
+   ],
+   [
+    "  Root  night  MYCELIA  GREEN ",
+    "Root  Night  Mycelia  Green"
+   ],
+   [
+    " Mycelia  bob  River ",
+    "Mycelia  Bob  River"
+   ]
+  ],
+  "id": "7-33",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.strip",
+    []
+   ],
+   [
+    "method",
+    "str.title",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.strip",
+   "str.title"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "97,73,43,38,36",
+    "97;73;43;38;36"
+   ],
+   [
+    "80,84,91",
+    "80;84;91"
+   ],
+   [
+    "43,78,93,2,20,77,40",
+    "43;78;93;2;20;77;40"
+   ]
+  ],
+  "family": "text",
+  "goal": "replace the commas with semicolons",
+  "hidden": [
+   [
+    "55,32,49,50,88,49,78",
+    "55;32;49;50;88;49;78"
+   ],
+   [
+    "58,37,89,1",
+    "58;37;89;1"
+   ],
+   [
+    "34,35,55,21,76",
+    "34;35;55;21;76"
+   ],
+   [
+    "37,19,74",
+    "37;19;74"
+   ],
+   [
+    "36,71,88,64",
+    "36;71;88;64"
+   ],
+   [
+    "69,11,70,71,63",
+    "69;11;70;71;63"
+   ]
+  ],
+  "id": "7-34",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.replace",
+    [
+     ",",
+     ";"
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.replace"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "97,93,30,40",
+    [
+     "97",
+     "93",
+     "30",
+     "40"
+    ]
+   ],
+   [
+    "8,87,51,60,91,27,33",
+    [
+     "8",
+     "87",
+     "51",
+     "60",
+     "91",
+     "27",
+     "33"
+    ]
+   ],
+   [
+    "97,2,50,59,70,12,69",
+    [
+     "97",
+     "2",
+     "50",
+     "59",
+     "70",
+     "12",
+     "69"
+    ]
+   ]
+  ],
+  "family": "text",
+  "goal": "split the comma separated numbers into a list of strings",
+  "hidden": [
+   [
+    "99,9,30,51,75",
+    [
+     "99",
+     "9",
+     "30",
+     "51",
+     "75"
+    ]
+   ],
+   [
+    "34,67,42,62,65,76,26",
+    [
+     "34",
+     "67",
+     "42",
+     "62",
+     "65",
+     "76",
+     "26"
+    ]
+   ],
+   [
+    "28,25,12,24",
+    [
+     "28",
+     "25",
+     "12",
+     "24"
+    ]
+   ],
+   [
+    "47,74,73,46,52",
+    [
+     "47",
+     "74",
+     "73",
+     "46",
+     "52"
+    ]
+   ],
+   [
+    "20,32,6,64,48,14,48",
+    [
+     "20",
+     "32",
+     "6",
+     "64",
+     "48",
+     "14",
+     "48"
+    ]
+   ],
+   [
+    "11,20,41,77,4,45",
+    [
+     "11",
+     "20",
+     "41",
+     "77",
+     "4",
+     "45"
+    ]
+   ]
+  ],
+  "id": "7-35",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "78,3,13,5,27,73,63",
+    6
+   ],
+   [
+    "73,28,34,36,55,13,58",
+    6
+   ],
+   [
+    "78,17,33,5,44,26,24",
+    6
+   ]
+  ],
+  "family": "text",
+  "goal": "count how many commas there are",
+  "hidden": [
+   [
+    "11,4,7,5,72,48",
+    5
+   ],
+   [
+    "63,9,77,82,51,16",
+    5
+   ],
+   [
+    "33,41,73",
+    2
+   ],
+   [
+    "83,12,86,65",
+    3
+   ],
+   [
+    "24,58,21,48,31,93",
+    5
+   ],
+   [
+    "23,5,33,46",
+    3
+   ]
+  ],
+  "id": "7-36",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.count",
+    [
+     ","
+    ]
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.count"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "alice hypha apple",
+    17
+   ],
+   [
+    "alice bob mycelia river root fungus",
+    35
+   ],
+   [
+    "night root green bob fungus",
+    27
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "how many characters does the text have",
+  "hidden": [
+   [
+    "river hypha stone bob root",
+    26
+   ],
+   [
+    "stone mycelia green spore fungus river",
+    38
+   ],
+   [
+    "green spore alice",
+    17
+   ],
+   [
+    "spore bob night river",
+    21
+   ],
+   [
+    "green bob stone alice",
+    21
+   ],
+   [
+    "green river fungus",
+    18
+   ]
+  ],
+  "id": "7-37",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "len",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst"
+  ],
+  "required_ops": [
+   "len"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "bob fungus river mycelia night root",
+    6
+   ],
+   [
+    "mycelia green apple",
+    3
+   ],
+   [
+    "green mycelia hypha stone",
+    4
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "how many words are there",
+  "hidden": [
+   [
+    "spore mycelia alice hypha apple fungus",
+    6
+   ],
+   [
+    "hypha green bob river",
+    4
+   ],
+   [
+    "green bob mycelia apple alice river",
+    6
+   ],
+   [
+    "apple green hypha bob",
+    4
+   ],
+   [
+    "spore river stone hypha root",
+    5
+   ],
+   [
+    "bob stone hypha fungus",
+    4
+   ]
+  ],
+  "id": "7-38",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "len",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "root hypha mycelia",
+    [
+     "hypha",
+     "mycelia",
+     "root"
+    ]
+   ],
+   [
+    "green apple river",
+    [
+     "apple",
+     "green",
+     "river"
+    ]
+   ],
+   [
+    "green alice apple hypha",
+    [
+     "alice",
+     "apple",
+     "green",
+     "hypha"
+    ]
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "sort the words alphabetically",
+  "hidden": [
+   [
+    "river stone alice fungus",
+    [
+     "alice",
+     "fungus",
+     "river",
+     "stone"
+    ]
+   ],
+   [
+    "hypha night mycelia fungus",
+    [
+     "fungus",
+     "hypha",
+     "mycelia",
+     "night"
+    ]
+   ],
+   [
+    "apple spore mycelia fungus",
+    [
+     "apple",
+     "fungus",
+     "mycelia",
+     "spore"
+    ]
+   ],
+   [
+    "bob night green",
+    [
+     "bob",
+     "green",
+     "night"
+    ]
+   ],
+   [
+    "mycelia spore root fungus hypha",
+    [
+     "fungus",
+     "hypha",
+     "mycelia",
+     "root",
+     "spore"
+    ]
+   ],
+   [
+    "alice bob apple stone",
+    [
+     "alice",
+     "apple",
+     "bob",
+     "stone"
+    ]
+   ]
+  ],
+  "id": "7-39",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "sorted",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "sorted"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "river hypha green bob alice",
+    5
+   ],
+   [
+    "green mycelia hypha spore fungus night",
+    7
+   ],
+   [
+    "alice mycelia river root night",
+    7
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "length of the longest word",
+  "hidden": [
+   [
+    "apple bob fungus river spore stone",
+    6
+   ],
+   [
+    "root stone night alice hypha",
+    5
+   ],
+   [
+    "root green fungus",
+    6
+   ],
+   [
+    "apple root mycelia",
+    7
+   ],
+   [
+    "spore bob root",
+    5
+   ],
+   [
+    "mycelia bob hypha night",
+    7
+   ]
+  ],
+  "id": "7-40",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "map",
+    [
+     "call",
+     "len",
+     []
+    ]
+   ],
+   [
+    "call",
+    "max",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len",
+   "max"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "bob spore hypha",
+    "bob,hypha,spore"
+   ],
+   [
+    "night fungus root",
+    "fungus,night,root"
+   ],
+   [
+    "apple spore green bob river stone",
+    "apple,bob,green,river,spore,stone"
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "sort the words and join them with commas",
+  "hidden": [
+   [
+    "root mycelia alice",
+    "alice,mycelia,root"
+   ],
+   [
+    "bob green fungus apple hypha",
+    "apple,bob,fungus,green,hypha"
+   ],
+   [
+    "bob root stone",
+    "bob,root,stone"
+   ],
+   [
+    "apple night spore fungus",
+    "apple,fungus,night,spore"
+   ],
+   [
+    "fungus night green stone",
+    "fungus,green,night,stone"
+   ],
+   [
+    "alice fungus stone night",
+    "alice,fungus,night,stone"
+   ]
+  ],
+  "id": "7-41",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "call",
+    "sorted",
+    []
+   ],
+   [
+    "join",
+    ","
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "sorted",
+   "str.join"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "7,47,44,52,31,43",
+    52
+   ],
+   [
+    "73,42,52,72,7,42",
+    73
+   ],
+   [
+    "19,88,46,32,55,85,81",
+    88
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "the largest number in the comma separated text",
+  "hidden": [
+   [
+    "47,14,68",
+    68
+   ],
+   [
+    "9,42,56,26",
+    56
+   ],
+   [
+    "86,3,29,18,54,51,59",
+    86
+   ],
+   [
+    "6,5,83",
+    83
+   ],
+   [
+    "35,87,80,35,81,70,5",
+    87
+   ],
+   [
+    "13,33,16,67,2,56,31",
+    67
+   ]
+  ],
+  "id": "7-42",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "max",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "max"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "15,40,45,83,22",
+    205
+   ],
+   [
+    "8,77,66",
+    151
+   ],
+   [
+    "11,60,76,69,19",
+    235
+   ]
+  ],
+  "family": "text+builtins",
+  "goal": "total of the comma separated numbers",
+  "hidden": [
+   [
+    "16,66,17,38,53,74",
+    264
+   ],
+   [
+    "36,32,95,12,95",
+    270
+   ],
+   [
+    "37,59,79,89,73,29,84",
+    450
+   ],
+   [
+    "26,71,91,47,59,71",
+    365
+   ],
+   [
+    "79,62,61,40,4",
+    246
+   ],
+   [
+    "43,29,25,66",
+    163
+   ]
+  ],
+  "id": "7-43",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "sum",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "sum"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    159.19,
+    12.617051953606278
+   ],
+   [
+    84,
+    9.16515138991168
+   ],
+   [
+    223.1,
+    14.936532395439043
+   ]
+  ],
+  "family": "math",
+  "goal": "square root of the number",
+  "hidden": [
+   [
+    139,
+    11.789826122551595
+   ],
+   [
+    152,
+    12.328828005937952
+   ],
+   [
+    220.9,
+    14.862705002791383
+   ],
+   [
+    263.43,
+    16.230526793668776
+   ],
+   [
+    226,
+    15.033296378372908
+   ],
+   [
+    267,
+    16.34013463836819
+   ]
+  ],
+  "id": "7-44",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.sqrt",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.sqrt"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    173,
+    173
+   ],
+   [
+    81.79,
+    81
+   ],
+   [
+    38.93,
+    38
+   ]
+  ],
+  "family": "math",
+  "goal": "floor of the number",
+  "hidden": [
+   [
+    138,
+    138
+   ],
+   [
+    212,
+    212
+   ],
+   [
+    211,
+    211
+   ],
+   [
+    255,
+    255
+   ],
+   [
+    340.13,
+    340
+   ],
+   [
+    243.33,
+    243
+   ]
+  ],
+  "id": "7-45",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.floor",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.floor"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    183.7,
+    184
+   ],
+   [
+    141.83,
+    142
+   ],
+   [
+    129.48,
+    130
+   ]
+  ],
+  "family": "math",
+  "goal": "round the number up to an integer",
+  "hidden": [
+   [
+    195,
+    195
+   ],
+   [
+    275,
+    275
+   ],
+   [
+    224,
+    224
+   ],
+   [
+    328.83,
+    329
+   ],
+   [
+    166,
+    166
+   ],
+   [
+    82.52,
+    83
+   ]
+  ],
+  "id": "7-46",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.ceil",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.ceil"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    1,
+    1
+   ],
+   [
+    5,
+    120
+   ],
+   [
+    10,
+    3628800
+   ]
+  ],
+  "family": "math",
+  "goal": "factorial of the number",
+  "hidden": [
+   [
+    8,
+    40320
+   ],
+   [
+    9,
+    362880
+   ],
+   [
+    7,
+    5040
+   ],
+   [
+    6,
+    720
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    4,
+    24
+   ]
+  ],
+  "id": "7-47",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.factorial",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.factorial"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     24,
+     33,
+     26,
+     42,
+     36,
+     37
+    ],
+    1151998848
+   ],
+   [
+    [
+     13,
+     27,
+     32,
+     26
+    ],
+    292032
+   ],
+   [
+    [
+     50,
+     40,
+     38,
+     22,
+     45,
+     34
+    ],
+    2558160000
+   ]
+  ],
+  "family": "math",
+  "goal": "product of all the numbers in the list",
+  "hidden": [
+   [
+    [
+     11,
+     24,
+     21
+    ],
+    5544
+   ],
+   [
+    [
+     5,
+     20,
+     33,
+     12,
+     8
+    ],
+    316800
+   ],
+   [
+    [
+     45,
+     22,
+     33,
+     27,
+     41
+    ],
+    36165690
+   ],
+   [
+    [
+     34,
+     19,
+     33,
+     14
+    ],
+    298452
+   ],
+   [
+    [
+     13,
+     27,
+     12,
+     4,
+     41,
+     37,
+     39
+    ],
+    996778224
+   ],
+   [
+    [
+     23,
+     37,
+     41
+    ],
+    34891
+   ]
+  ],
+  "id": "7-48",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "math.prod",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/math.rst"
+  ],
+  "required_ops": [
+   "math.prod"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     1,
+     1,
+     20,
+     46,
+     45,
+     36
+    ],
+    24.833333333333332
+   ],
+   [
+    [
+     20,
+     26,
+     7
+    ],
+    17.666666666666668
+   ],
+   [
+    [
+     1,
+     43,
+     2,
+     13,
+     12,
+     32,
+     50
+    ],
+    21.857142857142858
+   ]
+  ],
+  "family": "statistics",
+  "goal": "arithmetic mean of the numbers",
+  "hidden": [
+   [
+    [
+     37,
+     18,
+     42,
+     35,
+     33,
+     10,
+     37
+    ],
+    30.285714285714285
+   ],
+   [
+    [
+     27,
+     39,
+     8,
+     10
+    ],
+    21
+   ],
+   [
+    [
+     34,
+     49,
+     33,
+     7
+    ],
+    30.75
+   ],
+   [
+    [
+     7,
+     5,
+     11
+    ],
+    7.666666666666667
+   ],
+   [
+    [
+     32,
+     30,
+     40,
+     28,
+     4,
+     42,
+     1
+    ],
+    25.285714285714285
+   ],
+   [
+    [
+     21,
+     10,
+     46,
+     16,
+     23,
+     18,
+     11
+    ],
+    20.714285714285715
+   ]
+  ],
+  "id": "7-49",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.mean",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.mean"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     41,
+     7,
+     38,
+     5,
+     23
+    ],
+    23
+   ],
+   [
+    [
+     29,
+     40,
+     25,
+     2
+    ],
+    27.0
+   ],
+   [
+    [
+     15,
+     26,
+     38
+    ],
+    26
+   ]
+  ],
+  "family": "statistics",
+  "goal": "middle value of the list",
+  "hidden": [
+   [
+    [
+     29,
+     4,
+     40
+    ],
+    29
+   ],
+   [
+    [
+     16,
+     15,
+     3,
+     11
+    ],
+    13.0
+   ],
+   [
+    [
+     12,
+     21,
+     1,
+     30,
+     20,
+     27,
+     39
+    ],
+    21
+   ],
+   [
+    [
+     32,
+     5,
+     16,
+     44,
+     25
+    ],
+    25
+   ],
+   [
+    [
+     15,
+     27,
+     20,
+     26,
+     46,
+     32,
+     2
+    ],
+    26
+   ],
+   [
+    [
+     6,
+     12,
+     11,
+     23
+    ],
+    11.5
+   ]
+  ],
+  "id": "7-50",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.median",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.median"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    [
+     1,
+     19,
+     26,
+     36
+    ],
+    12.776932339180638
+   ],
+   [
+    [
+     8,
+     22,
+     35,
+     25,
+     22
+    ],
+    8.63944442658207
+   ],
+   [
+    [
+     42,
+     5,
+     8,
+     28,
+     23,
+     36
+    ],
+    13.548267621934384
+   ]
+  ],
+  "family": "statistics",
+  "goal": "population standard deviation of the numbers",
+  "hidden": [
+   [
+    [
+     25,
+     13,
+     30,
+     19
+    ],
+    6.378675411086537
+   ],
+   [
+    [
+     16,
+     28,
+     3,
+     18,
+     43
+    ],
+    13.335666462535722
+   ],
+   [
+    [
+     22,
+     10,
+     16
+    ],
+    4.898979485566356
+   ],
+   [
+    [
+     6,
+     13,
+     18,
+     35
+    ],
+    10.700467279516348
+   ],
+   [
+    [
+     36,
+     29,
+     30,
+     16
+    ],
+    7.292976072907411
+   ],
+   [
+    [
+     24,
+     23,
+     14,
+     47
+    ],
+    12.186057606953941
+   ]
+  ],
+  "id": "7-51",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "call",
+    "statistics.pstdev",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "statistics.pstdev"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "fungus night spore hypha green apple",
+    5.0
+   ],
+   [
+    "spore green mycelia hypha",
+    5.0
+   ],
+   [
+    "night river apple spore stone hypha",
+    5.0
+   ]
+  ],
+  "family": "cross",
+  "goal": "middle value of the word lengths",
+  "hidden": [
+   [
+    "mycelia bob apple fungus",
+    5.5
+   ],
+   [
+    "root stone alice mycelia hypha",
+    5
+   ],
+   [
+    "stone bob mycelia",
+    5
+   ],
+   [
+    "river spore bob night",
+    5.0
+   ],
+   [
+    "apple hypha spore bob fungus",
+    5
+   ],
+   [
+    "spore hypha mycelia",
+    5
+   ]
+  ],
+  "id": "7-52",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    []
+   ],
+   [
+    "map",
+    [
+     "call",
+     "len",
+     []
+    ]
+   ],
+   [
+    "call",
+    "statistics.median",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst",
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "len",
+   "statistics.median"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": true,
+  "examples": [
+   [
+    "46,52,60,81,81",
+    64
+   ],
+   [
+    "36,23,4,47",
+    27.5
+   ],
+   [
+    "53,4,85,91,90",
+    64.6
+   ]
+  ],
+  "family": "cross",
+  "goal": "mean of the numbers in the text",
+  "hidden": [
+   [
+    "32,52,46,81,13,24",
+    41.333333333333336
+   ],
+   [
+    "15,35,78,94,29",
+    50.2
+   ],
+   [
+    "52,6,78",
+    45.333333333333336
+   ],
+   [
+    "56,26,97,39",
+    54.5
+   ],
+   [
+    "49,95,6,71",
+    55.25
+   ],
+   [
+    "81,82,23,73,30",
+    57.8
+   ]
+  ],
+  "id": "7-53",
+  "novel_combination": false,
+  "reference_program": [
+   [
+    "method",
+    "str.split",
+    [
+     ","
+    ]
+   ],
+   [
+    "map",
+    [
+     "call",
+     "int",
+     []
+    ]
+   ],
+   [
+    "call",
+    "statistics.mean",
+    []
+   ]
+  ],
+  "required_docs": [
+   "Doc/builtins/functions.rst",
+   "Doc/builtins/stdtypes.rst",
+   "Doc/library/statistics.rst"
+  ],
+  "required_ops": [
+   "str.split",
+   "int",
+   "statistics.mean"
+  ],
+  "solvable": true,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "stone fungus Night RIVER",
+    "REVIR thgiN sugnuf enots"
+   ],
+   [
+    "  alice RIVER ",
+    " REVIR ecila  "
+   ],
+   [
+    "  ROOT  NIGHT  SPORE  HYPHA  Bob  ",
+    "  boB  AHPYH  EROPS  THGIN  TOOR  "
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "reverse the order of the characters",
+  "hidden": [
+   [
+    "  FUNGUS Spore ",
+    " eropS SUGNUF  "
+   ],
+   [
+    "  alice Apple hypha  ",
+    "  ahpyh elppA ecila  "
+   ],
+   [
+    "  SPORE  ALICE  mycelia  river",
+    "revir  ailecym  ECILA  EROPS  "
+   ],
+   [
+    "fungus  Green  root",
+    "toor  neerG  sugnuf"
+   ],
+   [
+    "  Root Hypha mycelia NIGHT  ",
+    "  THGIN ailecym ahpyH tooR  "
+   ],
+   [
+    " mycelia  fungus  Root  GREEN  stone",
+    "enots  NEERG  tooR  sugnuf  ailecym "
+   ]
+  ],
+  "id": "7-54",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "hypha root spore",
+    "hrs"
+   ],
+   [
+    "root hypha green",
+    "rhg"
+   ],
+   [
+    "mycelia river green",
+    "mrg"
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "keep only the first letter of each word",
+  "hidden": [
+   [
+    "night river hypha mycelia bob alice",
+    "nrhmba"
+   ],
+   [
+    "green root bob",
+    "grb"
+   ],
+   [
+    "root night hypha bob green",
+    "rnhbg"
+   ],
+   [
+    "green spore apple river alice mycelia",
+    "gsaram"
+   ],
+   [
+    "fungus hypha night",
+    "fhn"
+   ],
+   [
+    "fungus spore bob mycelia alice",
+    "fsbma"
+   ]
+  ],
+  "id": "7-55",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "mycelia hypha river root apple alice",
+    [
+     "root",
+     "alice",
+     "apple",
+     "hypha",
+     "river",
+     "mycelia"
+    ]
+   ],
+   [
+    "root night river stone mycelia",
+    [
+     "root",
+     "night",
+     "river",
+     "stone",
+     "mycelia"
+    ]
+   ],
+   [
+    "river spore root mycelia night",
+    [
+     "root",
+     "night",
+     "river",
+     "spore",
+     "mycelia"
+    ]
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "sort the words by their length",
+  "hidden": [
+   [
+    "spore alice fungus bob stone",
+    [
+     "bob",
+     "alice",
+     "spore",
+     "stone",
+     "fungus"
+    ]
+   ],
+   [
+    "spore green stone",
+    [
+     "green",
+     "spore",
+     "stone"
+    ]
+   ],
+   [
+    "root mycelia hypha bob fungus river",
+    [
+     "bob",
+     "root",
+     "hypha",
+     "river",
+     "fungus",
+     "mycelia"
+    ]
+   ],
+   [
+    "mycelia root green stone",
+    [
+     "root",
+     "green",
+     "stone",
+     "mycelia"
+    ]
+   ],
+   [
+    "alice green fungus",
+    [
+     "alice",
+     "green",
+     "fungus"
+    ]
+   ],
+   [
+    "spore river alice night",
+    [
+     "alice",
+     "night",
+     "river",
+     "spore"
+    ]
+   ]
+  ],
+  "id": "7-56",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ },
+ {
+  "cross_domain": false,
+  "examples": [
+   [
+    "hypha bob alice apple",
+    7
+   ],
+   [
+    "river bob green alice mycelia root",
+    13
+   ],
+   [
+    "stone hypha alice green",
+    8
+   ]
+  ],
+  "family": "unsolvable",
+  "goal": "count the vowels",
+  "hidden": [
+   [
+    "night spore green bob river",
+    8
+   ],
+   [
+    "stone apple mycelia root bob fungus",
+    12
+   ],
+   [
+    "root fungus river",
+    6
+   ],
+   [
+    "night root stone river green",
+    9
+   ],
+   [
+    "hypha river apple alice",
+    8
+   ],
+   [
+    "spore fungus green bob",
+    7
+   ]
+  ],
+  "id": "7-57",
+  "novel_combination": false,
+  "reference_program": null,
+  "required_docs": [],
+  "required_ops": [],
+  "solvable": false,
+  "split": "dev"
+ }
+]

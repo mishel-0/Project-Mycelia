@@ -1,0 +1,3273 @@
+{
+ "budget_episodes_per_car": 300,
+ "runs": {
+  "A": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 597,
+     "unnecessary_stops": 0,
+     "idle_ticks": 2855,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 3,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9854037936547144,
+      0.998298122341722
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 2829,
+     "unnecessary_stops": 0,
+     "idle_ticks": 122507,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 1879,
+     "collision": 92,
+     "success_rate": 0.589375,
+     "success_wilson_95": [
+      0.5753918994147058,
+      0.6032151606548062
+     ],
+     "collision_rate": 0.019166666666666665
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 150,
+     "unnecessary_stops": 0,
+     "idle_ticks": 23124,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 450,
+     "collision": 0,
+     "success_rate": 0.25,
+     "success_wilson_95": [
+      0.21701661446323872,
+      0.28616423604361174
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1350,
+     "unnecessary_stops": 0,
+     "idle_ticks": 38256,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 450,
+     "collision": 0,
+     "success_rate": 0.75,
+     "success_wilson_95": [
+      0.7294780218160054,
+      0.7694571787245107
+     ],
+     "collision_rate": 0.0
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9444,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 597,
+     "unnecessary_stops": 0,
+     "idle_ticks": 7351,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 3,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9854037936547144,
+      0.998298122341722
+     ],
+     "collision_rate": 0.005
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1429,
+     "unnecessary_stops": 0,
+     "idle_ticks": 81396,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 882,
+     "collision": 89,
+     "success_rate": 0.3675,
+     "success_wilson_95": [
+      0.3484373657059764,
+      0.386986117541535
+     ],
+     "collision_rate": 0.037083333333333336
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 550,
+     "unnecessary_stops": 0,
+     "idle_ticks": 28453,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 50,
+     "success": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.08333333333333333
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 550,
+     "unnecessary_stops": 0,
+     "idle_ticks": 28461,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 23,
+     "success": 27,
+     "success_rate": 0.045,
+     "success_wilson_95": [
+      0.03110848866772835,
+      0.0646806592547393
+     ],
+     "collision_rate": 0.03833333333333333
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 7448,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 255,
+     "unnecessary_stops": 0,
+     "idle_ticks": 17034,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 329,
+     "collision": 16,
+     "success_rate": 0.425,
+     "success_wilson_95": [
+      0.3860453087497685,
+      0.46490894640228664
+     ],
+     "collision_rate": 0.02666666666666667
+    }
+   }
+  },
+  "B": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 597,
+     "unnecessary_stops": 0,
+     "idle_ticks": 2855,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 3,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9854037936547144,
+      0.998298122341722
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 3428,
+     "unnecessary_stops": 0,
+     "idle_ticks": 67196,
+     "foreign_rule_used": 1917,
+     "incorrect_transfer": 276,
+     "helpful_transfer": 1641,
+     "stuck": 1004,
+     "collision": 368,
+     "success_rate": 0.7141666666666666,
+     "success_wilson_95": [
+      0.7012178138988431,
+      0.726772996710617
+     ],
+     "collision_rate": 0.07666666666666666
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 0,
+     "foreign_rule_used": 450,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 450,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1791,
+     "unnecessary_stops": 0,
+     "idle_ticks": 8565,
+     "foreign_rule_used": 1182,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 1173,
+     "collision": 9,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9905244467854191,
+      0.9973672502848026
+     ],
+     "collision_rate": 0.005
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9144,
+     "foreign_rule_used": 300,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 300,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 588,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1084,
+     "foreign_rule_used": 432,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 423,
+     "collision": 12,
+     "stuck": 0,
+     "success_rate": 0.98,
+     "success_wilson_95": [
+      0.9653699456538909,
+      0.9885228213729564
+     ],
+     "collision_rate": 0.02
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1004,
+     "unnecessary_stops": 0,
+     "idle_ticks": 55776,
+     "foreign_rule_used": 735,
+     "incorrect_transfer": 267,
+     "helpful_transfer": 468,
+     "success": 1040,
+     "collision": 356,
+     "success_rate": 0.43333333333333335,
+     "success_wilson_95": [
+      0.41363024094401873,
+      0.45324949905472917
+     ],
+     "collision_rate": 0.14833333333333334
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 400,
+     "unnecessary_stops": 0,
+     "idle_ticks": 20668,
+     "foreign_rule_used": 150,
+     "incorrect_transfer": 150,
+     "helpful_transfer": 0,
+     "collision": 200,
+     "success": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.3333333333333333
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 400,
+     "unnecessary_stops": 0,
+     "idle_ticks": 21024,
+     "foreign_rule_used": 150,
+     "incorrect_transfer": 69,
+     "helpful_transfer": 81,
+     "collision": 92,
+     "success": 108,
+     "success_rate": 0.18,
+     "success_wilson_95": [
+      0.1513253010749538,
+      0.2127461875738147
+     ],
+     "collision_rate": 0.15333333333333332
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 3224,
+     "foreign_rule_used": 294,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 294,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 332,
+     "unnecessary_stops": 0,
+     "idle_ticks": 10860,
+     "foreign_rule_used": 141,
+     "incorrect_transfer": 48,
+     "helpful_transfer": 93,
+     "stuck": 204,
+     "collision": 64,
+     "success_rate": 0.5533333333333333,
+     "success_wilson_95": [
+      0.5133399776694885,
+      0.5926481075557168
+     ],
+     "collision_rate": 0.10666666666666667
+    }
+   }
+  },
+  "C": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 597,
+     "unnecessary_stops": 0,
+     "idle_ticks": 2855,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 3,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9854037936547144,
+      0.998298122341722
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 3229,
+     "unnecessary_stops": 0,
+     "idle_ticks": 85629,
+     "foreign_rule_used": 1280,
+     "incorrect_transfer": 184,
+     "helpful_transfer": 1096,
+     "stuck": 1295,
+     "collision": 276,
+     "success_rate": 0.6727083333333334,
+     "success_wilson_95": [
+      0.659300614695797,
+      0.6858398347159175
+     ],
+     "collision_rate": 0.0575
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 450,
+     "unnecessary_stops": 0,
+     "idle_ticks": 7708,
+     "foreign_rule_used": 300,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 300,
+     "stuck": 150,
+     "collision": 0,
+     "success_rate": 0.75,
+     "success_wilson_95": [
+      0.7138357639563884,
+      0.7829833855367614
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1644,
+     "unnecessary_stops": 0,
+     "idle_ticks": 18462,
+     "foreign_rule_used": 788,
+     "incorrect_transfer": 6,
+     "helpful_transfer": 782,
+     "stuck": 150,
+     "collision": 6,
+     "success_rate": 0.9133333333333333,
+     "success_wilson_95": [
+      0.8994398597849019,
+      0.9254663384420846
+     ],
+     "collision_rate": 0.0033333333333333335
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9244,
+     "foreign_rule_used": 200,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 200,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 591,
+     "unnecessary_stops": 0,
+     "idle_ticks": 3173,
+     "foreign_rule_used": 288,
+     "incorrect_transfer": 6,
+     "helpful_transfer": 282,
+     "collision": 9,
+     "stuck": 0,
+     "success_rate": 0.985,
+     "success_wilson_95": [
+      0.9717403929844038,
+      0.9920887570323066
+     ],
+     "collision_rate": 0.015
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1145,
+     "unnecessary_stops": 0,
+     "idle_ticks": 64312,
+     "foreign_rule_used": 492,
+     "incorrect_transfer": 178,
+     "helpful_transfer": 314,
+     "success": 988,
+     "collision": 267,
+     "success_rate": 0.4116666666666667,
+     "success_wilson_95": [
+      0.3921339060468514,
+      0.43148174945148954
+     ],
+     "collision_rate": 0.11125
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 450,
+     "unnecessary_stops": 0,
+     "idle_ticks": 23263,
+     "foreign_rule_used": 100,
+     "incorrect_transfer": 100,
+     "helpful_transfer": 0,
+     "collision": 150,
+     "success": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.25
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 450,
+     "unnecessary_stops": 0,
+     "idle_ticks": 23503,
+     "foreign_rule_used": 100,
+     "incorrect_transfer": 46,
+     "helpful_transfer": 54,
+     "collision": 69,
+     "success": 81,
+     "success_rate": 0.135,
+     "success_wilson_95": [
+      0.10996732443966875,
+      0.16467671730033281
+     ],
+     "collision_rate": 0.115
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 4632,
+     "foreign_rule_used": 196,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 196,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 307,
+     "unnecessary_stops": 0,
+     "idle_ticks": 12914,
+     "foreign_rule_used": 96,
+     "incorrect_transfer": 32,
+     "helpful_transfer": 64,
+     "stuck": 245,
+     "collision": 48,
+     "success_rate": 0.5116666666666667,
+     "success_wilson_95": [
+      0.4717230993999969,
+      0.5514617942430168
+     ],
+     "collision_rate": 0.08
+    }
+   }
+  },
+  "D": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 4,
+      "reverified_ok": 11,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 15
+     },
+     "coordination_records": 15
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 7,
+      "reverified_ok": 8,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 15
+     },
+     "coordination_records": 15
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 12,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 12
+     },
+     "coordination_records": 12
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 584,
+     "unnecessary_stops": 0,
+     "idle_ticks": 4138,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 13,
+     "collision": 3,
+     "success_rate": 0.9733333333333334,
+     "success_wilson_95": [
+      0.9571240661880865,
+      0.9835201901856102
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 3196,
+     "unnecessary_stops": 0,
+     "idle_ticks": 104988,
+     "foreign_rule_used": 1057,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 1048,
+     "stuck": 1592,
+     "collision": 12,
+     "success_rate": 0.6658333333333334,
+     "success_wilson_95": [
+      0.652361222461142,
+      0.6790402223298407
+     ],
+     "collision_rate": 0.0025
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 548,
+     "unnecessary_stops": 0,
+     "idle_ticks": 2632,
+     "foreign_rule_used": 411,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 411,
+     "stuck": 52,
+     "collision": 0,
+     "success_rate": 0.9133333333333333,
+     "success_wilson_95": [
+      0.8881100641938375,
+      0.9332975963015033
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1752,
+     "unnecessary_stops": 0,
+     "idle_ticks": 12414,
+     "foreign_rule_used": 1029,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 1020,
+     "stuck": 39,
+     "collision": 9,
+     "success_rate": 0.9733333333333334,
+     "success_wilson_95": [
+      0.9648225898414398,
+      0.9798280565152706
+     ],
+     "collision_rate": 0.005
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9144,
+     "foreign_rule_used": 300,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 300,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 588,
+     "unnecessary_stops": 0,
+     "idle_ticks": 3584,
+     "foreign_rule_used": 318,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 309,
+     "collision": 12,
+     "stuck": 0,
+     "success_rate": 0.98,
+     "success_wilson_95": [
+      0.9653699456538909,
+      0.9885228213729564
+     ],
+     "collision_rate": 0.02
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1540,
+     "unnecessary_stops": 0,
+     "idle_ticks": 88436,
+     "foreign_rule_used": 28,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 28,
+     "success": 860,
+     "collision": 0,
+     "success_rate": 0.35833333333333334,
+     "success_wilson_95": [
+      0.33938964876794897,
+      0.3777297987293903
+     ],
+     "collision_rate": 0.0
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 31048,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 30940,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 8856,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 260,
+     "unnecessary_stops": 0,
+     "idle_ticks": 17592,
+     "foreign_rule_used": 28,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 28,
+     "stuck": 340,
+     "collision": 0,
+     "success_rate": 0.43333333333333335,
+     "success_wilson_95": [
+      0.39423111501886426,
+      0.47328377844962927
+     ],
+     "collision_rate": 0.0
+    }
+   }
+  },
+  "A_scope": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 584,
+     "unnecessary_stops": 0,
+     "idle_ticks": 4138,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 13,
+     "collision": 3,
+     "success_rate": 0.9733333333333334,
+     "success_wilson_95": [
+      0.9571240661880865,
+      0.9835201901856102
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 2771,
+     "unnecessary_stops": 0,
+     "idle_ticks": 131933,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 2026,
+     "collision": 3,
+     "success_rate": 0.5772916666666666,
+     "success_wilson_95": [
+      0.5632605138310213,
+      0.5911992047838713
+     ],
+     "collision_rate": 0.000625
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 137,
+     "unnecessary_stops": 0,
+     "idle_ticks": 23782,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 463,
+     "collision": 0,
+     "success_rate": 0.22833333333333333,
+     "success_wilson_95": [
+      0.19653696364484088,
+      0.26358622723926983
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1350,
+     "unnecessary_stops": 0,
+     "idle_ticks": 38256,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 450,
+     "collision": 0,
+     "success_rate": 0.75,
+     "success_wilson_95": [
+      0.7294780218160054,
+      0.7694571787245107
+     ],
+     "collision_rate": 0.0
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9444,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 597,
+     "unnecessary_stops": 0,
+     "idle_ticks": 7976,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 3,
+     "stuck": 0,
+     "success_rate": 0.995,
+     "success_wilson_95": [
+      0.9854037936547144,
+      0.998298122341722
+     ],
+     "collision_rate": 0.005
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1563,
+     "unnecessary_stops": 0,
+     "idle_ticks": 89539,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 837,
+     "collision": 0,
+     "success_rate": 0.34875,
+     "success_wilson_95": [
+      0.3299388042714222,
+      0.36804460585073706
+     ],
+     "collision_rate": 0.0
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 31048,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 30940,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 8856,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 237,
+     "unnecessary_stops": 0,
+     "idle_ticks": 18695,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 363,
+     "collision": 0,
+     "success_rate": 0.395,
+     "success_wilson_95": [
+      0.35667139292040984,
+      0.43466456429246747
+     ],
+     "collision_rate": 0.0
+    }
+   }
+  },
+  "B_scope": {
+   "per_seed": [
+    {
+     "suite": "drive_eval_1.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "visibility": [
+          "clear"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "right_free": [
+          "unknown"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_2.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "distance": "near",
+         "left_free": "yes",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block",
+         "right_free": "yes",
+         "surface": "dry"
+        },
+        "right",
+        {
+         "visibility": [
+          "clear"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "unknown",
+         "visibility": "fog"
+        },
+        "slow",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "none"
+         ]
+        }
+       ]
+      ],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "yes",
+         "visibility": "clear",
+         "surface": "dry"
+        },
+        "left",
+        {
+         "right_free": [
+          "no",
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "mid",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "left_free": "none",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    },
+    {
+     "suite": "drive_eval_3.json",
+     "rules": {
+      "car1": [
+       [
+        {
+         "ahead": "block",
+         "left_free": "yes"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "none",
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "block"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "visibility": [
+          "clear"
+         ],
+         "right_free": [
+          "yes"
+         ],
+         "left_free": [
+          "none"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ]
+      ],
+      "car2": [],
+      "car3": [],
+      "car4": [
+       [
+        {
+         "ahead": "vehicle",
+         "right_free": "yes",
+         "visibility": "clear"
+        },
+        "right",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "yes"
+         ],
+         "distance": [
+          "far",
+          "near"
+         ]
+        }
+       ],
+       [
+        {
+         "ahead": "vehicle",
+         "distance": "near",
+         "right_free": "none",
+         "visibility": "clear"
+        },
+        "left",
+        {
+         "surface": [
+          "dry"
+         ],
+         "left_free": [
+          "no",
+          "yes"
+         ]
+        }
+       ]
+      ]
+     },
+     "sharing": {
+      "adopted_in_scope": 0,
+      "reverified_ok": 0,
+      "reverified_failed": 0,
+      "skipped_untrusted": 0,
+      "messages": 0
+     },
+     "coordination_records": 0
+    }
+   ],
+   "metrics": {
+    "own_family": {
+     "episodes": 600,
+     "success": 584,
+     "unnecessary_stops": 0,
+     "idle_ticks": 4138,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "stuck": 13,
+     "collision": 3,
+     "success_rate": 0.9733333333333334,
+     "success_wilson_95": [
+      0.9571240661880865,
+      0.9835201901856102
+     ],
+     "collision_rate": 0.005
+    },
+    "all": {
+     "episodes": 4800,
+     "success": 3196,
+     "unnecessary_stops": 0,
+     "idle_ticks": 104988,
+     "foreign_rule_used": 1063,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 1054,
+     "stuck": 1592,
+     "collision": 12,
+     "success_rate": 0.6658333333333334,
+     "success_wilson_95": [
+      0.652361222461142,
+      0.6790402223298407
+     ],
+     "collision_rate": 0.0025
+    },
+    "family:city_blocks": {
+     "episodes": 600,
+     "success": 548,
+     "unnecessary_stops": 0,
+     "idle_ticks": 2632,
+     "foreign_rule_used": 411,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 411,
+     "stuck": 52,
+     "collision": 0,
+     "success_rate": 0.9133333333333333,
+     "success_wilson_95": [
+      0.8881100641938375,
+      0.9332975963015033
+     ],
+     "collision_rate": 0.0
+    },
+    "other_cars_family": {
+     "episodes": 1800,
+     "success": 1752,
+     "unnecessary_stops": 0,
+     "idle_ticks": 12414,
+     "foreign_rule_used": 1035,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 1026,
+     "stuck": 39,
+     "collision": 9,
+     "success_rate": 0.9733333333333334,
+     "success_wilson_95": [
+      0.9648225898414398,
+      0.9798280565152706
+     ],
+     "collision_rate": 0.005
+    },
+    "family:rain_pedestrians": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 1192,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 9144,
+     "foreign_rule_used": 300,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 300,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:highway_traffic": {
+     "episodes": 600,
+     "success": 588,
+     "unnecessary_stops": 0,
+     "idle_ticks": 3584,
+     "foreign_rule_used": 324,
+     "incorrect_transfer": 9,
+     "helpful_transfer": 315,
+     "collision": 12,
+     "stuck": 0,
+     "success_rate": 0.98,
+     "success_wilson_95": [
+      0.9653699456538909,
+      0.9885228213729564
+     ],
+     "collision_rate": 0.02
+    },
+    "held_out": {
+     "episodes": 2400,
+     "stuck": 1540,
+     "unnecessary_stops": 0,
+     "idle_ticks": 88436,
+     "foreign_rule_used": 28,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 28,
+     "success": 860,
+     "collision": 0,
+     "success_rate": 0.35833333333333334,
+     "success_wilson_95": [
+      0.33938964876794897,
+      0.3777297987293903
+     ],
+     "collision_rate": 0.0
+    },
+    "family:narrow_blocked": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 31048,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:fog_blocks": {
+     "episodes": 600,
+     "stuck": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 30940,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "success": 0,
+     "collision": 0,
+     "success_rate": 0.0,
+     "success_wilson_95": [
+      4.336808689942018e-19,
+      0.00636170101370071
+     ],
+     "collision_rate": 0.0
+    },
+    "family:rain_traffic": {
+     "episodes": 600,
+     "success": 600,
+     "unnecessary_stops": 0,
+     "idle_ticks": 8856,
+     "foreign_rule_used": 0,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_wilson_95": [
+      0.9936382989862994,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0
+    },
+    "family:mixed": {
+     "episodes": 600,
+     "success": 260,
+     "unnecessary_stops": 0,
+     "idle_ticks": 17592,
+     "foreign_rule_used": 28,
+     "incorrect_transfer": 0,
+     "helpful_transfer": 28,
+     "stuck": 340,
+     "collision": 0,
+     "success_rate": 0.43333333333333335,
+     "success_wilson_95": [
+      0.39423111501886426,
+      0.47328377844962927
+     ],
+     "collision_rate": 0.0
+    }
+   }
+  }
+ },
+ "seconds": 8.397702061000018
+}

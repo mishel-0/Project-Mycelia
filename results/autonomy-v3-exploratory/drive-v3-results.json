@@ -1,0 +1,2596 @@
+{
+ "conditions": {
+  "A": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1284,
+     "idle_ticks": 51588,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 1744,
+     "stuck": 812,
+     "success_rate": 0.334375,
+     "success_ci": [
+      0.31962550319042826,
+      0.34945554148141555
+     ],
+     "collision_rate": 0.45416666666666666,
+     "collision_ci": [
+      0.43847246710652954,
+      0.4699524760731003
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 347,
+     "idle_ticks": 3987,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 92,
+     "stuck": 41,
+     "success_rate": 0.7229166666666667,
+     "success_ci": [
+      0.6812284181166749,
+      0.7610652218735804
+     ],
+     "collision_rate": 0.19166666666666668,
+     "collision_ci": [
+      0.15895698032223937,
+      0.2292723774482487
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 581,
+     "idle_ticks": 9807,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 274,
+     "stuck": 105,
+     "success_rate": 0.6052083333333333,
+     "success_ci": [
+      0.5739271778925384,
+      0.6356508581541332
+     ],
+     "collision_rate": 0.28541666666666665,
+     "collision_ci": [
+      0.2577481487445806,
+      0.314795658922604
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 267,
+     "idle_ticks": 41570,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 857,
+     "stuck": 812,
+     "success_rate": 0.13791322314049587,
+     "success_ci": [
+      0.12326934665335544,
+      0.15399117707401616
+     ],
+     "collision_rate": 0.44266528925619836,
+     "collision_ci": [
+      0.4206750523178113,
+      0.4648826055049251
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 877,
+     "idle_ticks": 8788,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 473,
+     "stuck": 90,
+     "success_rate": 0.3284722222222222,
+     "success_ci": [
+      0.30469896055200235,
+      0.35315821138189457
+     ],
+     "collision_rate": 0.6090277777777777,
+     "collision_ci": [
+      0.5835662246207131,
+      0.633909176214826
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "collision": 691,
+     "idle_ticks": 6363,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 390,
+     "stuck": 111,
+     "success_rate": 0.3271812080536913,
+     "success_ci": [
+      0.3011383524962177,
+      0.3543343717842208
+     ],
+     "collision_rate": 0.5796979865771812,
+     "collision_ci": [
+      0.5514643272631189,
+      0.6074196105687176
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 659,
+     "idle_ticks": 17636,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 490,
+     "stuck": 159,
+     "success_rate": 0.503822629969419,
+     "success_ci": [
+      0.47675536306509864,
+      0.5308675092970767
+     ],
+     "collision_rate": 0.3746177370030581,
+     "collision_ci": [
+      0.34878997623096175,
+      0.4011798102896884
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "collision": 775,
+     "idle_ticks": 38813,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 464,
+     "stuck": 681,
+     "success_rate": 0.24166666666666667,
+     "success_ci": [
+      0.22304611974754435,
+      0.2613188753762786
+     ],
+     "collision_rate": 0.4036458333333333,
+     "collision_ci": [
+      0.3819135864751988,
+      0.42576287339961416
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "collision": 880,
+     "idle_ticks": 158,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 77,
+     "stuck": 3,
+     "success_rate": 0.08020833333333334,
+     "success_ci": [
+      0.06465255316641809,
+      0.09911033270676343
+     ],
+     "collision_rate": 0.9166666666666666,
+     "collision_ci": [
+      0.8974785725027712,
+      0.9325334514444432
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "collision": 488,
+     "idle_ticks": 15945,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 192,
+     "stuck": 280,
+     "success_rate": 0.2,
+     "success_ci": [
+      0.1759148281932741,
+      0.2264765145647316
+     ],
+     "collision_rate": 0.5083333333333333,
+     "collision_ci": [
+      0.4767387967063388,
+      0.5398614437726055
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "stuck": 424,
+     "idle_ticks": 25678,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 102,
+     "success": 434,
+     "success_rate": 0.45208333333333334,
+     "success_ci": [
+      0.4208533221951912,
+      0.48369529505087916
+     ],
+     "collision_rate": 0.10625,
+     "collision_ci": [
+      0.08830172803509424,
+      0.1273369093347882
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      10,
+      9,
+      12,
+      14
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    },
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      12,
+      14,
+      14
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    },
+    {
+     "messages": 0,
+     "bytes": 0,
+     "adopted": 0,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 0,
+     "operational_collisions_by_round": [
+      13,
+      11,
+      14,
+      15
+     ],
+     "liar_rules_held_end": 0,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 0,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    }
+   ]
+  },
+  "M3": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1870,
+     "idle_ticks": 45118,
+     "unsafe_transfer": 320,
+     "liar_rule_fired": 832,
+     "collision": 1294,
+     "stuck": 676,
+     "success_rate": 0.4869791666666667,
+     "success_ci": [
+      0.4711910475809452,
+      0.5027933112769043
+     ],
+     "collision_rate": 0.33697916666666666,
+     "collision_ci": [
+      0.32219845036845157,
+      0.3520857225318224
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 367,
+     "idle_ticks": 3150,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 92,
+     "stuck": 21,
+     "success_rate": 0.7645833333333333,
+     "success_ci": [
+      0.7246212407236104,
+      0.8003441076760381
+     ],
+     "collision_rate": 0.19166666666666668,
+     "collision_ci": [
+      0.15895698032223937,
+      0.2292723774482487
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 604,
+     "idle_ticks": 16683,
+     "unsafe_transfer": 13,
+     "liar_rule_fired": 209,
+     "collision": 115,
+     "stuck": 241,
+     "success_rate": 0.6291666666666667,
+     "success_ci": [
+      0.5981532988890256,
+      0.6591504285346109
+     ],
+     "collision_rate": 0.11979166666666667,
+     "collision_ci": [
+      0.10075120269613162,
+      0.1418628254520353
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 853,
+     "idle_ticks": 35100,
+     "unsafe_transfer": 74,
+     "liar_rule_fired": 340,
+     "stuck": 676,
+     "collision": 407,
+     "success_rate": 0.440599173553719,
+     "success_ci": [
+      0.4186238135349241,
+      0.46280979592106414
+     ],
+     "collision_rate": 0.21022727272727273,
+     "collision_ci": [
+      0.192659410308886,
+      0.2289428062546739
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "collision": 609,
+     "idle_ticks": 5180,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "success": 810,
+     "stuck": 21,
+     "success_rate": 0.5625,
+     "success_ci": [
+      0.536745038561868,
+      0.587922388668696
+     ],
+     "collision_rate": 0.42291666666666666,
+     "collision_ci": [
+      0.39763884040045155,
+      0.4486046660151863
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "collision": 643,
+     "idle_ticks": 5910,
+     "unsafe_transfer": 7,
+     "liar_rule_fired": 34,
+     "success": 448,
+     "stuck": 101,
+     "success_rate": 0.37583892617449666,
+     "success_ci": [
+      0.34878372962344956,
+      0.40369181985958386
+     ],
+     "collision_rate": 0.5394295302013423,
+     "collision_ci": [
+      0.511052048943834,
+      0.567553688720338
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 714,
+     "idle_ticks": 15189,
+     "unsafe_transfer": 316,
+     "liar_rule_fired": 637,
+     "collision": 490,
+     "stuck": 104,
+     "success_rate": 0.5458715596330275,
+     "success_ci": [
+      0.5187941444866538,
+      0.5726803238594497
+     ],
+     "collision_rate": 0.3746177370030581,
+     "collision_ci": [
+      0.34878997623096175,
+      0.4011798102896884
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 634,
+     "idle_ticks": 36788,
+     "unsafe_transfer": 320,
+     "liar_rule_fired": 832,
+     "collision": 593,
+     "success": 693,
+     "success_rate": 0.3609375,
+     "success_ci": [
+      0.3397523211652967,
+      0.3826780290324064
+     ],
+     "collision_rate": 0.30885416666666665,
+     "collision_ci": [
+      0.28858683003913627,
+      0.3298848498206279
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 266,
+     "idle_ticks": 105,
+     "unsafe_transfer": 153,
+     "liar_rule_fired": 207,
+     "collision": 692,
+     "stuck": 2,
+     "success_rate": 0.27708333333333335,
+     "success_ci": [
+      0.24970286445900194,
+      0.3062407027292384
+     ],
+     "collision_rate": 0.7208333333333333,
+     "collision_ci": [
+      0.6916194311850474,
+      0.7482869415069762
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 396,
+     "idle_ticks": 11647,
+     "unsafe_transfer": 141,
+     "liar_rule_fired": 207,
+     "collision": 372,
+     "stuck": 192,
+     "success_rate": 0.4125,
+     "success_ci": [
+      0.3817681984991519,
+      0.44392927647193303
+     ],
+     "collision_rate": 0.3875,
+     "collision_ci": [
+      0.3571888014895104,
+      0.41870795204474176
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 604,
+     "idle_ticks": 16683,
+     "unsafe_transfer": 13,
+     "liar_rule_fired": 209,
+     "collision": 115,
+     "stuck": 241,
+     "success_rate": 0.6291666666666667,
+     "success_ci": [
+      0.5981532988890256,
+      0.6591504285346109
+     ],
+     "collision_rate": 0.11979166666666667,
+     "collision_ci": [
+      0.10075120269613162,
+      0.1418628254520353
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 25,
+     "bytes": 8883,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 2,
+     "operational_collisions_by_round": [
+      10,
+      9,
+      12,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 17,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    },
+    {
+     "messages": 25,
+     "bytes": 8979,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 2,
+     "operational_collisions_by_round": [
+      14,
+      12,
+      14,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 0,
+     "foreign_rules_held_end": 17,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    },
+    {
+     "messages": 25,
+     "bytes": 8976,
+     "adopted": 25,
+     "rejected_by_verification": 0,
+     "rejected_by_trust": 0,
+     "verifications": 0,
+     "retractions": 3,
+     "operational_collisions_by_round": [
+      15,
+      11,
+      14,
+      15
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "foreign_rules_held_end": 14,
+     "trust": {
+      "car1": {},
+      "car2": {},
+      "car3": {},
+      "car4": {}
+     }
+    }
+   ]
+  },
+  "BIO_full": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1946,
+     "idle_ticks": 44847,
+     "unsafe_transfer": 657,
+     "liar_rule_fired": 831,
+     "collision": 1209,
+     "stuck": 685,
+     "success_rate": 0.5067708333333333,
+     "success_ci": [
+      0.4909590274570816,
+      0.5225691059368367
+     ],
+     "collision_rate": 0.31484375,
+     "collision_ci": [
+      0.30034486525708926,
+      0.32971271770152866
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 384,
+     "idle_ticks": 3103,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 75,
+     "stuck": 21,
+     "success_rate": 0.8,
+     "success_ci": [
+      0.7618971051871651,
+      0.8333391953604682
+     ],
+     "collision_rate": 0.15625,
+     "collision_ci": [
+      0.1265113748359063,
+      0.19144703078659725
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 621,
+     "idle_ticks": 16198,
+     "unsafe_transfer": 92,
+     "liar_rule_fired": 209,
+     "collision": 99,
+     "stuck": 240,
+     "success_rate": 0.646875,
+     "success_ci": [
+      0.616110857076893,
+      0.6764683813645
+     ],
+     "collision_rate": 0.103125,
+     "collision_ci": [
+      0.08544207977532679,
+      0.1239714674149515
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 821,
+     "idle_ticks": 35421,
+     "unsafe_transfer": 115,
+     "liar_rule_fired": 339,
+     "stuck": 685,
+     "collision": 430,
+     "success_rate": 0.4240702479338843,
+     "success_ci": [
+      0.40222789949746424,
+      0.44621332302453814
+     ],
+     "collision_rate": 0.22210743801652894,
+     "collision_ci": [
+      0.20415234851968794,
+      0.2411631461526743
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 874,
+     "idle_ticks": 5054,
+     "unsafe_transfer": 325,
+     "liar_rule_fired": 0,
+     "collision": 536,
+     "stuck": 30,
+     "success_rate": 0.6069444444444444,
+     "success_ci": [
+      0.581464729535942,
+      0.6318550903919117
+     ],
+     "collision_rate": 0.37222222222222223,
+     "collision_ci": [
+      0.3476258392929329,
+      0.3974985317023587
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 547,
+     "idle_ticks": 6789,
+     "unsafe_transfer": 316,
+     "liar_rule_fired": 33,
+     "collision": 546,
+     "stuck": 99,
+     "success_rate": 0.4588926174496644,
+     "success_ci": [
+      0.43078150777080804,
+      0.48726782955803405
+     ],
+     "collision_rate": 0.45805369127516776,
+     "collision_ci": [
+      0.4299492264998558,
+      0.48642764832549334
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 715,
+     "idle_ticks": 13552,
+     "unsafe_transfer": 348,
+     "liar_rule_fired": 636,
+     "collision": 487,
+     "stuck": 106,
+     "success_rate": 0.5466360856269113,
+     "success_ci": [
+      0.5195602640678798,
+      0.573438778750659
+     ],
+     "collision_rate": 0.37232415902140675,
+     "collision_ci": [
+      0.3465354810678987,
+      0.39886058203544633
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 634,
+     "idle_ticks": 36690,
+     "unsafe_transfer": 332,
+     "liar_rule_fired": 831,
+     "collision": 598,
+     "success": 688,
+     "success_rate": 0.35833333333333334,
+     "success_ci": [
+      0.33718732017789266,
+      0.3800450965029134
+     ],
+     "collision_rate": 0.31145833333333334,
+     "collision_ci": [
+      0.2911381401130851,
+      0.33253147326357607
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 24,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 308,
+     "idle_ticks": 609,
+     "unsafe_transfer": 215,
+     "liar_rule_fired": 207,
+     "collision": 650,
+     "stuck": 2,
+     "success_rate": 0.32083333333333336,
+     "success_ci": [
+      0.29206923439632526,
+      0.35102559530637256
+     ],
+     "collision_rate": 0.6770833333333334,
+     "collision_ci": [
+      0.6468494434893757,
+      0.7059056666881904
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 402,
+     "idle_ticks": 11321,
+     "unsafe_transfer": 263,
+     "liar_rule_fired": 206,
+     "collision": 365,
+     "stuck": 193,
+     "success_rate": 0.41875,
+     "success_ci": [
+      0.38792600779923553,
+      0.4502216475310577
+     ],
+     "collision_rate": 0.3802083333333333,
+     "collision_ci": [
+      0.3500356876673302,
+      0.4113358554478457
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 615,
+     "idle_ticks": 16719,
+     "unsafe_transfer": 87,
+     "liar_rule_fired": 209,
+     "collision": 95,
+     "stuck": 250,
+     "success_rate": 0.640625,
+     "success_ci": [
+      0.6097678177519923,
+      0.6703612403301926
+     ],
+     "collision_rate": 0.09895833333333333,
+     "collision_ci": [
+      0.08163765962031572,
+      0.11947576733049045
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 37,
+     "bytes": 12165,
+     "probation_adopted": 37,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      11,
+      9,
+      16,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 3,
+      "car2": 1,
+      "car3": 0,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 20,
+      "car2": 15,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10554,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      13,
+      6,
+      5,
+      5
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 2
+     },
+     "model_entries": {
+      "car1": 21,
+      "car2": 22,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 40,
+     "bytes": 13509,
+     "probation_adopted": 40,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      17,
+      14,
+      19,
+      18
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 1,
+      "car4": 3
+     },
+     "model_entries": {
+      "car1": 19,
+      "car2": 16,
+      "car3": 5,
+      "car4": 34
+     }
+    }
+   ]
+  },
+  "BIO_without_bee": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1704,
+     "idle_ticks": 33875,
+     "unsafe_transfer": 1446,
+     "liar_rule_fired": 1589,
+     "collision": 1671,
+     "stuck": 465,
+     "success_rate": 0.44375,
+     "success_ci": [
+      0.42809997133418803,
+      0.45951245893172127
+     ],
+     "collision_rate": 0.43515625,
+     "collision_ci": [
+      0.4195479195596992,
+      0.4508941875523907
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 383,
+     "idle_ticks": 3509,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 76,
+     "stuck": 21,
+     "success_rate": 0.7979166666666667,
+     "success_ci": [
+      0.759693241950164,
+      0.8314094731769998
+     ],
+     "collision_rate": 0.15833333333333333,
+     "collision_ci": [
+      0.12840542168542363,
+      0.19368656935754958
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 516,
+     "idle_ticks": 14549,
+     "unsafe_transfer": 229,
+     "liar_rule_fired": 365,
+     "collision": 229,
+     "stuck": 215,
+     "success_rate": 0.5375,
+     "success_ci": [
+      0.5058733994631753,
+      0.5688276826920738
+     ],
+     "collision_rate": 0.23854166666666668,
+     "collision_ci": [
+      0.21265747224402207,
+      0.2665099827291009
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 671,
+     "idle_ticks": 24205,
+     "unsafe_transfer": 772,
+     "liar_rule_fired": 900,
+     "collision": 800,
+     "stuck": 465,
+     "success_rate": 0.3465909090909091,
+     "success_ci": [
+      0.32571544227494154,
+      0.3680739664940019
+     ],
+     "collision_rate": 0.4132231404958678,
+     "collision_ci": [
+      0.39148171716339975,
+      0.4353082514331743
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 765,
+     "idle_ticks": 3726,
+     "unsafe_transfer": 535,
+     "liar_rule_fired": 292,
+     "collision": 664,
+     "stuck": 11,
+     "success_rate": 0.53125,
+     "success_ci": [
+      0.5054267280802712,
+      0.5569069855350107
+     ],
+     "collision_rate": 0.46111111111111114,
+     "collision_ci": [
+      0.4355020807591891,
+      0.4869270756306822
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 403,
+     "idle_ticks": 4804,
+     "unsafe_transfer": 595,
+     "liar_rule_fired": 390,
+     "collision": 728,
+     "stuck": 61,
+     "success_rate": 0.33808724832214765,
+     "success_ci": [
+      0.3117905186846513,
+      0.36542421814119636
+     ],
+     "collision_rate": 0.610738255033557,
+     "collision_ci": [
+      0.58274522026816,
+      0.6380198301929183
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 697,
+     "idle_ticks": 12173,
+     "unsafe_transfer": 439,
+     "liar_rule_fired": 705,
+     "collision": 536,
+     "stuck": 75,
+     "success_rate": 0.5328746177370031,
+     "success_ci": [
+      0.5057798642161355,
+      0.5597768380985721
+     ],
+     "collision_rate": 0.40978593272171254,
+     "collision_ci": [
+      0.38343598605525114,
+      0.4366642261974118
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 433,
+     "idle_ticks": 26640,
+     "unsafe_transfer": 911,
+     "liar_rule_fired": 1297,
+     "collision": 931,
+     "success": 556,
+     "success_rate": 0.28958333333333336,
+     "success_ci": [
+      0.26973132246800496,
+      0.31027564936672186
+     ],
+     "collision_rate": 0.48489583333333336,
+     "collision_ci": [
+      0.46259358216278235,
+      0.5072584034392154
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 24,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 262,
+     "idle_ticks": 1179,
+     "unsafe_transfer": 490,
+     "liar_rule_fired": 427,
+     "collision": 698,
+     "stuck": 0,
+     "success_rate": 0.27291666666666664,
+     "success_ci": [
+      0.2456847615397972,
+      0.3019586854089709
+     ],
+     "collision_rate": 0.7270833333333333,
+     "collision_ci": [
+      0.698041314591029,
+      0.7543152384602027
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 315,
+     "idle_ticks": 1456,
+     "unsafe_transfer": 636,
+     "liar_rule_fired": 588,
+     "collision": 645,
+     "stuck": 0,
+     "success_rate": 0.328125,
+     "success_ci": [
+      0.2991599906282786,
+      0.3584600494934955
+     ],
+     "collision_rate": 0.671875,
+     "collision_ci": [
+      0.6415399505065045,
+      0.7008400093717215
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 611,
+     "idle_ticks": 16691,
+     "unsafe_transfer": 91,
+     "liar_rule_fired": 209,
+     "collision": 99,
+     "stuck": 250,
+     "success_rate": 0.6364583333333333,
+     "success_ci": [
+      0.6055422155785994,
+      0.6662867222641133
+     ],
+     "collision_rate": 0.103125,
+     "collision_ci": [
+      0.08544207977532679,
+      0.1239714674149515
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 37,
+     "bytes": 12207,
+     "probation_adopted": 0,
+     "promoted_by_quorum": 0,
+     "withdrawn": 0,
+     "pruned": 4,
+     "operational_collisions_by_round": [
+      26,
+      9,
+      16,
+      14
+     ],
+     "liar_rules_held_end": 12,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 3,
+      "car2": 1,
+      "car3": 0,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 21,
+      "car2": 19,
+      "car3": 2,
+      "car4": 38
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10560,
+     "probation_adopted": 0,
+     "promoted_by_quorum": 0,
+     "withdrawn": 0,
+     "pruned": 4,
+     "operational_collisions_by_round": [
+      25,
+      6,
+      4,
+      5
+     ],
+     "liar_rules_held_end": 12,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 2
+     },
+     "model_entries": {
+      "car1": 22,
+      "car2": 22,
+      "car3": 2,
+      "car4": 36
+     }
+    },
+    {
+     "messages": 40,
+     "bytes": 13509,
+     "probation_adopted": 0,
+     "promoted_by_quorum": 0,
+     "withdrawn": 0,
+     "pruned": 4,
+     "operational_collisions_by_round": [
+      30,
+      14,
+      19,
+      18
+     ],
+     "liar_rules_held_end": 12,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 1,
+      "car4": 3
+     },
+     "model_entries": {
+      "car1": 19,
+      "car2": 17,
+      "car3": 5,
+      "car4": 40
+     }
+    }
+   ]
+  },
+  "BIO_without_crow": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1922,
+     "idle_ticks": 45145,
+     "unsafe_transfer": 565,
+     "liar_rule_fired": 832,
+     "collision": 1223,
+     "stuck": 695,
+     "success_rate": 0.5005208333333333,
+     "success_ci": [
+      0.4847138342610148,
+      0.5163267913846713
+     ],
+     "collision_rate": 0.3184895833333333,
+     "collision_ci": [
+      0.3039416794541308,
+      0.3334002830242893
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 382,
+     "idle_ticks": 2817,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 77,
+     "stuck": 21,
+     "success_rate": 0.7958333333333333,
+     "success_ci": [
+      0.7574908504502817,
+      0.8294782792564122
+     ],
+     "collision_rate": 0.16041666666666668,
+     "collision_ci": [
+      0.13030141984849422,
+      0.19592415661494875
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 621,
+     "idle_ticks": 16243,
+     "unsafe_transfer": 79,
+     "liar_rule_fired": 210,
+     "collision": 99,
+     "stuck": 240,
+     "success_rate": 0.646875,
+     "success_ci": [
+      0.616110857076893,
+      0.6764683813645
+     ],
+     "collision_rate": 0.103125,
+     "collision_ci": [
+      0.08544207977532679,
+      0.1239714674149515
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 792,
+     "idle_ticks": 35924,
+     "unsafe_transfer": 102,
+     "liar_rule_fired": 340,
+     "stuck": 695,
+     "collision": 449,
+     "success_rate": 0.4090909090909091,
+     "success_ci": [
+      0.38739080464824527,
+      0.4311510672148323
+     ],
+     "collision_rate": 0.23192148760330578,
+     "collision_ci": [
+      0.21366301507928936,
+      0.25124170933512696
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 853,
+     "idle_ticks": 5564,
+     "unsafe_transfer": 235,
+     "liar_rule_fired": 0,
+     "collision": 549,
+     "stuck": 38,
+     "success_rate": 0.5923611111111111,
+     "success_ci": [
+      0.5667676031368647,
+      0.6174631504371908
+     ],
+     "collision_rate": 0.38125,
+     "collision_ci": [
+      0.3565114636132161,
+      0.40662042464871245
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 547,
+     "idle_ticks": 6712,
+     "unsafe_transfer": 224,
+     "liar_rule_fired": 34,
+     "collision": 544,
+     "stuck": 101,
+     "success_rate": 0.4588926174496644,
+     "success_ci": [
+      0.43078150777080804,
+      0.48726782955803405
+     ],
+     "collision_rate": 0.4563758389261745,
+     "collision_ci": [
+      0.42828490509347633,
+      0.4847470447248868
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 715,
+     "idle_ticks": 13670,
+     "unsafe_transfer": 345,
+     "liar_rule_fired": 637,
+     "collision": 485,
+     "stuck": 108,
+     "success_rate": 0.5466360856269113,
+     "success_ci": [
+      0.5195602640678798,
+      0.573438778750659
+     ],
+     "collision_rate": 0.37079510703363916,
+     "collision_ci": [
+      0.3450328329765259,
+      0.39731408118194894
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 636,
+     "idle_ticks": 36764,
+     "unsafe_transfer": 330,
+     "liar_rule_fired": 832,
+     "collision": 597,
+     "success": 687,
+     "success_rate": 0.3578125,
+     "success_ci": [
+      0.3366744021465511,
+      0.37951842783087564
+     ],
+     "collision_rate": 0.3109375,
+     "collision_ci": [
+      0.29062781705349733,
+      0.3320022096197844
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 297,
+     "idle_ticks": 284,
+     "unsafe_transfer": 192,
+     "liar_rule_fired": 207,
+     "collision": 661,
+     "stuck": 2,
+     "success_rate": 0.309375,
+     "success_ci": [
+      0.2809432647615064,
+      0.339326234282643
+     ],
+     "collision_rate": 0.6885416666666667,
+     "collision_ci": [
+      0.658545074510112,
+      0.7170353663260025
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 395,
+     "idle_ticks": 11403,
+     "unsafe_transfer": 222,
+     "liar_rule_fired": 206,
+     "collision": 371,
+     "stuck": 194,
+     "success_rate": 0.4114583333333333,
+     "success_ci": [
+      0.38074239635075646,
+      0.4428800485604605
+     ],
+     "collision_rate": 0.38645833333333335,
+     "collision_ci": [
+      0.35616648389987254,
+      0.4176552395745116
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 609,
+     "idle_ticks": 17215,
+     "unsafe_transfer": 72,
+     "liar_rule_fired": 209,
+     "stuck": 259,
+     "collision": 92,
+     "success_rate": 0.634375,
+     "success_ci": [
+      0.6034303347381954,
+      0.6642485429847812
+     ],
+     "collision_rate": 0.09583333333333334,
+     "collision_ci": [
+      0.07879097102492201,
+      0.11609736574628006
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 34,
+     "bytes": 11472,
+     "probation_adopted": 34,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      11,
+      9,
+      16,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 20,
+      "car2": 16,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10713,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      13,
+      4,
+      9,
+      11
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 2
+     },
+     "model_entries": {
+      "car1": 21,
+      "car2": 21,
+      "car3": 2,
+      "car4": 30
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10602,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      17,
+      13,
+      20,
+      16
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 1,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 19,
+      "car2": 20,
+      "car3": 5,
+      "car4": 31
+     }
+    }
+   ]
+  },
+  "BIO_without_octopus": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1948,
+     "idle_ticks": 45494,
+     "unsafe_transfer": 603,
+     "liar_rule_fired": 820,
+     "collision": 1207,
+     "stuck": 685,
+     "success_rate": 0.5072916666666667,
+     "success_ci": [
+      0.4914795716117496,
+      0.5230891874278548
+     ],
+     "collision_rate": 0.3143229166666667,
+     "collision_ci": [
+      0.29983111991715516,
+      0.3291858373957768
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 385,
+     "idle_ticks": 3551,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 74,
+     "stuck": 21,
+     "success_rate": 0.8020833333333334,
+     "success_ci": [
+      0.7641024571695184,
+      0.8352674287985845
+     ],
+     "collision_rate": 0.15416666666666667,
+     "collision_ci": [
+      0.12461931061448131,
+      0.18920550958755258
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 619,
+     "idle_ticks": 16184,
+     "unsafe_transfer": 94,
+     "liar_rule_fired": 209,
+     "collision": 101,
+     "stuck": 240,
+     "success_rate": 0.6447916666666667,
+     "success_ci": [
+      0.6139958893142553,
+      0.6744332890074017
+     ],
+     "collision_rate": 0.10520833333333333,
+     "collision_ci": [
+      0.08734792463035751,
+      0.12621568267965688
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 821,
+     "idle_ticks": 35423,
+     "unsafe_transfer": 97,
+     "liar_rule_fired": 339,
+     "stuck": 685,
+     "collision": 430,
+     "success_rate": 0.4240702479338843,
+     "success_ci": [
+      0.40222789949746424,
+      0.44621332302453814
+     ],
+     "collision_rate": 0.22210743801652894,
+     "collision_ci": [
+      0.20415234851968794,
+      0.2411631461526743
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 864,
+     "idle_ticks": 4987,
+     "unsafe_transfer": 282,
+     "liar_rule_fired": 0,
+     "collision": 546,
+     "stuck": 30,
+     "success_rate": 0.6,
+     "success_ci": [
+      0.5744631977453153,
+      0.6250046858235868
+     ],
+     "collision_rate": 0.37916666666666665,
+     "collision_ci": [
+      0.35446011848309167,
+      0.4045161888711515
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 538,
+     "idle_ticks": 7167,
+     "unsafe_transfer": 273,
+     "liar_rule_fired": 33,
+     "collision": 555,
+     "stuck": 99,
+     "success_rate": 0.4513422818791946,
+     "success_ci": [
+      0.42329387252606254,
+      0.4797033022713424
+     ],
+     "collision_rate": 0.46560402684563756,
+     "collision_ci": [
+      0.4374426472533831,
+      0.4939863901034032
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 726,
+     "idle_ticks": 13816,
+     "unsafe_transfer": 337,
+     "liar_rule_fired": 625,
+     "collision": 476,
+     "stuck": 106,
+     "success_rate": 0.555045871559633,
+     "success_ci": [
+      0.5279918034219291,
+      0.5817775585933953
+     ],
+     "collision_rate": 0.363914373088685,
+     "collision_ci": [
+      0.338274389078871,
+      0.39035135482768835
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 634,
+     "idle_ticks": 36956,
+     "unsafe_transfer": 321,
+     "liar_rule_fired": 820,
+     "collision": 587,
+     "success": 699,
+     "success_rate": 0.3640625,
+     "success_ci": [
+      0.342831222768526,
+      0.3858366476494534
+     ],
+     "collision_rate": 0.30572916666666666,
+     "collision_ci": [
+      0.2855262698781296,
+      0.3267078897613582
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 24,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 320,
+     "idle_ticks": 1326,
+     "unsafe_transfer": 179,
+     "liar_rule_fired": 196,
+     "collision": 638,
+     "stuck": 2,
+     "success_rate": 0.3333333333333333,
+     "success_ci": [
+      0.3042297644732227,
+      0.3637654259478915
+     ],
+     "collision_rate": 0.6645833333333333,
+     "collision_ci": [
+      0.6341135651107039,
+      0.6937411843484458
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 398,
+     "idle_ticks": 11293,
+     "unsafe_transfer": 239,
+     "liar_rule_fired": 206,
+     "collision": 369,
+     "stuck": 193,
+     "success_rate": 0.41458333333333336,
+     "success_ci": [
+      0.3838202314815879,
+      0.4460273036092332
+     ],
+     "collision_rate": 0.384375,
+     "collision_ci": [
+      0.3541222920086384,
+      0.4155493713460097
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 611,
+     "idle_ticks": 16691,
+     "unsafe_transfer": 91,
+     "liar_rule_fired": 209,
+     "collision": 99,
+     "stuck": 250,
+     "success_rate": 0.6364583333333333,
+     "success_ci": [
+      0.6055422155785994,
+      0.6662867222641133
+     ],
+     "collision_rate": 0.103125,
+     "collision_ci": [
+      0.08544207977532679,
+      0.1239714674149515
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 37,
+     "bytes": 12228,
+     "probation_adopted": 37,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      11,
+      9,
+      16,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 3,
+      "car2": 0,
+      "car3": 0,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 20,
+      "car2": 15,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10569,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      13,
+      6,
+      3,
+      3
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 2
+     },
+     "model_entries": {
+      "car1": 21,
+      "car2": 22,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 37,
+     "bytes": 12504,
+     "probation_adopted": 37,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      17,
+      14,
+      19,
+      21
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 3,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 1,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 19,
+      "car2": 15,
+      "car3": 5,
+      "car4": 32
+     }
+    }
+   ]
+  },
+  "BIO_without_physarum": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1946,
+     "idle_ticks": 44847,
+     "unsafe_transfer": 657,
+     "liar_rule_fired": 831,
+     "collision": 1209,
+     "stuck": 685,
+     "success_rate": 0.5067708333333333,
+     "success_ci": [
+      0.4909590274570816,
+      0.5225691059368367
+     ],
+     "collision_rate": 0.31484375,
+     "collision_ci": [
+      0.30034486525708926,
+      0.32971271770152866
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 384,
+     "idle_ticks": 3103,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 75,
+     "stuck": 21,
+     "success_rate": 0.8,
+     "success_ci": [
+      0.7618971051871651,
+      0.8333391953604682
+     ],
+     "collision_rate": 0.15625,
+     "collision_ci": [
+      0.1265113748359063,
+      0.19144703078659725
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 621,
+     "idle_ticks": 16198,
+     "unsafe_transfer": 92,
+     "liar_rule_fired": 209,
+     "collision": 99,
+     "stuck": 240,
+     "success_rate": 0.646875,
+     "success_ci": [
+      0.616110857076893,
+      0.6764683813645
+     ],
+     "collision_rate": 0.103125,
+     "collision_ci": [
+      0.08544207977532679,
+      0.1239714674149515
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 821,
+     "idle_ticks": 35421,
+     "unsafe_transfer": 115,
+     "liar_rule_fired": 339,
+     "stuck": 685,
+     "collision": 430,
+     "success_rate": 0.4240702479338843,
+     "success_ci": [
+      0.40222789949746424,
+      0.44621332302453814
+     ],
+     "collision_rate": 0.22210743801652894,
+     "collision_ci": [
+      0.20415234851968794,
+      0.2411631461526743
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 874,
+     "idle_ticks": 5054,
+     "unsafe_transfer": 325,
+     "liar_rule_fired": 0,
+     "collision": 536,
+     "stuck": 30,
+     "success_rate": 0.6069444444444444,
+     "success_ci": [
+      0.581464729535942,
+      0.6318550903919117
+     ],
+     "collision_rate": 0.37222222222222223,
+     "collision_ci": [
+      0.3476258392929329,
+      0.3974985317023587
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 547,
+     "idle_ticks": 6789,
+     "unsafe_transfer": 316,
+     "liar_rule_fired": 33,
+     "collision": 546,
+     "stuck": 99,
+     "success_rate": 0.4588926174496644,
+     "success_ci": [
+      0.43078150777080804,
+      0.48726782955803405
+     ],
+     "collision_rate": 0.45805369127516776,
+     "collision_ci": [
+      0.4299492264998558,
+      0.48642764832549334
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 715,
+     "idle_ticks": 13552,
+     "unsafe_transfer": 348,
+     "liar_rule_fired": 636,
+     "collision": 487,
+     "stuck": 106,
+     "success_rate": 0.5466360856269113,
+     "success_ci": [
+      0.5195602640678798,
+      0.573438778750659
+     ],
+     "collision_rate": 0.37232415902140675,
+     "collision_ci": [
+      0.3465354810678987,
+      0.39886058203544633
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 634,
+     "idle_ticks": 36690,
+     "unsafe_transfer": 332,
+     "liar_rule_fired": 831,
+     "collision": 598,
+     "success": 688,
+     "success_rate": 0.35833333333333334,
+     "success_ci": [
+      0.33718732017789266,
+      0.3800450965029134
+     ],
+     "collision_rate": 0.31145833333333334,
+     "collision_ci": [
+      0.2911381401130851,
+      0.33253147326357607
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 24,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 308,
+     "idle_ticks": 609,
+     "unsafe_transfer": 215,
+     "liar_rule_fired": 207,
+     "collision": 650,
+     "stuck": 2,
+     "success_rate": 0.32083333333333336,
+     "success_ci": [
+      0.29206923439632526,
+      0.35102559530637256
+     ],
+     "collision_rate": 0.6770833333333334,
+     "collision_ci": [
+      0.6468494434893757,
+      0.7059056666881904
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 402,
+     "idle_ticks": 11321,
+     "unsafe_transfer": 263,
+     "liar_rule_fired": 206,
+     "collision": 365,
+     "stuck": 193,
+     "success_rate": 0.41875,
+     "success_ci": [
+      0.38792600779923553,
+      0.4502216475310577
+     ],
+     "collision_rate": 0.3802083333333333,
+     "collision_ci": [
+      0.3500356876673302,
+      0.4113358554478457
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 615,
+     "idle_ticks": 16719,
+     "unsafe_transfer": 87,
+     "liar_rule_fired": 209,
+     "collision": 95,
+     "stuck": 250,
+     "success_rate": 0.640625,
+     "success_ci": [
+      0.6097678177519923,
+      0.6703612403301926
+     ],
+     "collision_rate": 0.09895833333333333,
+     "collision_ci": [
+      0.08163765962031572,
+      0.11947576733049045
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 37,
+     "bytes": 12141,
+     "probation_adopted": 37,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      11,
+      9,
+      16,
+      14
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 3,
+      "car2": 1,
+      "car3": 0,
+      "car4": 1
+     },
+     "model_entries": {
+      "car1": 20,
+      "car2": 15,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10566,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      13,
+      6,
+      5,
+      5
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 0,
+      "car4": 2
+     },
+     "model_entries": {
+      "car1": 21,
+      "car2": 22,
+      "car3": 2,
+      "car4": 31
+     }
+    },
+    {
+     "messages": 40,
+     "bytes": 13527,
+     "probation_adopted": 40,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      17,
+      14,
+      19,
+      18
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 1,
+      "car4": 3
+     },
+     "model_entries": {
+      "car1": 19,
+      "car2": 16,
+      "car3": 5,
+      "car4": 34
+     }
+    }
+   ]
+  },
+  "BIO_without_rat": {
+   "metrics": {
+    "all": {
+     "episodes": 3840,
+     "success": 1875,
+     "idle_ticks": 44724,
+     "unsafe_transfer": 548,
+     "liar_rule_fired": 832,
+     "collision": 1270,
+     "stuck": 695,
+     "success_rate": 0.48828125,
+     "success_ci": [
+      0.4724908119950363,
+      0.5040951109770282
+     ],
+     "collision_rate": 0.3307291666666667,
+     "collision_ci": [
+      0.31602423435089344,
+      0.3457724308011483
+     ]
+    },
+    "own_family": {
+     "episodes": 480,
+     "success": 359,
+     "idle_ticks": 3158,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 91,
+     "stuck": 30,
+     "success_rate": 0.7479166666666667,
+     "success_ci": [
+      0.7072086078144397,
+      0.7846880572214516
+     ],
+     "collision_rate": 0.18958333333333333,
+     "collision_ci": [
+      0.1570348812398138,
+      0.22706089111020455
+     ]
+    },
+    "car:car1": {
+     "episodes": 960,
+     "success": 590,
+     "idle_ticks": 16602,
+     "unsafe_transfer": 86,
+     "liar_rule_fired": 209,
+     "collision": 120,
+     "stuck": 250,
+     "success_rate": 0.6145833333333334,
+     "success_ci": [
+      0.5833976205846106,
+      0.6448556860008733
+     ],
+     "collision_rate": 0.125,
+     "collision_ci": [
+      0.10556242130268347,
+      0.1474267571448236
+     ]
+    },
+    "obstacle:block": {
+     "episodes": 1936,
+     "success": 804,
+     "idle_ticks": 35865,
+     "unsafe_transfer": 101,
+     "liar_rule_fired": 340,
+     "stuck": 695,
+     "collision": 437,
+     "success_rate": 0.4152892561983471,
+     "success_ci": [
+      0.39352776928222033,
+      0.437386247681102
+     ],
+     "collision_rate": 0.22572314049586778,
+     "collision_ci": [
+      0.20765458429293826,
+      0.24487799502123342
+     ]
+    },
+    "other_family": {
+     "episodes": 1440,
+     "success": 833,
+     "idle_ticks": 4885,
+     "unsafe_transfer": 214,
+     "liar_rule_fired": 0,
+     "collision": 577,
+     "stuck": 30,
+     "success_rate": 0.5784722222222223,
+     "success_ci": [
+      0.5527917785788027,
+      0.6037351022773497
+     ],
+     "collision_rate": 0.40069444444444446,
+     "collision_ci": [
+      0.3756806454841225,
+      0.42623666458287046
+     ]
+    },
+    "obstacle:pedestrian": {
+     "episodes": 1192,
+     "success": 486,
+     "idle_ticks": 6204,
+     "unsafe_transfer": 207,
+     "liar_rule_fired": 34,
+     "collision": 607,
+     "stuck": 99,
+     "success_rate": 0.4077181208053691,
+     "success_ci": [
+      0.380161040480627,
+      0.43586808413514105
+     ],
+     "collision_rate": 0.5092281879194631,
+     "collision_ci": [
+      0.4808645659946943,
+      0.5375325215437289
+     ]
+    },
+    "obstacle:vehicle": {
+     "episodes": 1308,
+     "success": 717,
+     "idle_ticks": 13597,
+     "unsafe_transfer": 344,
+     "liar_rule_fired": 637,
+     "collision": 484,
+     "stuck": 107,
+     "success_rate": 0.5481651376146789,
+     "success_ci": [
+      0.5210926949682743,
+      0.5749554967951346
+     ],
+     "collision_rate": 0.37003058103975534,
+     "collision_ci": [
+      0.3442816137985383,
+      0.39654072588750144
+     ]
+    },
+    "held_out": {
+     "episodes": 1920,
+     "stuck": 635,
+     "idle_ticks": 36681,
+     "unsafe_transfer": 334,
+     "liar_rule_fired": 832,
+     "collision": 602,
+     "success": 683,
+     "success_rate": 0.35572916666666665,
+     "success_ci": [
+      0.3346230047876113,
+      0.37741147837629785
+     ],
+     "collision_rate": 0.31354166666666666,
+     "collision_ci": [
+      0.29317973632073613,
+      0.3346482238694425
+     ]
+    },
+    "obstacle:none": {
+     "episodes": 68,
+     "success": 68,
+     "idle_ticks": 0,
+     "unsafe_transfer": 0,
+     "liar_rule_fired": 0,
+     "collision": 0,
+     "stuck": 0,
+     "success_rate": 1.0,
+     "success_ci": [
+      0.9465286634799296,
+      1.0000000000000002
+     ],
+     "collision_rate": 0.0,
+     "collision_ci": [
+      0.0,
+      0.053471336520070537
+     ]
+    },
+    "car:car2": {
+     "episodes": 960,
+     "success": 291,
+     "idle_ticks": 171,
+     "unsafe_transfer": 181,
+     "liar_rule_fired": 207,
+     "collision": 667,
+     "stuck": 2,
+     "success_rate": 0.303125,
+     "success_ci": [
+      0.274883314445627,
+      0.3329360042393142
+     ],
+     "collision_rate": 0.6947916666666667,
+     "collision_ci": [
+      0.6649332224337546,
+      0.7230973987615682
+     ]
+    },
+    "car:car3": {
+     "episodes": 960,
+     "success": 389,
+     "idle_ticks": 11271,
+     "unsafe_transfer": 210,
+     "liar_rule_fired": 207,
+     "collision": 378,
+     "stuck": 193,
+     "success_rate": 0.40520833333333334,
+     "success_ci": [
+      0.37459059459013605,
+      0.4365816699618727
+     ],
+     "collision_rate": 0.39375,
+     "collision_ci": [
+      0.3633257964187862,
+      0.4250211374746741
+     ]
+    },
+    "car:car4": {
+     "episodes": 960,
+     "success": 605,
+     "idle_ticks": 16680,
+     "unsafe_transfer": 71,
+     "liar_rule_fired": 209,
+     "collision": 105,
+     "stuck": 250,
+     "success_rate": 0.6302083333333334,
+     "success_ci": [
+      0.5992084024244103,
+      0.6601703550590942
+     ],
+     "collision_rate": 0.109375,
+     "collision_ci": [
+      0.09116657276652104,
+      0.13069715478296548
+     ]
+    }
+   },
+   "per_seed": [
+    {
+     "messages": 31,
+     "bytes": 10542,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      16,
+      6,
+      19,
+      17
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 2,
+     "own_rules_end": {
+      "car1": 3,
+      "car2": 0,
+      "car3": 0,
+      "car4": 0
+     },
+     "model_entries": {
+      "car1": 0,
+      "car2": 0,
+      "car3": 0,
+      "car4": 0
+     }
+    },
+    {
+     "messages": 25,
+     "bytes": 8601,
+     "probation_adopted": 25,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      12,
+      14,
+      13,
+      13
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 1,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 0,
+      "car3": 0,
+      "car4": 0
+     },
+     "model_entries": {
+      "car1": 0,
+      "car2": 0,
+      "car3": 0,
+      "car4": 0
+     }
+    },
+    {
+     "messages": 31,
+     "bytes": 10710,
+     "probation_adopted": 31,
+     "promoted_by_quorum": 0,
+     "withdrawn": 2,
+     "pruned": 0,
+     "operational_collisions_by_round": [
+      17,
+      12,
+      15,
+      16
+     ],
+     "liar_rules_held_end": 8,
+     "false_rule_acceptance": 4,
+     "own_rules_end": {
+      "car1": 2,
+      "car2": 1,
+      "car3": 1,
+      "car4": 0
+     },
+     "model_entries": {
+      "car1": 0,
+      "car2": 0,
+      "car3": 0,
+      "car4": 0
+     }
+    }
+   ]
+  }
+ },
+ "budget_curve": {
+  "A": {
+   "100": {
+    "success_rate": 0.26484375,
+    "collision": 1572
+   },
+   "200": {
+    "success_rate": 0.31197916666666664,
+    "collision": 1572
+   },
+   "400": {
+    "success_rate": 0.334375,
+    "collision": 1744
+   }
+  },
+  "M3": {
+   "100": {
+    "success_rate": 0.33098958333333334,
+    "collision": 1554
+   },
+   "200": {
+    "success_rate": 0.4869791666666667,
+    "collision": 1294
+   },
+   "400": {
+    "success_rate": 0.4869791666666667,
+    "collision": 1294
+   }
+  },
+  "BIO_full": {
+   "100": {
+    "success_rate": 0.3307291666666667,
+    "collision": 1555
+   },
+   "200": {
+    "success_rate": 0.49947916666666664,
+    "collision": 1248
+   },
+   "400": {
+    "success_rate": 0.5067708333333333,
+    "collision": 1209
+   }
+  }
+ },
+ "primary": {
+  "BIO_full_beats_M3": false,
+  "BIO_full_better_somewhere": false,
+  "BIO_full_worse_somewhere": false
+ },
+ "contributions": {
+  "bee": {
+   "removing_it_hurts": true,
+   "removing_it_helps": false
+  },
+  "crow": {
+   "removing_it_hurts": false,
+   "removing_it_helps": false
+  },
+  "octopus": {
+   "removing_it_hurts": false,
+   "removing_it_helps": false
+  },
+  "physarum": {
+   "removing_it_hurts": false,
+   "removing_it_helps": false
+  },
+  "rat": {
+   "removing_it_hurts": false,
+   "removing_it_helps": false
+  }
+ },
+ "seconds": 39.45966184400004
+}

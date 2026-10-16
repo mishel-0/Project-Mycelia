@@ -339,3 +339,47 @@ The opt-in candidate mechanism consolidates a locally sensed nutrient-gradient d
 The assay trains a growing network in a Gaussian resource field, then transfers only the root compartment into fresh uniform substrate, discards all old geometry/tips, regenerates tips with randomized polarity and disables further acquisition. Six paired arms compare intact memory, erased trace, directional coupling disabled, inheritance disabled, rotated trace and uniform-history sham. All physical initial pools are matched across arms.
 
 **First result: the primary behavioral check did not pass.** In 30 paired trials, the memory-minus-erased alignment difference was +0.157, with a 95% bootstrap interval of −0.142 to +0.437. The direction initially follows the bait but is overwritten by subsequent local gradients. None of the networks reached the bait's central radius-3 region. This is a gradient-history regrowth assay, not a replication of the published wood-bait experiment. See `DIRECTIONAL-MEMORY.md` for the protocol, limitations and next model requirements.
+
+## Receptor-field memory (new)
+
+Unsupervised receptor growth + teach-only memory reaches **94.5%** held-out 4-class accuracy and **97.3%** tumor-presence accuracy on the brain-tumor MRI dataset (previous colony memory: 73.3%). See [RECEPTOR-MEMORY.md](RECEPTOR-MEMORY.md).
+
+## Mycelial Symbiosis Engine (new)
+
+A self-modifying trace memory with structural plasticity, local reward/punishment, a metabolic budget, fast/slow memory with sleep, and self-healing. 93.7% diagnosis and 97.4% tumor presence with 6x less memory than the fixed network; recovers to full accuracy after losing 50% of its memories. See [SYMBIOSIS-ENGINE.md](SYMBIOSIS-ENGINE.md).
+
+## Collective Dissent (new)
+
+Independent specialists plus a coordinator that abstains when evidence is unreliable: at 90% coverage, accuracy on answered scans rises from 93.7% to 98.1% (68 of 93 errors caught before output). See [COLLECTIVE-DISSENT.md](COLLECTIVE-DISSENT.md).
+
+## Symbiosis Lab v0.1 (new)
+
+A bounded self-improvement loop: detects a weakness, gathers evidence, tests candidates against frozen production, rejects regressions, verifies, and asks a separate gate for a one-time holdout score. Only a human can approve a release. See [SYMBIOSIS-LAB.md](SYMBIOSIS-LAB.md).
+
+## MLCP — internal communication protocol (new)
+
+Specialists exchange one 4-bit learned token each in a checksummed frame: same diagnosis accuracy as raw vectors with 2.9x fewer bytes (16x fewer than JSON), far more robust to bit corruption, and every English explanation parses back to its exact message. See [MLCP.md](MLCP.md).
+
+## Talk to Mycelia (new)
+
+`python -m mycelia.talk` for a command chat over real Mycelia data, or `--claude` for plain English through Claude, which can only answer by calling Mycelia's commands. See [TALK.md](TALK.md).
+
+## Pure Mycelia (new, non-neural)
+
+Rule-based agents learn invented-word meanings and compositional rules from demonstrations by sharing verified discoveries: 100% on unseen combinations with ~90 evaluations per episode, versus ~20,000-110,000 for a single joint-search learner. No neural networks or LLMs. See [PURE-MYCELIA.md](PURE-MYCELIA.md).
+
+## Pure Mycelia v0.2: skills from online docs (new)
+
+Reads docs.python.org through the allowlisted gateway, verifies each documented skill by experiment in a restricted sandbox, shares verified skills on the bus and composes them to solve held-out tasks, abstaining when it can't. Live run (docs from CPython's GitHub via Mycelia Reach, Agent-Reach style): 11/13 held-out tasks solved with documentation + learned priors vs 7/13 blind, 0 wrong answers. See [PURE-WEB.md](PURE-WEB.md).
+
+## Pure Mycelia v0.3 (new)
+
+Multi-source, multi-domain learning with claim lifecycles, copy/lineage tracking, four memories and network comparisons. Honest headline: a shared repository beats adaptive symbiosis on accuracy (549 vs ~240 of 814); adaptive symbiosis blocks fake knowledge completely. See [MYCELIA-LEARN.md](MYCELIA-LEARN.md).
+
+## Mycelia Autonomous Sandbox v0.1 (new)
+
+Symbolic driving cars learn and share rules with verified scope. Shared repository: 71% success but 368 crashes; applying rules only inside their verified scope: 67% success, 12 crashes. An ablation shows this safety comes from scope checking, not from adaptive symbiosis. See [AUTONOMY.md](AUTONOMY.md).
+
+## Mycelia Autonomous Sandbox v0.2 (new)
+
+Hidden brake differences, a lying car, a hidden environment shift and message limits. Pre-registered criterion met (adaptive beats scope-only on collisions), but the real finding is narrower: runtime monitoring with retraction alone is best (46.8% success, 1,315 collisions vs 33.9% / 2,538 for scope-only); the full adaptive stack only matches isolated cars. See [AUTONOMY-V2.md](AUTONOMY-V2.md).

@@ -1,0 +1,251 @@
+{
+  "method": "Mycelia Collective Dissent: disagreement detection and abstention.\n\nSpecialists see the same scan through different evidence:\n  A engine   - Symbiosis Engine on compartment responses (plastic memory)\n  B fixed    - fixed kernel network on the same compartment responses\n  C pixels   - kernel memory on raw 64px pixels (independent features)\n  D failures - similarity to scans the engine got wrong in 2-fold\n               cross-validation on training data (\"known failure patterns\")\n\nCoordinator: logistic model predicting \"A is wrong\" from disagreement,\nmargins and failure similarity. It is fitted on a validation split of\nTraining only; abstention thresholds for target coverages are fixed there.\nSpecialists are then refit on all Training and Testing is scored once.\nAbstention is a research safety signal, not clinical reliability.\n",
+  "specialist_test_accuracy": {
+    "A": 0.9366053169734151,
+    "B": 0.9461486025903204,
+    "C": 0.9175187457396047
+  },
+  "signals": [
+    "margin_A",
+    "margin_B",
+    "margin_C",
+    "A!=B",
+    "A!=C",
+    "B!=C",
+    "disagreement",
+    "failure_similarity",
+    "confidence_A"
+  ],
+  "coordinator": {
+    "weights": [
+      -0.42564121000456523,
+      -0.029165346119607766,
+      0.009829125517500705,
+      0.48370628934150584,
+      0.14555042205161714,
+      0.30258567806858105,
+      0.07203067269434894,
+      -0.15696416538416136,
+      -0.4323779274354361
+    ],
+    "bias": -4.723271181095167
+  },
+  "validation_curve": [
+    {
+      "target_coverage": 1.0,
+      "threshold": 2.0,
+      "coverage": 1.0,
+      "answered": 1081,
+      "abstained": 0,
+      "accuracy_answered": 0.9620721554116559,
+      "accuracy_answered_wilson_95": [
+        0.9489517333483484,
+        0.971920152471714
+      ],
+      "errors_answered": 41,
+      "errors_caught": 0,
+      "total_errors": 41,
+      "glioma_answered_recall": 0.9321428571428572,
+      "glioma_abstained": 0
+    },
+    {
+      "target_coverage": 0.95,
+      "threshold": 0.10569125873433793,
+      "coverage": 0.9500462534690102,
+      "answered": 1027,
+      "abstained": 54,
+      "accuracy_answered": 0.9922103213242454,
+      "accuracy_answered_wilson_95": [
+        0.9847045125814688,
+        0.9960476596842904
+      ],
+      "errors_answered": 8,
+      "errors_caught": 33,
+      "total_errors": 41,
+      "glioma_answered_recall": 0.9922779922779923,
+      "glioma_abstained": 21
+    },
+    {
+      "target_coverage": 0.9,
+      "threshold": 0.03511570612880109,
+      "coverage": 0.9000925069380203,
+      "answered": 973,
+      "abstained": 108,
+      "accuracy_answered": 0.9969167523124358,
+      "accuracy_answered_wilson_95": [
+        0.9909743485638345,
+        0.998950875502131
+      ],
+      "errors_answered": 3,
+      "errors_caught": 38,
+      "total_errors": 41,
+      "glioma_answered_recall": 1.0,
+      "glioma_abstained": 37
+    },
+    {
+      "target_coverage": 0.85,
+      "threshold": 0.018886602782214622,
+      "coverage": 0.8501387604070305,
+      "answered": 919,
+      "abstained": 162,
+      "accuracy_answered": 0.9978237214363439,
+      "accuracy_answered_wilson_95": [
+        0.9920999358837501,
+        0.9994029829050148
+      ],
+      "errors_answered": 2,
+      "errors_caught": 39,
+      "total_errors": 41,
+      "glioma_answered_recall": 1.0,
+      "glioma_abstained": 54
+    },
+    {
+      "target_coverage": 0.8,
+      "threshold": 0.012487142593543454,
+      "coverage": 0.8001850138760407,
+      "answered": 865,
+      "abstained": 216,
+      "accuracy_answered": 1.0,
+      "accuracy_answered_wilson_95": [
+        0.9955786423613944,
+        1.0
+      ],
+      "errors_answered": 0,
+      "errors_caught": 41,
+      "total_errors": 41,
+      "glioma_answered_recall": 1.0,
+      "glioma_abstained": 79
+    },
+    {
+      "target_coverage": 0.7,
+      "threshold": 0.0077977524364001025,
+      "coverage": 0.700277520814061,
+      "answered": 757,
+      "abstained": 324,
+      "accuracy_answered": 1.0,
+      "accuracy_answered_wilson_95": [
+        0.9949510390421568,
+        1.0
+      ],
+      "errors_answered": 0,
+      "errors_caught": 41,
+      "total_errors": 41,
+      "glioma_answered_recall": 1.0,
+      "glioma_abstained": 128
+    }
+  ],
+  "test_curve": [
+    {
+      "target_coverage": 1.0,
+      "threshold": 2.0,
+      "coverage": 1.0,
+      "answered": 1467,
+      "abstained": 0,
+      "accuracy_answered": 0.9366053169734151,
+      "accuracy_answered_wilson_95": [
+        0.9229600347962719,
+        0.9479699980211962
+      ],
+      "errors_answered": 93,
+      "errors_caught": 0,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.8153034300791556,
+      "glioma_abstained": 0
+    },
+    {
+      "target_coverage": 0.95,
+      "threshold": 0.10569125873433793,
+      "coverage": 0.9427402862985685,
+      "answered": 1383,
+      "abstained": 84,
+      "accuracy_answered": 0.9739696312364425,
+      "accuracy_answered_wilson_95": [
+        0.964174482008841,
+        0.9811390516050257
+      ],
+      "errors_answered": 36,
+      "errors_caught": 57,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.9115853658536586,
+      "glioma_abstained": 51
+    },
+    {
+      "target_coverage": 0.9,
+      "threshold": 0.03511570612880109,
+      "coverage": 0.8991138377641446,
+      "answered": 1319,
+      "abstained": 148,
+      "accuracy_answered": 0.9810462471569371,
+      "accuracy_answered_wilson_95": [
+        0.9721694191241488,
+        0.9871292115154644
+      ],
+      "errors_answered": 25,
+      "errors_caught": 68,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.93,
+      "glioma_abstained": 79
+    },
+    {
+      "target_coverage": 0.85,
+      "threshold": 0.018886602782214622,
+      "coverage": 0.8609406952965235,
+      "answered": 1263,
+      "abstained": 204,
+      "accuracy_answered": 0.9857482185273159,
+      "accuracy_answered_wilson_95": [
+        0.9775842767750734,
+        0.9909662797738236
+      ],
+      "errors_answered": 18,
+      "errors_caught": 75,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.9407407407407408,
+      "glioma_abstained": 109
+    },
+    {
+      "target_coverage": 0.8,
+      "threshold": 0.012487142593543454,
+      "coverage": 0.8104976141785958,
+      "answered": 1189,
+      "abstained": 278,
+      "accuracy_answered": 0.9857022708158116,
+      "accuracy_answered_wilson_95": [
+        0.9772219557476591,
+        0.9910542484864677
+      ],
+      "errors_answered": 17,
+      "errors_caught": 76,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.9372384937238494,
+      "glioma_abstained": 140
+    },
+    {
+      "target_coverage": 0.7,
+      "threshold": 0.0077977524364001025,
+      "coverage": 0.7123381049761418,
+      "answered": 1045,
+      "abstained": 422,
+      "accuracy_answered": 0.9866028708133971,
+      "accuracy_answered_wilson_95": [
+        0.9776382498011088,
+        0.9920030543703563
+      ],
+      "errors_answered": 14,
+      "errors_caught": 79,
+      "total_errors": 93,
+      "glioma_answered_recall": 0.9289617486338798,
+      "glioma_abstained": 196
+    }
+  ],
+  "disagreement_only_rule_test": {
+    "flagged": 98,
+    "errors_flagged": 55,
+    "total_errors": 93,
+    "accuracy_when_all_agree": 0.9722425127830533,
+    "answered_when_all_agree": 1369,
+    "validation_flagged": 78
+  },
+  "failure_bank_size": 448,
+  "seconds": 140.29367254300007
+}

@@ -1,0 +1,26 @@
+{
+  "weak_class_growth+0.25": {
+    "wins": 0.0,
+    "trials": 0.5904900000000002
+  },
+  "sharper_recall": {
+    "wins": 0.0,
+    "trials": 0.6561000000000001
+  },
+  "softer_recall": {
+    "wins": 0.0,
+    "trials": 0.7290000000000001
+  },
+  "extra_epoch": {
+    "wins": 0.0,
+    "trials": 0.81
+  },
+  "larger_budget": {
+    "wins": 0.0,
+    "trials": 0.9
+  },
+  "weak_class_growth+0.45": {
+    "wins": 1.0,
+    "trials": 1.0
+  }
+}
