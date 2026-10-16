@@ -47,7 +47,7 @@ def neighbors(g, pos):
         if 0 <= y < N and 0 <= x < N and not g[y, x]: yield (y, x)
 
 
-def bfs_path(g, src, is_target):
+def bfs_path(g, src, is_target, rng):
     prev = {src: None}; q = deque([src])
     while q:
         cur = q.popleft()
@@ -55,7 +55,8 @@ def bfs_path(g, src, is_target):
             path = []
             while cur != src: path.append(cur); cur = prev[cur]
             return path[::-1]
-        for nb in neighbors(g, cur):
+        nbs = list(neighbors(g, cur)); rng.shuffle(nbs)       # random tie-breaking: robots must not move in lockstep
+        for nb in nbs:
             if nb not in prev: prev[nb] = cur; q.append(nb)
     return []
 
@@ -82,7 +83,7 @@ def run(method, scenario, K, mapseed, cap=8000):
                 comms = scenario != 'no_comms'; seen = visited if comms else priv_seen[i]
                 if not paths[i] or paths[i][-1] in seen:
                     taken = {c for j, c in claimed.items() if j != i} if comms else set()
-                    paths[i] = bfs_path(g, pos[i], lambda c: c not in seen and c not in taken)
+                    paths[i] = bfs_path(g, pos[i], lambda c: c not in seen and c not in taken, rng)
                     claimed[i] = paths[i][-1] if paths[i] else None
                 nxt = paths[i].pop(0) if paths[i] else nbs[int(rng.integers(len(nbs)))]
             pos[i] = nxt; visited.add(nxt)
