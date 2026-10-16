@@ -1,0 +1,296 @@
+{
+  "schema": "mycelia.matched-readout-comparison.v1",
+  "scope": "Separate representation quality from readout choice on the OMNIA split.\n\nApplies the identical Training-only RBF-SVM protocol used by the HOG baseline\nto (a) frozen MYCELIA colony features, (b) HOG+intensity, and (c) both\nconcatenated. Retrospective: the Testing set was evaluated before. The frozen\nMYCELIA memory was fit unlabeled on all clean Training images, so its features\nfor the inner validation partition were learned without labels but not held\nout from representation learning; C selection uses labels from inner only.",
+  "counts": {
+    "inner": 4328,
+    "validation": 1082,
+    "train": 5410,
+    "test": 1468
+  },
+  "deduplication": {
+    "removed": {
+      "Training_duplicate": 190,
+      "Testing_train_overlap": 114,
+      "Testing_duplicate": 18
+    },
+    "training_label_conflicts": 0,
+    "training_unique": 5410,
+    "testing_unique": 1468,
+    "test_labels_not_used_for_duplicate_filtering": true
+  },
+  "models": {
+    "mycelia_svm": {
+      "feature_dimension": 4144,
+      "candidates": [
+        {
+          "C": 1.0,
+          "validation_balanced_accuracy": 0.8280855071334623
+        },
+        {
+          "C": 10.0,
+          "validation_balanced_accuracy": 0.8336897387734649
+        },
+        {
+          "C": 100.0,
+          "validation_balanced_accuracy": 0.840202083012826
+        }
+      ],
+      "selected_C": 100.0,
+      "final_fit_seconds": 14.243166500004008,
+      "heldout_metrics": {
+        "accuracy": 0.7915531335149864,
+        "correct": 1162,
+        "count": 1468,
+        "accuracy_95pct_Wilson_CI": [
+          0.7700264651899891,
+          0.8115579132564952
+        ],
+        "balanced_accuracy": 0.7839895248895604,
+        "confusion_labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            241,
+            80,
+            47,
+            11
+          ],
+          [
+            51,
+            205,
+            28,
+            14
+          ],
+          [
+            4,
+            2,
+            385,
+            0
+          ],
+          [
+            30,
+            32,
+            7,
+            331
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.6358839050131926,
+            "precision": 0.7392638036809815,
+            "f1": 0.6836879432624113
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.6879194630872483,
+            "precision": 0.6426332288401254,
+            "f1": 0.6645056726094003
+          },
+          "notumor": {
+            "count": 391,
+            "recall": 0.9846547314578005,
+            "precision": 0.8244111349036403,
+            "f1": 0.8974358974358975
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.8275,
+            "precision": 0.9297752808988764,
+            "f1": 0.8756613756613756
+          }
+        }
+      }
+    },
+    "hog_svm": {
+      "feature_dimension": 580,
+      "candidates": [
+        {
+          "C": 1.0,
+          "validation_balanced_accuracy": 0.9043494714669303
+        },
+        {
+          "C": 10.0,
+          "validation_balanced_accuracy": 0.9332703606085347
+        },
+        {
+          "C": 100.0,
+          "validation_balanced_accuracy": 0.9332703606085347
+        }
+      ],
+      "selected_C": 10.0,
+      "final_fit_seconds": 1.2874735420045909,
+      "heldout_metrics": {
+        "accuracy": 0.8957765667574932,
+        "correct": 1315,
+        "count": 1468,
+        "accuracy_95pct_Wilson_CI": [
+          0.879099562835678,
+          0.9103876424853671
+        ],
+        "balanced_accuracy": 0.8919411418693912,
+        "confusion_labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            286,
+            47,
+            36,
+            10
+          ],
+          [
+            27,
+            255,
+            9,
+            7
+          ],
+          [
+            0,
+            1,
+            390,
+            0
+          ],
+          [
+            11,
+            5,
+            0,
+            384
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.7546174142480211,
+            "precision": 0.8827160493827161,
+            "f1": 0.813655761024182
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.8557046979865772,
+            "precision": 0.827922077922078,
+            "f1": 0.8415841584158417
+          },
+          "notumor": {
+            "count": 391,
+            "recall": 0.9974424552429667,
+            "precision": 0.896551724137931,
+            "f1": 0.9443099273607748
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.96,
+            "precision": 0.9576059850374065,
+            "f1": 0.9588014981273408
+          }
+        }
+      }
+    },
+    "mycelia_plus_hog_svm": {
+      "feature_dimension": 4724,
+      "candidates": [
+        {
+          "C": 1.0,
+          "validation_balanced_accuracy": 0.8745135490876763
+        },
+        {
+          "C": 10.0,
+          "validation_balanced_accuracy": 0.8875529403161215
+        },
+        {
+          "C": 100.0,
+          "validation_balanced_accuracy": 0.8875170098789646
+        }
+      ],
+      "selected_C": 10.0,
+      "final_fit_seconds": 13.236686249998456,
+      "heldout_metrics": {
+        "accuracy": 0.8569482288828338,
+        "correct": 1258,
+        "count": 1468,
+        "accuracy_95pct_Wilson_CI": [
+          0.8381051969575136,
+          0.8739280140377147
+        ],
+        "balanced_accuracy": 0.8518887511735083,
+        "confusion_labels": [
+          "glioma",
+          "meningioma",
+          "notumor",
+          "pituitary"
+        ],
+        "confusion_matrix": [
+          [
+            264,
+            65,
+            39,
+            11
+          ],
+          [
+            31,
+            238,
+            18,
+            11
+          ],
+          [
+            2,
+            1,
+            388,
+            0
+          ],
+          [
+            9,
+            21,
+            2,
+            368
+          ]
+        ],
+        "classes": {
+          "glioma": {
+            "count": 379,
+            "recall": 0.6965699208443272,
+            "precision": 0.8627450980392157,
+            "f1": 0.7708029197080292
+          },
+          "meningioma": {
+            "count": 298,
+            "recall": 0.7986577181208053,
+            "precision": 0.7323076923076923,
+            "f1": 0.7640449438202248
+          },
+          "notumor": {
+            "count": 391,
+            "recall": 0.9923273657289002,
+            "precision": 0.8680089485458613,
+            "f1": 0.9260143198090692
+          },
+          "pituitary": {
+            "count": 400,
+            "recall": 0.92,
+            "precision": 0.9435897435897436,
+            "f1": 0.9316455696202531
+          }
+        }
+      }
+    }
+  },
+  "paired": {
+    "hog_vs_mycelia": {
+      "only_first_correct": 191,
+      "only_second_correct": 38,
+      "chi2_continuity_corrected": 100.89082969432314
+    },
+    "combined_vs_hog": {
+      "only_first_correct": 31,
+      "only_second_correct": 88,
+      "chi2_continuity_corrected": 26.352941176470587
+    }
+  }
+}

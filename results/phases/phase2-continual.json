@@ -1,0 +1,444 @@
+{
+  "schema": "mycelia.continual-stream.v1",
+  "scope": "Phase 2: continual (streaming) learning on the OMNIA brain-MRI split.\n\nTraining images arrive in chunks. After each chunk every arm is scored on the\nclean Testing images of the classes seen so far. Arms:\n  mycelia_stale    MYCELIA learns the chunk unlabeled; a running class-mean\n                   readout absorbs the chunk's features once (no replay).\n  mycelia_refresh  same MYCELIA model; centroids recomputed on all seen data\n                   with the current representation (measures drift cost).\n  hog_running      fixed HOG descriptor + running class means (no replay).\n  hog_svm_retrain  HOG + RBF-SVM retrained from scratch on all seen data.\n  hog_svm_latest   HOG + RBF-SVM trained on the latest chunk only.\nRetrospective: Testing was scored in earlier experiments.",
+  "capacity": 256,
+  "seed": 42,
+  "deduplication": {
+    "removed": {
+      "Training_duplicate": 190,
+      "Testing_train_overlap": 114,
+      "Testing_duplicate": 18
+    },
+    "training_label_conflicts": 0,
+    "training_unique": 5410,
+    "testing_unique": 1468,
+    "test_labels_not_used_for_duplicate_filtering": true
+  },
+  "labels_passed_to_visual_learning": false,
+  "protocols": {
+    "iid": {
+      "protocol": "iid",
+      "chunks": 8,
+      "per_chunk": [
+        {
+          "chunk": 1,
+          "images_seen": 677,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6273841961852861,
+          "mycelia_refresh": 0.6273841961852861,
+          "hog_running": 0.6737057220708447,
+          "hog_svm_retrain": 0.7895095367847411,
+          "hog_svm_latest": 0.7895095367847411,
+          "cumulative_seconds": {
+            "mycelia_learn": 64.30004087500129,
+            "mycelia_refresh": 0.2876285000020289,
+            "hog_svm_retrain": 0.0673599159999867
+          }
+        },
+        {
+          "chunk": 2,
+          "images_seen": 1354,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6519073569482289,
+          "mycelia_refresh": 0.6505449591280654,
+          "hog_running": 0.6709809264305178,
+          "hog_svm_retrain": 0.8337874659400545,
+          "hog_svm_latest": 0.8140326975476839,
+          "cumulative_seconds": {
+            "mycelia_learn": 132.85955895799998,
+            "mycelia_refresh": 0.7781132499949308,
+            "hog_svm_retrain": 0.24138454099738738
+          }
+        },
+        {
+          "chunk": 3,
+          "images_seen": 2030,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.646457765667575,
+          "mycelia_refresh": 0.6532697547683923,
+          "hog_running": 0.6743869209809265,
+          "hog_svm_retrain": 0.8528610354223434,
+          "hog_svm_latest": 0.8106267029972752,
+          "cumulative_seconds": {
+            "mycelia_learn": 201.34310279099736,
+            "mycelia_refresh": 1.523348166992946,
+            "hog_svm_retrain": 0.5703465829938068
+          }
+        },
+        {
+          "chunk": 4,
+          "images_seen": 2706,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6437329700272479,
+          "mycelia_refresh": 0.6532697547683923,
+          "hog_running": 0.6716621253405994,
+          "hog_svm_retrain": 0.8664850136239782,
+          "hog_svm_latest": 0.8113079019073569,
+          "cumulative_seconds": {
+            "mycelia_learn": 274.9279151660012,
+            "mycelia_refresh": 2.5565364999929443,
+            "hog_svm_retrain": 1.0703514989945688
+          }
+        },
+        {
+          "chunk": 5,
+          "images_seen": 3382,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6478201634877384,
+          "mycelia_refresh": 0.6546321525885559,
+          "hog_running": 0.6696185286103542,
+          "hog_svm_retrain": 0.8801089918256131,
+          "hog_svm_latest": 0.7854223433242506,
+          "cumulative_seconds": {
+            "mycelia_learn": 351.8880564580031,
+            "mycelia_refresh": 3.836451749994012,
+            "hog_svm_retrain": 1.836141581996344
+          }
+        },
+        {
+          "chunk": 6,
+          "images_seen": 4058,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6505449591280654,
+          "mycelia_refresh": 0.6553133514986376,
+          "hog_running": 0.6757493188010899,
+          "hog_svm_retrain": 0.8862397820163488,
+          "hog_svm_latest": 0.7888283378746594,
+          "cumulative_seconds": {
+            "mycelia_learn": 431.28197041599924,
+            "mycelia_refresh": 5.381749124993803,
+            "hog_svm_retrain": 2.913565123002627
+          }
+        },
+        {
+          "chunk": 7,
+          "images_seen": 4734,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6491825613079019,
+          "mycelia_refresh": 0.6498637602179836,
+          "hog_running": 0.6764305177111717,
+          "hog_svm_retrain": 0.8985013623978202,
+          "hog_svm_latest": 0.8113079019073569,
+          "cumulative_seconds": {
+            "mycelia_learn": 514.1416154580002,
+            "mycelia_refresh": 7.192968374991324,
+            "hog_svm_retrain": 4.372352247999515
+          }
+        },
+        {
+          "chunk": 8,
+          "images_seen": 5410,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6532697547683923,
+          "mycelia_refresh": 0.6566757493188011,
+          "hog_running": 0.6764305177111717,
+          "hog_svm_retrain": 0.8957765667574932,
+          "hog_svm_latest": 0.8044959128065395,
+          "cumulative_seconds": {
+            "mycelia_learn": 600.7208372079986,
+            "mycelia_refresh": 9.351648499992734,
+            "hog_svm_retrain": 6.530712914995092
+          }
+        }
+      ],
+      "final_mycelia_learning": {
+        "images_seen": 5410,
+        "patches_seen": 86560,
+        "colonies": 256,
+        "updates": 84532,
+        "context_connections": 18394,
+        "context_updates": 259680,
+        "context_motif_connections": 75211,
+        "context_motif_updates": 281320,
+        "context_prediction_error": 218478.66250243696,
+        "predictive_feedback_patches": 0,
+        "predictive_feedback_error": 0.0,
+        "visual_episodes": 5410,
+        "episode_capacity": 10000,
+        "suppressed_updates": 2028,
+        "novelty_overflow": 10927,
+        "recycled_colonies": 0,
+        "motif_merges": 0,
+        "remaining_funding": {
+          "carbon": 0.0,
+          "water": 0.0,
+          "energy": 0.0
+        },
+        "initial_funding": {
+          "carbon": 18870.888070779853,
+          "water": 143579.6605308489,
+          "energy": 16384.0
+        },
+        "memory_material": 92.72143298903593,
+        "max_absolute_budget_error": 1.1550582712516189e-10
+      },
+      "cumulative_seconds": {
+        "mycelia_learn": 600.7208372079986,
+        "mycelia_refresh": 9.351648499992734,
+        "hog_svm_retrain": 6.530712914995092
+      }
+    },
+    "class_incremental": {
+      "protocol": "class_incremental",
+      "chunks": 8,
+      "per_chunk": [
+        {
+          "chunk": 1,
+          "images_seen": 700,
+          "classes_seen": [
+            "glioma"
+          ],
+          "test_images": 379,
+          "colonies": 256,
+          "mycelia_stale": 1.0,
+          "mycelia_refresh": 1.0,
+          "hog_running": 1.0,
+          "hog_svm_retrain": null,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 55.73966541700065,
+            "mycelia_refresh": 0.27148324999870965,
+            "hog_svm_retrain": 0.0
+          }
+        },
+        {
+          "chunk": 2,
+          "images_seen": 1400,
+          "classes_seen": [
+            "glioma"
+          ],
+          "test_images": 379,
+          "colonies": 256,
+          "mycelia_stale": 1.0,
+          "mycelia_refresh": 1.0,
+          "hog_running": 1.0,
+          "hog_svm_retrain": null,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 129.04908566700033,
+            "mycelia_refresh": 0.8053120419936022,
+            "hog_svm_retrain": 0.0
+          }
+        },
+        {
+          "chunk": 3,
+          "images_seen": 2093,
+          "classes_seen": [
+            "glioma",
+            "meningioma"
+          ],
+          "test_images": 677,
+          "colonies": 256,
+          "mycelia_stale": 0.6573116691285081,
+          "mycelia_refresh": 0.654357459379616,
+          "hog_running": 0.620384047267356,
+          "hog_svm_retrain": 0.8227474150664698,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 202.59925087500596,
+            "mycelia_refresh": 1.6003857079922454,
+            "hog_svm_retrain": 0.3533448749949457
+          }
+        },
+        {
+          "chunk": 4,
+          "images_seen": 2786,
+          "classes_seen": [
+            "glioma",
+            "meningioma"
+          ],
+          "test_images": 677,
+          "colonies": 256,
+          "mycelia_stale": 0.654357459379616,
+          "mycelia_refresh": 0.654357459379616,
+          "hog_running": 0.6262924667651403,
+          "hog_svm_retrain": 0.8330871491875923,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 278.0069191250077,
+            "mycelia_refresh": 2.6513887909895857,
+            "hog_svm_retrain": 0.9680085419968236
+          }
+        },
+        {
+          "chunk": 5,
+          "images_seen": 3419,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor"
+          ],
+          "test_images": 1068,
+          "colonies": 256,
+          "mycelia_stale": 0.6067415730337079,
+          "mycelia_refresh": 0.6198501872659176,
+          "hog_running": 0.6404494382022472,
+          "hog_svm_retrain": 0.8838951310861424,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 349.5895920410039,
+            "mycelia_refresh": 3.940817081987916,
+            "hog_svm_retrain": 1.8152024169976357
+          }
+        },
+        {
+          "chunk": 6,
+          "images_seen": 4052,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor"
+          ],
+          "test_images": 1068,
+          "colonies": 256,
+          "mycelia_stale": 0.6114232209737828,
+          "mycelia_refresh": 0.6338951310861424,
+          "hog_running": 0.647003745318352,
+          "hog_svm_retrain": 0.8810861423220974,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 423.9869327080087,
+            "mycelia_refresh": 5.5671160819911165,
+            "hog_svm_retrain": 2.8940976669982774
+          }
+        },
+        {
+          "chunk": 7,
+          "images_seen": 4731,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6253405994550408,
+          "mycelia_refresh": 0.6512261580381471,
+          "hog_running": 0.6689373297002725,
+          "hog_svm_retrain": 0.8937329700272479,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 508.1588442920038,
+            "mycelia_refresh": 7.470156206989486,
+            "hog_svm_retrain": 4.298774416995002
+          }
+        },
+        {
+          "chunk": 8,
+          "images_seen": 5410,
+          "classes_seen": [
+            "glioma",
+            "meningioma",
+            "notumor",
+            "pituitary"
+          ],
+          "test_images": 1468,
+          "colonies": 256,
+          "mycelia_stale": 0.6212534059945504,
+          "mycelia_refresh": 0.6587193460490464,
+          "hog_running": 0.6764305177111717,
+          "hog_svm_retrain": 0.8957765667574932,
+          "hog_svm_latest": null,
+          "cumulative_seconds": {
+            "mycelia_learn": 595.006187417006,
+            "mycelia_refresh": 9.555601331987418,
+            "hog_svm_retrain": 5.918240583996521
+          }
+        }
+      ],
+      "final_mycelia_learning": {
+        "images_seen": 5410,
+        "patches_seen": 86560,
+        "colonies": 256,
+        "updates": 84823,
+        "context_connections": 19370,
+        "context_updates": 259680,
+        "context_motif_connections": 77854,
+        "context_motif_updates": 281320,
+        "context_prediction_error": 216881.06883735285,
+        "predictive_feedback_patches": 0,
+        "predictive_feedback_error": 0.0,
+        "visual_episodes": 5410,
+        "episode_capacity": 10000,
+        "suppressed_updates": 1737,
+        "novelty_overflow": 10176,
+        "recycled_colonies": 0,
+        "motif_merges": 0,
+        "remaining_funding": {
+          "carbon": 0.0,
+          "water": 0.0,
+          "energy": 0.0
+        },
+        "initial_funding": {
+          "carbon": 18870.888070779853,
+          "water": 143579.6605308489,
+          "energy": 16384.0
+        },
+        "memory_material": 89.65894156306584,
+        "max_absolute_budget_error": 6.298250809777528e-11
+      },
+      "cumulative_seconds": {
+        "mycelia_learn": 595.006187417006,
+        "mycelia_refresh": 9.555601331987418,
+        "hog_svm_retrain": 5.918240583996521
+      }
+    }
+  }
+}

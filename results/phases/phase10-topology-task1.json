@@ -1,0 +1,370 @@
+{
+  "schema": "mycelia.topology-battery.task1.v1",
+  "scope": "Phase 10, Task 1: transport-network design. Does MYCELIA's grown topology\nbalance cost, efficiency, and robustness better than classic graph designs?\n\nTerminals = inoculum + N food patches. Methods connect the same terminals:\n  mycelia        grown from the inoculum on a low-nutrient field with patches\n  mst            Euclidean minimum spanning tree (cheapest possible tree)\n  complete       straight edge between every terminal pair (most efficient)\nMetrics (Bebber et al. 2007 style):\n  cost           total edge length (MYCELIA: all living cords, and backbone only)\n  efficiency     mean over terminal pairs of euclid / network distance (1 = ideal)\n  robustness     fraction of terminal pairs still connected after removing 10%\n                 of edges, random and targeted (highest-load edges first)",
+  "args": {
+    "output": "runs/phase10-topology/task1",
+    "layouts": "5",
+    "sources": "5",
+    "size": "64",
+    "steps": "1200",
+    "max_nodes": "2500",
+    "patch_radius": "4.0",
+    "seed": "7",
+    "background": "0.8",
+    "strength": "3.0"
+  },
+  "layouts": [
+    {
+      "layout": 0,
+      "points": [
+        [
+          32.0,
+          32.0
+        ],
+        [
+          38.004582397024016,
+          51.066262446539625
+        ],
+        [
+          45.23291313176929,
+          18.80994511954841
+        ],
+        [
+          22.40798167573882,
+          49.93056537902057
+        ],
+        [
+          8.252734619147587,
+          47.41896408237278
+        ],
+        [
+          22.545556487327048,
+          21.36442938083712
+        ]
+      ],
+      "mycelia_budget_errors": {
+        "carbon_error": 1.5370460459962487e-10,
+        "water_error": 0.0,
+        "energy_error": -4.2928149923682213e-10
+      },
+      "mycelia": {
+        "edges": 675,
+        "cost_total_length": 1461.4942906261308,
+        "cost_backbone_length": 133.97588042446625,
+        "efficiency": 0.7315812529355772,
+        "efficiency_connected_pairs": 0.7315812529355772,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.26666666666666666
+      },
+      "mst": {
+        "edges": 5,
+        "cost_total_length": 82.91786632091296,
+        "cost_backbone_length": 82.91786632091296,
+        "efficiency": 0.8059652713815072,
+        "efficiency_connected_pairs": 0.8059652713815072,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.4
+      },
+      "complete": {
+        "edges": 15,
+        "cost_total_length": 394.5446846055069,
+        "cost_backbone_length": 394.5446846055069,
+        "efficiency": 1.0,
+        "efficiency_connected_pairs": 1.0,
+        "terminals_reached": 6,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 1.0
+      }
+    },
+    {
+      "layout": 1,
+      "points": [
+        [
+          32.0,
+          32.0
+        ],
+        [
+          23.694669277066915,
+          55.38928848022043
+        ],
+        [
+          49.755032561418375,
+          26.772070713881313
+        ],
+        [
+          13.13377263069317,
+          30.990341799810416
+        ],
+        [
+          19.58490296406475,
+          20.342971930454226
+        ],
+        [
+          37.1518720434308,
+          18.706879299841894
+        ]
+      ],
+      "mycelia_budget_errors": {
+        "carbon_error": -6.002665031701326e-11,
+        "water_error": 7.275957614183426e-12,
+        "energy_error": 8.803908713161945e-10
+      },
+      "mycelia": {
+        "edges": 577,
+        "cost_total_length": 1402.8215743912367,
+        "cost_backbone_length": 138.65038177094058,
+        "efficiency": 0.7416924605557693,
+        "efficiency_connected_pairs": 0.7416924605557693,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.2
+      },
+      "mst": {
+        "edges": 5,
+        "cost_total_length": 83.51872994241576,
+        "cost_backbone_length": 83.51872994241576,
+        "efficiency": 0.786599928254691,
+        "efficiency_connected_pairs": 0.786599928254691,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.4666666666666667,
+        "robust_targeted_10pct": 0.4666666666666667
+      },
+      "complete": {
+        "edges": 15,
+        "cost_total_length": 372.90251638362207,
+        "cost_backbone_length": 372.90251638362207,
+        "efficiency": 1.0,
+        "efficiency_connected_pairs": 1.0,
+        "terminals_reached": 6,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 1.0
+      }
+    },
+    {
+      "layout": 2,
+      "points": [
+        [
+          32.0,
+          32.0
+        ],
+        [
+          49.77196179056406,
+          21.767226036202658
+        ],
+        [
+          36.95111120247497,
+          45.32163598016858
+        ],
+        [
+          49.298895160778464,
+          52.075406194340594
+        ],
+        [
+          9.276211254444666,
+          28.987904006216418
+        ],
+        [
+          31.27732769490983,
+          11.127401473765161
+        ]
+      ],
+      "mycelia_budget_errors": {
+        "carbon_error": -1.0913936421275139e-11,
+        "water_error": 0.0,
+        "energy_error": -1.7280399333685637e-10
+      },
+      "mycelia": {
+        "edges": 516,
+        "cost_total_length": 1439.0914566969343,
+        "cost_backbone_length": 106.06114848550618,
+        "efficiency": 0.7856567349201893,
+        "efficiency_connected_pairs": 0.7856567349201893,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.4,
+        "robust_targeted_10pct": 0.2
+      },
+      "mst": {
+        "edges": 5,
+        "cost_total_length": 92.60110724224185,
+        "cost_backbone_length": 92.60110724224185,
+        "efficiency": 0.8736741560918858,
+        "efficiency_connected_pairs": 0.8736741560918858,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.4666666666666667
+      },
+      "complete": {
+        "edges": 15,
+        "cost_total_length": 424.78032941606244,
+        "cost_backbone_length": 424.78032941606244,
+        "efficiency": 1.0,
+        "efficiency_connected_pairs": 1.0,
+        "terminals_reached": 6,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 1.0
+      }
+    },
+    {
+      "layout": 3,
+      "points": [
+        [
+          32.0,
+          32.0
+        ],
+        [
+          53.88808206219082,
+          17.96872688379905
+        ],
+        [
+          32.61462158895511,
+          14.524140992984318
+        ],
+        [
+          41.0737510294943,
+          48.40389076698939
+        ],
+        [
+          28.424431875438877,
+          53.93244816576158
+        ],
+        [
+          14.95974535693891,
+          43.787850130109
+        ]
+      ],
+      "mycelia_budget_errors": {
+        "carbon_error": 2.8194335754960775e-11,
+        "water_error": 0.0,
+        "energy_error": -1.6007106751203537e-10
+      },
+      "mycelia": {
+        "edges": 716,
+        "cost_total_length": 1301.6526822298288,
+        "cost_backbone_length": 115.97429626444394,
+        "efficiency": 0.4995747647685899,
+        "efficiency_connected_pairs": 0.749362147152885,
+        "terminals_reached": 5,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 0.1
+      },
+      "mst": {
+        "edges": 5,
+        "cost_total_length": 88.44667361163903,
+        "cost_backbone_length": 88.44667361163903,
+        "efficiency": 0.7743161405063811,
+        "efficiency_connected_pairs": 0.7743161405063811,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.4666666666666667,
+        "robust_targeted_10pct": 0.4
+      },
+      "complete": {
+        "edges": 15,
+        "cost_total_length": 416.4349803263427,
+        "cost_backbone_length": 416.4349803263427,
+        "efficiency": 1.0,
+        "efficiency_connected_pairs": 1.0,
+        "terminals_reached": 6,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 1.0
+      }
+    },
+    {
+      "layout": 4,
+      "points": [
+        [
+          32.0,
+          32.0
+        ],
+        [
+          14.171369732921582,
+          31.965337397125516
+        ],
+        [
+          36.87192116592116,
+          9.377072401853338
+        ],
+        [
+          15.100452059717885,
+          52.55412910209773
+        ],
+        [
+          11.380187655401448,
+          14.229149571166303
+        ],
+        [
+          53.51976575800521,
+          37.85041245422637
+        ]
+      ],
+      "mycelia_budget_errors": {
+        "carbon_error": -4.902176442556083e-10,
+        "water_error": 0.0,
+        "energy_error": 2.8685462893918157e-09
+      },
+      "mycelia": {
+        "edges": 578,
+        "cost_total_length": 1343.9264917902879,
+        "cost_backbone_length": 129.71314988219368,
+        "efficiency": 0.7400673287825239,
+        "efficiency_connected_pairs": 0.7400673287825239,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.06666666666666667
+      },
+      "mst": {
+        "edges": 5,
+        "cost_total_length": 101.83529797080425,
+        "cost_backbone_length": 101.83529797080425,
+        "efficiency": 0.8456638319688589,
+        "efficiency_connected_pairs": 0.8456638319688589,
+        "terminals_reached": 6,
+        "robust_random_10pct": 0.6666666666666666,
+        "robust_targeted_10pct": 0.4
+      },
+      "complete": {
+        "edges": 15,
+        "cost_total_length": 462.7143818018082,
+        "cost_backbone_length": 462.7143818018082,
+        "efficiency": 1.0,
+        "efficiency_connected_pairs": 1.0,
+        "terminals_reached": 6,
+        "robust_random_10pct": 1.0,
+        "robust_targeted_10pct": 1.0
+      }
+    }
+  ],
+  "means": {
+    "mycelia": {
+      "cost_total_length": 1389.7972991468837,
+      "cost_backbone_length": 124.87497136551012,
+      "efficiency": 0.6997145083925298,
+      "efficiency_connected_pairs": 0.7496719848693889,
+      "edges": 612.4,
+      "robust_random_10pct": 0.6799999999999999,
+      "robust_targeted_10pct": 0.16666666666666669,
+      "terminals_reached": 5.8
+    },
+    "mst": {
+      "cost_total_length": 89.86393501760276,
+      "cost_backbone_length": 89.86393501760276,
+      "efficiency": 0.8172438656406648,
+      "efficiency_connected_pairs": 0.8172438656406648,
+      "edges": 5.0,
+      "robust_random_10pct": 0.5866666666666667,
+      "robust_targeted_10pct": 0.42666666666666664,
+      "terminals_reached": 6.0
+    },
+    "complete": {
+      "cost_total_length": 414.2753785066684,
+      "cost_backbone_length": 414.2753785066684,
+      "efficiency": 1.0,
+      "efficiency_connected_pairs": 1.0,
+      "edges": 15.0,
+      "robust_random_10pct": 1.0,
+      "robust_targeted_10pct": 1.0,
+      "terminals_reached": 6.0
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "mycelia.phase8-text-growth.v1",
+  "scope": "Phase 8 gate: does MYCELIA's growing character-colony predict held-out text\nbetter than a trivial fixed-order n-gram baseline?\n\nMetric: bits per character (cross-entropy), lower is better. Both models train\non the same prefix of the text and are scored, without further learning, on a\ndisjoint held-out suffix. Paired per-position bootstrap CI, same protocol as\nPhase 4 (tools/masked_visual_prediction_test.py).",
+  "corpus": "runs/phase8-text/corpus/combined.txt",
+  "train_chars": 3161330,
+  "held_out_chars": 351259,
+  "order": 4,
+  "max_specialists": 100000,
+  "novelty_threshold": 0.6,
+  "seed": 1,
+  "mycelia_summary": {
+    "step": 3161330,
+    "specialists": 87332,
+    "recruited": 87332,
+    "recycled": 0,
+    "rejected_for_capacity": 0,
+    "alphabet_size": 112
+  },
+  "mycelia_mean_bits_per_char": 2.378663849431754,
+  "baseline_mean_bits_per_char": 2.3786639221276626,
+  "mean_delta_mycelia_minus_baseline": -7.269590845255938e-08,
+  "paired_bootstrap_95_ci": [
+    -2.1808772535767816e-07,
+    0.0
+  ],
+  "fraction_positions_mycelia_better": 2.846902143432624e-06,
+  "gate": "mycelia beats fixed n-gram baseline (negative delta) with 95% CI excluding zero",
+  "gate_passed": false
+}
