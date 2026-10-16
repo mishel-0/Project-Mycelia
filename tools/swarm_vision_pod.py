@@ -12,6 +12,8 @@ Runs configurations in parallel (one per worker). CPU only. Research simulation.
 """
 from __future__ import annotations
 import argparse, json, time, os
+for _v in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS", "VECLIB_MAXIMUM_THREADS"):
+    os.environ.setdefault(_v, "1")          # one thread per worker: no oversubscription
 from multiprocessing import Pool
 from pathlib import Path
 import numpy as np
@@ -114,7 +116,7 @@ def main():
     with Pool(a.workers) as pool:
         for i, r in enumerate(pool.imap_unordered(worker, jobs)):
             rows.extend(r)
-            if i % 10 == 0: print(f'{i+1}/{len(jobs)} configs done, {time.time()-t0:.0f}s', flush=True)
+            if i % 2 == 0: print(f'{i+1}/{len(jobs)} configs done, {time.time()-t0:.0f}s', flush=True)
     rng = np.random.default_rng(0); summary = {}
     for n in a.noise:
         for l in a.labels:
